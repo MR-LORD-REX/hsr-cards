@@ -12,7 +12,7 @@ A Python library to generate beautiful battle cards for Honkai Star Rail .
 
 ## Installation
 
-### From PyPI (coming soon)
+### From PyPI
 ```bash
 pip install hsr-cards
 ```
