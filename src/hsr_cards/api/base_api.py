@@ -125,7 +125,8 @@ class BaseAPI:
             "prod_official_sea",
         ] = "prod_official_asia",
     ) -> dict:
-        role_id = self.uid if self.cookie else get_default_uid()
+        role_id = self.uid if self.cookie else get_default_uid() 
+        server = server if self.cookie else "prod_official_asia"
         params = {
             "server": server,
             "role_id": role_id,

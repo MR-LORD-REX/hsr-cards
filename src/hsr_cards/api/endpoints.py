@@ -5,6 +5,9 @@ import random
 import string
 import time
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def check_cookies():
     ltoken = os.getenv("ltoken_v2")
