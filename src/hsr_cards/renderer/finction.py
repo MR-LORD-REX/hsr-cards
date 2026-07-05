@@ -15,6 +15,7 @@ class PFRenderer:
         self.api = BaseAPI
         self.fonts = HSRFonts()
         self.floor_bg=Path(__file__).parent.parent / "assets" / "backgrounds" / "PF" / "floor_bg.png"
+        self.floor_bg_tierce=Path(__file__).parent.parent / "assets" / "backgrounds" / "PF" / "floor_bg_tierce.png"
         self.buff_mask=Path(__file__).parent.parent / "assets" / "backgrounds" / "PF" / "buff_m.png"
         self.header_bg=Path(__file__).parent.parent / "assets" / "backgrounds" / "PF" / "header_bg.png"
         self.main_bg=Path(__file__).parent.parent / "assets" / "backgrounds" / "PF" / "main_bg.png"
@@ -40,27 +41,36 @@ class PFRenderer:
         if uid.startswith("1") or uid.startswith("8"):
             return 'prod_official_asia'
         
-    async def _render_buff(self,buff: dict, draw: ImageDraw.ImageDraw ,main_img: Image.Image, i: int, f16: ImageFont.FreeTypeFont):
+    async def _render_buff(self,buff: dict, draw: ImageDraw.ImageDraw ,main_img: Image.Image, i: int, f16: ImageFont.FreeTypeFont, col_width: int = 390):
         if buff:
             icon=await self.get_icon(buff["icon"])
             mask=Image.open(self.buff_mask)
             icon=icon.resize((36,36))
             mask.alpha_composite(icon,(0,0))
-            main_img.alpha_composite(mask,(17+i*390,259))
+            main_img.alpha_composite(mask,(17+i*col_width,259))
             buff_name=buff["name_mi18n"]
-            draw.text((58+i*402,270),buff_name,font=f16,fill=(255,255,255,255))
+            draw.text((58+i*(col_width+12),270),buff_name,font=f16,fill=(255,255,255,255))
             
-    async def _render_team(self,team: list, main_img: Image.Image, i: int):
+    async def _render_team(self,team: list, main_img: Image.Image, i: int, col_width: int = 390):
         if team:
             team_img=await render_team(team)
-            team_img=team_img.resize((310,82))
-            main_img.alpha_composite(team_img,(15+i*391,166))
+            # For tierce (col_width=260): 230px wide; for standard (col_width=391): 310px wide
+            team_w = 310 if col_width >= 390 else col_width - 30
+            team_img=team_img.resize((team_w, 82))
+            main_img.alpha_composite(team_img,(15+i*col_width,166))
         
         
     async def _render_floor(self,floor_data: dict) -> Image.Image | None:
         if floor_data['is_fast']:
             return None
-        main_img=Image.open(self.floor_bg).convert("RGBA")
+        
+        is_tierce = floor_data.get('is_tierce', False) and floor_data.get('node_3') is not None
+        
+        if is_tierce:
+            main_img=Image.open(self.floor_bg_tierce).convert("RGBA")
+        else:
+            main_img=Image.open(self.floor_bg).convert("RGBA")
+        
         draw=ImageDraw.Draw(main_img)
         f20=self.fonts.get_font(20, "bold")
         f16=self.fonts.get_font(16, "medium")
@@ -79,23 +89,35 @@ class PFRenderer:
         
         tasks=[]
         
-        for i in range(2):
+        if is_tierce:
+            col_width = 260
+            node_count = 3
+            time_x_offsets = [15, 275, 535]
+            score_x_offsets = [15, 275, 535]
+        else:
+            col_width = 391
+            node_count = 2
+            time_x_offsets = [232, 590]
+            score_x_offsets = [69, 469]
+        
+        for i in range(node_count):
             node=floor_data[f"node_{i+1}"]
             
             buff=node["buff"]
-            tasks.append(self._render_buff(buff, draw, main_img, i, f16))
+            tasks.append(self._render_buff(buff, draw, main_img, i, f16, col_width))
             
             challenge_time=node["challenge_time"]
-            challenge_time=f"{challenge_time['year']}/{challenge_time['month']}/{challenge_time['day']} {challenge_time['hour']}:{challenge_time['minute']}"
-            draw.text((232+i*358,103),challenge_time,fill=(255,215,0),font=f16)
+            challenge_time_str=f"{challenge_time['year']}/{challenge_time['month']}/{challenge_time['day']} {challenge_time['hour']}:{challenge_time['minute']}"
+            draw.text((time_x_offsets[i],103),challenge_time_str,fill=(255,215,0),font=f16)
             
             team=node["avatars"]
             if team:
-                tasks.append(self._render_team(team, main_img, i))
+                tasks.append(self._render_team(team, main_img, i, col_width))
             
             score=int(node["score"])
-            draw.text((69+i*400,137),f"{score}",font=f16,fill=(255,215,0,255))
+            draw.text((score_x_offsets[i],137),f"{score}",font=f16,fill=(255,215,0,255))
             t_score+=score
+        
         draw.text((259,59),f"{t_score}",font=f16,fill=(255,215,0,255))
         await asyncio.gather(*tasks)
         return main_img

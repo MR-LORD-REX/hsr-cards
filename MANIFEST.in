@@ -1,4 +1,3 @@
 include README.md
 include LICENSE
-recursive-include hsr_cards/assets *
-recursive-include hsr_cards/fonts *
+recursive-include src/hsr_cards/assets *
