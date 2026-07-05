@@ -6,6 +6,16 @@ import string
 import time
 import os
 
+def check_cookies():
+    ltoken = os.getenv("ltoken_v2")
+    ltuid = os.getenv("ltuid_v2")
+    uid = os.getenv("default_uid")
+    if not ltoken or not ltuid or not uid:
+        raise ValueError("Environment variables 'ltoken_v2', 'ltuid_v2', or 'default_uid' are not set. Please add them to your .env file and load it using load_dotenv()")
+    else:
+        print("Environment variables 'ltoken_v2', 'ltuid_v2', and 'default_uid' are set correctly.")
+
+check_cookies()
 
 def generate_ds() -> str:
     t = int(time.time())

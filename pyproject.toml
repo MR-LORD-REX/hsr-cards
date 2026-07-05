@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hsr-cards"
-version = "1.0.6"
+version = "1.0.7"
 description = "A library to generate Honkai Star Rail player stats cards with async support"
 readme = "README.md"
 requires-python = ">=3.10"
