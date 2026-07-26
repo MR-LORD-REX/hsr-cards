@@ -15,11 +15,19 @@ from .models.notes import NotesResponse, NotesData
 from PIL import Image
 
 class HonkaiStarrail:
-    def __init__(self, uid: int | str, cookie: Cookies | None = None):
+    def __init__(
+        self, uid: int | str, 
+        cookie: Cookies | None = None,
+        proxy: str | None = None
+        ):
         self.uid = str(uid)
         self.cookie = cookie
         cookie_dict = cookie.model_dump() if cookie is not None else None
-        self.api = BaseAPI(self.uid, cookie=cookie_dict)
+        self.api = BaseAPI(
+            self.uid, 
+            cookie=cookie_dict,
+            proxy=proxy
+        )
         
     def _check_server(self):
         if self.uid.startswith("1") or self.uid.startswith("8"):

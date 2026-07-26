@@ -5,11 +5,18 @@ from ..utils.errors import APIError
 
 
 class BaseAPI:
-    def __init__(self, uid: int | str, cookie: Optional[Mapping[str, str]] = None):
+    def __init__(
+        self, 
+        uid: int | str, 
+        cookie: Optional[Mapping[str, str]] = None,
+        proxy: Optional[str] = None
+        ):
         self.uid = uid
         self.cookie=cookie
         self.endpoints = BaseEndpoint(cookie=cookie)
-        self.session = aiohttp.ClientSession()
+        self.session = aiohttp.ClientSession(
+            proxy=proxy
+        ) if proxy else aiohttp.ClientSession()
 
     async def __aenter__(self):
         return self
