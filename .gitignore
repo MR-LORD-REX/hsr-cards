@@ -6,4 +6,3 @@ build/
 venv/
 .env
 .venv/
-main.py
