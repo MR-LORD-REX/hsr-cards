@@ -6,3 +6,5 @@ build/
 venv/
 .env
 .venv/
+.nanoka_cache/
+.test_nanoka_cache/
