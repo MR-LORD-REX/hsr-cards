@@ -7,11 +7,13 @@ from .renderer.hoyolab.banners import BannerRenderer
 from .renderer.hoyolab.events import EventsRenderer
 from .renderer.hoyolab.endgame import EndgameRenderer
 from .renderer.hoyolab.notes import NotesRenderer
+from .renderer.hoyolab.currencywar import CurrencyWarRenderer, CurrencyWarResult
 from .api.base_api import BaseAPI
 from .utils.errors import HSR_Error
 from .models.auth import Cookies
 from .models.events import CalendarData, CalendarResponse
 from .models.notes import NotesResponse, NotesData
+from .models.currencywar import CurrencyWarData, CurrencyWarResponse 
 from PIL import Image
 
 class HonkaiStarrail:
@@ -173,6 +175,33 @@ class HonkaiStarrail:
             raise
         except Exception as e:
             raise HSR_Error(f"Failed to render notes: {e}")
+
+    async def currency_war(
+        self,
+        index: int = 0,
+        raw: bool = False,
+    ) -> "CurrencyWarResult | tuple[CurrencyWarResult, CurrencyWarData]":
+        """Render one Currency Wars run.
+
+        ``index`` follows the API order (0 is the most recent run) and accepts
+        negative values. The result exposes ``image``, ``current``, ``next()``,
+        ``prev()`` and ``all`` for paging through the recent runs.
+        """
+        try:
+            server = self._check_server()
+            raw_data = await self.api._fetch_currency_war(server=server)
+            parsed = CurrencyWarResponse.model_validate(raw_data)
+            if parsed.retcode != 0 or parsed.data is None:
+                raise HSR_Error(f"API error {parsed.retcode}: {parsed.message}")
+            async with CurrencyWarRenderer() as renderer:
+                result = await renderer.render_currency_war(parsed.data, index)
+            if raw:
+                return result, parsed.data
+            return result
+        except HSR_Error:
+            raise
+        except Exception as e:
+            raise HSR_Error(f"Failed to render currency war: {e}")
 
     async def verify_cookies(self) -> bool:
         if self.cookie is None:

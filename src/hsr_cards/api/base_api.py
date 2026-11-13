@@ -101,6 +101,26 @@ class BaseAPI:
             print(f"Error fetching AS data: {e}")
             return {}
     
+    async def _fetch_currency_war(
+        self,
+        server: Literal[
+            "prod_official_asia",
+            "prod_official_usa",
+            "prod_official_eur",
+            "prod_official_cn",
+            "prod_official_sea",
+        ] = "prod_official_asia",
+    ) -> dict:
+        params = {"server": server, "role_id": self.uid}
+        headers = self.endpoints.headers
+        base_url = self.endpoints.CURRENCY_WAR
+        try:
+            async with self.session.get(base_url, params=params, headers=headers) as response:
+                return await response.json()
+        except Exception as e:
+            print(f"Error fetching currency war data: {e}")
+            return {}
+
     async def _fetch_notes(
         self,
         server: Literal[

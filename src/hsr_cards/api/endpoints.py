@@ -48,6 +48,7 @@ class BaseEndpoint:
     AS: str = 'https://sg-public-api.hoyolab.com/event/game_record/hkrpg/api/challenge_boss'
     NOTES: str = 'https://sg-act-public-api.hoyolab.com/event/game_record/hkrpg/api/note'
     ACT_CALENDAR: str = 'https://sg-act-public-api.hoyolab.com/event/game_record/hkrpg/api/get_act_calender'
+    CURRENCY_WAR: str = 'https://sg-act-public-api.hoyolab.com/event/game_record/hkrpg/api/grid_fight'
 
     cookie: Optional[Mapping[str, str]] = field(default=None)
 

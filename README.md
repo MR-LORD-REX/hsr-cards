@@ -236,9 +236,25 @@ Main client class for generating cards.
 - `banners()` -> `Image`: Generate the current banner card
 - `events()` -> `Image`: Generate the current events card
 - `endgame()` -> `Image`: Generate the current endgame card
+- `fetch_currency_war(index=0, raw=False)` -> `CurrencyWarResult`: Render one Currency Wars run
 - `notes(raw=False)` -> `Image | (Image, NotesData)`: Generate a notes card
 - `get_character_info(identifier, version=None, ...)` -> `InfoCardResult`: Generate a Nanoka info card
 - `get_character_skills(identifier, version=None, ...)` -> `SkillsCardResult`: Generate a Nanoka skills card
+
+`fetch_currency_war()` returns a `CurrencyWarResult` with:
+
+- `.image` - a 720 px wide PNG-ready PIL image of one run (Telegram friendly);
+- `.current` - the rendered run index, newest run first;
+- `.next()` / `.prev()` - the adjacent run index, or `None` at either end;
+- `.all` - every available run index, e.g. `[0, 1, 2]`.
+
+```python
+async with HonkaiStarrail("800556377") as client:
+    run = await client.fetch_currency_war(0)
+    run.image.save("Cards/CurrencyWar.png")
+    for i in run.all:
+        (await client.fetch_currency_war(i)).image.save(f"Cards/CurrencyWar_{i}.png")
+```
 
 All methods are async. Player methods return PIL images; Nanoka card methods return the
 result objects described above.

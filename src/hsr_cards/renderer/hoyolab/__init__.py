@@ -2,6 +2,7 @@
 
 from .anomaly import AnomalyRenderer
 from .banners import BannerRenderer
+from .currencywar import CurrencyWarRenderer
 from .endgame import EndgameRenderer
 from .events import EventsRenderer
 from .finction import PFRenderer
@@ -13,6 +14,7 @@ __all__ = [
     "AnomalyRenderer",
     "ASRenderer",
     "BannerRenderer",
+    "CurrencyWarRenderer",
     "EndgameRenderer",
     "EventsRenderer",
     "MOCRenderer",
