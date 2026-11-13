@@ -1,0 +1,17 @@
+{
+    "1308":  {
+                 "char_name":  "Acheron",
+                 "raw_url":  "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/1308.png",
+                 "git_url":  "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/1308.png"
+             },
+    "1415":  {
+                 "char_name":  "Cyrene",
+                 "raw_url":  "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/1415.png",
+                 "git_url":  "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/1415.png"
+             },
+    "1511":  {
+                 "char_name":  "Aeon ★ Aha",
+                 "raw_url":  "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/1511.png",
+                 "git_url":  "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/1511.png"
+             }
+}

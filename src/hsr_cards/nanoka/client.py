@@ -5,6 +5,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable, Literal, TypeVar
 
+from PIL import Image
+
+from ..builds import find_build, load_build_image
 from .cache import NanokaCache, collect_asset_specs, default_cache_root, mode_key
 from .constants import (
     DEFAULT_ASSET_BASE_URL,
@@ -373,6 +376,52 @@ class NanokaClient:
             return None
         detail = await self.get_character_detail(summary.id, refresh=False) if include_details else None
         return Character(summary=summary, detail=detail, locale=self.language)
+
+    async def character_build(
+        self,
+        identifier: int | str | None = None,
+        url: bool = False,
+        *,
+        name: str | None = None,
+        element: str | None = None,
+        path: str | None = None,
+        rarity: int | None = None,
+        released: bool | None = None,
+        include_beta: bool = True,
+        search: str | None = None,
+        build_dir: str | Path | None = None,
+        **filters: Any,
+    ) -> Image.Image | str | None:
+        """Return a community build card for an id, name, or catalog filter.
+
+        ``url=True`` returns the GitHub raw image URL instead of loading the
+        local PNG. Returns ``None`` when no build is available for the resolved
+        character.
+        """
+        record = find_build(identifier, name=name, search=search, build_dir=build_dir)
+        if record is None:
+            character = await self.get_character(
+                identifier,
+                name=name,
+                element=element,
+                path=path,
+                rarity=rarity,
+                released=released,
+                include_beta=include_beta,
+                search=search,
+                include_details=False,
+                **filters,
+            )
+            if character is None:
+                return None
+            record = find_build(character.summary.id, build_dir=build_dir)
+            if record is None:
+                record = find_build(character.summary.name, build_dir=build_dir)
+        if record is None:
+            return None
+        if url:
+            return record.raw_url
+        return load_build_image(record)
 
     async def get_character_detail(self, identifier: int | str, *, refresh: bool = False) -> CharacterDetail:
         payload = await self._detail("character", identifier, refresh=refresh)

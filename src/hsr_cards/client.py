@@ -1,4 +1,5 @@
-from typing import Literal
+from pathlib import Path
+from typing import Any, Literal
 from .renderer.hoyolab.anomaly import AnomalyRenderer
 from .renderer.hoyolab.moc import MOCRenderer
 from .renderer.hoyolab.finction import PFRenderer
@@ -14,6 +15,7 @@ from .models.auth import Cookies
 from .models.events import CalendarData, CalendarResponse
 from .models.notes import NotesResponse, NotesData
 from .models.currencywar import CurrencyWarData, CurrencyWarResponse 
+from .builds import BUILD_METADATA_URL, update_build_assets
 from PIL import Image
 
 class HonkaiStarrail:
@@ -213,6 +215,72 @@ class HonkaiStarrail:
         except Exception:
             return False
 
+    async def update_nanoka_assets(
+        self,
+        *,
+        version: str | None = None,
+        force: bool = False,
+    ) -> None:
+        """Refresh the Nanoka cache with the same rules as ``update_assets``.
+
+        ``version`` switches to and refreshes one published build; ``force``
+        revalidates the active build even when its manifest looks complete.
+        """
+        from .nanoka import NanokaClient
+
+        async with NanokaClient() as nanoka:
+            await nanoka.update_assets(version=version, force=force)
+
+    async def character_build(
+        self,
+        identifier: int | str | None = None,
+        url: bool = False,
+        *,
+        name: str | None = None,
+        element: str | None = None,
+        path: str | None = None,
+        rarity: int | None = None,
+        released: bool | None = None,
+        include_beta: bool = True,
+        search: str | None = None,
+        build_dir: str | Path | None = None,
+        **filters: Any,
+    ) -> Image.Image | str | None:
+        """Return a community build card or its raw GitHub URL.
+
+        Identifiers follow Nanoka's resolution rules: pass an id, a character
+        name, or catalog filters. ``url=True`` returns ``raw_url`` from
+        ``metadata.json`` instead of loading the local PNG.
+        """
+        from .nanoka import NanokaClient
+
+        async with NanokaClient(include_assets=False) as nanoka:
+            return await nanoka.character_build(
+                identifier,
+                name=name,
+                element=element,
+                path=path,
+                rarity=rarity,
+                released=released,
+                include_beta=include_beta,
+                search=search,
+                url=url,
+                build_dir=build_dir,
+                **filters,
+            )
+
+    async def update_builds(
+        self,
+        *,
+        metadata_url: str = BUILD_METADATA_URL,
+        build_dir: str | Path | None = None,
+    ) -> int:
+        """Refresh local community build images from the repository metadata."""
+        return await update_build_assets(
+            self.api.session,
+            metadata_url=metadata_url,
+            build_dir=build_dir,
+        )
 
     async def get_character_info(
         self,

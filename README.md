@@ -211,6 +211,44 @@ for identifier, error in batch.errors.items():
 `HonkaiStarrail.render_all_info(...)` and `.render_all_skills(...)` delegate to the same
 functions.
 
+## Character Build Cards
+
+Community build-guide cards live in `src/hsr_cards/assets/char_builds/`. Images are named
+`<character_id>.png` and described by `metadata.json`:
+
+```json
+{
+  "1308": {
+    "char_name": "Acheron",
+    "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/1308.png",
+    "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/1308.png"
+  }
+}
+```
+
+`character_build()` is available on both `NanokaClient` and `HonkaiStarrail`. It follows
+Nanoka's identifier rules (numeric id, published name, or catalog filters) and scans the
+build directory at call time. It returns a PIL image, or the GitHub raw URL when `url=True`.
+If no build exists for the resolved character it returns `None`.
+
+```python
+async with HonkaiStarrail("800556377") as client:
+    image = await client.character_build("Acheron")
+    image.save("Cards/Acheron-build.png")
+    raw_url = await client.character_build(1511, url=True)
+```
+
+`update_builds()` fetches the repository `metadata.json`, merges it into the local copy,
+downloads each `raw_url` to `<character_id>.png`, and returns the number of updated images.
+Local-only metadata entries are preserved, so small asset additions do not require a new
+package release.
+
+```python
+async with HonkaiStarrail("800556377") as client:
+    updated = await client.update_builds()
+    await client.update_nanoka_assets(force=True)
+```
+
 ## Requirements
 
 - Python 3.10+
@@ -236,12 +274,15 @@ Main client class for generating cards.
 - `banners()` -> `Image`: Generate the current banner card
 - `events()` -> `Image`: Generate the current events card
 - `endgame()` -> `Image`: Generate the current endgame card
-- `fetch_currency_war(index=0, raw=False)` -> `CurrencyWarResult`: Render one Currency Wars run
+- `currency_war(index=0, raw=False)` -> `CurrencyWarResult`: Render one Currency Wars run
 - `notes(raw=False)` -> `Image | (Image, NotesData)`: Generate a notes card
+- `character_build(identifier, url=False, ...)` -> `Image | str | None`: Return a community build card or its raw GitHub URL
+- `update_builds()` -> `int`: Refresh bundled community build images from the repository metadata
+- `update_nanoka_assets(version=None, force=False)` -> `None`: Refresh the Nanoka cache
 - `get_character_info(identifier, version=None, ...)` -> `InfoCardResult`: Generate a Nanoka info card
 - `get_character_skills(identifier, version=None, ...)` -> `SkillsCardResult`: Generate a Nanoka skills card
 
-`fetch_currency_war()` returns a `CurrencyWarResult` with:
+`currency_war()` returns a `CurrencyWarResult` with:
 
 - `.image` - a 720 px wide PNG-ready PIL image of one run (Telegram friendly);
 - `.current` - the rendered run index, newest run first;
@@ -250,10 +291,10 @@ Main client class for generating cards.
 
 ```python
 async with HonkaiStarrail("800556377") as client:
-    run = await client.fetch_currency_war(0)
+    run = await client.currency_war(0)
     run.image.save("Cards/CurrencyWar.png")
     for i in run.all:
-        (await client.fetch_currency_war(i)).image.save(f"Cards/CurrencyWar_{i}.png")
+        (await client.currency_war(i)).image.save(f"Cards/CurrencyWar_{i}.png")
 ```
 
 All methods are async. Player methods return PIL images; Nanoka card methods return the
@@ -264,8 +305,8 @@ result objects described above.
 Create a `.env` file in your project root (see `.env_example`):
 
 ```
-ltoken_v2=v2_CAISdKm9p8FxQ3sZ4gT0RJlkfFn3NbX7tCmmE9ff0ZqjKaB2xPkHYqThZsFQPP5is4NCd2Rjc19vdmVyc2Vh.GxGYbRBBBBBD.MVRCIDFy85cHYgYnvbC4tLpI8wZx0NKq0nq5SKz6o9cE1h_hCjBq2igWd0n4ZBU1rSI52elPNjsgFHz2IRrKLbuI8O7lB
-ltuid_v2=242012003
+ltoken_v2=v2_CAISdKm9p8FxQ3sZ4gT0RJlkfFn3NbX7tCmmE9ff0Zq
+ltuid_v2=2420xxxx
 ```
 
 ## License
