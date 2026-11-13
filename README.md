@@ -100,15 +100,25 @@ async def main():
         print(character.display_name(), character.element, character.path)
         print(latest.id, boss.boss_names, next_pf.boss_names)
 
-        await client.update_assets()               # revalidate and pull new releases
+        builds = await client.get_versions()       # published builds + live server/beta
+        await client.update_assets(version=builds.latest)
+        await client.clear_cache(version=builds.live_server)
 
 
 asyncio.run(main())
 ```
 
-- Cache layout: `.nanoka_cache/<version>/<locale>/{data,assets}/manifest.json`.
-  Pass `cache_dir=` to relocate it; `clear_cache()` removes only the active
-  version/locale; `update_assets(force=True)` revalidates everything.
+
+- Cache layout: `.nanoka_cache/<version>/<locale>/{data,assets}/manifest.json`, plus
+  `.nanoka_cache/manifest.json` for the published version list. Pass `cache_dir=` to
+  relocate the root. `update_assets(force=True)` revalidates the active build;
+  `update_assets(version="4.7.51")` switches to and refreshes one published build.
+  `clear_cache(version="4.7.51")` removes that version; `clear_cache()` clears all
+  versions and the global manifest.
+- `get_versions(refresh=False)` returns a `NanokaVersions` model with `versions`
+  (every published build), `live_server` (for example `4.7`), `live_beta` (the
+  newest patch build, for example `4.7.51`), and `latest`. Pass `refresh=True` to
+  bypass the cached global manifest.
 - Versions resolve through `static.nanoka.cc/manifest.json`; pass `version="4.7.51"`
   (or another published build) to pin one.
 - Locales: `en`, `zh`, `ja`, `ko` (plus aliases such as `en-us`, `zh-cn`, `jp`, `kr`).
@@ -121,6 +131,56 @@ asyncio.run(main())
   boss/stage data ready for card generation.
 - Set `include_assets=False` for JSON-only caches. Without a preceding full
   `initialize()`, `character_assets()` lazy-downloads the icons it needs.
+
+## Character Cards
+
+The Nanoka renderer is available from the package root. Character identifiers may be a
+numeric id or a published name. Omit `version` for the newest build, pass one version for
+a single-version card, or pass `(from_version, to_version)` for an inline comparison.
+
+```python
+import asyncio
+from hsr_cards import get_character_info, get_character_skills
+
+
+async def main():
+    info = await get_character_info("Mortenax Blade")
+    skills = await get_character_skills(1415, version="4.7.51")
+    compare_info = await get_character_info(1512, version=("4.6", "4.7.51"))
+    compare_skills = await get_character_skills(
+        1512, version=("4.6", "4.7.51"), locale="ja"
+    )
+    info.save("info.png")
+    skills.save("skills.png")
+    compare_info.save("info-compare.png")
+    compare_skills.save("skills-compare.png")
+
+
+asyncio.run(main())
+```
+
+Both functions accept `locale`, `cache_dir`, `proxy`, `rendered_cache_dir`, and
+`use_rendered_cache` keyword arguments. Info cards are 1080x1440. Skills sheets are
+1920 px wide and grow vertically as the kit requires; a long kit can be taller than
+3188 px. Changed blocks are tinted, removed text is struck through, and added text is
+highlighted for comparisons.
+
+`get_character_info()` returns an `InfoCardResult`; `get_character_skills()` returns a
+`SkillsCardResult`. Both expose `.image` and delegate `.save()` to the PIL image.
+`SkillsCardResult` also exposes:
+
+- `.tables` - one 2D `list[list[str]]` per skill, including the `A`/`B` column headers;
+- `.table_models` - labeled `SkillTable` objects (`label`, `table_id`, `rows`);
+- `.dropdowns` - label -> table index for building rich messages;
+- `.sections` - labeled skill, eidolon, and material key/value data;
+- `.to_json_dict()` - a JSON-serializable payload of the four fields above.
+
+For comparison skills, changed table cells read `old -> new` (for example
+`100% -> 120%`), while descriptions keep their `(A)`/`(B)` column references.
+
+Rendered non-player cards are cached in `.hsr_cards_rendered/` using
+`{character}_{card_type}_{version}.png`; comparisons use both versions joined by `--`.
+Pass `use_rendered_cache=False` to force a fresh render.
 
 ## Requirements
 
@@ -140,12 +200,19 @@ Main client class for generating cards.
 - `uid` (int | str): Your Honkai Star Rail UID
 
 **Methods:**
-- `anomaly()` → Image: Generate anomaly card
-- `PF(schedule_type)` → Image: Generate Pure Fiction card
-- `MOC(schedule_type)` → Image: Generate Memory of Chaos card
-- `shadow(schedule_type)` → Image: Generate Apocalyptic Shadow card
+- `anomaly()` -> `Image`: Generate an Anomaly card
+- `PF(schedule_type)` -> `Image`: Generate a Pure Fiction card
+- `MOC(schedule_type)` -> `Image`: Generate a Memory of Chaos card
+- `shadow(schedule_type)` -> `Image`: Generate an Apocalyptic Shadow card
+- `banners()` -> `Image`: Generate the current banner card
+- `events()` -> `Image`: Generate the current events card
+- `endgame()` -> `Image`: Generate the current endgame card
+- `notes(raw=False)` -> `Image | (Image, NotesData)`: Generate a notes card
+- `get_character_info(identifier, version=None, ...)` -> `InfoCardResult`: Generate a Nanoka info card
+- `get_character_skills(identifier, version=None, ...)` -> `SkillsCardResult`: Generate a Nanoka skills card
 
-All methods are async and return PIL Image objects.
+All methods are async. Player methods return PIL images; Nanoka card methods return the
+result objects described above.
 
 ## Environment Variables
 

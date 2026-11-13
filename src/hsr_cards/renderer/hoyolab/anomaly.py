@@ -1,17 +1,17 @@
-from .team import render_team
-from .stars import render_stars
-from ..utils.hsrfonts import HSRFonts
-from ..utils.errors import AnomalyDataError
+from ..common.team import render_team
+from ..common.stars import render_stars
+from ...utils.hsrfonts import HSRFonts
+from ...utils.errors import AnomalyDataError
 import asyncio
 from PIL import Image , ImageDraw
 from io import BytesIO
 from pathlib import Path
 import aiohttp
 
-main_bg=Path(__file__).parent.parent / "assets"/"backgrounds"/"ANO"/"main_bg.png"
+main_bg=Path(__file__).parent.parent.parent / "assets"/"backgrounds"/"ANO"/"main_bg.png"
 
-star_boss=Path(__file__).parent.parent / "assets"/"backgrounds"/"ANO"/"star_boss.png"
-star_gold=Path(__file__).parent.parent / "assets"/"backgrounds"/"ANO"/"star_gold.png"
+star_boss=Path(__file__).parent.parent.parent / "assets"/"backgrounds"/"ANO"/"star_boss.png"
+star_gold=Path(__file__).parent.parent.parent / "assets"/"backgrounds"/"ANO"/"star_gold.png"
 
 class AnomalyRenderer:
     def __init__(self):

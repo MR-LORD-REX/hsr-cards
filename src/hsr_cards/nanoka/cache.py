@@ -3,6 +3,7 @@ from __future__ import annotations
 import asyncio
 import json
 import os
+import time
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -29,9 +30,13 @@ from .endpoints import (
 from .exceptions import NanokaCacheError, NanokaHTTPError
 from .http import AsyncHTTP
 from .locales import Locale
-from .models import AssetInfo, CacheManifest, as_utc
+from .models import AssetInfo, CacheManifest, NanokaVersions, as_utc
 
 MANIFEST_NAME = "manifest.json"
+
+
+def _version_key(value: str) -> tuple[int, ...]:
+    return tuple(int(part) for part in str(value).split(".") if part.isdigit())
 
 
 def default_cache_root() -> Path:
@@ -201,6 +206,81 @@ class NanokaCache:
             self.version = latest
         return self.version
 
+    async def write_global_manifest(self, payload: Any) -> None:
+        """Cache the root manifest for offline ``get_versions`` calls."""
+        if not isinstance(payload, dict):
+            return
+        def write():
+            atomic_write_text(
+                self.root / MANIFEST_NAME,
+                json.dumps(payload, ensure_ascii=False, indent=2),
+            )
+        await asyncio.to_thread(write)
+    async def versions(self, *, refresh: bool = False) -> NanokaVersions:
+        """Return the published HSR builds advertised by the root manifest."""
+        payload = None if refresh else self._read_global_manifest()
+        if not isinstance(payload, dict):
+            try:
+                payload = await self.http.get_json(self.manifest_url, allow_404=True)
+            except NanokaHTTPError as exc:
+                if self.exists():
+                    payload = {"hsr": {"latest": self.version, "live": self.live_version}}
+                else:
+                    raise exc
+            if isinstance(payload, dict):
+                await self.write_global_manifest(payload)
+        entry = payload.get("hsr") if isinstance(payload, dict) else None
+        entry = entry if isinstance(entry, dict) else {}
+        available = entry.get("available")
+        versions = [str(value) for value in available] if isinstance(available, list) else []
+        latest = entry.get("latest")
+        live = entry.get("live")
+        if isinstance(live, str) and live:
+            self.live_version = live
+        if isinstance(latest, str) and latest:
+            latest_value = latest
+        elif versions:
+            latest_value = max(versions, key=_version_key)
+        else:
+            latest_value = self.version
+        if latest_value and latest_value not in versions:
+            versions.append(latest_value)
+        beta = max(versions, key=_version_key) if versions else latest_value
+        return NanokaVersions(
+            versions=sorted(set(versions), key=_version_key),
+            live_server=live if isinstance(live, str) else None,
+            live_beta=beta,
+            latest=latest_value,
+        )
+
+    def _read_global_manifest(self) -> Any | None:
+        path = self.root / MANIFEST_NAME
+        if not path.is_file():
+            return None
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return None
+    async def clear_version(self, version: str | None = None) -> None:
+        """Remove one complete version tree, or every version when omitted."""
+        if version:
+            target = self.root / str(version)
+            if target.is_dir():
+                await asyncio.to_thread(shutil_rmtree, target)
+            if self.version == str(version):
+                self._manifest = None
+                self._validators = {}
+            return
+        self._manifest = None
+        self._validators = {}
+        for child in self.root.iterdir() if self.root.is_dir() else ():
+            if child.is_dir():
+                await asyncio.to_thread(shutil_rmtree, child)
+            else:
+                try:
+                    await asyncio.to_thread(child.unlink)
+                except OSError:
+                    pass
     async def ensure(self, *, force: bool = False, update: bool = False) -> CacheManifest:
         async with self._lock:
             manifest = self.read_manifest()
@@ -209,11 +289,9 @@ class NanokaCache:
                     if not self.include_assets or manifest.assets_complete:
                         return manifest
                     return await self._download_assets(manifest)
-                if not manifest and self._pinned_version:
-                    raise NanokaCacheError(
-                        f"No Nanoka cache for {self.version}/{self.locale.value}; "
-                        "call initialize() with network access first"
-                    )
+                # A pinned version without a cache still bootstraps from the
+                # CDN; otherwise ``NanokaClient(version="4.6")`` could never
+                # download that build's JSON on a first run.
             await self.resolve_version()
             manifest = self.read_manifest()
             if force or update or self.auto_update:
@@ -613,11 +691,14 @@ class NanokaCache:
         self._touch()
 
     async def asset(self, relative: str, *, download: bool = True) -> Path | None:
+        # ``include_assets`` controls the bulk download during ``ensure()``;
+        # an explicit single-asset request should still be able to fetch one
+        # file (the character cards rely on this for old, unpinned builds).
         await self.ensure()
         path = self.assets_dir / relative
         if path.is_file():
             return path
-        if not download or not self.include_assets:
+        if not download:
             return None
         if self._manifest is None:
             self._manifest = self.read_manifest() or self._new_manifest()
@@ -637,7 +718,16 @@ def atomic_write_bytes(path: Path, payload: bytes) -> None:
     temporary = path.with_suffix(path.suffix + ".tmp")
     try:
         temporary.write_bytes(payload)
-        os.replace(temporary, path)
+        for attempt in range(5):
+            try:
+                os.replace(temporary, path)
+                break
+            except PermissionError as exc:
+                # Windows can briefly hold the target open after a concurrent
+                # read; retry the atomic swap instead of failing the fetch.
+                if attempt == 4:
+                    raise NanokaCacheError(f"Could not update cache file {path}: {exc}") from exc
+                time.sleep(0.05 * (attempt + 1))
     finally:
         if temporary.exists():
             temporary.unlink(missing_ok=True)

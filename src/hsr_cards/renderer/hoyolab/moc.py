@@ -1,14 +1,14 @@
-from .team import render_team
-from .stars import render_stars
-from ..api.base_api import BaseAPI
+from ..common.team import render_team
+from ..common.stars import render_stars
+from ...api.base_api import BaseAPI
 from PIL import Image, ImageDraw, ImageFont
-from ..utils.hsrfonts import HSRFonts
+from ...utils.hsrfonts import HSRFonts
 from typing import Literal
-from ..utils.errors import MOCDataError
+from ...utils.errors import MOCDataError
 from pathlib import Path
 import asyncio
 
-_ASSETS = Path(__file__).parent.parent / "assets"
+_ASSETS = Path(__file__).parent.parent.parent / "assets"
 
 class MOCRenderer:
     def __init__(self):

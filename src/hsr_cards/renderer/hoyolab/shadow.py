@@ -1,8 +1,8 @@
-from ..api.base_api import BaseAPI
-from .team import render_team 
-from .stars import render_stars
-from ..utils.hsrfonts import HSRFonts
-from ..utils.errors import PFError
+from ...api.base_api import BaseAPI
+from ..common.team import render_team 
+from ..common.stars import render_stars
+from ...utils.hsrfonts import HSRFonts
+from ...utils.errors import PFError
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
 import asyncio
@@ -14,12 +14,12 @@ class ASRenderer:
     def __init__(self):
         self.api = BaseAPI
         self.fonts = HSRFonts()
-        self.floor_bg=Path(__file__).parent.parent / "assets" / "backgrounds" / "AS" / "floor_bg.png"
-        self.floor_bg_tierce=Path(__file__).parent.parent / "assets" / "backgrounds" / "AS" / "floor_bg_tierce.png"
-        self.buff_mask=Path(__file__).parent.parent / "assets" / "backgrounds" / "AS" / "buff_m.png"
-        self.header_bg=Path(__file__).parent.parent / "assets" / "backgrounds" / "AS" / "header_bg.png"
-        self.main_bg=Path(__file__).parent.parent / "assets" / "backgrounds" / "AS" / "main_bg.png"
-        self.boss_mask=Path(__file__).parent.parent / "assets" / "backgrounds" / "AS" / "boss_m.png"
+        self.floor_bg=Path(__file__).parent.parent.parent / "assets" / "backgrounds" / "AS" / "floor_bg.png"
+        self.floor_bg_tierce=Path(__file__).parent.parent.parent / "assets" / "backgrounds" / "AS" / "floor_bg_tierce.png"
+        self.buff_mask=Path(__file__).parent.parent.parent / "assets" / "backgrounds" / "AS" / "buff_m.png"
+        self.header_bg=Path(__file__).parent.parent.parent / "assets" / "backgrounds" / "AS" / "header_bg.png"
+        self.main_bg=Path(__file__).parent.parent.parent / "assets" / "backgrounds" / "AS" / "main_bg.png"
+        self.boss_mask=Path(__file__).parent.parent.parent / "assets" / "backgrounds" / "AS" / "boss_m.png"
         self.session = aiohttp.ClientSession()
         
     async def __aenter__(self):

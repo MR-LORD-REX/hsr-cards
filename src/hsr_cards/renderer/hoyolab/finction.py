@@ -1,8 +1,8 @@
-from ..api.base_api import BaseAPI
-from .team import render_team 
-from .stars import render_stars
-from ..utils.hsrfonts import HSRFonts
-from ..utils.errors import PFError
+from ...api.base_api import BaseAPI
+from ..common.team import render_team 
+from ..common.stars import render_stars
+from ...utils.hsrfonts import HSRFonts
+from ...utils.errors import PFError
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
 import asyncio
@@ -14,11 +14,11 @@ class PFRenderer:
     def __init__(self):
         self.api = BaseAPI
         self.fonts = HSRFonts()
-        self.floor_bg=Path(__file__).parent.parent / "assets" / "backgrounds" / "PF" / "floor_bg.png"
-        self.floor_bg_tierce=Path(__file__).parent.parent / "assets" / "backgrounds" / "PF" / "floor_bg_tierce.png"
-        self.buff_mask=Path(__file__).parent.parent / "assets" / "backgrounds" / "PF" / "buff_m.png"
-        self.header_bg=Path(__file__).parent.parent / "assets" / "backgrounds" / "PF" / "header_bg.png"
-        self.main_bg=Path(__file__).parent.parent / "assets" / "backgrounds" / "PF" / "main_bg.png"
+        self.floor_bg=Path(__file__).parent.parent.parent / "assets" / "backgrounds" / "PF" / "floor_bg.png"
+        self.floor_bg_tierce=Path(__file__).parent.parent.parent / "assets" / "backgrounds" / "PF" / "floor_bg_tierce.png"
+        self.buff_mask=Path(__file__).parent.parent.parent / "assets" / "backgrounds" / "PF" / "buff_m.png"
+        self.header_bg=Path(__file__).parent.parent.parent / "assets" / "backgrounds" / "PF" / "header_bg.png"
+        self.main_bg=Path(__file__).parent.parent.parent / "assets" / "backgrounds" / "PF" / "main_bg.png"
         self.session = aiohttp.ClientSession()
         
     async def __aenter__(self):

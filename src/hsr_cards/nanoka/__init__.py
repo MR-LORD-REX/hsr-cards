@@ -54,6 +54,7 @@ from .models import (
     MonsterSummary,
     MonsterVariant,
     NanokaModel,
+    NanokaVersions,
     PeakDetail,
     PeakSchedule,
     RelicSetDetail,
@@ -129,4 +130,5 @@ __all__ = [
     "AssetInfo",
     "CacheManifest",
     "NanokaModel",
+    "NanokaVersions",
 ]

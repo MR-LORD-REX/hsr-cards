@@ -1,14 +1,14 @@
-from ..utils.elements import Elements
-from ..utils.hsrfonts import HSRFonts
+from ...utils.elements import Elements
+from ...utils.hsrfonts import HSRFonts
 from PIL import Image, ImageDraw
 from pathlib import Path
 import asyncio
 
-char_icon=Path(__file__).parent.parent / "assets" / "team" / "char_icon.png"
-team_bg=Path(__file__).parent.parent / "assets" / "team" / "team_bg.png"
-circle_mask=Path(__file__).parent.parent / "assets" / "team" / "circle.png"
-ido_mask=Path(__file__).parent.parent / "assets" / "team" / "ido.png"
-lvl_mask=Path(__file__).parent.parent / "assets" / "team" / "lvl.png"
+char_icon=Path(__file__).parent.parent.parent / "assets" / "team" / "char_icon.png"
+team_bg=Path(__file__).parent.parent.parent / "assets" / "team" / "team_bg.png"
+circle_mask=Path(__file__).parent.parent.parent / "assets" / "team" / "circle.png"
+ido_mask=Path(__file__).parent.parent.parent / "assets" / "team" / "ido.png"
+lvl_mask=Path(__file__).parent.parent.parent / "assets" / "team" / "lvl.png"
 
 async def get_icon(url:str):
     import aiohttp

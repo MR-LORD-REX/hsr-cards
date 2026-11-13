@@ -3,10 +3,10 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter
 
-from ..models.notes import NotesData
-from ..utils.hsrfonts import HSRFonts
+from ...models.notes import NotesData
+from ...utils.hsrfonts import HSRFonts
 
-_ASSETS   = Path(__file__).parent.parent / "assets"
+_ASSETS   = Path(__file__).parent.parent.parent / "assets"
 _RESIN    = _ASSETS / "general" / "resin.png"
 
 BG        = (14,  14,  22,  255)

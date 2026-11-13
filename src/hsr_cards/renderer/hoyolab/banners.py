@@ -6,11 +6,11 @@ import aiohttp
 import asyncio
 from PIL import Image, ImageDraw, ImageFilter
 
-from ..models.events import CalendarData, CardPool, PoolAvatar, PoolEquip
-from ..utils.hsrfonts import HSRFonts
-from ..utils.elements import Elements
+from ...models.events import CalendarData, CardPool, PoolAvatar, PoolEquip
+from ...utils.hsrfonts import HSRFonts
+from ...utils.elements import Elements
 
-_ASSETS   = Path(__file__).parent.parent / "assets"
+_ASSETS   = Path(__file__).parent.parent.parent / "assets"
 _STAR_GOLD = _ASSETS / "backgrounds" / "ANO" / "star_gold.png"
 _STAR_NORM = _ASSETS / "backgrounds" / "ANO" / "star_normal.png"
 

@@ -1,8 +1,8 @@
 from pathlib import Path
 from PIL import Image , ImageDraw
 
-star_normal=Path(__file__).parent.parent / "assets"/"backgrounds"/"ANO"/"star_normal.png"
-star_gold=Path(__file__).parent.parent / "assets"/"backgrounds"/"ANO"/"star_gold.png"
+star_normal=Path(__file__).parent.parent.parent / "assets"/"backgrounds"/"ANO"/"star_normal.png"
+star_gold=Path(__file__).parent.parent.parent / "assets"/"backgrounds"/"ANO"/"star_gold.png"
 
 
 async def render_stars(gold_count:int):

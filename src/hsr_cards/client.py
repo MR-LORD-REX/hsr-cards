@@ -1,12 +1,12 @@
 from typing import Literal
-from .renderer.anomaly import AnomalyRenderer
-from .renderer.moc import MOCRenderer
-from .renderer.finction import PFRenderer
-from .renderer.shadow import ASRenderer
-from .renderer.banners import BannerRenderer
-from .renderer.events import EventsRenderer
-from .renderer.endgame import EndgameRenderer
-from .renderer.notes import NotesRenderer
+from .renderer.hoyolab.anomaly import AnomalyRenderer
+from .renderer.hoyolab.moc import MOCRenderer
+from .renderer.hoyolab.finction import PFRenderer
+from .renderer.hoyolab.shadow import ASRenderer
+from .renderer.hoyolab.banners import BannerRenderer
+from .renderer.hoyolab.events import EventsRenderer
+from .renderer.hoyolab.endgame import EndgameRenderer
+from .renderer.hoyolab.notes import NotesRenderer
 from .api.base_api import BaseAPI
 from .utils.errors import HSR_Error
 from .models.auth import Cookies
@@ -183,3 +183,57 @@ class HonkaiStarrail:
             return raw.get("retcode", -1) == 0
         except Exception:
             return False
+
+
+    async def get_character_info(
+        self,
+        identifier: int | str,
+        version: str | tuple[str, str] | list[str] | None = None,
+        *,
+        locale: str = "en",
+        cache_dir: str | None = None,
+        proxy: str | None = None,
+        rendered_cache_dir: str | None = None,
+        use_rendered_cache: bool = True,
+    ):
+        """Render a Nanoka character info card for this client's locale.
+
+        ``version`` follows Nanoka's rules: omit it for the newest published
+        build, pass one build for a pinned card, or pass ``(from, to)`` for a
+        comparison card.
+        """
+        from .renderer.nanoka import get_character_info as render_info
+
+        return await render_info(
+            identifier,
+            version,
+            locale=locale,
+            cache_dir=cache_dir,
+            proxy=proxy,
+            rendered_cache_dir=rendered_cache_dir,
+            use_rendered_cache=use_rendered_cache,
+        )
+
+    async def get_character_skills(
+        self,
+        identifier: int | str,
+        version: str | tuple[str, str] | list[str] | None = None,
+        *,
+        locale: str = "en",
+        cache_dir: str | None = None,
+        proxy: str | None = None,
+        rendered_cache_dir: str | None = None,
+        use_rendered_cache: bool = True,
+    ):
+        """Render a Nanoka skills/eidolon sheet and its rich-message payloads."""
+        from .renderer.nanoka import get_character_skills as render_skills
+
+        return await render_skills(
+            identifier,
+            version,
+            locale=locale,
+            cache_dir=cache_dir,
+            proxy=proxy,
+            rendered_cache_dir=rendered_cache_dir,
+            use_rendered_cache=use_rendered_cache,
+        )

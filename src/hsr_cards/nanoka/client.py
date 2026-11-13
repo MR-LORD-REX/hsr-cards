@@ -15,10 +15,11 @@ from .constants import (
     MODE_LABELS,
 )
 from .endpoints import DETAIL_FOLDERS
-from .exceptions import NanokaAssetError, NanokaNotFoundError
+from .exceptions import NanokaAssetError, NanokaHTTPError, NanokaNotFoundError
 from .http import AsyncHTTP
 from .locales import DEFAULT_LOCALE, Locale
 from .models import (
+    NanokaVersions,
     AchievementSeries,
     CharacterDetail,
     CharacterSummary,
@@ -228,14 +229,47 @@ class NanokaClient:
         self.version = self._cache.version
         return self
 
-    async def update_assets(self, *, force: bool = False) -> "NanokaClient":
-        """Revalidate against the CDN and download new data and icons."""
+    async def get_versions(self, *, refresh: bool = False) -> NanokaVersions:
+        """Return the builds currently published by Nanoka.
+
+        ``live_server`` is the stable game build (for example ``4.7``) and
+        ``live_beta`` is the newest published patch build (for example
+        ``4.7.51``). ``versions`` contains every selectable build.
+        """
+        return await self._cache.versions(refresh=refresh)
+
+
+    async def update_assets(
+        self,
+        *,
+        version: str | None = None,
+        force: bool = False,
+    ) -> "NanokaClient":
+        """Revalidate/download one published build, or the active build.
+
+        Passing ``version`` also switches the client to that build, so a
+        subsequent card render reads the assets that were just refreshed.
+        """
+        target = str(version).strip() if version else None
+        if target:
+            published = await self.get_versions()
+            if target not in published.versions:
+                raise ValueError(
+                    f"Unknown Nanoka version {target!r}; choose one of "
+                    f"{', '.join(published.versions)}"
+                )
+            self.version = target
+            self._cache.version = target
+            self._cache._pinned_version = True
+            self._cache._manifest = None
+            self._cache._validators = {}
         await self._cache.update(force=force)
         self.version = self._cache.version
         return self
 
-    async def clear_cache(self) -> None:
-        await self._cache.clear()
+    async def clear_cache(self, *, version: str | None = None) -> None:
+        """Clear one cached Nanoka build, or every build when omitted."""
+        await self._cache.clear_version(version)
 
     async def _prepare(self, refresh: bool = False) -> None:
         if refresh:
@@ -1185,6 +1219,23 @@ class NanokaClient:
     async def _find(self, items_awaitable, identifier: int | str):
         items = await items_awaitable
         return next((item for item in items if str(item.id) == str(identifier)), None)
+    async def fetch_asset(self, relative: str, *, refresh: bool = False) -> Path | None:
+        """Download one asset by its CDN-relative path.
+
+        ``relative`` is the path below ``https://static.nanoka.cc/assets/hsr/``
+        (for example ``skillicons/SkillIcon_1415_Ultra.webp``). This avoids a
+        full asset-bundle initialization when a card only needs a few icons.
+        """
+        await self._prepare(refresh)
+        normalized = relative.replace("\\", "/").lstrip("/")
+        path = self._cache.asset_file(normalized)
+        if path.is_file() and not refresh:
+            return path
+        try:
+            return await self._cache.asset(normalized)
+        except NanokaAssetError:
+            return None
+
     async def asset_path(self, value: str, *, refresh: bool = False) -> Path | None:
         """Resolve an icon path, ``kind:id`` key, or bare ID to a local file."""
         await self._prepare(refresh)

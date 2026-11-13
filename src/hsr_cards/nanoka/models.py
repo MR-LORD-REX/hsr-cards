@@ -1403,6 +1403,15 @@ class AssetInfo(NanokaModel):
     updated_at: datetime | None = None
 
 
+class NanokaVersions(NanokaModel):
+    """Published HSR data builds advertised by the Nanoka manifest."""
+
+    versions: list[str] = Field(default_factory=list)
+    live_server: str | None = None
+    live_beta: str | None = None
+    latest: str | None = None
+
+
 class CacheManifest(NanokaModel):
     schema_version: int = 2
     version: str
