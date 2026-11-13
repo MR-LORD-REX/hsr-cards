@@ -847,7 +847,8 @@ class SkillTreeLevel(NanokaModel):
     point_id: int | None = None
     point_name: str | None = None
     point_desc: str | None = None
-    point_trigger_key: int | None = None
+    # Older builds publish a label here ("PointNormal"); newer builds use an int.
+    point_trigger_key: int | str | None = None
     point_type: int | None = None
     pre_point: list[str | int] = Field(default_factory=list)
     status_add_list: list[dict[str, Any]] = Field(default_factory=list)

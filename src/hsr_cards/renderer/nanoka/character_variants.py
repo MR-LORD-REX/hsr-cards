@@ -25,6 +25,7 @@ from .character_info import (
     aggregate,
     asset,
     bonus_stats,
+    format_bonus,
     clean_localized,
     composite_panel,
     font,
@@ -228,7 +229,7 @@ class CardData:
     detail: Any
     items: dict[str, Any]
     stats: dict[str, float]
-    bonuses: list[tuple[str, float]]
+    bonuses: list[tuple[str, float, str]]
     sp_need: int | None
     icon_dir: Path | None
     ascension: list[Any]
@@ -628,22 +629,22 @@ def draw_stats_panel(canvas, draw, data: CardData, y: int, compact: bool = False
         stat_row(canvas, draw, data, col1, y + 60 + i * row_h, col_w, label, value, icon_name, 21 if compact else 22, 24, old_value)
     bonus_rows = []
     if before is None:
-        for label, value in data.bonuses[:6]:
-            bonus_rows.append((label.upper(), f"{value:g}%", bonus_icon_name(label), None))
+        for label, value, property_type in data.bonuses[:6]:
+            bonus_rows.append((label.upper(), format_bonus(value, property_type), bonus_icon_name(label), None))
     else:
-        old_bonuses = {label: value for label, value in before.bonuses}
-        new_bonuses = {label: value for label, value in data.bonuses}
+        old_bonuses = {label: (value, property_type) for label, value, property_type in before.bonuses}
+        new_bonuses = {label: (value, property_type) for label, value, property_type in data.bonuses}
         labels = list(new_bonuses)
         labels.extend(label for label in old_bonuses if label not in new_bonuses)
         for label in labels[:6]:
             current = new_bonuses.get(label)
             previous = old_bonuses.get(label)
             if current is None:
-                bonus_rows.append((label.upper(), f"{previous:g}%", bonus_icon_name(label), "removed"))
-            elif previous is not None and previous != current:
-                bonus_rows.append((label.upper(), f"{current:g}%", bonus_icon_name(label), f"{previous:g}%"))
+                bonus_rows.append((label.upper(), format_bonus(*previous), bonus_icon_name(label), "removed"))
+            elif previous is not None and previous[0] != current[0]:
+                bonus_rows.append((label.upper(), format_bonus(*current), bonus_icon_name(label), format_bonus(*previous)))
             else:
-                bonus_rows.append((label.upper(), f"{current:g}%", bonus_icon_name(label), None))
+                bonus_rows.append((label.upper(), format_bonus(*current), bonus_icon_name(label), None))
     row_h2 = (panel_h - 72) / max(len(bonus_rows), 1)
     for i, (label, value, icon_name, old_value) in enumerate(bonus_rows):
         if old_value == "removed":
@@ -699,10 +700,10 @@ def draw_compact_stats_panel(canvas, draw, data: CardData, y: int):
         draw.text((cx, sy), label, font=heavy(17, data.locale), fill=DIM)
         draw.text((cx, sy + 24), f"{value:,}", font=heavy(56, data.locale, display=True), fill=TEXT, stroke_width=1, stroke_fill=TEXT)
     draw.text((M + 624, sy), ui(data, "stat_bonus"), font=heavy(15, data.locale), fill=PURPLE)
-    for i, (label, value) in enumerate(data.bonuses[:3]):
+    for i, (label, value, property_type) in enumerate(data.bonuses[:3]):
         cy = sy + 34 + i * 44
         draw.text((M + 624, cy), label.upper(), font=heavy(12, data.locale), fill=DIM)
-        draw.text((M + 842, cy - 5), f"{value:g}%", font=heavy(28, data.locale, display=True), fill=TEXT if i < 2 else PURPLE)
+        draw.text((M + 842, cy - 5), format_bonus(value, property_type), font=heavy(28, data.locale, display=True), fill=TEXT if i < 2 else PURPLE)
     div_y = y + 180
     draw.line((sx, div_y, 1080 - M - 30, div_y), fill=LINE, width=1)
     secondary = [(ui(data, "spd"), f'{data.stats["spd"]:g}'), (ui(data, "crit_rate"), f'{data.stats["crit"]:g}%'), (ui(data, "crit_dmg"), f'{data.stats["crit_dmg"]:g}%'), (ui(data, "aggro"), f'{data.stats["aggro"]:g}')]

@@ -12,6 +12,8 @@ __all__ = [
     "Locale",
     "get_character_info",
     "get_character_skills",
+    "render_all_info",
+    "render_all_skills",
 ]
 
 
@@ -29,11 +31,13 @@ def __getattr__(name: str):
         from .nanoka import Locale, NanokaClient
 
         return {"NanokaClient": NanokaClient, "Locale": Locale}[name]
-    if name in {"get_character_info", "get_character_skills"}:
-        from .renderer.nanoka import get_character_info, get_character_skills
+    if name in {
+        "get_character_info",
+        "get_character_skills",
+        "render_all_info",
+        "render_all_skills",
+    }:
+        from .renderer import nanoka
 
-        return {
-            "get_character_info": get_character_info,
-            "get_character_skills": get_character_skills,
-        }[name]
+        return getattr(nanoka, name)
     raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

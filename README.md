@@ -180,7 +180,36 @@ For comparison skills, changed table cells read `old -> new` (for example
 
 Rendered non-player cards are cached in `.hsr_cards_rendered/` using
 `{character}_{card_type}_{version}.png`; comparisons use both versions joined by `--`.
-Pass `use_rendered_cache=False` to force a fresh render.
+Pass `use_rendered_cache=False` to skip writing, or `force_refresh=True` to rerender
+even when a cached file exists.
+
+### Rendering every character
+
+`render_all_info()` and `render_all_skills()` accept the same `version`, `locale`,
+`cache_dir`, `proxy`, `rendered_cache_dir`, and `use_rendered_cache` arguments as the
+single-character functions, plus:
+
+- `concurrency=4` - the maximum number of characters rendering at once;
+- `include_beta=True` - include unreleased Nanoka characters when listing the catalog;
+- `identifiers=[...]` - render this explicit subset instead of the whole catalog.
+
+They always rerender cards (an existing `.hsr_cards_rendered/` file is replaced) and
+return a `BatchRenderResult`. A failing character is captured in that character's
+`BatchCardResult.error` and never cancels the others:
+
+```python
+from hsr_cards import render_all_info, render_all_skills
+
+batch = await render_all_skills(("4.6.51", "4.6.54"), concurrency=6)
+for item in batch.succeeded:
+    print(item.identifier, item.image.size)
+for identifier, error in batch.errors.items():
+    print("failed", identifier, error)
+```
+
+`BatchRenderResult` exposes `.items`, `.succeeded`, `.failed`, `.errors`, and `.images`.
+`HonkaiStarrail.render_all_info(...)` and `.render_all_skills(...)` delegate to the same
+functions.
 
 ## Requirements
 

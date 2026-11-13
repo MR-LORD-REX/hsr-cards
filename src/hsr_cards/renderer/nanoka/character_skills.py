@@ -32,6 +32,9 @@ from .character_info import (
     PURPLE,
     TEXT,
     aggregate,
+    bonus_stats,
+    format_bonus,
+    max_stats,
     asset,
     clean_localized,
     composite_panel,
@@ -141,6 +144,9 @@ UI_LABELS = {
         "footer": "SKILLS / EIDOLONS", "passive": "PASSIVE",
         "memosprite": "MEMOSPRITE SKILLS",
         "energy": "Energy", "toughness": "Toughness", "sp": "SP Change",
+        "base_stats": "BASIC STATS", "base_hp": "Base HP", "base_atk": "Base ATK",
+        "base_def": "Base DEF", "base_spd": "Base SPD", "taunt": "Taunt",
+        "max_energy": "Max Energy", "total_bonus": "TOTAL STAT BONUS",
         "levels": "DEFAULT LEVELS  \u00b7  BASIC ATK 6  \u00b7  SKILL / ULTIMATE / TALENT 10  \u00b7  MEMOSPRITE 6  \u00b7  TECHNIQUE 1  \u00b7  TABLES: ALL LEVELS",
     },
     "zh": {
@@ -148,6 +154,9 @@ UI_LABELS = {
         "skills_sub": "\u9ed8\u8ba4\u6570\u503c  \u00b7  (#n) = \u8868\u683c\u5217",
         "eidolons_sub": "E1 - E6  \u00b7  \u56fa\u5b9a\u6570\u503c",
         "footer": "\u6280\u80fd / \u661f\u9b42", "passive": "\u88ab\u52a8",
+        "base_stats": "\u57fa\u7840\u5c5e\u6027", "base_hp": "\u57fa\u7840\u751f\u547d", "base_atk": "\u57fa\u7840\u653b\u51fb",
+        "base_def": "\u57fa\u7840\u9632\u5fa1", "base_spd": "\u57fa\u7840\u901f\u5ea6", "taunt": "\u5632\u8bbd",
+        "max_energy": "\u6700\u5927\u80fd\u91cf", "total_bonus": "\u603b\u5c5e\u6027\u52a0\u6210",
         "memosprite": "\u5fc6\u7075\u6280\u80fd",
     },
     "ja": {
@@ -155,6 +164,9 @@ UI_LABELS = {
         "skills_sub": "\u65e2\u5b9a\u5024  \u00b7  (#n) = \u8868\u306e\u5217",
         "eidolons_sub": "E1 - E6  \u00b7  \u56fa\u5b9a\u5024",
         "footer": "\u30b9\u30ad\u30eb / \u661f\u9b42", "passive": "\u30d1\u30c3\u30b7\u30d6",
+        "base_stats": "\u57fa\u790e\u30b9\u30c6\u30fc\u30bf\u30b9", "base_hp": "\u57fa\u790eHP", "base_atk": "\u57fa\u790e\u653b\u6483\u529b",
+        "base_def": "\u57fa\u790e\u9632\u5fa1\u529b", "base_spd": "\u57fa\u790e\u901f\u5ea6", "taunt": "\u30bf\u30a6\u30f3\u30c8",
+        "max_energy": "\u6700\u5927\u30a8\u30cd\u30eb\u30ae\u30fc", "total_bonus": "\u30b9\u30c6\u30fc\u30bf\u30b9\u30dc\u30fc\u30ca\u30b9",
         "memosprite": "\u30e1\u30e2\u30b9\u30d7\u30ea\u30c8\u30b9\u30ad\u30eb",
     },
     "ko": {
@@ -162,6 +174,9 @@ UI_LABELS = {
         "skills_sub": "\uae30\ubcf8\uac12  \u00b7  (#n) = \ud45c \uc5f4",
         "eidolons_sub": "E1 - E6  \u00b7  \uace0\uc815\uac12",
         "footer": "\uc2a4\ud0ac / \uc131\ud63c", "passive": "\ud328\uc2dc\ube0c",
+        "base_stats": "\uae30\ubcf8 \uc2a4\ud0ef", "base_hp": "\uae30\ubcf8 HP", "base_atk": "\uae30\ubcf8 \uacf5\uaca9\ub825",
+        "base_def": "\uae30\ubcf8 \ubc29\uc5b4\ub825", "base_spd": "\uae30\ubcf8 \uc18d\ub3c4", "taunt": "\ub3c4\ubc1c",
+        "max_energy": "\ucd5c\ub300 \uc5d0\ub108\uc9c0", "total_bonus": "\uc804\uccb4 \uc2a4\ud0ef \ubcf4\ub108\uc2a4",
         "memosprite": "\uae30\uc5b5\uc758 \uc815\ub839 \uc2a4\ud0ac",
     },
 }
@@ -292,6 +307,12 @@ class SkillData:
     eidolons: list[RankRow]
     memosprite_name: str = ""
     memosprite_code: str = ""
+    stats: dict[str, float] = field(default_factory=dict)
+    bonuses: list[tuple[str, float, str]] = field(default_factory=list)
+    sp_need: float = 0
+    stats_before: dict[str, float] | None = None
+    bonuses_before: list[tuple[str, float, str]] | None = None
+    sp_need_before: float | None = None
     version_before: str = ""
     version_after: str = ""
     detail: Any = None
@@ -850,20 +871,247 @@ def splash(canvas: Image.Image, data: SkillData, x: int, y: int, target_h: int) 
     return resized.width
 
 
-def splash_width(data: SkillData) -> int:
+def art_panel(data: SkillData, width: int, height: int) -> tuple[int, int, int, int]:
+    """Left header region that hosts the splash behind the identity text."""
+    return 0, 0, 812, height
+
+
+def scrim(size: tuple[int, int], horizontal: bool) -> Image.Image:
+    """Linear fade used to keep identity text readable over character art."""
+    w, h = size
+    layer = Image.new("RGBA", (max(1, w // 4), max(1, h // 4)), (0, 0, 0, 0))
+    pixels = layer.load()
+    small_w, small_h = layer.size
+    for y in range(small_h):
+        for x in range(small_w):
+            if horizontal:
+                t = x / max(small_w - 1, 1)
+                alpha = round(226 * (1 - t) ** 0.85)
+            else:
+                t = y / max(small_h - 1, 1)
+                alpha = round(180 * t ** 1.1)
+            pixels[x, y] = (12, 8, 23, alpha)
+    return layer.resize((w, h), Image.Resampling.BILINEAR)
+
+
+def header_art(canvas, data: SkillData, width: int, height: int) -> None:
     if not data.splash:
-        return 0
+        return
     image = trimmed_splash(data.splash)
-    return round(image.width * (HEADER_H - 30) / image.height)
+    target_h = height + 18
+    scale = target_h / image.height
+    resized = image.resize((round(image.width * scale), target_h), Image.Resampling.LANCZOS)
+    # Sit the art in the gap between the identity text and the stats panel
+    # instead of flush against the left edge, where it collided with the copy.
+    max_width = 470
+    if resized.width > max_width:
+        ratio = max_width / resized.width
+        resized = resized.resize((max_width, round(resized.height * ratio)), Image.Resampling.LANCZOS)
+    art_x = 812 - resized.width
+    art_y = height - resized.height + 26
+    canvas.alpha_composite(radial((700, 700), (246, 172, 87, 0.18)), (art_x + 20, art_y + 40))
+    canvas.alpha_composite(resized, (art_x, art_y))
+    canvas.alpha_composite(scrim((780, height), horizontal=True), (0, 0))
+    canvas.alpha_composite(scrim((780, height), horizontal=False), (0, 0))
 
 
-def splash_box(data: SkillData, width: int, height: int) -> tuple[int, int, int, int]:
-    art_w = splash_width(data)
-    return width - M - 18 - art_w, 30, width - M - 18, height - 30
+def stat_icon(data: SkillData, name: str | None, size: int = 18) -> Image.Image | None:
+    if not name:
+        return None
+    return load_webp(data.skill_icon_dir / name, (size, size))
+
+
+def draw_identity(canvas, draw, data: SkillData, width: int, height: int) -> None:
+    text_w = 556
+    title = data.name.upper() if data.locale == "en" else data.name
+    title_size = 48
+    while title_size > 34 and draw.textlength(
+        title, font=font(title_size, bold=True, display=True, locale=data.locale)
+    ) > text_w:
+        title_size -= 2
+    if any(ord(char) > 127 for char in title):
+        title_font = font_w(title_size, WEIGHT_BOLD, data.locale, title)
+    else:
+        title_font = font(title_size, bold=True, display=True, locale=data.locale)
+    y = 72
+    for line in wrap_locale(draw, title, title_font, text_w, data.locale)[:2]:
+        draw.text((M, y), line, font=title_font, fill=TEXT)
+        y += round(title_size * 1.12)
+    y += 8
+    for index in range(data.stars):
+        make_star(canvas, M + 12 + index * 25, y + 9, 10, GOLD)
+    y += 29
+    tag_x = M
+    for label, icon, color in (
+        (data.element_label.upper(), data.element_icon, FIRE),
+        (data.path_label.upper(), data.path_icon, PURPLE),
+    ):
+        fnt = font(12, bold=True, locale=data.locale)
+        tag_w = draw.textlength(label, font=fnt) + 40
+        composite_panel(canvas, (tag_x, y, tag_x + tag_w, y + 30), 15, (*color[:3], 42), (*color[:3], 132))
+        if icon:
+            canvas.alpha_composite(icon.resize((20, 20), Image.Resampling.LANCZOS), (round(tag_x) + 10, round(y) + 5))
+            draw.text((tag_x + 37, y + 7), label, font=fnt, fill=color)
+        else:
+            draw.text((tag_x + 18, y + 7), label, font=fnt, fill=color)
+        tag_x += tag_w + 9
+    if data.description:
+        desc_font = font(15, locale=data.locale)
+        y += 42
+        for line in wrap_locale(draw, data.description, desc_font, text_w, data.locale)[:3]:
+            draw_text_runs(draw, line, M, y, 15, WEIGHT_REGULAR, BODY_SOFT, data.locale)
+            y += 20
+
+def format_stat_value(value: float, *, comma: bool = False) -> str:
+    if comma:
+        return f"{value:,.0f}"
+    return f"{value:g}"
+
+
+def stat_pair(value: str, previous: str | None) -> str:
+    if previous is None or previous == value:
+        return value
+    return f"{previous} \u2192 {value}"
+
+
+def draw_stat_panel(canvas, draw, data: SkillData, x: int, y: int, width: int, height: int) -> None:
+    composite_panel(canvas, (x, y, x + width, y + height), 20, (19, 14, 33, 236), (255, 255, 255, 40))
+    draw.text((x + 22, y + 16), ui(data, "base_stats"), font=font_w(12, WEIGHT_BOLD, data.locale), fill=PURPLE)
+    draw.text(
+        (x + width - 22 - draw.textlength("LV. 80", font=font_w(11, WEIGHT_SEMI, data.locale)), y + 17),
+        "LV. 80",
+        font=font_w(11, WEIGHT_SEMI, data.locale),
+        fill=DIM,
+    )
+    draw.line((x + 22, y + 42, x + width - 22, y + 42), fill=LINE, width=1)
+    stats = data.stats
+    before = data.stats_before
+    specs = [
+        ("hp", ui(data, "base_hp"), "IconMaxHP.webp", True),
+        ("atk", ui(data, "base_atk"), "IconAttack.webp", True),
+        ("def", ui(data, "base_def"), "IconDefence.webp", True),
+        ("spd", ui(data, "base_spd"), "IconSpeed.webp", False),
+        ("aggro", ui(data, "taunt"), None, False),
+        (None, ui(data, "max_energy"), None, False),
+    ]
+    rows = max(1, len(specs))
+    row_h = (height - 52) / rows
+    for index, (key, label, icon_name, comma) in enumerate(specs):
+        ry = y + 50 + index * row_h
+        if key is None:
+            value = format_stat_value(data.sp_need, comma=False)
+            previous_value = (
+                format_stat_value(data.sp_need_before, comma=False)
+                if data.sp_need_before not in (None, data.sp_need)
+                else None
+            )
+        else:
+            value = format_stat_value(stats.get(key, 0), comma=comma)
+            previous_value = (
+                format_stat_value(before[key], comma=comma)
+                if before is not None and before.get(key) != stats.get(key)
+                else None
+            )
+        icon = stat_icon(data, icon_name, 18)
+        text_x = x + 24
+        if icon:
+            canvas.alpha_composite(icon, (x + 22, round(ry) - 2))
+            text_x = x + 48
+        draw.text((text_x, ry), label, font=font_w(13, WEIGHT_SEMI, data.locale), fill=MUTED)
+        text = stat_pair(value, previous_value)
+        value_font = font_w(14, WEIGHT_BOLD, data.locale)
+        value_w = draw.textlength(text, font=value_font)
+        value_color = GOLD if previous_value else TEXT
+        draw.text((x + width - 22 - value_w, ry - 1), text, font=value_font, fill=value_color)
+        if index < rows - 1:
+            draw.line((x + 22, ry + row_h - 7, x + width - 22, ry + row_h - 7), fill=(255, 255, 255, 18), width=1)
+        if previous_value:
+            change_overlay(canvas, (x + 12, ry - 6, x + width - 12, ry + row_h - 4), radius=8)
+
+
+def bonus_icon_name(label: str) -> str | None:
+    return {
+        "HP": "IconMaxHP.webp",
+        "ATK": "IconAttack.webp",
+        "DEF": "IconDefence.webp",
+        "SPD": "IconSpeed.webp",
+        "CRIT Rate": "IconCriticalChance.webp",
+        "CRIT DMG": "IconCriticalDamage.webp",
+        "Fire DMG Boost": "IconFireAddedRatio.webp",
+        "Ice DMG Boost": "IconIceAddedRatio.webp",
+        "Wind DMG Boost": "IconWindAddedRatio.webp",
+        "Lightning DMG Boost": "IconThunderAddedRatio.webp",
+        "Physical DMG Boost": "IconPhysicalAddedRatio.webp",
+        "Quantum DMG Boost": "IconQuantumAddedRatio.webp",
+        "Imaginary DMG Boost": "IconImaginaryAddedRatio.webp",
+    }.get(label)
+def draw_bonus_panel(canvas, draw, data: SkillData, x: int, y: int, width: int, height: int) -> None:
+
+
+    composite_panel(canvas, (x, y, x + width, y + height), 20, (19, 14, 33, 236), (255, 255, 255, 40))
+    draw.text((x + 22, y + 16), ui(data, "total_bonus"), font=font_w(12, WEIGHT_BOLD, data.locale), fill=PURPLE)
+    subtitle = "MINOR TRACES"
+    draw.text(
+        (x + width - 22 - draw.textlength(subtitle, font=font_w(10, WEIGHT_SEMI, data.locale)), y + 17),
+        subtitle,
+        font=font_w(10, WEIGHT_SEMI, data.locale),
+        fill=DIM,
+    )
+    draw.line((x + 22, y + 42, x + width - 22, y + 42), fill=LINE, width=1)
+
+    old = {label: (value, property_type) for label, value, property_type in (data.bonuses_before or [])}
+    labels = [label for label, _, _ in data.bonuses]
+    labels.extend(label for label in old if label not in labels)
+    rows = labels[:6]
+    columns = 3
+    tile_gap = 12
+    inner_w = width - 44
+    tile_w = (inner_w - tile_gap * (columns - 1)) / columns
+    tile_h = 86
+    for index, label in enumerate(rows):
+        col = index % columns
+        row = index // columns
+        bx = x + 22 + col * (tile_w + tile_gap)
+        by = y + 56 + row * (tile_h + 10)
+        current = next(
+            ((value, property_type) for name, value, property_type in data.bonuses if name == label),
+            None,
+        )
+        previous = old.get(label)
+        changed = current is None or (previous is not None and previous[0] != current[0])
+        tile_fill = (142, 216, 168, 20) if changed else (255, 255, 255, 16)
+        tile_edge = (142, 216, 168, 64) if changed else (255, 255, 255, 24)
+        composite_panel(canvas, (bx, by, bx + tile_w, by + tile_h), 14, tile_fill, tile_edge)
+        icon = stat_icon(data, bonus_icon_name(label), 16)
+        label_x = bx + 14
+        if icon:
+            canvas.alpha_composite(icon, (round(bx + 12), round(by + 12)) )
+            label_x = bx + 34
+        draw.text(
+            (label_x, by + 12),
+            fit(draw, label.upper(), font_w(10, WEIGHT_SEMI, data.locale), tile_w - (label_x - bx) - 12),
+            font=font_w(10, WEIGHT_SEMI, data.locale),
+            fill=MUTED,
+        )
+        if current is None:
+            value_text = format_bonus(*previous)
+            value_color = (224, 150, 164, 255)
+        else:
+            value_text = format_bonus(*current)
+            value_color = TEXT
+        draw.text((bx + 14, by + 34), value_text, font=font_w(24, WEIGHT_BOLD, data.locale, value_text), fill=value_color)
+        if current is not None and previous is not None and previous[0] != current[0]:
+            draw.text(
+                (bx + 14, by + tile_h - 22),
+                f"was {format_bonus(*previous)}",
+                font=font_w(9, WEIGHT_SEMI, data.locale),
+                fill=(224, 150, 164, 230),
+            )
 
 
 def header(canvas, draw, data: SkillData, width: int, height: int):
     draw.rectangle((0, 0, width, height), fill=(12, 8, 23, 255))
+    header_art(canvas, data, width, height)
     draw.line((M, 64, width - M, 64), fill=LINE, width=1)
     header_label = ui(data, "header")
     if data.comparison:
@@ -874,47 +1122,17 @@ def header(canvas, draw, data: SkillData, width: int, height: int):
         font=font(14, bold=True, locale=data.locale),
         fill=MUTED,
     )
-
-    art_x, art_y, art_right, art_bottom = splash_box(data, width, height)
-    if data.splash:
-        splash(canvas, data, art_x, art_y, height - 30)
-
     version_pill(canvas, draw, data, width)
+    draw_identity(canvas, draw, data, width, height)
 
-    text_w = max(900, art_x - M - 24)
-    title = data.name.upper() if data.locale == "en" else data.name
-    title_size = 54
-    while title_size > 36 and draw.textlength(title, font=font(title_size, bold=True, display=True, locale=data.locale)) > text_w:
-        title_size -= 2
-    title_font = font(title_size, bold=True, display=True, locale=data.locale)
-    y = 78
-    for line in wrap_locale(draw, title, title_font, text_w, data.locale)[:2]:
-        draw.text((M, y), line, font=title_font, fill=TEXT)
-        y += round(title_size * 1.02)
-    y += 5
-    for index in range(data.stars):
-        make_star(canvas, M + 13 + index * 30, y + 11, 12, GOLD)
-    y += 36
-    tag_x = M
-    for label, icon, color in (
-        (data.element_label.upper(), data.element_icon, FIRE),
-        (data.path_label.upper(), data.path_icon, PURPLE),
-    ):
-        fnt = font(13, bold=True, locale=data.locale)
-        tag_w = draw.textlength(label, font=fnt) + 42
-        composite_panel(canvas, (tag_x, y, tag_x + tag_w, y + 32), 16, (*color[:3], 33), (*color[:3], 126))
-        if icon:
-            canvas.alpha_composite(icon.resize((22, 22), Image.Resampling.LANCZOS), (round(tag_x) + 11, round(y) + 5))
-            draw.text((tag_x + 40, y + 7), label, font=fnt, fill=color)
-        else:
-            draw.text((tag_x + 20, y + 7), label, font=fnt, fill=color)
-        tag_x += tag_w + 10
-    if data.description:
-        desc_font = font(16, locale=data.locale)
-        y += 44
-        for line in wrap_locale(draw, data.description, desc_font, text_w, data.locale)[:3]:
-            draw_text_runs(draw, line, M, y, 16, WEIGHT_REGULAR, BODY_SOFT, data.locale)
-            y += 21
+    stats_x = 828
+    stats_w = 456
+    bonus_x = stats_x + stats_w + 18
+    bonus_w = width - M - bonus_x
+    panel_y = 82
+    panel_h = height - panel_y - 48
+    draw_stat_panel(canvas, draw, data, stats_x, panel_y, stats_w, panel_h)
+    draw_bonus_panel(canvas, draw, data, bonus_x, panel_y, bonus_w, panel_h)
 
     if data.comparison:
         draw.text(
@@ -930,7 +1148,6 @@ def header(canvas, draw, data: SkillData, width: int, height: int):
             font=font(9, bold=True, locale=data.locale),
             fill=DIM,
         )
-
 
 def section_title(draw, x: int, y: int, title: str, subtitle: str, width: int, locale: str, size: int = 20) -> int:
     draw.rectangle((x, y + 6, x + 24, y + 10), fill=PURPLE)
@@ -2172,6 +2389,22 @@ async def build_skill_data(character: CharacterData) -> SkillData:
         f"element/{element}.webp",
         f"pathicon/{path}.webp",
     ]
+    for icon in (
+        "IconMaxHP",
+        "IconAttack",
+        "IconDefence",
+        "IconSpeed",
+        "IconCriticalChance",
+        "IconCriticalDamage",
+        "IconFireAddedRatio",
+        "IconIceAddedRatio",
+        "IconWindAddedRatio",
+        "IconThunderAddedRatio",
+        "IconPhysicalAddedRatio",
+        "IconQuantumAddedRatio",
+        "IconImaginaryAddedRatio",
+    ):
+        relatives.append(f"skillicons/{icon}.webp")
     for suffix in ("Normal", "BP", "Ultra", "Passive", "Maze"):
         relatives.append(f"skillicons/SkillIcon_{character_id}_{suffix}.webp")
     if spprite_code:
@@ -2215,6 +2448,9 @@ async def build_skill_data(character: CharacterData) -> SkillData:
         memosprite_name=spprite_name,
         memosprite_code=spprite_code,
         detail=detail,
+        stats=max_stats(detail),
+        bonuses=bonus_stats(detail, locale),
+        sp_need=detail.sp_need or 0,
         items=character.items,
     )
     return data
@@ -2250,6 +2486,9 @@ async def build_comparison_data(
     mark_skill_diff(before, after)
     after.version_before = before.version
     after.version_after = after.version
+    after.stats_before = before.stats
+    after.bonuses_before = before.bonuses
+    after.sp_need_before = before.sp_need
     return after, before_data, after_data
 
 

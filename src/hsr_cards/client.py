@@ -237,3 +237,68 @@ class HonkaiStarrail:
             rendered_cache_dir=rendered_cache_dir,
             use_rendered_cache=use_rendered_cache,
         )
+
+    async def render_all_info(
+        self,
+        version: str | tuple[str, str] | list[str] | None = None,
+        *,
+        locale: str = "en",
+        cache_dir: str | None = None,
+        proxy: str | None = None,
+        rendered_cache_dir: str | None = None,
+        use_rendered_cache: bool = True,
+        concurrency: int = 4,
+        include_beta: bool = True,
+        identifiers: list[int | str] | tuple[int | str, ...] | None = None,
+    ):
+        """Render every character's info card concurrently.
+
+        ``version`` uses the same single/comparison rules as
+        :meth:`get_character_info`. Failures are collected per character in a
+        ``BatchRenderResult`` and never cancel the other renders.
+        """
+        from .renderer.nanoka import render_all_info as render_batch
+
+        return await render_batch(
+            version,
+            locale=locale,
+            cache_dir=cache_dir,
+            proxy=proxy,
+            rendered_cache_dir=rendered_cache_dir,
+            use_rendered_cache=use_rendered_cache,
+            concurrency=concurrency,
+            include_beta=include_beta,
+            identifiers=identifiers,
+        )
+
+    async def render_all_skills(
+        self,
+        version: str | tuple[str, str] | list[str] | None = None,
+        *,
+        locale: str = "en",
+        cache_dir: str | None = None,
+        proxy: str | None = None,
+        rendered_cache_dir: str | None = None,
+        use_rendered_cache: bool = True,
+        concurrency: int = 4,
+        include_beta: bool = True,
+        identifiers: list[int | str] | tuple[int | str, ...] | None = None,
+    ):
+        """Render every character's skills sheet concurrently.
+
+        Uses the same failure and comparison semantics as
+        :meth:`render_all_info`.
+        """
+        from .renderer.nanoka import render_all_skills as render_batch
+
+        return await render_batch(
+            version,
+            locale=locale,
+            cache_dir=cache_dir,
+            proxy=proxy,
+            rendered_cache_dir=rendered_cache_dir,
+            use_rendered_cache=use_rendered_cache,
+            concurrency=concurrency,
+            include_beta=include_beta,
+            identifiers=identifiers,
+        )

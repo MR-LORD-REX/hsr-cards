@@ -75,14 +75,15 @@ MODE_DETAIL_FOLDERS: Final[dict[str, str]] = {
 
 #: Map path codenames (used by the CDN) to the community-facing path names.
 PATH_ALIASES: Final[dict[str, str]] = {
-    "knight": "preservation",
-    "rogue": "hunt",
-    "mage": "erudition",
-    "shaman": "abundance",
-    "warlock": "nihility",
-    "warrior": "destruction",
-    "memory": "remembrance",
-    "elation": "elation",
+    "knight": "preservation", #correct
+    "rogue": "hunt", #correct
+    "mage": "erudition",  #correct
+    "shaman": "harmony", #fixed
+    "warlock": "nihility", #correct
+    "warrior": "destruction", #correct
+    "memory": "remembrance", #correct
+    "elation": "elation", #correct
+    "priest" : "abundance" #added
 }
 
 ELEMENTS: Final[tuple[str, ...]] = (

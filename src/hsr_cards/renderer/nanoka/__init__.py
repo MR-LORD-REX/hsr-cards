@@ -9,6 +9,8 @@ Public entry points mirror the Nanoka SDK's identifier rules:
 
 from __future__ import annotations
 
+import asyncio
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Sequence
 
@@ -22,6 +24,8 @@ from .data import CharacterData, close_all, load_character, normalize_locale, pa
 from .data import RenderedCardCache, default_rendered_cache_dir
 
 __all__ = [
+    "BatchCardResult",
+    "BatchRenderResult",
     "CharacterData",
     "build_card_data",
     "build_comparison_card_data",
@@ -33,6 +37,8 @@ __all__ = [
     "load_character",
     "normalize_locale",
     "parse_versions",
+    "render_all_info",
+    "render_all_skills",
     "render_detail",
     "render_full",
 ]
@@ -63,6 +69,7 @@ async def get_character_info(
     proxy: str | None = None,
     rendered_cache_dir: str | Path | None = None,
     use_rendered_cache: bool = True,
+    force_refresh: bool = False,
 ) -> InfoCardResult:
     """Render the character detail card.
 
@@ -78,7 +85,7 @@ async def get_character_info(
         try:
             versions = (data.before.version, data.version)
             cache = RenderedCardCache(rendered_cache_dir, enabled=use_rendered_cache)
-            cached = cache.load(data.name, "info", versions, locale=locale)
+            cached = None if force_refresh else cache.load(data.name, "info", versions, locale=locale)
             if cached is not None:
                 return InfoCardResult(cached, character=data.name, version=versions)
             image = render_detail(data)
@@ -92,7 +99,7 @@ async def get_character_info(
     try:
         data = await build_card_data(character)
         cache = RenderedCardCache(rendered_cache_dir, enabled=use_rendered_cache)
-        cached = cache.load(data.name, "info", data.version, locale=locale)
+        cached = None if force_refresh else cache.load(data.name, "info", data.version, locale=locale)
         if cached is not None:
             return InfoCardResult(cached, character=data.name, version=data.version)
         image = render_detail(data)
@@ -111,6 +118,7 @@ async def get_character_skills(
     proxy: str | None = None,
     rendered_cache_dir: str | Path | None = None,
     use_rendered_cache: bool = True,
+    force_refresh: bool = False,
 ):
     """Render the full character skills sheet and its rich-message payloads.
 
@@ -126,7 +134,7 @@ async def get_character_skills(
             versions = (data.version_before, data.version_after)
             result = render_full(data)
             cache = RenderedCardCache(rendered_cache_dir, enabled=use_rendered_cache)
-            cached = cache.load(data.name, "skills", versions, locale=locale)
+            cached = None if force_refresh else cache.load(data.name, "skills", versions, locale=locale)
             if cached is not None:
                 result.image = cached
             elif use_rendered_cache:
@@ -141,7 +149,7 @@ async def get_character_skills(
         data = await build_skill_data(character)
         result = render_full(data)
         cache = RenderedCardCache(rendered_cache_dir, enabled=use_rendered_cache)
-        cached = cache.load(data.name, "skills", data.version, locale=locale)
+        cached = None if force_refresh else cache.load(data.name, "skills", data.version, locale=locale)
         if cached is not None:
             result.image = cached
         elif use_rendered_cache:
@@ -149,3 +157,181 @@ async def get_character_skills(
         return result
     finally:
         await character.client.close()
+
+
+@dataclass
+class BatchCardResult:
+    """One character's outcome from a batch render."""
+
+    identifier: int | str
+    result: InfoCardResult | "SkillsCardResult" | None = None
+    error: Exception | None = None
+
+    @property
+    def ok(self) -> bool:
+        return self.error is None
+
+    @property
+    def image(self) -> Image.Image | None:
+        return self.result.image if self.result is not None else None
+
+
+@dataclass
+class BatchRenderResult:
+    """Batch render summary; one failure never aborts the other characters."""
+
+    items: list[BatchCardResult] = field(default_factory=list)
+
+    def __iter__(self):
+        return iter(self.items)
+
+    def __len__(self) -> int:
+        return len(self.items)
+
+    @property
+    def succeeded(self) -> list[BatchCardResult]:
+        return [item for item in self.items if item.ok]
+
+    @property
+    def failed(self) -> list[BatchCardResult]:
+        return [item for item in self.items if not item.ok]
+
+    @property
+    def errors(self) -> dict[int | str, Exception]:
+        return {item.identifier: item.error for item in self.items if item.error is not None}
+
+    @property
+    def images(self) -> list[Image.Image]:
+        return [item.result.image for item in self.succeeded if item.result is not None]
+
+
+async def _batch_identifiers(
+    identifiers: Sequence[int | str] | None,
+    *,
+    version: str | None,
+    include_beta: bool,
+    cache_dir: str | Path | None,
+) -> list[int | str]:
+    if identifiers is not None:
+        return list(dict.fromkeys(identifiers))
+    from ...nanoka import NanokaClient
+
+    client = NanokaClient(version=version, cache_dir=cache_dir, include_assets=False)
+    try:
+        await client.initialize()
+        summaries = await client.list_characters(include_beta=include_beta)
+    finally:
+        await client.close()
+    return [summary.id for summary in summaries]
+
+
+async def _run_batch(
+    renderer_name: str,
+    identifiers: Sequence[int | str] | None,
+    version: str | Sequence[str] | None,
+    *,
+    locale: str,
+    cache_dir: str | Path | None,
+    proxy: str | None,
+    rendered_cache_dir: str | Path | None,
+    use_rendered_cache: bool,
+    concurrency: int,
+    include_beta: bool,
+) -> BatchRenderResult:
+    # validate the shape once, before spending time listing characters
+    from_version, _to_version = parse_versions(version)
+    targets = await _batch_identifiers(identifiers, version=from_version, include_beta=include_beta, cache_dir=cache_dir)
+    renderer = globals()[renderer_name]
+    limit = asyncio.Semaphore(max(1, int(concurrency)))
+    items: list[BatchCardResult] = []
+
+    async def render_one(identifier: int | str) -> BatchCardResult:
+        async with limit:
+            try:
+                result = await renderer(
+                    identifier,
+                    version,
+                    locale=locale,
+                    cache_dir=cache_dir,
+                    proxy=proxy,
+                    rendered_cache_dir=rendered_cache_dir,
+                    use_rendered_cache=use_rendered_cache,
+                    force_refresh=True,
+                )
+            except Exception as exc:
+                return BatchCardResult(identifier=identifier, error=exc)
+            return BatchCardResult(identifier=identifier, result=result)
+
+    outcomes = await asyncio.gather(
+        *(render_one(identifier) for identifier in targets), return_exceptions=True
+    )
+    for identifier, outcome in zip(targets, outcomes):
+        if isinstance(outcome, BaseException):
+            items.append(BatchCardResult(identifier=identifier, error=outcome))
+        else:
+            items.append(outcome)
+    return BatchRenderResult(items)
+
+
+async def render_all_info(
+    version: str | Sequence[str] | None = None,
+    *,
+    locale: str = "en",
+    cache_dir: str | Path | None = None,
+    proxy: str | None = None,
+    rendered_cache_dir: str | Path | None = None,
+    use_rendered_cache: bool = True,
+    concurrency: int = 4,
+    include_beta: bool = True,
+    identifiers: Sequence[int | str] | None = None,
+) -> BatchRenderResult:
+    """Render info cards for every Nanoka character concurrently.
+
+    Cards are always rerendered, even when a matching file already exists in
+    ``.hsr_cards_rendered/``; the fresh image replaces the cached one. One
+    character failing is reported in :class:`BatchRenderResult` and does not
+    cancel the rest. ``version`` follows the single/comparison rules used by
+    :func:`get_character_info`.
+    """
+    return await _run_batch(
+        "get_character_info",
+        identifiers,
+        version,
+        locale=locale,
+        cache_dir=cache_dir,
+        proxy=proxy,
+        rendered_cache_dir=rendered_cache_dir,
+        use_rendered_cache=use_rendered_cache,
+        concurrency=concurrency,
+        include_beta=include_beta,
+    )
+
+
+async def render_all_skills(
+    version: str | Sequence[str] | None = None,
+    *,
+    locale: str = "en",
+    cache_dir: str | Path | None = None,
+    proxy: str | None = None,
+    rendered_cache_dir: str | Path | None = None,
+    use_rendered_cache: bool = True,
+    concurrency: int = 4,
+    include_beta: bool = True,
+    identifiers: Sequence[int | str] | None = None,
+) -> BatchRenderResult:
+    """Render skills/eidolon sheets for every Nanoka character concurrently.
+
+    Uses the same rerender-and-continue semantics as :func:`render_all_info`.
+    """
+    return await _run_batch(
+        "get_character_skills",
+        identifiers,
+        version,
+        locale=locale,
+        cache_dir=cache_dir,
+        proxy=proxy,
+        rendered_cache_dir=rendered_cache_dir,
+        use_rendered_cache=use_rendered_cache,
+        concurrency=concurrency,
+        include_beta=include_beta,
+    )

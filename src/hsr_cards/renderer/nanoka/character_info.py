@@ -266,7 +266,26 @@ BONUS_LABELS = {
 }
 
 
+# Minor traces mix percentage bonuses (``FireAddedRatio``) with flat values
+# (``SpeedDelta`` is +N SPD, not N% SPD). Keep the raw type so callers format
+# each bonus correctly instead of assuming every value is a ratio.
+FLAT_BONUS_TYPES = {"SpeedDelta", "HPDelta", "AttackDelta", "DefenceDelta"}
+
+BONUS_LABELS.update({
+    "SpeedDelta": {"en": "SPD", "zh": "\u901f\u5ea6", "ja": "\u901f\u5ea6", "ko": "\uc18d\ub3c4"},
+    "StatusProbabilityBase": {"en": "Effect Hit Rate"},
+    "StatusResistanceBase": {"en": "Effect RES"},
+    "BreakDamageAddedRatioBase": {"en": "Break Effect"},
+})
+
+
 def bonus_stats(detail, locale="en"):
+    """Return ``(label, value, property_type)`` for every minor trace bonus.
+
+    Ratio property types are returned as percentages; ``SpeedDelta`` and other
+    flat types keep their native value. Callers should use :func:`format_bonus`
+    rather than appending ``%`` themselves.
+    """
     totals = {}
     for trace in detail.minor_traces:
         for level in trace.levels:
@@ -276,17 +295,35 @@ def bonus_stats(detail, locale="en"):
                 key = status.get("property_type")
                 if key:
                     totals[key] = totals.get(key, 0) + float(status.get("value") or 0)
-    order = ["HPAddedRatio", "CriticalChanceBase", "FireAddedRatio", "IceAddedRatio", "WindAddedRatio", "LightningAddedRatio", "PhysicalAddedRatio", "QuantumAddedRatio", "ImaginaryAddedRatio", "SpeedAddedRatio", "AttackAddedRatio", "DefenceAddedRatio", "CriticalDamageBase"]
+    order = ["HPAddedRatio", "CriticalChanceBase", "FireAddedRatio", "IceAddedRatio", "WindAddedRatio", "LightningAddedRatio", "PhysicalAddedRatio", "QuantumAddedRatio", "ImaginaryAddedRatio", "SpeedAddedRatio", "SpeedDelta", "AttackAddedRatio", "DefenceAddedRatio", "CriticalDamageBase"]
     result = []
     for key in order:
         if key in totals:
             labels = BONUS_LABELS.get(key, {})
-            result.append((labels.get(locale) or labels.get("en") or key, totals.pop(key) * 100))
+            value = totals.pop(key)
+            result.append((
+                labels.get(locale) or labels.get("en") or key,
+                value if key in FLAT_BONUS_TYPES else value * 100,
+                key,
+            ))
     for key, value in totals.items():
         if value:
             labels = BONUS_LABELS.get(key, {})
-            result.append((labels.get(locale) or labels.get("en") or key, value * 100))
-    return result or [("No minor traces", 0)]
+            result.append((
+                labels.get(locale) or labels.get("en") or key,
+                value if key in FLAT_BONUS_TYPES else value * 100,
+                key,
+            ))
+    if not result:
+        return [("No minor traces", 0, "")]
+    return result
+
+
+def format_bonus(value: float, property_type: str = "") -> str:
+    """Format a trace bonus; flat SPD-style values never get a percent sign."""
+    if property_type in FLAT_BONUS_TYPES:
+        return f"{value:g}"
+    return f"{value:g}%"
 
 
 def clean_localized(text, locale):
@@ -522,10 +559,10 @@ async def build(character_id: int, locale: str, output: Path):
     bonus_rows = bonuses[:4]
     slots = max(1, len(bonus_rows))
     slot_w = (bonus_w - 56) // slots
-    for index, (label, value) in enumerate(bonus_rows):
+    for index, (label, value, property_type) in enumerate(bonus_rows):
         cx = bonus_x + 28 + index * slot_w
         draw.text((cx, card_y + 64), label.upper(), font=font(12, bold=True, locale=locale), fill=DIM)
-        draw.text((cx, card_y + 88), f"{value:g}%", font=font(40, display=True), fill=PURPLE if index == 2 else TEXT)
+        draw.text((cx, card_y + 88), format_bonus(value, property_type), font=font(40, display=True), fill=PURPLE if index == 2 else TEXT)
         if index < slots - 1:
             draw.line((cx + slot_w - 20, card_y + 56, cx + slot_w - 20, card_y + 148), fill=(255, 255, 255, 18), width=1)
     draw.text((bonus_x + 28, card_y + card_h - 30), "Minor trace bonuses only", font=font(12), fill=DIM)
