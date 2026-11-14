@@ -1,0 +1,26 @@
+{
+  "name": "Rutilant Arena",
+  "icon": "SpriteOutput/ItemIcon/71022.png",
+  "parts": {
+    "33095": {
+      "name": "Taikiyan Laser Stadium",
+      "desc": null,
+      "story": null
+    },
+    "33096": {
+      "name": "Taikiyan's Arclight Race Track",
+      "desc": null,
+      "story": null
+    }
+  },
+  "require_num": {
+    "2": {
+      "desc": "Increases the wearer's CRIT Rate by <unbreak>#1[i]%</unbreak>. When the wearer's current CRIT Rate reaches <unbreak>#2[i]%</unbreak> or higher, DMG dealt by Basic ATK and Skill increases by <unbreak>#3[i]%</unbreak>.",
+      "param_list": [
+        0.08,
+        0.7,
+        0.2
+      ]
+    }
+  }
+}

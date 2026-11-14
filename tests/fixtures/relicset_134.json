@@ -1,0 +1,42 @@
+{
+  "name": "The Edacious Heretic",
+  "icon": "SpriteOutput/ItemIcon/71061.png",
+  "parts": {
+    "31341": {
+      "name": "Heretic's Cranial Apparatus",
+      "desc": null,
+      "story": null
+    },
+    "31342": {
+      "name": "Heretic's Injection Gloves",
+      "desc": null,
+      "story": null
+    },
+    "31343": {
+      "name": "Heretic's Straitjacket of Reason",
+      "desc": null,
+      "story": null
+    },
+    "31344": {
+      "name": "Heretic's Ravenous Ankle-Boots",
+      "desc": null,
+      "story": null
+    }
+  },
+  "require_num": {
+    "2": {
+      "desc": "Increases CRIT DMG by <unbreak>#1[i]%</unbreak>.",
+      "param_list": [
+        0.16
+      ]
+    },
+    "4": {
+      "desc": "Increases DMG dealt by the wearer's Basic ATK by <unbreak>#1[i]%</unbreak>. When the wearer uses Basic ATK, increases the wearer's ATK by <unbreak>#2[i]%</unbreak>, lasting for <unbreak>#3[i]</unbreak> turn(s).",
+      "param_list": [
+        0.36,
+        0.2,
+        2
+      ]
+    }
+  }
+}

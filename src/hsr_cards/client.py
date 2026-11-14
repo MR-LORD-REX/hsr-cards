@@ -374,6 +374,33 @@ class HonkaiStarrail:
             use_rendered_cache=use_rendered_cache,
         )
 
+    async def get_relic_info(
+        self,
+        identifier: int | str,
+        version: str | tuple[str, str] | list[str] | None = None,
+        *,
+        locale: str = "en",
+        cache_dir: str | None = None,
+        proxy: str | None = None,
+        rendered_cache_dir: str | None = None,
+        use_rendered_cache: bool = True,
+    ):
+        """Render relic set bonuses and every piece, including planar sets.
+
+        Arguments and version comparisons follow get_character_info().
+        """
+        from .renderer.nanoka import get_relic_info as render_relic
+
+        return await render_relic(
+            identifier,
+            version,
+            locale=locale,
+            cache_dir=cache_dir,
+            proxy=proxy,
+            rendered_cache_dir=rendered_cache_dir,
+            use_rendered_cache=use_rendered_cache,
+        )
+
     async def get_character_skills(
         self,
         identifier: int | str,

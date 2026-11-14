@@ -1192,7 +1192,7 @@ class RelicPart(NanokaModel):
     @computed_field
     @property
     def slot(self) -> str | None:
-        return RELIC_SLOT_BY_ID.get(self.id or 0)
+        return RELIC_SLOT_BY_ID.get((self.id or 0) % 10)
 
 
 class RelicSetEffectDetail(NanokaModel):

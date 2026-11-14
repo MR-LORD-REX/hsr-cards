@@ -285,6 +285,39 @@ Rendered files use `{name}_lc_info_{version}.png`, with both builds joined by `-
 comparisons and a locale suffix for non-English cards. The standalone function also
 accepts `force_refresh=True`, matching `get_character_info()`.
 
+## Relic Set Info Cards
+
+`get_relic_info()` accepts the same arguments as `get_character_info()`: a numeric set
+id or published name, optional version (one build or a two-build comparison), `locale`,
+`cache_dir`, `proxy`, `rendered_cache_dir`, and `use_rendered_cache`.
+
+```python
+from hsr_cards import get_relic_info
+
+info = await get_relic_info("The Edacious Heretic", version="4.7.51")
+info.save("relic-set.png")
+planar = await get_relic_info(309)  # Rutilant Arena, newest build.
+planar.save("planar-set.png")
+comparison = await get_relic_info(330, version=("4.6.51", "4.6.54"))
+comparison.save("relic-comparison.png")
+
+# The same arguments work on the main client.
+info = await client.get_relic_info("The Edacious Heretic")
+```
+
+Each card includes the set icon, individual piece artwork and slot names, and all set
+bonuses with bold gold values. Cavern Relic cards start at 1080x1350; Planar Ornament
+cards start at 1080x1080. Cards grow vertically for long text and version comparisons.
+Comparisons strike through removed text, highlight additions, and retain removed
+bonuses and pieces.
+
+The returned `RelicInfoCardResult` exposes `.image`, `.relic_set` (name), `.identifier`,
+`.version`, `.cache_path`, `.set_type` (`"cavern"` or `"planar"`), `.effects` (piece count
+to resolved description), and `.parts` (`RelicPart` models). It delegates `.save()` and
+image attributes to its PIL image. Rendered files use `{name}_relic_info_{version}.png`,
+with both builds joined by `--` for comparisons and a locale suffix for non-English
+cards. The standalone function also accepts `force_refresh=True`.
+
 ## Prydwen Tier List
 
 Render Prydwen's current HSR tier list in a 1280 px wide image with four role columns,
@@ -377,6 +410,7 @@ Main client class for generating cards.
 - `update_builds()` -> `int`: Refresh bundled community build images from the repository metadata
 - `update_nanoka_assets(version=None, force=False)` -> `None`: Refresh the Nanoka cache
 - `get_LC_info(identifier, version=None, ...)` -> `LCInfoCardResult`: Generate a level-80 Nanoka Light Cone card with inline S1-S5 values
+- `get_relic_info(identifier, version=None, ...)` -> `RelicInfoCardResult`: Generate a Nanoka relic or planar set card with all pieces and set bonuses
 - `get_character_info(identifier, version=None, ...)` -> `InfoCardResult`: Generate a Nanoka info card
 - `get_character_skills(identifier, version=None, ...)` -> `SkillsCardResult`: Generate a Nanoka skills card
 - `tier_list(game_mode="MOC", raw=False, timeout=30.0)` -> `Image | (Image, TierListData)`: Render Prydwen's MOC, PF, or AS tier list

@@ -23,6 +23,7 @@ from .character_variants import build_card_data, build_comparison_card_data, ren
 from .data import CharacterData, close_all, load_character, normalize_locale, parse_versions
 from .data import RenderedCardCache, default_rendered_cache_dir
 from .light_cone import LCInfoCardResult, get_LC_info
+from .relic import RelicInfoCardResult, get_relic_info
 
 __all__ = [
     "BatchCardResult",
@@ -36,6 +37,8 @@ __all__ = [
     "get_character_info",
     "get_LC_info",
     "LCInfoCardResult",
+    "get_relic_info",
+    "RelicInfoCardResult",
     "get_character_skills",
     "load_character",
     "normalize_locale",

@@ -1,0 +1,26 @@
+{
+  "name": "Fleet of the Ageless",
+  "icon": "SpriteOutput/ItemIcon/71013.png",
+  "parts": {
+    "33025": {
+      "name": "The Xianzhou Luofu's Celestial Ark",
+      "desc": null,
+      "story": null
+    },
+    "33026": {
+      "name": "The Xianzhou Luofu's Ambrosial Arbor Vines",
+      "desc": null,
+      "story": null
+    }
+  },
+  "require_num": {
+    "2": {
+      "desc": "Increases the wearer's Max HP by <unbreak>#1[i]%</unbreak>. When the wearer's SPD reaches <unbreak>#2[i]</unbreak> or higher, all allies' ATK increases by <unbreak>#3[i]%</unbreak>.",
+      "param_list": [
+        0.12,
+        120,
+        0.08
+      ]
+    }
+  }
+}
