@@ -233,7 +233,7 @@ class HonkaiStarrail:
 
     async def character_build(
         self,
-        identifier: int | str | None = None,
+        identifier: int | str ,
         url: bool = False,
         *,
         name: str | None = None,
@@ -253,6 +253,7 @@ class HonkaiStarrail:
         ``metadata.json`` instead of loading the local PNG.
         """
         from .nanoka import NanokaClient
+
 
         async with NanokaClient(include_assets=False) as nanoka:
             return await nanoka.character_build(
