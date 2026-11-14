@@ -16,6 +16,10 @@ __all__ = [
     "render_all_skills",
     "RedeemCode",
     "Reward",
+    "tier_list",
+    "TierListData",
+    "fetch_tier_list",
+    "parse_tier_list",
 ]
 
 
@@ -33,6 +37,14 @@ def __getattr__(name: str):
         from .nanoka import Locale, NanokaClient
 
         return {"NanokaClient": NanokaClient, "Locale": Locale}[name]
+    if name == "tier_list":
+        from .renderer.prydwen import tier_list
+
+        return tier_list
+    if name in {"TierListData", "fetch_tier_list", "parse_tier_list"}:
+        from .prydwen import tier_list as tier_list_module
+
+        return getattr(tier_list_module, name)
     if name in {"RedeemCode", "Reward"}:
         from .prydwen.codes import RedeemCode, Reward
 

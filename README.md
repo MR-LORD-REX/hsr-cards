@@ -249,6 +249,66 @@ async with HonkaiStarrail("800556377") as client:
     await client.update_nanoka_assets(force=True)
 ```
 
+## Prydwen Tier List
+
+Render Prydwen's current HSR tier list in a 1280 px wide image with four role columns,
+colored tier bars, character portraits, elements, eidolons, tags, and movement badges.
+The height grows to fit every tier. Choose `game_mode="MOC"` (Memory of Chaos, the
+default), `"PF"` (Pure Fiction), or `"AS"` (Apocalyptic Shadow). The parser reads each
+mode's own rankings, tags, and badges from the data embedded in Prydwen's page.
+The source URL, selected mode, and published update date appear on the card.
+
+```python
+from hsr_cards import tier_list
+
+# No UID or HoYoLAB cookies needed for the standalone function.
+image, data = await tier_list(game_mode="PF", raw=True)
+image.save("tier-list.png")
+print(data.mode, data.updated)
+```
+
+The main client exposes the same renderer:
+
+```python
+from hsr_cards import HonkaiStarrail
+
+async with HonkaiStarrail("800556377") as client:
+    image = await client.tier_list()  # Defaults to MOC.
+    image.save("Cards/TierList-MOC.png")
+    (await client.tier_list("PF")).save("Cards/TierList-PF.png")
+    image, data = await client.tier_list(game_mode="AS", raw=True)
+    image.save("Cards/TierList-AS.png")
+```
+
+The default return value is a PIL image; `raw=True` returns `(image, TierListData)`.
+Both entry points accept `timeout=30.0` (seconds per request). The standalone function
+also accepts `proxy=`; the client method uses the proxy supplied to `HonkaiStarrail`.
+Portraits download concurrently and each unique URL is fetched once per render.
+Unavailable portraits become named placeholders; page-fetch and parsing errors are raised.
+
+For data only, use `await fetch_tier_list(game_mode="PF")` or
+`parse_tier_list(html, game_mode="AS")` from `hsr_cards`.
+`TierListData` exposes `.mode`, `.mode_key`, `.updated`, `.roles`, `.groups`, `.tiers`,
+and `.source`. Each tier contains ordered `.roles`, each with `.characters` carrying
+`.name`, `.slug`, `.icon_url`, `.element`, `.rarity`, `.eidolon`, `.tags`, and `.marks`.
+To render data you already parsed, use the renderer directly:
+
+```python
+from hsr_cards import parse_tier_list
+from hsr_cards.renderer.prydwen import TierListRenderer
+
+data = parse_tier_list(saved_html, game_mode="MOC")
+async with TierListRenderer() as renderer:
+    image = await renderer.render_tier_list(data)
+```
+
+Offline parser, renderer, and client tests run without additional test dependencies:
+
+```powershell
+$env:PYTHONPATH = (Resolve-Path src).Path
+& '.\.venv\Scripts\python.exe' -m unittest discover -s tests -v
+```
+
 ## Requirements
 
 - Python 3.10+
@@ -282,6 +342,7 @@ Main client class for generating cards.
 - `update_nanoka_assets(version=None, force=False)` -> `None`: Refresh the Nanoka cache
 - `get_character_info(identifier, version=None, ...)` -> `InfoCardResult`: Generate a Nanoka info card
 - `get_character_skills(identifier, version=None, ...)` -> `SkillsCardResult`: Generate a Nanoka skills card
+- `tier_list(game_mode="MOC", raw=False, timeout=30.0)` -> `Image | (Image, TierListData)`: Render Prydwen's MOC, PF, or AS tier list
 - `redeem_codes()` -> `list[RedeemCode]`: Fetch active HSR redeem codes and their rewards from Prydwen
 
 `currency_war()` returns a `CurrencyWarResult` with:

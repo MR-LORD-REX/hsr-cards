@@ -17,6 +17,8 @@ from .models.notes import NotesResponse, NotesData
 from .models.currencywar import CurrencyWarData, CurrencyWarResponse 
 from .builds import BUILD_METADATA_URL, update_build_assets
 from .prydwen.codes import RedeemCode, fetch_redeem_codes
+from .prydwen.tier_list import TierListData, fetch_tier_list
+from .renderer.prydwen import TierListRenderer
 from PIL import Image
 
 class HonkaiStarrail:
@@ -27,6 +29,7 @@ class HonkaiStarrail:
         ):
         self.uid = str(uid)
         self.cookie = cookie
+        self.proxy = proxy
         cookie_dict = cookie.model_dump() if cookie is not None else None
         self.api = BaseAPI(
             self.uid, 
@@ -222,6 +225,30 @@ class HonkaiStarrail:
             return await fetch_redeem_codes()
         except Exception as e:
             raise HSR_Error(f"Failed to fetch redeem codes: {e}")
+
+    async def tier_list(
+        self,
+        game_mode: Literal["MOC", "PF", "AS"] = "MOC",
+        raw: bool = False,
+        *,
+        timeout: float = 30.0,
+    ) -> Image.Image | tuple[Image.Image, TierListData]:
+        """Render Prydwen's MOC, PF, or AS list; optionally return parsed data.
+
+        Defaults to Memory of Chaos. No player record is requested.
+        This client's proxy also applies to Prydwen.
+        """
+        try:
+            data = await fetch_tier_list(game_mode=game_mode, timeout=timeout, proxy=self.proxy)
+            async with TierListRenderer(
+                session=self.api.session, proxy=self.proxy, timeout=timeout
+            ) as renderer:
+                image = await renderer.render_tier_list(data)
+            return (image, data) if raw else image
+        except HSR_Error:
+            raise
+        except Exception as e:
+            raise HSR_Error(f"Failed to render tier list: {e}") from e
 
     async def update_nanoka_assets(
         self,
