@@ -11,6 +11,8 @@ __all__ = [
     "NanokaClient",
     "Locale",
     "get_character_info",
+    "get_LC_info",
+    "LCInfoCardResult",
     "get_character_skills",
     "render_all_info",
     "render_all_skills",
@@ -51,6 +53,8 @@ def __getattr__(name: str):
         return {"RedeemCode": RedeemCode, "Reward": Reward}[name]
     if name in {
         "get_character_info",
+        "get_LC_info",
+        "LCInfoCardResult",
         "get_character_skills",
         "render_all_info",
         "render_all_skills",

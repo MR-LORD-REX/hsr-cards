@@ -22,6 +22,7 @@ from .character_skills import render_full
 from .character_variants import build_card_data, build_comparison_card_data, render_detail
 from .data import CharacterData, close_all, load_character, normalize_locale, parse_versions
 from .data import RenderedCardCache, default_rendered_cache_dir
+from .light_cone import LCInfoCardResult, get_LC_info
 
 __all__ = [
     "BatchCardResult",
@@ -33,6 +34,8 @@ __all__ = [
     "build_skill_data",
     "close_all",
     "get_character_info",
+    "get_LC_info",
+    "LCInfoCardResult",
     "get_character_skills",
     "load_character",
     "normalize_locale",

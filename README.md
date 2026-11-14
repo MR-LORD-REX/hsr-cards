@@ -249,6 +249,42 @@ async with HonkaiStarrail("800556377") as client:
     await client.update_nanoka_assets(force=True)
 ```
 
+## Light Cone Info Cards
+
+`get_LC_info()` accepts the same arguments as `get_character_info()`: a numeric id or
+published name, optional version (one build or a two-build comparison), `locale`,
+`cache_dir`, `proxy`, `rendered_cache_dir`, and `use_rendered_cache`.
+
+```python
+from hsr_cards import get_LC_info
+
+info = await get_LC_info("No Shifts on Rainy Days", version="4.7.51")
+info.save("light-cone.png")
+comparison = await get_LC_info(23065, version=("4.6.51", "4.6.54"))
+comparison.save("light-cone-comparison.png")
+
+# The same arguments work on the main client.
+info = await client.get_LC_info("A Grounded Ascent")
+```
+
+The card fixes stats at level 80 and displays all five superimposition values inline,
+in S1/S2/S3/S4/S5 order. For example, Energy reads **6/6.5/7/7.5/8**, while DMG reads
+**15/17.25/19.5/21.75/24%**. Unchanging values appear once. Bold gold numbers and cyan
+mechanic names stand out against a dark background, with 32 px body text. The artwork,
+path, rarity, base stats, and total ascension materials are included; there are no sliders.
+
+Cards are 1080x1440 portrait images, growing vertically when a description needs more
+space. The reference "No Shifts on Rainy Days" card is 1080x1464. Version comparisons
+strike through removed text and highlight additions in green. Stats and material counts
+show their previous values when changed.
+
+The returned `LCInfoCardResult` exposes `.image`, `.light_cone` (name), `.identifier`,
+`.version`, `.cache_path`, `.description` (plain text with S1-S5 values), and `.stats`
+(level-80 HP/ATK/DEF). It delegates `.save()` and image attributes to its PIL image.
+Rendered files use `{name}_lc_info_{version}.png`, with both builds joined by `--` for
+comparisons and a locale suffix for non-English cards. The standalone function also
+accepts `force_refresh=True`, matching `get_character_info()`.
+
 ## Prydwen Tier List
 
 Render Prydwen's current HSR tier list in a 1280 px wide image with four role columns,
@@ -340,6 +376,7 @@ Main client class for generating cards.
 - `character_build(identifier, url=False, ...)` -> `Image | str | None`: Return a community build card or its raw GitHub URL
 - `update_builds()` -> `int`: Refresh bundled community build images from the repository metadata
 - `update_nanoka_assets(version=None, force=False)` -> `None`: Refresh the Nanoka cache
+- `get_LC_info(identifier, version=None, ...)` -> `LCInfoCardResult`: Generate a level-80 Nanoka Light Cone card with inline S1-S5 values
 - `get_character_info(identifier, version=None, ...)` -> `InfoCardResult`: Generate a Nanoka info card
 - `get_character_skills(identifier, version=None, ...)` -> `SkillsCardResult`: Generate a Nanoka skills card
 - `tier_list(game_mode="MOC", raw=False, timeout=30.0)` -> `Image | (Image, TierListData)`: Render Prydwen's MOC, PF, or AS tier list

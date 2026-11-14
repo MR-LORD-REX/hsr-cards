@@ -347,6 +347,33 @@ class HonkaiStarrail:
             use_rendered_cache=use_rendered_cache,
         )
 
+    async def get_LC_info(
+        self,
+        identifier: int | str,
+        version: str | tuple[str, str] | list[str] | None = None,
+        *,
+        locale: str = "en",
+        cache_dir: str | None = None,
+        proxy: str | None = None,
+        rendered_cache_dir: str | None = None,
+        use_rendered_cache: bool = True,
+    ):
+        """Render a level-80 Light Cone card with all S1-S5 values inline.
+
+        Arguments and version comparisons follow get_character_info().
+        """
+        from .renderer.nanoka import get_LC_info as render_lc
+
+        return await render_lc(
+            identifier,
+            version,
+            locale=locale,
+            cache_dir=cache_dir,
+            proxy=proxy,
+            rendered_cache_dir=rendered_cache_dir,
+            use_rendered_cache=use_rendered_cache,
+        )
+
     async def get_character_skills(
         self,
         identifier: int | str,
