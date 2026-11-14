@@ -1,0 +1,73 @@
+{
+  "char_name": "Sparkle",
+  "character_id": 1306,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "sparkle.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sparkle/sparkle.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sparkle/sparkle.png",
+      "sha256": "31d721a414c836a1fcade7e8ecdf1b6781b05187dc1efdf375ccec690306aeac",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sparkle.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sparkle/sparkle.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sparkle/sparkle.detailed.png",
+      "sha256": "c8cd5a42e2f0faae0506e48d39b6f0109c3314b7439aebb68baf8bd1060e31b7",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sparkle.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sparkle/sparkle.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sparkle/sparkle.detailed.conditions-01.png",
+      "sha256": "8f2d34261bae0de7436c6734b91f778a41c45d5f2417de3cd85fb83b05605918",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sparkle.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sparkle/sparkle.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sparkle/sparkle.detailed.conditions-02.png",
+      "sha256": "0d86b8a0f0c5e49ff83e9b8f73fda78bd8f7f47ed91b622c0222f6ec543a56d4",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sparkle.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sparkle/sparkle.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sparkle/sparkle.detailed.conditions-03.png",
+      "sha256": "7b6b4ac87e8797a8d1a641b20c695e2f04e886704e66dd451649bcfbe26b5e76",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:40.540436+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.562795Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "sparkle",
+  "source": "https://www.prydwen.gg/star-rail/characters/sparkle",
+  "source_html_sha256": "1b81cca29689b83654220533e9074d6fd753ffe5c1ade3485b4096bee070c46f",
+  "website_last_updated": "31/May/2026"
+}

@@ -1,0 +1,73 @@
+{
+  "char_name": "Himeko Nova",
+  "character_id": 1510,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "himeko-nova.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/himeko-nova/himeko-nova.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/himeko-nova/himeko-nova.png",
+      "sha256": "dd76831dac5f832ab1c2a54992d21323319e4005a059326c0f7db84cac0212d6",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "himeko-nova.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/himeko-nova/himeko-nova.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/himeko-nova/himeko-nova.detailed.png",
+      "sha256": "d93ec414ec5bed5346824a51ea33399209fbce74e38f80e7067fb302c40839da",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "himeko-nova.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/himeko-nova/himeko-nova.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/himeko-nova/himeko-nova.detailed.conditions-01.png",
+      "sha256": "949ba4f623f18f6adc915194d5e8ae2c892dda0ca3210ea528a0becc1d355260",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "himeko-nova.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/himeko-nova/himeko-nova.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/himeko-nova/himeko-nova.detailed.conditions-02.png",
+      "sha256": "081168898f779bbb9dbb5294a4ce129f86d0ebac43b2996a3db973cb66b4fc57",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "himeko-nova.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/himeko-nova/himeko-nova.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/himeko-nova/himeko-nova.detailed.conditions-03.png",
+      "sha256": "6c54df463491db7bfb9831889f44648169c0bd6af1dea8eef2c1860ee6304aa9",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:50.336737+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.349661Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "himeko-nova",
+  "source": "https://www.prydwen.gg/star-rail/characters/himeko-nova",
+  "source_html_sha256": "1210127de68ab9c44e42cd36e1b48647312203ceb9bc1962456881a0517f7fee",
+  "website_last_updated": "24/July/2026"
+}

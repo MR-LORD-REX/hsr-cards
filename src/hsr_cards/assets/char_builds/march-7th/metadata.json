@@ -1,0 +1,62 @@
+{
+  "char_name": "March 7th",
+  "character_id": 1001,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "march-7th.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th/march-7th.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th/march-7th.png",
+      "sha256": "c243d9006722ecc75465493894cdad9db44896afbc49abde13d9d4fb0a1f9a64",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "march-7th.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th/march-7th.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th/march-7th.detailed.png",
+      "sha256": "490d9f918b1023e83b9f137f0d945143983acf254a3b449ef950d7f8570453cc",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "march-7th.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th/march-7th.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th/march-7th.detailed.conditions-01.png",
+      "sha256": "3e2aaaf9b917cb5e9f6554a251d991d19952c12b8517358bd247370bbd4e1f49",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "march-7th.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th/march-7th.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th/march-7th.detailed.conditions-02.png",
+      "sha256": "95b1081ff35541275e10d338bae2496a0391c764ecfe3a7cf49fd3130e5ea797",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:13.971341+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.367994Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "march-7th",
+  "source": "https://www.prydwen.gg/star-rail/characters/march-7th",
+  "source_html_sha256": "09ee9b0e861450ace10adac5b6479b7e888a92970ce4a79b603fb4fab8a756e9",
+  "website_last_updated": "31/May/2026"
+}

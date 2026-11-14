@@ -1,0 +1,62 @@
+{
+  "char_name": "Bronya",
+  "character_id": 1101,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "bronya.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/bronya/bronya.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/bronya/bronya.png",
+      "sha256": "4673e329c6c4b74a9bbbd369aa9a73ad773ba28bc692d1b5f7d02e7546dd2134",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "bronya.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/bronya/bronya.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/bronya/bronya.detailed.png",
+      "sha256": "0b1b64e6d498f480956ddcf2b686191180540f24aa3b40ec2d0a8088a3ccd383",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "bronya.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/bronya/bronya.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/bronya/bronya.detailed.conditions-01.png",
+      "sha256": "8d706af16e91f84715476b0b184342479803532babc5cafd7d0d69fab5a0f3d1",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "bronya.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/bronya/bronya.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/bronya/bronya.detailed.conditions-02.png",
+      "sha256": "70da7432d94156691ab6f79cba9d4c81005952dd60fdc6e61150a87ff847d3ee",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:25.897306+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.098575Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "bronya",
+  "source": "https://www.prydwen.gg/star-rail/characters/bronya",
+  "source_html_sha256": "004992664659b09517bd09307c9ff4196ccf620a3237cdb654bfbb572a5dd8fd",
+  "website_last_updated": "31/May/2026"
+}

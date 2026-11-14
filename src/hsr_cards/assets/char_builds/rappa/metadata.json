@@ -1,0 +1,73 @@
+{
+  "char_name": "Rappa",
+  "character_id": 1317,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "rappa.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/rappa/rappa.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/rappa/rappa.png",
+      "sha256": "c67023055aa06097ea4e8922ef8fd0c052737788a4744b9e3a652917cccba60d",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "rappa.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/rappa/rappa.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/rappa/rappa.detailed.png",
+      "sha256": "4195f9fc05a691e10b1199e9ba77330abac377dd3862a95eef8f2cbcf8e85b69",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "rappa.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/rappa/rappa.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/rappa/rappa.detailed.conditions-01.png",
+      "sha256": "589dd8049063f1ee0dadc40931abb5e7217d43a5733284e35b23ea9426c43271",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "rappa.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/rappa/rappa.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/rappa/rappa.detailed.conditions-02.png",
+      "sha256": "a14bec6ca688b944a14705edb88ee4ca56f3055c6e0f9255e9d64c3c49f299b2",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "rappa.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/rappa/rappa.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/rappa/rappa.detailed.conditions-03.png",
+      "sha256": "cc7d1858d3f3eb27405de7e1901b60c5492cb5a8a454a4a7b0651a1ff2aa5370",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:25.547325+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.736871Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "rappa",
+  "source": "https://www.prydwen.gg/star-rail/characters/rappa",
+  "source_html_sha256": "343ca9d762778943649df686d5e7f9eddad93750162287f2b2de73b8e146d328",
+  "website_last_updated": "31/May/2026"
+}

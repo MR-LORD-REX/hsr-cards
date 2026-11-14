@@ -1,0 +1,73 @@
+{
+  "char_name": "Boothill",
+  "character_id": 1315,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "boothill.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/boothill/boothill.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/boothill/boothill.png",
+      "sha256": "b8900b3d348a3f160fccbf04b74753e110c4af24431f1523b6a6104b42c31946",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "boothill.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/boothill/boothill.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/boothill/boothill.detailed.png",
+      "sha256": "ea1d41c3fe590affcd48d318449c9616cb5e04a531f710b58ec859c0b4b9d3c5",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "boothill.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/boothill/boothill.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/boothill/boothill.detailed.conditions-01.png",
+      "sha256": "6a027ada2fa1bc5d584b81122eb0f59650a19616017045fd89ce64db25faff2a",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "boothill.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/boothill/boothill.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/boothill/boothill.detailed.conditions-02.png",
+      "sha256": "85db3a366842043da1de17fb3a64afdccca838541c0711f5634e4ebe0abf4446",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "boothill.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/boothill/boothill.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/boothill/boothill.detailed.conditions-03.png",
+      "sha256": "849de46f48893277daa0ebf565753f71a3a527cc10cbd0aa80710677adc00d5d",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:24.660604+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.039335Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "boothill",
+  "source": "https://www.prydwen.gg/star-rail/characters/boothill",
+  "source_html_sha256": "36ae8578c580184513e8006caef09d386bff28a5376ada2e1211006a54d9fab7",
+  "website_last_updated": "31/May/2026"
+}

@@ -1,0 +1,62 @@
+{
+  "char_name": "Pela",
+  "character_id": 1106,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "pela.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/pela/pela.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/pela/pela.png",
+      "sha256": "7eca3334a0b981e280ee752d9af70f58ab3cdfa9f977caa4b9dc4cb63e881a3c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "pela.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/pela/pela.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/pela/pela.detailed.png",
+      "sha256": "7dfad992e34e0ebe99ea3786a787c007560b386ddcc4d6a8a6efaa81ce2e6558",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "pela.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/pela/pela.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/pela/pela.detailed.conditions-01.png",
+      "sha256": "327fa1d7e78e770f9fbdca68ef67d937ec8adf85c681d22fddda7d6f7910d956",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "pela.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/pela/pela.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/pela/pela.detailed.conditions-02.png",
+      "sha256": "8286f2e97adadd2e5f61fbfa329796d1359b60b9fad738a0ca780518f40e5767",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:21.546433+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.616813Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "pela",
+  "source": "https://www.prydwen.gg/star-rail/characters/pela",
+  "source_html_sha256": "bf5ad1ede49df8fc7b29e81223c35435d134f71972eb34f6328faa6096481967",
+  "website_last_updated": "31/May/2026"
+}

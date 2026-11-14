@@ -1,0 +1,73 @@
+{
+  "char_name": "March 7th • The Hunt",
+  "character_id": 1224,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "march-7th-swordmaster.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th-swordmaster/march-7th-swordmaster.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th-swordmaster/march-7th-swordmaster.png",
+      "sha256": "a309f92a3365267d2f5f2282ce1c33e2e1a75711930001d25783d08e46fa2a88",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "march-7th-swordmaster.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th-swordmaster/march-7th-swordmaster.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th-swordmaster/march-7th-swordmaster.detailed.png",
+      "sha256": "061b64004569fc21dbe836e7318a009927e9309e8bd84705aafe19a119df9ddf",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "march-7th-swordmaster.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th-swordmaster/march-7th-swordmaster.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th-swordmaster/march-7th-swordmaster.detailed.conditions-01.png",
+      "sha256": "1417bc650301b9da44a527b589da6b29f049939988f1eb2996f41ce29b1d6eb5",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "march-7th-swordmaster.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th-swordmaster/march-7th-swordmaster.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th-swordmaster/march-7th-swordmaster.detailed.conditions-02.png",
+      "sha256": "097b90f1731292f610e97522b0c6ee1c06503efdcd5ccb0ec55418ab55178c02",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "march-7th-swordmaster.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th-swordmaster/march-7th-swordmaster.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th-swordmaster/march-7th-swordmaster.detailed.conditions-03.png",
+      "sha256": "590f94e97ebec17d83688700245a816eba0b6430b13a42bf36287f285adba651",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:12.692191+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.329345Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "march-7th-swordmaster",
+  "source": "https://www.prydwen.gg/star-rail/characters/march-7th-swordmaster",
+  "source_html_sha256": "ba4745f27969be4a9cca11277aa6319d8b8bb0525ab493eeea55b2ebf254f987",
+  "website_last_updated": "31/May/2026"
+}

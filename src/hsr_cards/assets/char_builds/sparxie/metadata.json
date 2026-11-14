@@ -1,0 +1,73 @@
+{
+  "char_name": "Sparxie",
+  "character_id": 1501,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "sparxie.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sparxie/sparxie.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sparxie/sparxie.png",
+      "sha256": "b7efb135b82a13f29d20f8aa8ef784cf7d85273fa902545f60b41d48534fb313",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sparxie.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sparxie/sparxie.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sparxie/sparxie.detailed.png",
+      "sha256": "87e87e3832204068c4e88365d3ca278377af94ae8756fa8d2603f694e3c6c59a",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sparxie.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sparxie/sparxie.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sparxie/sparxie.detailed.conditions-01.png",
+      "sha256": "54f951c676d39c3c14161be5b57d5b306920423d765d1d37d2201611e1fa0dc1",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sparxie.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sparxie/sparxie.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sparxie/sparxie.detailed.conditions-02.png",
+      "sha256": "2ada854ae824ff498060f3ceecbe05e4cd4ec5dc051be6904a1d77bc8a1390f3",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sparxie.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sparxie/sparxie.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sparxie/sparxie.detailed.conditions-03.png",
+      "sha256": "0347b6261b7a028a92d9f2e73095649395ad1e1c92540c9842f1488042b120eb",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:41.890145+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.634246Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "sparxie",
+  "source": "https://www.prydwen.gg/star-rail/characters/sparxie",
+  "source_html_sha256": "a5f63eb6a68b7d3587be57d84407633ed7ad29b87eb8d7cf629c59df448d8a1d",
+  "website_last_updated": "31/May/2026"
+}

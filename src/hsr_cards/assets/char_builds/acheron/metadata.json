@@ -1,0 +1,73 @@
+{
+  "char_name": "Acheron",
+  "character_id": 1308,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "acheron.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/acheron/acheron.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/acheron/acheron.png",
+      "sha256": "a0236d0c1def725dbbd617093e12df07a025e1ce7ef80fd6214db6d935b9c180",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "acheron.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/acheron/acheron.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/acheron/acheron.detailed.png",
+      "sha256": "cd754178c178937fd7c31ffa0b930859176da1a360fbd0911ae542baee3ebcf2",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "acheron.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/acheron/acheron.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/acheron/acheron.detailed.conditions-01.png",
+      "sha256": "32c232a28b16fb9d3690a79427f41b51b2bfd5b5b1e75f9cafa996797cc9e643",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "acheron.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/acheron/acheron.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/acheron/acheron.detailed.conditions-02.png",
+      "sha256": "d9ae2be0e60c96bcee03414c9b963d433ecfb991aec6fe64773e423a508e3c10",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "acheron.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/acheron/acheron.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/acheron/acheron.detailed.conditions-03.png",
+      "sha256": "81c0d791c93c8bd5da6212e4c1add0628d1d083a86ffc7ecc229aea018c242a1",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:05.083502+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.053904Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "acheron",
+  "source": "https://www.prydwen.gg/star-rail/characters/acheron",
+  "source_html_sha256": "e213b9d0aa842547b5592c272704dfc2d51c50bae78927f1e15c0596a4ad3fb8",
+  "website_last_updated": "11/November/2026"
+}

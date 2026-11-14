@@ -1,0 +1,62 @@
+{
+  "char_name": "Lynx",
+  "character_id": 1110,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "lynx.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/lynx/lynx.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/lynx/lynx.png",
+      "sha256": "bc061e2805e51a720729dd9d85dd2a4182b4fc6afaab5793bc5e033a9b73850e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "lynx.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/lynx/lynx.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/lynx/lynx.detailed.png",
+      "sha256": "b32a6e22f462033a3d71151003768493d370603f36deaaf8b504eb32704d4b3f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "lynx.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/lynx/lynx.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/lynx/lynx.detailed.conditions-01.png",
+      "sha256": "d3a8e6fb81844f82dedb91ff7ed75c60900d2d751b4ccdaa1e9c6fb11b8a8136",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "lynx.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/lynx/lynx.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/lynx/lynx.detailed.conditions-02.png",
+      "sha256": "5ef81652bc3fd8547dfe7129ab4eb5e6e03f78b55d22acb017feeae46b47346b",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:10.120867+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.211341Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "lynx",
+  "source": "https://www.prydwen.gg/star-rail/characters/lynx",
+  "source_html_sha256": "ac243d73ce06f302c3fb9617045104823350003528aa5c58492cd0b7c8cd22e1",
+  "website_last_updated": "31/May/2026"
+}

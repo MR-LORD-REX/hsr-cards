@@ -1,0 +1,62 @@
+{
+  "char_name": "Trailblazer • Elation",
+  "character_id": 8009,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "trailblazer-elation.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-elation/trailblazer-elation.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-elation/trailblazer-elation.png",
+      "sha256": "2194d1ba8850bb1338a7bdbad256450297b2d143b3f4c30ff8aabbc65bc16414",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-elation.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-elation/trailblazer-elation.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-elation/trailblazer-elation.detailed.png",
+      "sha256": "0e88a3a283c9f4cec20856caa82b44453ce4128699f663375489ce59438fc5d4",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-elation.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-elation/trailblazer-elation.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-elation/trailblazer-elation.detailed.conditions-01.png",
+      "sha256": "59dfebb8c92847f903bca65a0f748f2c5a4d86e27d1671a3861f780fe99a94b1",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-elation.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-elation/trailblazer-elation.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-elation/trailblazer-elation.detailed.conditions-02.png",
+      "sha256": "f2d5c0401810b1099d6dad4644ff4fa9baa93c16fa769e704559e848133da3d6",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:52.826483+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.169075Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "trailblazer-elation",
+  "source": "https://www.prydwen.gg/star-rail/characters/trailblazer-elation",
+  "source_html_sha256": "2fa5074d036cc4badbeb4946ca24c14a896b5086ea0af02cb50274c3a7345ea7",
+  "website_last_updated": "31/May/2026"
+}

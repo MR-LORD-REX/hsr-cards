@@ -1,0 +1,62 @@
+{
+  "char_name": "Guinaifen",
+  "character_id": 1210,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "guinaifen.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/guinaifen/guinaifen.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/guinaifen/guinaifen.png",
+      "sha256": "350ab2ee6156c2410e6a610aa7fe71e125c992ad8eb00d89af456ae3fdaa7d8f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "guinaifen.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/guinaifen/guinaifen.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/guinaifen/guinaifen.detailed.png",
+      "sha256": "417df343d36741879f04aa63f5d044568f65399280d6fedde3ae342802000fab",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "guinaifen.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/guinaifen/guinaifen.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/guinaifen/guinaifen.detailed.conditions-01.png",
+      "sha256": "1290017c46b8ae9430b22447c29fe85b29ffeec567833955de5b397f68239218",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "guinaifen.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/guinaifen/guinaifen.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/guinaifen/guinaifen.detailed.conditions-02.png",
+      "sha256": "84a25d99c9258c8cf68e060f0f514131f321bf51ec5f37ff86938e9c6ec9eef4",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:46.624417+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.194324Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "guinaifen",
+  "source": "https://www.prydwen.gg/star-rail/characters/guinaifen",
+  "source_html_sha256": "2bb86719976a856ce0e17621d96c576cabaa05c3b3ae1524d86a7f13a0f4e8e4",
+  "website_last_updated": "31/May/2026"
+}

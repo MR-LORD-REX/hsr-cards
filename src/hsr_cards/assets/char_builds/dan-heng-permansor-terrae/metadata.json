@@ -1,0 +1,73 @@
+{
+  "char_name": "Dan Heng • Permansor Terrae",
+  "character_id": 1414,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "dan-heng-permansor-terrae.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dan-heng-permansor-terrae/dan-heng-permansor-terrae.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dan-heng-permansor-terrae/dan-heng-permansor-terrae.png",
+      "sha256": "b513979f2c882cd4eb9d6dac33f2169193c2eca32807f251d6de9caae3def456",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "dan-heng-permansor-terrae.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dan-heng-permansor-terrae/dan-heng-permansor-terrae.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dan-heng-permansor-terrae/dan-heng-permansor-terrae.detailed.png",
+      "sha256": "348ccc1d9500091d585fef803be7aaa58721bdf8441ba7f7e98da659477b5286",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "dan-heng-permansor-terrae.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dan-heng-permansor-terrae/dan-heng-permansor-terrae.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dan-heng-permansor-terrae/dan-heng-permansor-terrae.detailed.conditions-01.png",
+      "sha256": "32e531a8b54c6e027b5dcebb55113aaa38bc581b6634d4dad604d96e51ba4525",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "dan-heng-permansor-terrae.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dan-heng-permansor-terrae/dan-heng-permansor-terrae.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dan-heng-permansor-terrae/dan-heng-permansor-terrae.detailed.conditions-02.png",
+      "sha256": "50c8f5afcceb3ac4b989f5d163492921131ff3297581d3c89d11c941c3c08fbb",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "dan-heng-permansor-terrae.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dan-heng-permansor-terrae/dan-heng-permansor-terrae.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dan-heng-permansor-terrae/dan-heng-permansor-terrae.detailed.conditions-03.png",
+      "sha256": "cbf8407a82a35af94a3e5fbdc92584f6c187cdeec1442ee1aa0e1b579895b00e",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:33.994781+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.633352Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "dan-heng-permansor-terrae",
+  "source": "https://www.prydwen.gg/star-rail/characters/dan-heng-permansor-terrae",
+  "source_html_sha256": "973d074c1b802dfc9018a302f052a12593a03a73b925e741bdffbbcb9c2eef54",
+  "website_last_updated": "31/May/2026"
+}

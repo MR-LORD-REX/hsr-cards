@@ -1,0 +1,73 @@
+{
+  "char_name": "The Herta",
+  "character_id": 1401,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "the-herta.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/the-herta/the-herta.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/the-herta/the-herta.png",
+      "sha256": "b77af9d450d10b82c24a542d77d77ceeb412cd8ccfc4b32b634922d46e7e1ea1",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "the-herta.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/the-herta/the-herta.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/the-herta/the-herta.detailed.png",
+      "sha256": "3cf94f5b8d638450a4fcffa466e84c24d71f12ba4ccea003e51dcfb052849cdc",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "the-herta.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/the-herta/the-herta.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/the-herta/the-herta.detailed.conditions-01.png",
+      "sha256": "41cb71e2679dd475e8d87f173b751bb0dd9b7b4989c2b15edc7ab770f6428521",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "the-herta.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/the-herta/the-herta.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/the-herta/the-herta.detailed.conditions-02.png",
+      "sha256": "fbae54246934c444139f5172da7e0ac36a60b3127d15c7bf001bd80ba8c66e51",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "the-herta.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/the-herta/the-herta.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/the-herta/the-herta.detailed.conditions-03.png",
+      "sha256": "2e380ef4ddffb931d4dc51a912acb4c319c1da1630ef5eac4dfc268323ee9516",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:47.350588+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.920476Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "the-herta",
+  "source": "https://www.prydwen.gg/star-rail/characters/the-herta",
+  "source_html_sha256": "b3b08c156a43ef80cb91efa2cc11c96a39e10c5a7192bc6ae5e7c30068fa90ed",
+  "website_last_updated": "31/May/2026"
+}

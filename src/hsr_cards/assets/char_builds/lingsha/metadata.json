@@ -1,0 +1,62 @@
+{
+  "char_name": "Lingsha",
+  "character_id": 1222,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "lingsha.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/lingsha/lingsha.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/lingsha/lingsha.png",
+      "sha256": "a986693b6160ea0113d19620983b646e4023bd19b810d0bc6f4b4e4e3185f114",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "lingsha.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/lingsha/lingsha.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/lingsha/lingsha.detailed.png",
+      "sha256": "58441ada1e2fdac2e0fdbe1f22672aab4e14644e7725241d9bb9aa2b9fd08165",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "lingsha.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/lingsha/lingsha.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/lingsha/lingsha.detailed.conditions-01.png",
+      "sha256": "df8a0800d34cd2e6ec7dc2d2cb998dd7d2cd86da02bf7217d7bc7d9c7c70aee7",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "lingsha.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/lingsha/lingsha.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/lingsha/lingsha.detailed.conditions-02.png",
+      "sha256": "64d2fd9206d80b72edfd432ec70fb8aa163050a1e09307b4f1ccc42bc07b59d0",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:06.469217+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.068774Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "lingsha",
+  "source": "https://www.prydwen.gg/star-rail/characters/lingsha",
+  "source_html_sha256": "498637cfdab38e0ecbfaa4903ee3096d1f0f28b32d6604a1a52d0ccf331a039c",
+  "website_last_updated": "31/May/2026"
+}

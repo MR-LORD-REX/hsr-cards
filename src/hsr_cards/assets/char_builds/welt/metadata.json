@@ -1,0 +1,62 @@
+{
+  "char_name": "Welt",
+  "character_id": 1004,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "welt.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/welt/welt.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/welt/welt.png",
+      "sha256": "f915250c304f3312329f8bb3cfc99acd56c7c4465c23379db879ad836ba776eb",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "welt.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/welt/welt.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/welt/welt.detailed.png",
+      "sha256": "1cf48d832971e893425553ed62e94271ffedbe9f440f0c931d913fea5fba1fbe",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "welt.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/welt/welt.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/welt/welt.detailed.conditions-01.png",
+      "sha256": "01770d7303bd74bb3f316de4f8a02c3adc27e495e2ce3cd005dbc4dc0895d8ca",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "welt.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/welt/welt.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/welt/welt.detailed.conditions-02.png",
+      "sha256": "9977cdf7959deafdacb0b59637a3c9e3390d8eb656dca19bbe415a967c71d333",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:59.286396+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.628142Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "welt",
+  "source": "https://www.prydwen.gg/star-rail/characters/welt",
+  "source_html_sha256": "da09e2f14434c155d7baa4d65e3c4da0818a9a4cc9db7aded230ba1fb9f6fad6",
+  "website_last_updated": "31/May/2026"
+}

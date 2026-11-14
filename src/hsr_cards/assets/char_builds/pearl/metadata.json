@@ -1,0 +1,73 @@
+{
+  "char_name": "Pearl",
+  "character_id": 1503,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "pearl.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/pearl/pearl.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/pearl/pearl.png",
+      "sha256": "0aa820646a29fe21f608419950661e9c82349a0150fc9d9f64d67aaa23255646",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "pearl.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/pearl/pearl.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/pearl/pearl.detailed.png",
+      "sha256": "fbeeb24eb7a5a6caef30c9d2d07380e05a7b9bfeeac41a06f7d6b781d3014df0",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "pearl.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/pearl/pearl.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/pearl/pearl.detailed.conditions-01.png",
+      "sha256": "99886ee4c899a2145cd3e73a3eb50feec5b85fb895cd42a5472ac8fa19508982",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "pearl.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/pearl/pearl.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/pearl/pearl.detailed.conditions-02.png",
+      "sha256": "270c6cb4d9700d0595188db0d0105cd3f53ed1bd50af0316a391f1f035d5b2fc",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "pearl.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/pearl/pearl.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/pearl/pearl.detailed.conditions-03.png",
+      "sha256": "99da050075a376b5489e13ee1772bc195ffa538a7782b1d60b829daa5219227e",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:20.180404+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.570877Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "pearl",
+  "source": "https://www.prydwen.gg/star-rail/characters/pearl",
+  "source_html_sha256": "4362bccc40b1df530b80c1dc6326c529f32c4fe6eec4fd85918481bd72d9b02c",
+  "website_last_updated": "11/November/2026"
+}

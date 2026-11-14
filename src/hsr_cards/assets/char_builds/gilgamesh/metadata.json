@@ -1,0 +1,73 @@
+{
+  "char_name": "Gilgamesh",
+  "character_id": 1509,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "gilgamesh.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gilgamesh/gilgamesh.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gilgamesh/gilgamesh.png",
+      "sha256": "90a620397238608f2061fedddc58e45f48361235652eb0002f0e78e22436a296",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "gilgamesh.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gilgamesh/gilgamesh.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gilgamesh/gilgamesh.detailed.png",
+      "sha256": "4009bc65b777fd38277a8eb6f20a4e9a12b320d3a5511efe1a0cce9cfc431133",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "gilgamesh.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gilgamesh/gilgamesh.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gilgamesh/gilgamesh.detailed.conditions-01.png",
+      "sha256": "fe2433640906ea3de88145f565e21037d61cf2dd46cbd45447b1450ef4d93853",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "gilgamesh.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gilgamesh/gilgamesh.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gilgamesh/gilgamesh.detailed.conditions-02.png",
+      "sha256": "cb417080918f956bf1d297a0a32ef0774fbe49bdc8b4f57b6df22744ea370042",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "gilgamesh.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gilgamesh/gilgamesh.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gilgamesh/gilgamesh.detailed.conditions-03.png",
+      "sha256": "8c90740eb2d0ab4121d489e466773d5f60215478120df33d645ceb04a5fc13f7",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:45.409256+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.155113Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "gilgamesh",
+  "source": "https://www.prydwen.gg/star-rail/characters/gilgamesh",
+  "source_html_sha256": "1b52fb1c9eb1c4a145e1f162fd60a5245d0c5b364cf780c3fa690d55eb969dde",
+  "website_last_updated": "26/August/2026"
+}

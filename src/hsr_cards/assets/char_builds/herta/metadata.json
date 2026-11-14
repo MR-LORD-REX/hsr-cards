@@ -1,0 +1,62 @@
+{
+  "char_name": "Herta",
+  "character_id": 1013,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "herta.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/herta/herta.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/herta/herta.png",
+      "sha256": "0a1ef1e53ef533260e18f1f267afd18a4d957b24682ac99847233cf3b154c57e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "herta.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/herta/herta.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/herta/herta.detailed.png",
+      "sha256": "d5d3577be3bcb73983ef518f6005c63d0f85a1e6aa43f9d087d8007edbf3ca64",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "herta.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/herta/herta.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/herta/herta.detailed.conditions-01.png",
+      "sha256": "f21a8ebe71f0e558912629793dd07dd001baec3629709eaa0e81c6846c535dbe",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "herta.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/herta/herta.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/herta/herta.detailed.conditions-02.png",
+      "sha256": "e9319f83b6b92616e5a79d7a14e1588e4b8ef8490c55a45b96c291d4a58bdf79",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:48.991035+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.270617Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "herta",
+  "source": "https://www.prydwen.gg/star-rail/characters/herta",
+  "source_html_sha256": "ec3702374cc925477c4866e049f98d686976acf61ee24f8ba03c5f32084a3957",
+  "website_last_updated": "31/May/2026"
+}

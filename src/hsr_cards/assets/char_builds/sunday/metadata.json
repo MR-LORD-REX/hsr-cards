@@ -1,0 +1,73 @@
+{
+  "char_name": "Sunday",
+  "character_id": 1313,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "sunday.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sunday/sunday.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sunday/sunday.png",
+      "sha256": "d2688b672e16311d4ae3f996292f173e480c9f6d195f70476d2db3648ad8ca11",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sunday.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sunday/sunday.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sunday/sunday.detailed.png",
+      "sha256": "35d1870de8c9d11896d9d4162593300f43d0e9221b81e6ac74ac2c366f2eb5e4",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sunday.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sunday/sunday.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sunday/sunday.detailed.conditions-01.png",
+      "sha256": "730b006fd80bdc3106cb73c75dd7e3e9c04733aa016b7468c670ab300403b6ad",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sunday.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sunday/sunday.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sunday/sunday.detailed.conditions-02.png",
+      "sha256": "4f750aa35df2471a7b1c569b421ae58d117c3fa3a516c1f904d34fee43974dd1",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sunday.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sunday/sunday.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sunday/sunday.detailed.conditions-03.png",
+      "sha256": "9767166db5e664795841d211f672ab4e822f4c10d017c18167ee4570fe75cf6d",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:43.320209+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.732795Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "sunday",
+  "source": "https://www.prydwen.gg/star-rail/characters/sunday",
+  "source_html_sha256": "c2ba8a36a473afbc3e058cdf6705d997a2d0512d045b958a954236b67ccbdd91",
+  "website_last_updated": "31/May/2026"
+}

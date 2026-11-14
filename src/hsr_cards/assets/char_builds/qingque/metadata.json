@@ -1,0 +1,62 @@
+{
+  "char_name": "Qingque",
+  "character_id": 1201,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "qingque.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/qingque/qingque.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/qingque/qingque.png",
+      "sha256": "736e2daef19102aec9d6c94472d4aaf8a9cebe642249f82d1c53e793ea1aaaf0",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "qingque.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/qingque/qingque.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/qingque/qingque.detailed.png",
+      "sha256": "5524bd3d79cc4f28d1b6be301919f8d7959e69ba6250358895c9fbfbdf2ad24d",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "qingque.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/qingque/qingque.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/qingque/qingque.detailed.conditions-01.png",
+      "sha256": "68669e53758b143c84159ffc8391f55205be5604832b1e3d9f76887e9a68213e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "qingque.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/qingque/qingque.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/qingque/qingque.detailed.conditions-02.png",
+      "sha256": "527aee587b818bffd37b5345a1fde6a9957d7dde4b26213b9bf5b0924ad0ac6d",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:24.298805+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.708825Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "qingque",
+  "source": "https://www.prydwen.gg/star-rail/characters/qingque",
+  "source_html_sha256": "4924976d455e2cc0ff5cd56bec1b5a83b1403e47e9733507210597312f35693b",
+  "website_last_updated": "31/May/2026"
+}

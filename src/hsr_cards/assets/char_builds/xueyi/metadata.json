@@ -1,0 +1,62 @@
+{
+  "char_name": "Xueyi",
+  "character_id": 1214,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "xueyi.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/xueyi/xueyi.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/xueyi/xueyi.png",
+      "sha256": "77a695a6c2ac8c088bb6dbceb51225694ddb1335d2bbd3c529826d519bd5e599",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "xueyi.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/xueyi/xueyi.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/xueyi/xueyi.detailed.png",
+      "sha256": "49dc4a1026b9188266dfb093638215a6ab85505fc29f88d09b1566e816a80993",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "xueyi.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/xueyi/xueyi.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/xueyi/xueyi.detailed.conditions-01.png",
+      "sha256": "bbddf23a7c827c6696f1439ff4ddecfa88d6344d50b6e46e815f082a6b92d814",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "xueyi.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/xueyi/xueyi.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/xueyi/xueyi.detailed.conditions-02.png",
+      "sha256": "81249358412a4c40e3119916fbc6706e895d8fe7065b67552236b997f5d08526",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:50:00.479596+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.669396Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "xueyi",
+  "source": "https://www.prydwen.gg/star-rail/characters/xueyi",
+  "source_html_sha256": "0f58e029f9a612c1a0085dd4f989235d5d71b4ffddf7346f6aeaee1f6b010069",
+  "website_last_updated": "31/May/2026"
+}

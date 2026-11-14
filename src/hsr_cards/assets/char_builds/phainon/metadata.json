@@ -1,0 +1,73 @@
+{
+  "char_name": "Phainon",
+  "character_id": 1408,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "phainon.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/phainon/phainon.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/phainon/phainon.png",
+      "sha256": "330b09b07f85fc21eab8bd8e0a9cf6483b8eac13f61e1ab01185877e15dee359",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "phainon.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/phainon/phainon.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/phainon/phainon.detailed.png",
+      "sha256": "be24d0b5d7e2fe26b4328bf28957825196f1f8bcb5d27651a7fd53fad4f37965",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "phainon.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/phainon/phainon.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/phainon/phainon.detailed.conditions-01.png",
+      "sha256": "e0a416903eca648ab72a57d885de5f7d809bbcafe80b9e4af935a94c4e84b35f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "phainon.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/phainon/phainon.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/phainon/phainon.detailed.conditions-02.png",
+      "sha256": "1fcd01645619086ed421b4bad9e1e77c71e75533a2c6620f9459b5b674a6aa83",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "phainon.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/phainon/phainon.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/phainon/phainon.detailed.conditions-03.png",
+      "sha256": "49a14b53e8512da78876019748d77f6c603adc0d7877dacc144594ea3ac70081",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:22.940478+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.674570Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "phainon",
+  "source": "https://www.prydwen.gg/star-rail/characters/phainon",
+  "source_html_sha256": "0e7f2a4948658bdc7a26f263d2eb7c8400a3195211723cdc818a6d1f8e6a8cf5",
+  "website_last_updated": "31/May/2026"
+}

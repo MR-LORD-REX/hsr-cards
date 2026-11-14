@@ -1,0 +1,62 @@
+{
+  "char_name": "Sampo",
+  "character_id": 1108,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "sampo.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sampo/sampo.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sampo/sampo.png",
+      "sha256": "fb6d1f54836c40c2143145ab0dd8faa2d5b1ea9055f63b69b69d233c1f1fc72b",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sampo.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sampo/sampo.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sampo/sampo.detailed.png",
+      "sha256": "708be163f05a7ca436c267eaee21bfb0d7be6a22710f8d89caf0c1d65ae2658e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sampo.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sampo/sampo.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sampo/sampo.detailed.conditions-01.png",
+      "sha256": "eba54efbd1679abab2e78e40496467c747fd533c2bab55faecacf07e858bc82f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sampo.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sampo/sampo.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sampo/sampo.detailed.conditions-02.png",
+      "sha256": "5fe6a35f4772909f8590163ded59d4b44abd80277c4b3a047009f4b15f3c31d1",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:33.883029+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.212415Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "sampo",
+  "source": "https://www.prydwen.gg/star-rail/characters/sampo",
+  "source_html_sha256": "41d6d30c4f2ece0318c2b4cf9f85e7c7b803d1406f1b75f044c44fdc13ce6396",
+  "website_last_updated": "31/May/2026"
+}

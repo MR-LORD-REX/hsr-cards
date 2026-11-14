@@ -1,0 +1,62 @@
+{
+  "char_name": "Tingyun",
+  "character_id": 1202,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "tingyun.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/tingyun/tingyun.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/tingyun/tingyun.png",
+      "sha256": "3ab61e09ec3cd87423214fba2ffcc45234262311361c7185f78f374702597392",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "tingyun.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/tingyun/tingyun.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/tingyun/tingyun.detailed.png",
+      "sha256": "842000479d50fe6c00c45079e7cb38062b68345fdb7d2f9ee17116bd2bee6370",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "tingyun.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/tingyun/tingyun.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/tingyun/tingyun.detailed.conditions-01.png",
+      "sha256": "c8bdfc1ee302b98cbf80f452ffbfa8052e76e26f0235aa1ec564fe169d20ab8a",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "tingyun.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/tingyun/tingyun.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/tingyun/tingyun.detailed.conditions-02.png",
+      "sha256": "6aa6e23ec58d2c52bfbe6841249d2200a2417473ed643da06b9ebd0ee840b0c6",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:50.194242+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.033918Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "tingyun",
+  "source": "https://www.prydwen.gg/star-rail/characters/tingyun",
+  "source_html_sha256": "a9f4281e1c463bb221d9ff57c5b3af909001e52cc11a7ab3c9c185ad401e0f44",
+  "website_last_updated": "31/May/2026"
+}

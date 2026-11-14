@@ -1,0 +1,73 @@
+{
+  "char_name": "Blade",
+  "character_id": 1205,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "blade.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/blade/blade.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/blade/blade.png",
+      "sha256": "173e439013afaf4c7ec44695294bbf41d118023996b2d76a0ba7eeede8ae9079",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "blade.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/blade/blade.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/blade/blade.detailed.png",
+      "sha256": "265e694b18f8dd9d4041f609b3664484fefaaf294cc7ec8ca188b9af48f0832e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "blade.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/blade/blade.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/blade/blade.detailed.conditions-01.png",
+      "sha256": "2534a66d0b98014c7b3fe58d714279d7635b70e1ae13d23b39117edf64ee76eb",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "blade.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/blade/blade.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/blade/blade.detailed.conditions-02.png",
+      "sha256": "52279547912790bca9ee28979e7ff929a08583e9fd52410f54f8ff3ed415ab4b",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "blade.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/blade/blade.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/blade/blade.detailed.conditions-03.png",
+      "sha256": "1a3b0368633551415481cf25236db9d5efe5338635475ae8fe1303e3972fb61c",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:23.406487+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.999152Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "blade",
+  "source": "https://www.prydwen.gg/star-rail/characters/blade",
+  "source_html_sha256": "2c51e4381a26953a2ed6b359eeb2ee58c53fcd72d1393880614a72941a27dafa",
+  "website_last_updated": "31/May/2026"
+}

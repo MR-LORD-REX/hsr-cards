@@ -1,0 +1,62 @@
+{
+  "char_name": "Trailblazer • Preservation",
+  "character_id": 8003,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "trailblazer-preservation.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-preservation/trailblazer-preservation.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-preservation/trailblazer-preservation.png",
+      "sha256": "d3d4204f7c2a73dcc260b0ad4146bbddee648e3e54b7be70e0bc62c2502027f7",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-preservation.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-preservation/trailblazer-preservation.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-preservation/trailblazer-preservation.detailed.png",
+      "sha256": "496ef85b053ecb73b5aeff81e289698d50ad725097b13f1a255025db3dba8466",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-preservation.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-preservation/trailblazer-preservation.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-preservation/trailblazer-preservation.detailed.conditions-01.png",
+      "sha256": "dfa16dab940db4a8a1ecfa43aa006b0de263a36db7a1a2b4a7725fa36a6e18bd",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-preservation.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-preservation/trailblazer-preservation.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-preservation/trailblazer-preservation.detailed.conditions-02.png",
+      "sha256": "1b6b0a0170105e492e68ddfa0b6d4df1b0bf0ade45156bfc052ae81f77a48888",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:55.053328+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.274697Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "trailblazer-preservation",
+  "source": "https://www.prydwen.gg/star-rail/characters/trailblazer-preservation",
+  "source_html_sha256": "c764dc99e6bb3a21d1d3fa4a1b16afe644fc99ab86fd4a6682ad986dec7b7b38",
+  "website_last_updated": "31/May/2026"
+}

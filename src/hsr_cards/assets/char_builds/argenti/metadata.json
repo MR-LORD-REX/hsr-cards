@@ -1,0 +1,62 @@
+{
+  "char_name": "Argenti",
+  "character_id": 1302,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "argenti.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/argenti/argenti.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/argenti/argenti.png",
+      "sha256": "28a01652ca78c606c5b8c6ba1ca24aa053e3c717b49db5114b474db3d216fbcd",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "argenti.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/argenti/argenti.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/argenti/argenti.detailed.png",
+      "sha256": "a7ac333489e6af5b8fabff7e0f06d97a8a9ebacee3b20c29fcfc441654021cbf",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "argenti.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/argenti/argenti.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/argenti/argenti.detailed.conditions-01.png",
+      "sha256": "fd973221e8c9d24898d487aaaa7057cd1c58cedaadc1cb9317c38ef6e0667ce7",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "argenti.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/argenti/argenti.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/argenti/argenti.detailed.conditions-02.png",
+      "sha256": "34db13f1196e865c92562bd31423fc12ebd0fc68da1c98b9420c127b374ce15b",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:11.449360+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.320541Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "argenti",
+  "source": "https://www.prydwen.gg/star-rail/characters/argenti",
+  "source_html_sha256": "1d5462ef870222de590b8950a9e18a4db5368da53a03486bd8a556fed8af779e",
+  "website_last_updated": "31/May/2026"
+}

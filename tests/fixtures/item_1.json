@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "item_main_type": "Virtual",
+  "item_sub_type": "Virtual",
+  "inventory_display_tag": 1,
+  "rarity": "SuperRare",
+  "purpose_type": 12,
+  "item_name": "Stellar Jade",
+  "item_bg_desc": "A fleeting gleam arrowing across the night sky. Catch it before it's gone. Maybe it can be used to barter?\\n\\n<i>\"Some say that the lights are wishes of sentient beings. While insignificant and elusive, they did light up the pocket of sky around them, right?\"</i>",
+  "item_icon_path": "SpriteOutput/ItemIcon/900001.png",
+  "item_figure_icon_path": "SpriteOutput/ItemFigures/900001.png",
+  "item_currency_icon_path": "SpriteOutput/ItemCurrency/1.png",
+  "item_avatar_icon_path": "",
+  "pile_limit": 999999999,
+  "custom_data_list": [],
+  "return_item_id_list": [],
+  "item_desc": "",
+  "item_comefrom": []
+}

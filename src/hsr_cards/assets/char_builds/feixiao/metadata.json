@@ -1,0 +1,73 @@
+{
+  "char_name": "Feixiao",
+  "character_id": 1220,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "feixiao.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/feixiao/feixiao.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/feixiao/feixiao.png",
+      "sha256": "068ed3ee063741b349f151260dd277a6889c7f84333fde510be0bd0f084b43f3",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "feixiao.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/feixiao/feixiao.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/feixiao/feixiao.detailed.png",
+      "sha256": "c56d42a80cd2af80cc4f7ffd56268a051f3a729346c2873d78b0812e62c82f57",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "feixiao.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/feixiao/feixiao.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/feixiao/feixiao.detailed.conditions-01.png",
+      "sha256": "90e805cfcb57b34159be08d348b97c97d3eff53efcee3a1f009f0a5d618df786",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "feixiao.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/feixiao/feixiao.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/feixiao/feixiao.detailed.conditions-02.png",
+      "sha256": "42909edc418476b531fda16defb5b14408bf880889d83ad26a9b9fdaa679835c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "feixiao.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/feixiao/feixiao.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/feixiao/feixiao.detailed.conditions-03.png",
+      "sha256": "e109b30b55ad15084704fde638461746580897302bd69c1f97f13244b2e39d38",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:39.089829+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.867332Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "feixiao",
+  "source": "https://www.prydwen.gg/star-rail/characters/feixiao",
+  "source_html_sha256": "f9be800814cf7e12742821c6716042b293df8afa98a3fd54a146d5cbeb19a350",
+  "website_last_updated": "31/May/2026"
+}

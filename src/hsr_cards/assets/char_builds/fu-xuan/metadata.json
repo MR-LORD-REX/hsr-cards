@@ -1,0 +1,62 @@
+{
+  "char_name": "Fu Xuan",
+  "character_id": 1208,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "fu-xuan.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/fu-xuan/fu-xuan.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/fu-xuan/fu-xuan.png",
+      "sha256": "4a3cd11e522deafdcf2e178cc327b85fae7bb56eb34c8c4bcb57f25c3684c352",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "fu-xuan.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/fu-xuan/fu-xuan.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/fu-xuan/fu-xuan.detailed.png",
+      "sha256": "008ebfc700ef55ee066f2cd05409272accd18f5959808abf93e76dd5ee39b747",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "fu-xuan.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/fu-xuan/fu-xuan.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/fu-xuan/fu-xuan.detailed.conditions-01.png",
+      "sha256": "39d577ce230b0fd1f806f21e0d329ca1abc9b68b9dba5ffce043e2f2c02d5cf9",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "fu-xuan.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/fu-xuan/fu-xuan.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/fu-xuan/fu-xuan.detailed.conditions-02.png",
+      "sha256": "316e2803250811447098228a1f9841a726b0b29691d6085e9cf9b66bacd10826",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:41.557481+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.979569Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "fu-xuan",
+  "source": "https://www.prydwen.gg/star-rail/characters/fu-xuan",
+  "source_html_sha256": "bde33fc620c1fc230d5b4880e95f6ffb64c0b19de3fb766a05927cf99153d0a5",
+  "website_last_updated": "31/May/2026"
+}

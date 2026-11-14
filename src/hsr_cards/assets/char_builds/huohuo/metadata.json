@@ -1,0 +1,62 @@
+{
+  "char_name": "Huohuo",
+  "character_id": 1217,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "huohuo.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/huohuo/huohuo.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/huohuo/huohuo.png",
+      "sha256": "9a70095bb539bc02caf4de65029238024e4285677d0df057fbface6f7e78d664",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "huohuo.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/huohuo/huohuo.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/huohuo/huohuo.detailed.png",
+      "sha256": "3884e5bf56063853d1ae8942fe6bd0cf259812baa882cb897cf1f3951a44d93b",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "huohuo.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/huohuo/huohuo.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/huohuo/huohuo.detailed.conditions-01.png",
+      "sha256": "09379ffb878917986ae1d5cd41edfff8d66f633e641c7a915c72cce131353d58",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "huohuo.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/huohuo/huohuo.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/huohuo/huohuo.detailed.conditions-02.png",
+      "sha256": "94f153250d89ccb94992c1426bacabe1dcb74c2942b1f8261ce94e2627412604",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:54.105632+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.523344Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "huohuo",
+  "source": "https://www.prydwen.gg/star-rail/characters/huohuo",
+  "source_html_sha256": "e34e3ff32d60c47265edff4b4f24414875ea7a37acb78efea6d079f80163e81c",
+  "website_last_updated": "31/May/2026"
+}

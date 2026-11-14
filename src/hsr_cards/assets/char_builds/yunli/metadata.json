@@ -1,0 +1,73 @@
+{
+  "char_name": "Yunli",
+  "character_id": 1221,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "yunli.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yunli/yunli.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yunli/yunli.png",
+      "sha256": "2f0f15717ffb1f3747e76d5499b954b542179da73b936d3e6b78c60028d6d22e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yunli.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yunli/yunli.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yunli/yunli.detailed.png",
+      "sha256": "2561e90be387b57502b11c4a09183910b10b3a1fc6cf6cc013722ecc61ba5db1",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yunli.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yunli/yunli.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yunli/yunli.detailed.conditions-01.png",
+      "sha256": "93f5a46126c69de4bc31647001736f18eb6352b660b54a32b38c3f6fa60b5b57",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yunli.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yunli/yunli.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yunli/yunli.detailed.conditions-02.png",
+      "sha256": "23558f96b3245103cc2188ba63b1ea26e8cbb9040c277f810d6562dfe9105077",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yunli.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yunli/yunli.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yunli/yunli.detailed.conditions-03.png",
+      "sha256": "97edb4fee69ab3b09c780b2a449fd8652d2e24498ad1a6028d03c1466fb195c7",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:50:05.331994+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.856737Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "yunli",
+  "source": "https://www.prydwen.gg/star-rail/characters/yunli",
+  "source_html_sha256": "24db69d4f6892a63e515f2afa7ebc4bcbd77170237479d39b40a4b2b03cf52c6",
+  "website_last_updated": "31/May/2026"
+}

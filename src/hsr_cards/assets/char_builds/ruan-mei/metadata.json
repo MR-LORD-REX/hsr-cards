@@ -1,0 +1,62 @@
+{
+  "char_name": "Ruan Mei",
+  "character_id": 1303,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "ruan-mei.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/ruan-mei/ruan-mei.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/ruan-mei/ruan-mei.png",
+      "sha256": "849ba526ad070b58c9c704011c9ec90d79d41ea60f0cbce7eda803715cd4b9a0",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "ruan-mei.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/ruan-mei/ruan-mei.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/ruan-mei/ruan-mei.detailed.png",
+      "sha256": "0c499fb4784ce98f735f6d31721f01048d1c18a0542427ced62820ea35c4d88a",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "ruan-mei.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/ruan-mei/ruan-mei.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/ruan-mei/ruan-mei.detailed.conditions-01.png",
+      "sha256": "9baf2ee338917e8a7aebf58949d55e46e535f1a1969eb538a36cda56d090b06e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "ruan-mei.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/ruan-mei/ruan-mei.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/ruan-mei/ruan-mei.detailed.conditions-02.png",
+      "sha256": "a3e8116c52b098024f093c5f497ea2e45f7f175cf14e906da9cda9e82524ac2c",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:31.337698+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.118692Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "ruan-mei",
+  "source": "https://www.prydwen.gg/star-rail/characters/ruan-mei",
+  "source_html_sha256": "1f491b279cf45a2a0c80323bc6e46de21d6913bec930575c15af20d59abe9982",
+  "website_last_updated": "31/May/2026"
+}

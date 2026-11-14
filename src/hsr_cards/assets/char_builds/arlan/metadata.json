@@ -1,0 +1,62 @@
+{
+  "char_name": "Arlan",
+  "character_id": 1008,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "arlan.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/arlan/arlan.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/arlan/arlan.png",
+      "sha256": "306049495cca1f4dbf3899ff7a039c4bdbd265232728ca089ea3674e98f1af21",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "arlan.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/arlan/arlan.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/arlan/arlan.detailed.png",
+      "sha256": "0f88a8400cb5aab7f27963c3865fa1e5272241851ad0f0bcc5c2bd2f2055c4a3",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "arlan.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/arlan/arlan.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/arlan/arlan.detailed.conditions-01.png",
+      "sha256": "de745374648d04801a73d61c837f19c2d12e9360ff509bf6afe4e351f5e4b84b",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "arlan.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/arlan/arlan.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/arlan/arlan.detailed.conditions-02.png",
+      "sha256": "1b8dfdfe7cf3dfabfcd62ed9293540e3f99320e44dcf31685b4758711e689aa2",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:12.727434+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.351213Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "arlan",
+  "source": "https://www.prydwen.gg/star-rail/characters/arlan",
+  "source_html_sha256": "d1dc9ba796c3000cf4d1e77e062eaecc95ec676461335c989c322da4648da895",
+  "website_last_updated": "31/May/2026"
+}

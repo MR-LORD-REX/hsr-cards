@@ -1,0 +1,73 @@
+{
+  "char_name": "Robin",
+  "character_id": 1309,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "robin.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/robin/robin.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/robin/robin.png",
+      "sha256": "f1f0f172940d4648c9de7e7153d82e507a89d2b31ca14017c740da2c28bcbae2",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "robin.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/robin/robin.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/robin/robin.detailed.png",
+      "sha256": "18e34711c362d0c3bbfb73fa383e2d68155768ccf4f4fb558eafdb65c2b4af6e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "robin.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/robin/robin.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/robin/robin.detailed.conditions-01.png",
+      "sha256": "30948d6d25475bf4f94fe1f89c13b438e141fe27f3bbfe715d512ffbdfb621aa",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "robin.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/robin/robin.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/robin/robin.detailed.conditions-02.png",
+      "sha256": "9577984fb57efe3b616af4d5950e9369f3d24c2be2f183b3de817e4ad734e289",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "robin.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/robin/robin.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/robin/robin.detailed.conditions-03.png",
+      "sha256": "d5b90e27cecc25a2fbc00c12383d046ba14ec49ccb256ca984514269c2495bcb",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:29.796568+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.028229Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "robin",
+  "source": "https://www.prydwen.gg/star-rail/characters/robin",
+  "source_html_sha256": "eaf9dcd588e06fbff6a1e0d98a7eef075c9617782fbd69e72eadaf6f5bfbc16f",
+  "website_last_updated": "31/May/2026"
+}

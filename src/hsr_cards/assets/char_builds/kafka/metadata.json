@@ -1,0 +1,73 @@
+{
+  "char_name": "Kafka",
+  "character_id": 1005,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "kafka.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/kafka/kafka.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/kafka/kafka.png",
+      "sha256": "c4587cd9890911c769d5876003d30be9a6ac881e8ff1bda55935c2e7fe8e79f8",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "kafka.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/kafka/kafka.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/kafka/kafka.detailed.png",
+      "sha256": "af54be1ec4cd371b7854469af4eeb33ebb57da3c5a1feff44270ccaea974a32f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "kafka.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/kafka/kafka.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/kafka/kafka.detailed.conditions-01.png",
+      "sha256": "24bae5df340a1d82569b39dacb84d28eaf66773f6ac15fcee385b8da5e21a42a",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "kafka.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/kafka/kafka.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/kafka/kafka.detailed.conditions-02.png",
+      "sha256": "5974f00816d76bd15a429a93bfe9aec07f02fd34ad62d9baab5d94bbb9c9ff01",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "kafka.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/kafka/kafka.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/kafka/kafka.detailed.conditions-03.png",
+      "sha256": "b12df09c1243c6e85d3e41451ab49eada310671793d9299f49e3fcba27d43037",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:05.098216+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.989365Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "kafka",
+  "source": "https://www.prydwen.gg/star-rail/characters/kafka",
+  "source_html_sha256": "fbcb0791c91d7f09e01defc08ee9d7124034803fcfe749d19614ec6a4a06a5f1",
+  "website_last_updated": "31/May/2026"
+}

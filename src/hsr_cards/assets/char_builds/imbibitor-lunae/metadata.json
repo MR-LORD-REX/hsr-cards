@@ -1,0 +1,62 @@
+{
+  "char_name": "Dan Heng • Imbibitor Lunae",
+  "character_id": 1213,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "imbibitor-lunae.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/imbibitor-lunae/imbibitor-lunae.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/imbibitor-lunae/imbibitor-lunae.png",
+      "sha256": "92b7bb784324ad454d6adb8062d609c48a077be4a093f4efbef2c218a0953ce9",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "imbibitor-lunae.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/imbibitor-lunae/imbibitor-lunae.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/imbibitor-lunae/imbibitor-lunae.detailed.png",
+      "sha256": "36759bc64f22302a5ff3d5c6b33362e939c37664c7e73e0cb1b8b8a552e6fffe",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "imbibitor-lunae.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/imbibitor-lunae/imbibitor-lunae.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/imbibitor-lunae/imbibitor-lunae.detailed.conditions-01.png",
+      "sha256": "fd9dac9f53035bd4888c1d262796a28059703601b37131128097dd2e8f1b8b81",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "imbibitor-lunae.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/imbibitor-lunae/imbibitor-lunae.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/imbibitor-lunae/imbibitor-lunae.detailed.conditions-02.png",
+      "sha256": "350518ecb939433463cb86a30c9735d4b9c23005eebab31d3b5d21bf278a8928",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:58.135636+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.755024Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "imbibitor-lunae",
+  "source": "https://www.prydwen.gg/star-rail/characters/imbibitor-lunae",
+  "source_html_sha256": "ac1d44cf335d9856df41dd932b590611e9a2a2d754e1a5b272fd518f2f7afda9",
+  "website_last_updated": "11/November/2026"
+}

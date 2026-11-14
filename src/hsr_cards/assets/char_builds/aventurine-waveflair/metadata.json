@@ -1,0 +1,73 @@
+{
+  "char_name": "Aventurine Waveflair",
+  "character_id": 1513,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "aventurine-waveflair.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aventurine-waveflair/aventurine-waveflair.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aventurine-waveflair/aventurine-waveflair.png",
+      "sha256": "21cc5d18bf8acdc9b44b9eb8508524ab08311d677f495c8125ebb5156fa756f3",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aventurine-waveflair.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aventurine-waveflair/aventurine-waveflair.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aventurine-waveflair/aventurine-waveflair.detailed.png",
+      "sha256": "c33f1ef15f93ec3e0207bacb0ed3d2ae6eed8161e916b9e814a3254cdbebec38",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aventurine-waveflair.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aventurine-waveflair/aventurine-waveflair.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aventurine-waveflair/aventurine-waveflair.detailed.conditions-01.png",
+      "sha256": "5ee7283fee59ff314ad1de54430bda7b98b304150f3e1efb32da4c4746cffdc6",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aventurine-waveflair.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aventurine-waveflair/aventurine-waveflair.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aventurine-waveflair/aventurine-waveflair.detailed.conditions-02.png",
+      "sha256": "625ebbf9d9e346610fb06842d24d1eba183123a21fafd3148d3b5ee8f7b0149f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aventurine-waveflair.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aventurine-waveflair/aventurine-waveflair.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aventurine-waveflair/aventurine-waveflair.detailed.conditions-03.png",
+      "sha256": "8b0217cb4d12d21c9b12c2e1d5bdc6dc71f3c855ec94846bd8789fa55a3e98b7",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:16.857568+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.577867Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "aventurine-waveflair",
+  "source": "https://www.prydwen.gg/star-rail/characters/aventurine-waveflair",
+  "source_html_sha256": "e9a6f66d97c3c621a18817da7c921ff5e221fbacdc4d8f49f4153fa13dc75a79",
+  "website_last_updated": "28/September/2026"
+}

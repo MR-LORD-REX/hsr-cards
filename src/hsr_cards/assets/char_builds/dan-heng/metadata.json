@@ -1,0 +1,62 @@
+{
+  "char_name": "Dan Heng",
+  "character_id": 1002,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "dan-heng.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dan-heng/dan-heng.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dan-heng/dan-heng.png",
+      "sha256": "709b53163d999038123c3036a153c90d73eaebab7ca07d157a613b0189fb83c9",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "dan-heng.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dan-heng/dan-heng.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dan-heng/dan-heng.detailed.png",
+      "sha256": "4005a6d21ea01daf43b55b63096fa5dc85173c9401546015420002dc8ce92595",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "dan-heng.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dan-heng/dan-heng.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dan-heng/dan-heng.detailed.conditions-01.png",
+      "sha256": "4ffbb4037c5e4ed4795053e968916b3309802459e63eb1d717fc80daee8dfc64",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "dan-heng.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dan-heng/dan-heng.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dan-heng/dan-heng.detailed.conditions-02.png",
+      "sha256": "8bd5f8ca5614e80803c40b1506d90aea9e555612b39304074852cfcde898ed9d",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:35.227607+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.699664Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "dan-heng",
+  "source": "https://www.prydwen.gg/star-rail/characters/dan-heng",
+  "source_html_sha256": "f1f29977787dddb4533d605d18e210381f052ffd66e7475874ad5fac9d01c445",
+  "website_last_updated": "31/May/2026"
+}

@@ -1,0 +1,62 @@
+{
+  "char_name": "Jiaoqiu",
+  "character_id": 1218,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "jiaoqiu.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jiaoqiu/jiaoqiu.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jiaoqiu/jiaoqiu.png",
+      "sha256": "28afd7a5b27cb885f82cdf53da9aa1be8c95ac2a47718bf516dbdfcda1a78a90",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "jiaoqiu.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jiaoqiu/jiaoqiu.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jiaoqiu/jiaoqiu.detailed.png",
+      "sha256": "d5d37e04c70f7a83ba453116a580bbb2f99c8e856169652bbac3dba84a1833b7",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "jiaoqiu.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jiaoqiu/jiaoqiu.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jiaoqiu/jiaoqiu.detailed.conditions-01.png",
+      "sha256": "5d2c180dcc45ab4089e70fc3dbe3ec8fd05f66186ee4c2d94c42ba21cbd8bdfc",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "jiaoqiu.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jiaoqiu/jiaoqiu.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jiaoqiu/jiaoqiu.detailed.conditions-02.png",
+      "sha256": "1779f49dd95b4a7918217eae026466b337445137f61387962bd1e2e8b8d6f792",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:00.777884+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.866956Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "jiaoqiu",
+  "source": "https://www.prydwen.gg/star-rail/characters/jiaoqiu",
+  "source_html_sha256": "44888faeb58d598d5021766a24ab3d16508ccaba8ff24312940a62bba3357088",
+  "website_last_updated": "31/May/2026"
+}

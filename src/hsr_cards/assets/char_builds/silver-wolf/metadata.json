@@ -1,0 +1,73 @@
+{
+  "char_name": "Silver Wolf",
+  "character_id": 1006,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "silver-wolf.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/silver-wolf/silver-wolf.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/silver-wolf/silver-wolf.png",
+      "sha256": "4df1ca88757e77c0ce620ab0aca3eb43d50ca39096f88787e14d4453d348445e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "silver-wolf.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/silver-wolf/silver-wolf.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/silver-wolf/silver-wolf.detailed.png",
+      "sha256": "9d7e99d1bd8c46d32e71a69b6bace742913e9042d10ee0d684d0d645e569f987",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "silver-wolf.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/silver-wolf/silver-wolf.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/silver-wolf/silver-wolf.detailed.conditions-01.png",
+      "sha256": "fab8aa39350da4f7c0bf5b26d4e89015ead371dec80d3d532e2b600adf079fe6",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "silver-wolf.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/silver-wolf/silver-wolf.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/silver-wolf/silver-wolf.detailed.conditions-02.png",
+      "sha256": "a91976f2115aae10a203a6eda5dca4cdf3749f0aeb7c6acc1a692c3d3ae5c1d8",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "silver-wolf.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/silver-wolf/silver-wolf.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/silver-wolf/silver-wolf.detailed.conditions-03.png",
+      "sha256": "bdc7979969dbec4301a520656a1e9b5eb83aa863f2027394263f5bb845e07e99",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:39.174797+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.443364Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "silver-wolf",
+  "source": "https://www.prydwen.gg/star-rail/characters/silver-wolf",
+  "source_html_sha256": "d1f29d825751daf9704c4e222566fa1fd7150abd24419982f90f196de2f1e7bf",
+  "website_last_updated": "31/May/2026"
+}

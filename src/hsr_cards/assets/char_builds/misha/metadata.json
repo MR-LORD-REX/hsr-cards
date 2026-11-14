@@ -1,0 +1,62 @@
+{
+  "char_name": "Misha",
+  "character_id": 1312,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "misha.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/misha/misha.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/misha/misha.png",
+      "sha256": "d6e7423a4820850f844435b27733d3285f7876626b94875d0635c058f042b76c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "misha.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/misha/misha.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/misha/misha.detailed.png",
+      "sha256": "0d3c7ea85407b66a33bd63b48770b97bf05550ff1a7371882f948f7045d9e496",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "misha.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/misha/misha.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/misha/misha.detailed.conditions-01.png",
+      "sha256": "e2cd000b0e5414e6d539995ee39d97e3e8c6cee310656fc39784aafd00744222",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "misha.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/misha/misha.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/misha/misha.detailed.conditions-02.png",
+      "sha256": "56628000f765dca6e410f6709377c3ebbb951cef022eea5604427d2777078d18",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:15.160704+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.394235Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "misha",
+  "source": "https://www.prydwen.gg/star-rail/characters/misha",
+  "source_html_sha256": "d8d03e19709eaaa538a0e1f7c3a30916848743a6255b6c14ea47bfbe900dff9e",
+  "website_last_updated": "31/May/2026"
+}

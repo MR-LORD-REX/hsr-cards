@@ -1,0 +1,73 @@
+{
+  "char_name": "Cipher",
+  "character_id": 1406,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "cipher.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cipher/cipher.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cipher/cipher.png",
+      "sha256": "a10d79fc2bf270e6db892f3e57920b60c0fab6e444c7af8c8d568d80b4f9b10b",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cipher.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cipher/cipher.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cipher/cipher.detailed.png",
+      "sha256": "9bdf466d494583524e073cc473bf66e7d5b651bcfebc0024085e3c20df9b1d55",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cipher.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cipher/cipher.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cipher/cipher.detailed.conditions-01.png",
+      "sha256": "39aa0a837e16fcf1ec36a75a43ca2afe23cccfcc675e62969810f66aa68b1257",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cipher.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cipher/cipher.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cipher/cipher.detailed.conditions-02.png",
+      "sha256": "defdaf4c9e8eb8d7e13c112006de596b632145a388f72ac530d3ceb3cdc48399",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cipher.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cipher/cipher.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cipher/cipher.detailed.conditions-03.png",
+      "sha256": "81d3d10db70f91708e09bc2c967b0c3ee9cd3267678475e0eb07507a21c64fc0",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:29.965498+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.343218Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "cipher",
+  "source": "https://www.prydwen.gg/star-rail/characters/cipher",
+  "source_html_sha256": "35ba1cd9326eb997e5b51e6980ab58a33e17b1b4be4b859368ceb5ecbe4b8772",
+  "website_last_updated": "31/May/2026"
+}

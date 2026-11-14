@@ -1,0 +1,73 @@
+{
+  "char_name": "The Dahlia",
+  "character_id": 1321,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "the-dahlia.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/the-dahlia/the-dahlia.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/the-dahlia/the-dahlia.png",
+      "sha256": "7751d1e352e79244f8206462f89a71dc57cda8a2f5239365537a8e0ff586498c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "the-dahlia.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/the-dahlia/the-dahlia.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/the-dahlia/the-dahlia.detailed.png",
+      "sha256": "ba60a51f990e64c137c644e2b01e27e2f8c4f63e27675ccb065da4dad8300148",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "the-dahlia.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/the-dahlia/the-dahlia.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/the-dahlia/the-dahlia.detailed.conditions-01.png",
+      "sha256": "30ca858bae3d4cb3926d74bb9b7d80c3bb22c7101bbdd3b0c03e7f2463df7769",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "the-dahlia.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/the-dahlia/the-dahlia.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/the-dahlia/the-dahlia.detailed.conditions-02.png",
+      "sha256": "800c91bf00aa9220d0ef83c5c3479b57492183427686cba4c0089838eb20b9e1",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "the-dahlia.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/the-dahlia/the-dahlia.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/the-dahlia/the-dahlia.detailed.conditions-03.png",
+      "sha256": "c9f365079f88f074c5a2272d1dd219e9cdc0fc53560a2422031632908809fbfa",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:45.984370+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.852568Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "the-dahlia",
+  "source": "https://www.prydwen.gg/star-rail/characters/the-dahlia",
+  "source_html_sha256": "8ebf804bd8ad13c9901907db64026448ba94ba26dd9e5ee019054d4e25480127",
+  "website_last_updated": "31/May/2026"
+}

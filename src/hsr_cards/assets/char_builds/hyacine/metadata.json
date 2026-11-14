@@ -1,0 +1,73 @@
+{
+  "char_name": "Hyacine",
+  "character_id": 1409,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "hyacine.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hyacine/hyacine.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hyacine/hyacine.png",
+      "sha256": "78b488eaed07b065c9953a1b7ebac946b622abe756c9bcc2a28a1fdbbf63a079",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hyacine.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hyacine/hyacine.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hyacine/hyacine.detailed.png",
+      "sha256": "655d106be176c94d004b5c447dc33d10128ccf77f708fa23bf0d4fa9efdc008b",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hyacine.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hyacine/hyacine.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hyacine/hyacine.detailed.conditions-01.png",
+      "sha256": "d61c9b3df03db4e719ec55e02c66771737a13868da991fcb01d99de9acf29ac2",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hyacine.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hyacine/hyacine.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hyacine/hyacine.detailed.conditions-02.png",
+      "sha256": "98b0346a99d869b0e0e0088d9072817f6f80772d7591d150100e172f099051b2",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hyacine.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hyacine/hyacine.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hyacine/hyacine.detailed.conditions-03.png",
+      "sha256": "43ff5b5f6dc03b6e44cce2639c226446e759696d96521d15ada97376037154fa",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:55.578506+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.637198Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "hyacine",
+  "source": "https://www.prydwen.gg/star-rail/characters/hyacine",
+  "source_html_sha256": "75dd7c16ad28905ef1093947430a5b796a31a815d5d68c5d3d2a5571d87ee568",
+  "website_last_updated": "31/May/2026"
+}

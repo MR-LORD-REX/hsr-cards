@@ -1,0 +1,62 @@
+{
+  "char_name": "Hanya",
+  "character_id": 1215,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "hanya.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hanya/hanya.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hanya/hanya.png",
+      "sha256": "f25de631411f3d63c12c6379238cf481de8440a140e301f3530c9e792ae89781",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hanya.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hanya/hanya.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hanya/hanya.detailed.png",
+      "sha256": "3560419caa83f6dc4e1a9afa2c9b4ad2067e6b0c93bc51aa386ec76278751545",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hanya.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hanya/hanya.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hanya/hanya.detailed.conditions-01.png",
+      "sha256": "8f766d0a102e2cbaace49b882ddf9c8f3edeb4f6bcb660fef8318f8f9a23f5c2",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hanya.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hanya/hanya.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hanya/hanya.detailed.conditions-02.png",
+      "sha256": "cff133f26c42a67deafbaa3780a5f8274bbcaf82c95729d43a7054a9a7ad60ae",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:47.747766+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.222839Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "hanya",
+  "source": "https://www.prydwen.gg/star-rail/characters/hanya",
+  "source_html_sha256": "faa46e54b53d45060a68ae97e100bad346dbc61eca05dbe27d50a4def69af875",
+  "website_last_updated": "31/May/2026"
+}

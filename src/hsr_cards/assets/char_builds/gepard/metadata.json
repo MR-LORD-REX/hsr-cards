@@ -1,0 +1,62 @@
+{
+  "char_name": "Gepard",
+  "character_id": 1104,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "gepard.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gepard/gepard.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gepard/gepard.png",
+      "sha256": "d189b0821b54f0a7400a2c60533b88a009de1e28238124ef6f7a3c1d1e88110c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "gepard.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gepard/gepard.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gepard/gepard.detailed.png",
+      "sha256": "62c473f1880805003c6b9eab04140011325a16d7e9787bc161b43c6aefd607e8",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "gepard.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gepard/gepard.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gepard/gepard.detailed.conditions-01.png",
+      "sha256": "7f2273050da5c250c3809bbb58fb4b07153b49500dc1b6baec8ed827ed4a1eca",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "gepard.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gepard/gepard.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gepard/gepard.detailed.conditions-02.png",
+      "sha256": "59bb75405d6c2e194e8cca48d2d40166250ce8bba15461b44af5c9a52e25f284",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:44.142533+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.086909Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "gepard",
+  "source": "https://www.prydwen.gg/star-rail/characters/gepard",
+  "source_html_sha256": "dd842e299405c2e72259256a33d9c1e19bc9e007ae3a6aabcdfa9eb132c4adef",
+  "website_last_updated": "31/May/2026"
+}

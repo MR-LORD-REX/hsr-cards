@@ -1,0 +1,73 @@
+{
+  "char_name": "Trailblazer • Remembrance",
+  "character_id": 8007,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "trailblazer-remembrance.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-remembrance/trailblazer-remembrance.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-remembrance/trailblazer-remembrance.png",
+      "sha256": "e15e4b78f5c05bdcca6e1f31adb44c4724164339b3307c9c3f281b80225ce185",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-remembrance.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-remembrance/trailblazer-remembrance.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-remembrance/trailblazer-remembrance.detailed.png",
+      "sha256": "23f4c35ae80196f255f5cf39a725b3e4fb01e1b1e6acc0850c44ad721a1e7a7b",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-remembrance.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-remembrance/trailblazer-remembrance.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-remembrance/trailblazer-remembrance.detailed.conditions-01.png",
+      "sha256": "bb2d3920076cdf89d340f56855fe6bf22425194c73c2bf550dc6bacee66107f6",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-remembrance.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-remembrance/trailblazer-remembrance.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-remembrance/trailblazer-remembrance.detailed.conditions-02.png",
+      "sha256": "a6e3602069c9f588f84adab5bd7892a15285df2bea34b04c4bdefe4628517904",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-remembrance.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-remembrance/trailblazer-remembrance.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-remembrance/trailblazer-remembrance.detailed.conditions-03.png",
+      "sha256": "84c6d777736f42dcc7f09ee04fde2968ec6a762e5fb1713b98896d213e47e3eb",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:56.533763+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.367923Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "trailblazer-remembrance",
+  "source": "https://www.prydwen.gg/star-rail/characters/trailblazer-remembrance",
+  "source_html_sha256": "e736aa0af6494636607bce5c6be1b552d7693fe66a20d02b91998ab9ad8d97d2",
+  "website_last_updated": "31/May/2026"
+}

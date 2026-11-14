@@ -1,0 +1,62 @@
+{
+  "char_name": "Aventurine",
+  "character_id": 1304,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "aventurine.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aventurine/aventurine.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aventurine/aventurine.png",
+      "sha256": "59d2a40b2a1b8ed5f95e11ecd0f99dd2adeefec38fecbcb052c542b8e21571fd",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aventurine.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aventurine/aventurine.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aventurine/aventurine.detailed.png",
+      "sha256": "e60683e3a8adbbcc000c6ceda7aaf90d8f9105c0bade72b50381b779b4d905bf",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aventurine.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aventurine/aventurine.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aventurine/aventurine.detailed.conditions-01.png",
+      "sha256": "41c108131eac89b688c6d466c6da64f0bbe63b8200fad02794bb6d3fe89f3861",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aventurine.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aventurine/aventurine.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aventurine/aventurine.detailed.conditions-02.png",
+      "sha256": "48ecf3b0d5360229f2f6cf8c114e3b8143e94163f253c151e71a7d7a06b1b407",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:18.211735+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.668061Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "aventurine",
+  "source": "https://www.prydwen.gg/star-rail/characters/aventurine",
+  "source_html_sha256": "ff17941ddadfe9167eef4dc4173ddbaef25fa8caa77a09b078f08e1d2f1edba2",
+  "website_last_updated": "31/May/2026"
+}

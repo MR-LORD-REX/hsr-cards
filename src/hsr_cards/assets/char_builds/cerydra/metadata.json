@@ -1,0 +1,73 @@
+{
+  "char_name": "Cerydra",
+  "character_id": 1412,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "cerydra.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cerydra/cerydra.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cerydra/cerydra.png",
+      "sha256": "0b170aabb5b71366b7a49e781f5bc1f3c0dc31a60f82cae57891f7fd23c62d52",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cerydra.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cerydra/cerydra.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cerydra/cerydra.detailed.png",
+      "sha256": "b7eb9794a43aba7a0913dd4b988a90b27cf54e922664a8c49775ca0c3e239952",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cerydra.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cerydra/cerydra.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cerydra/cerydra.detailed.conditions-01.png",
+      "sha256": "e5e2efcaf21ebfaf6aea0e22c646a6f0b7f43b6b4a18f047eb7618aec0b4fcf3",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cerydra.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cerydra/cerydra.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cerydra/cerydra.detailed.conditions-02.png",
+      "sha256": "3481162d433c510ea7809da7c4dd5c86b58154bc663826fead76dcc1ce5219f8",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cerydra.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cerydra/cerydra.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cerydra/cerydra.detailed.conditions-03.png",
+      "sha256": "6876de9aff5f52561bc12b593b5f9bde1074c429143cecd021f59a2ed72adbfa",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:28.613670+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.253809Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "cerydra",
+  "source": "https://www.prydwen.gg/star-rail/characters/cerydra",
+  "source_html_sha256": "8c06c48adc97e9bf7eab02b86665d4a411e931a9195a48503b3b1074b87aa4ce",
+  "website_last_updated": "04/June/2026"
+}

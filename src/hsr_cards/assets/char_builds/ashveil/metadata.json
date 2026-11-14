@@ -1,0 +1,73 @@
+{
+  "char_name": "Ashveil",
+  "character_id": 1504,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "ashveil.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/ashveil/ashveil.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/ashveil/ashveil.png",
+      "sha256": "fcd32ea11c501b57669b71e19a29749c24a2ba44814c7cdce44e630080a6b2eb",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "ashveil.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/ashveil/ashveil.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/ashveil/ashveil.detailed.png",
+      "sha256": "2aa33afce7ab54328db71e4befe7bd957922490108c747e41cbfdcddb538fad5",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "ashveil.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/ashveil/ashveil.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/ashveil/ashveil.detailed.conditions-01.png",
+      "sha256": "fc18a48c6f9e1bee6f9d0233ad8a93ad357f82acd7b69e3d9a07a4917f10f3a8",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "ashveil.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/ashveil/ashveil.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/ashveil/ashveil.detailed.conditions-02.png",
+      "sha256": "9158a264c625847ee41e7be34662149cbc366e4319fff89540adab0a131d217a",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "ashveil.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/ashveil/ashveil.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/ashveil/ashveil.detailed.conditions-03.png",
+      "sha256": "271f3e4b91eb94e8b940aae4667c455c31f7ba6024b245b67591c6fac6f1d691",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:14.114306+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.444210Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "ashveil",
+  "source": "https://www.prydwen.gg/star-rail/characters/ashveil",
+  "source_html_sha256": "858623467c3368ea2e7692ca4d4254590810f633fa5c40a5b6debd5619ef5907",
+  "website_last_updated": "10/September/2026"
+}

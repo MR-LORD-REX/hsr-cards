@@ -7,7 +7,7 @@ from typing import Any, Iterable, Literal, TypeVar
 
 from PIL import Image
 
-from ..builds import find_build, load_build_image
+from ..builds import find_builds, load_build_image
 from .cache import NanokaCache, collect_asset_specs, default_cache_root, mode_key
 from .constants import (
     DEFAULT_ASSET_BASE_URL,
@@ -382,6 +382,7 @@ class NanokaClient:
         identifier: int | str | None = None,
         url: bool = False,
         *,
+        detailed: bool = False,
         name: str | None = None,
         element: str | None = None,
         path: str | None = None,
@@ -391,37 +392,41 @@ class NanokaClient:
         search: str | None = None,
         build_dir: str | Path | None = None,
         **filters: Any,
-    ) -> Image.Image | str | None:
-        """Return a community build card for an id, name, or catalog filter.
+    ) -> Image.Image | str | list[Image.Image] | list[str] | None:
+        """Return one clean card, or the detailed summary and condition pages.
 
-        ``url=True`` returns the GitHub raw image URL instead of loading the
-        local PNG. Returns ``None`` when no build is available for the resolved
-        character.
+        ``url=True`` returns GitHub raw links. ``detailed=True`` always returns
+        a list, with the summary first. Missing variants return ``None``.
+        Local id/name lookups work without downloading the Nanoka catalog.
         """
-        record = find_build(identifier, name=name, search=search, build_dir=build_dir)
-        if record is None:
+        lookup = dict(name=name, search=search, build_dir=build_dir, detailed=detailed)
+        catalog_filters = (
+            any(value is not None for value in (element, path, rarity, released))
+            or bool(filters) or not include_beta
+        )
+        records = [] if catalog_filters else find_builds(identifier, **lookup)
+        if not records and not catalog_filters:
+            other_variant = {**lookup, "detailed": not detailed}
+            if find_builds(identifier, **other_variant):
+                return None
+        if not records:
             character = await self.get_character(
-                identifier,
-                name=name,
-                element=element,
-                path=path,
-                rarity=rarity,
-                released=released,
-                include_beta=include_beta,
-                search=search,
-                include_details=False,
-                **filters,
+                identifier, name=name, element=element, path=path, rarity=rarity,
+                released=released, include_beta=include_beta, search=search,
+                include_details=False, **filters,
             )
             if character is None:
                 return None
-            record = find_build(character.summary.id, build_dir=build_dir)
-            if record is None:
-                record = find_build(character.summary.name, build_dir=build_dir)
-        if record is None:
+            records = find_builds(character.summary.id, build_dir=build_dir, detailed=detailed)
+        if not records:
             return None
         if url:
-            return record.raw_url
-        return load_build_image(record)
+            links = [record.raw_url for record in records]
+            return links if detailed else links[0]
+        images = [load_build_image(record) for record in records]
+        if any(image is None for image in images):
+            return None
+        return images if detailed else images[0]
 
     async def get_character_detail(self, identifier: int | str, *, refresh: bool = False) -> CharacterDetail:
         payload = await self._detail("character", identifier, refresh=refresh)

@@ -1,0 +1,73 @@
+{
+  "char_name": "Jingliu",
+  "character_id": 1212,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "jingliu.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jingliu/jingliu.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jingliu/jingliu.png",
+      "sha256": "3728a9896b92d9b71c76d200481cb9ec5342df5f3a10804a86425d3b613ec25c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "jingliu.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jingliu/jingliu.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jingliu/jingliu.detailed.png",
+      "sha256": "e460f5f9bc1ab16e97e38ced93e749c6799fccd4adaf3e4395a4c5b643ed449a",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "jingliu.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jingliu/jingliu.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jingliu/jingliu.detailed.conditions-01.png",
+      "sha256": "4a18b54ef20a0838526d282a91b698ba434ca9bd6f0f6d7ec3688e8a976be49d",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "jingliu.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jingliu/jingliu.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jingliu/jingliu.detailed.conditions-02.png",
+      "sha256": "7a8f2c92b8189a74c7160f5fd2c09cc79a1fe1b09a37bd2389c56d58f022d99c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "jingliu.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jingliu/jingliu.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jingliu/jingliu.detailed.conditions-03.png",
+      "sha256": "5673f60c57386d8f722c80969268f1cc5a2d6cfc23aa4cb58d8f1f4bc505c0e1",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:03.615683+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.926425Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "jingliu",
+  "source": "https://www.prydwen.gg/star-rail/characters/jingliu",
+  "source_html_sha256": "a8aec23300cb9bf31f86a02f845625e43457fc16fb1fd589045c297701a73a9f",
+  "website_last_updated": "29/September/2026"
+}

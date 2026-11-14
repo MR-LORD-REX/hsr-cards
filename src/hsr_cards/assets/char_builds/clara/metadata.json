@@ -1,0 +1,62 @@
+{
+  "char_name": "Clara",
+  "character_id": 1107,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "clara.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/clara/clara.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/clara/clara.png",
+      "sha256": "624be0a1ecf31c4fe16f1c1049e2a9b8337ec3db4b023dbe8f404e4db9a5f7ff",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "clara.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/clara/clara.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/clara/clara.detailed.png",
+      "sha256": "54f8dba762f7841664adcd3afbad49415f9824a2f3642952ecdabb077dfdd85e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "clara.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/clara/clara.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/clara/clara.detailed.conditions-01.png",
+      "sha256": "76a009f4db71ed4cd3fdcb57d65a3d26f262ff968968ce5893836915e43468a5",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "clara.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/clara/clara.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/clara/clara.detailed.conditions-02.png",
+      "sha256": "6c02ed8625b8134b2f326303e1a89eac8ea241ac9072e932d03abdcdfbe47647",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:31.192293+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.389534Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "clara",
+  "source": "https://www.prydwen.gg/star-rail/characters/clara",
+  "source_html_sha256": "6399752bf361b336d8ba161b6f72af1ab5de61543f95b47a74db54b907efe95f",
+  "website_last_updated": "31/May/2026"
+}

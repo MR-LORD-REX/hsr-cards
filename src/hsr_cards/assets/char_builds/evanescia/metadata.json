@@ -1,0 +1,73 @@
+{
+  "char_name": "Evanescia",
+  "character_id": 1505,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "evanescia.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/evanescia/evanescia.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/evanescia/evanescia.png",
+      "sha256": "ea166c0a84b0a7a7760e1bc07ca4c9a27705dec1ce740148524d523c7295a5df",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "evanescia.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/evanescia/evanescia.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/evanescia/evanescia.detailed.png",
+      "sha256": "64815988ab23c5374d7c52b62709354694ab643e712963bc84892cbc068b6513",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "evanescia.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/evanescia/evanescia.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/evanescia/evanescia.detailed.conditions-01.png",
+      "sha256": "4e1fd194b0321ebf91bafef91ecb7a879f7abef2b7aa06189f3954bb4d679525",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "evanescia.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/evanescia/evanescia.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/evanescia/evanescia.detailed.conditions-02.png",
+      "sha256": "b474add0a2401b36ed43e3531f2e49266610b09e68bbf0273574930b6f53c54f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "evanescia.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/evanescia/evanescia.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/evanescia/evanescia.detailed.conditions-03.png",
+      "sha256": "63d67379ff57dd8a0dde73ae8eca41ca495391413497ffed11771a362a70e09b",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:37.737824+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.801936Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "evanescia",
+  "source": "https://www.prydwen.gg/star-rail/characters/evanescia",
+  "source_html_sha256": "8dd4d47fb2a625c8b761bee5b0d2b33d5c4822ca4c2171a6d05464ac20b7341a",
+  "website_last_updated": "24/June/2026"
+}

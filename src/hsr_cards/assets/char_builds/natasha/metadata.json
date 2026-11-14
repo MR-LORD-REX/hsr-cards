@@ -1,0 +1,62 @@
+{
+  "char_name": "Natasha",
+  "character_id": 1105,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "natasha.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/natasha/natasha.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/natasha/natasha.png",
+      "sha256": "2b6165a5d6ee39f7cde380c1ef45236ed7fd527d7d025380fb4bc50c98120871",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "natasha.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/natasha/natasha.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/natasha/natasha.detailed.png",
+      "sha256": "de18a78e44a51f6b59176305d77a5b2e9b35925d5ed75c46e7e9e600d9775b6e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "natasha.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/natasha/natasha.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/natasha/natasha.detailed.conditions-01.png",
+      "sha256": "9454c736e5b4f4b32a83754e85abee90663e63a17264108baff3e5e4214c5ed2",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "natasha.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/natasha/natasha.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/natasha/natasha.detailed.conditions-02.png",
+      "sha256": "72d4c652dfcb0aee7141b52b2fa89446852b5ba82abe3a1191c39b8f346b805d",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:18.712155+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.503092Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "natasha",
+  "source": "https://www.prydwen.gg/star-rail/characters/natasha",
+  "source_html_sha256": "018086cfdbf100d64fd69b9779c5eaf57c04f816724b4bd07c5f04120afc5410",
+  "website_last_updated": "31/May/2026"
+}

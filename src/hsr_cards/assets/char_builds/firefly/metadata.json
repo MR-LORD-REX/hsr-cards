@@ -1,0 +1,73 @@
+{
+  "char_name": "Firefly",
+  "character_id": 1310,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "firefly.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/firefly/firefly.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/firefly/firefly.png",
+      "sha256": "8749504c58e35743c715189e407afb56dd46427b9cd108eed7744fe145e3e363",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "firefly.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/firefly/firefly.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/firefly/firefly.detailed.png",
+      "sha256": "f4a0e11776abfbf339f0e435b964125981255a360e4a8baafed9c03eb3440531",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "firefly.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/firefly/firefly.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/firefly/firefly.detailed.conditions-01.png",
+      "sha256": "183d348124191f78e6b504c9feddad1dc3291372b61d34bcf010598b4d789004",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "firefly.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/firefly/firefly.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/firefly/firefly.detailed.conditions-02.png",
+      "sha256": "7ded6a23ad638cd6f035ac0f52935da1a9aeba2f5734515485f3737d5dd404c5",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "firefly.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/firefly/firefly.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/firefly/firefly.detailed.conditions-03.png",
+      "sha256": "2316f33253282f6b7b183f5ba5ed389d1ed2ac22cb24b56c007cc12bcea6c025",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:40.308434+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.916686Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "firefly",
+  "source": "https://www.prydwen.gg/star-rail/characters/firefly",
+  "source_html_sha256": "a6214e349ec3b0ad4a0afd16d5357fd710c31e5407d10906ac3d5e3cc73e0c87",
+  "website_last_updated": "31/May/2026"
+}

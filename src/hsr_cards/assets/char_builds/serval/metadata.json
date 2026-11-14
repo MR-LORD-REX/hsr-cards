@@ -1,0 +1,62 @@
+{
+  "char_name": "Serval",
+  "character_id": 1103,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "serval.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/serval/serval.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/serval/serval.png",
+      "sha256": "f82407da48a76d88497ef96111b5870831eaab35fb05d1bae65cc86f92744eac",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "serval.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/serval/serval.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/serval/serval.detailed.png",
+      "sha256": "cf8c36da5fa361befec0f371842d7bc19a157b95397f5e7a04259d1e3e7cf1ac",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "serval.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/serval/serval.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/serval/serval.detailed.conditions-01.png",
+      "sha256": "7673df3310762e66dceea216458ac18c7bf5aeda3d030e8d53b736f9e1406376",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "serval.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/serval/serval.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/serval/serval.detailed.conditions-02.png",
+      "sha256": "c48c29776cae940e6a512556543a80bf6dbafb10679a568dfe303b06cf71738c",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:36.425104+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.295690Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "serval",
+  "source": "https://www.prydwen.gg/star-rail/characters/serval",
+  "source_html_sha256": "81590144948f40ebf3c6dbeff0a48c3698a8945d2cd30ad4d4f7ab57b069b085",
+  "website_last_updated": "31/May/2026"
+}

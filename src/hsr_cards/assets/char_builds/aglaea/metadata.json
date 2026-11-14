@@ -1,0 +1,73 @@
+{
+  "char_name": "Aglaea",
+  "character_id": 1402,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "aglaea.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aglaea/aglaea.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aglaea/aglaea.png",
+      "sha256": "78ccc46a643a30a392798e14382daa11ef2397db694fa68827fd0c3f8ab48618",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aglaea.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aglaea/aglaea.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aglaea/aglaea.detailed.png",
+      "sha256": "ac316cf2f177dac41a3b6425fe15b55a77647b84c1ab78004100e222c197015d",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aglaea.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aglaea/aglaea.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aglaea/aglaea.detailed.conditions-01.png",
+      "sha256": "34906c7daf67bc2b2498f8431d22e231ec1f50354dea455ee3369e421f376018",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aglaea.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aglaea/aglaea.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aglaea/aglaea.detailed.conditions-02.png",
+      "sha256": "4377b2d6627030a9266afba83e8f1760acbdbbe4a0fa10f03a6fb77182b69457",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aglaea.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aglaea/aglaea.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aglaea/aglaea.detailed.conditions-03.png",
+      "sha256": "507f57d8991336159660169bfc81e16d9b8dfca033c4f8dbcfdae35d4d98d54f",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:06.367940+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.107403Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "aglaea",
+  "source": "https://www.prydwen.gg/star-rail/characters/aglaea",
+  "source_html_sha256": "66e64eb970e6d6ab3f03213ca44bbcd1899a3c23e6f0e2b4bf772b6a4cd8da57",
+  "website_last_updated": "31/May/2026"
+}

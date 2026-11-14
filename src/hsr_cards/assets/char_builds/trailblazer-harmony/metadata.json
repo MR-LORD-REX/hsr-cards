@@ -1,0 +1,62 @@
+{
+  "char_name": "Trailblazer • Harmony",
+  "character_id": 8005,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "trailblazer-harmony.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-harmony/trailblazer-harmony.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-harmony/trailblazer-harmony.png",
+      "sha256": "d003f9a1ea46a807bad9e57f2b11475d4f95beeec93968a46ffab71c0e0e9f9d",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-harmony.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-harmony/trailblazer-harmony.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-harmony/trailblazer-harmony.detailed.png",
+      "sha256": "be4598cd429e82ee43c5b2748b6cdb9d9800a8e20febd3a7562652d3fd55d1c9",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-harmony.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-harmony/trailblazer-harmony.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-harmony/trailblazer-harmony.detailed.conditions-01.png",
+      "sha256": "1bcd18078e13b1ca9ac92a624f7fb7826436ea190dae7eeae507461b41ecf4e3",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "trailblazer-harmony.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/trailblazer-harmony/trailblazer-harmony.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/trailblazer-harmony/trailblazer-harmony.detailed.conditions-02.png",
+      "sha256": "a5c001a6de64118fcc9d78e2e977163a619f61d7595d3b4747bd03a2b0239b01",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:54.054622+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.248370Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "trailblazer-harmony",
+  "source": "https://www.prydwen.gg/star-rail/characters/trailblazer-harmony",
+  "source_html_sha256": "45e254fa81137fe85ce229205a872d7c35f81a6bbab0f3c28fb55c4b884e7062",
+  "website_last_updated": "31/May/2026"
+}

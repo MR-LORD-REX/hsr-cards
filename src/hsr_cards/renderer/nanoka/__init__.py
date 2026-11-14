@@ -24,6 +24,7 @@ from .data import CharacterData, close_all, load_character, normalize_locale, pa
 from .data import RenderedCardCache, default_rendered_cache_dir
 from .light_cone import LCInfoCardResult, get_LC_info
 from .relic import RelicInfoCardResult, get_relic_info
+from .item import ItemInfoCardResult, get_item_info
 
 __all__ = [
     "BatchCardResult",
@@ -39,6 +40,8 @@ __all__ = [
     "LCInfoCardResult",
     "get_relic_info",
     "RelicInfoCardResult",
+    "get_item_info",
+    "ItemInfoCardResult",
     "get_character_skills",
     "load_character",
     "normalize_locale",

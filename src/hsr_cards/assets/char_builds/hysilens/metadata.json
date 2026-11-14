@@ -1,0 +1,73 @@
+{
+  "char_name": "Hysilens",
+  "character_id": 1410,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "hysilens.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hysilens/hysilens.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hysilens/hysilens.png",
+      "sha256": "0556aadc4ea9ee1a8edadcffe4d9c8cab7819f8b4e296fe2f07792b42e9c7284",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hysilens.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hysilens/hysilens.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hysilens/hysilens.detailed.png",
+      "sha256": "c53fd7853ff62aaa45a69c41852d3acce0c16f6286767bb6d78725205eb962c6",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hysilens.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hysilens/hysilens.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hysilens/hysilens.detailed.conditions-01.png",
+      "sha256": "171ba7535e62c88f9f2ff9c8cf66b6b8567e91f52e6e24da0d9b21b306493a9e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hysilens.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hysilens/hysilens.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hysilens/hysilens.detailed.conditions-02.png",
+      "sha256": "2ca490b8e633ff9ffdb48bd823875caff33b9d48abc0958411fde5ec55a8c53e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hysilens.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hysilens/hysilens.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hysilens/hysilens.detailed.conditions-03.png",
+      "sha256": "cdb66398e8a214810a62a3dabf97762d15a7a3013e2b3877e4ac9dce449ac15e",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:56.921209+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.708851Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "hysilens",
+  "source": "https://www.prydwen.gg/star-rail/characters/hysilens",
+  "source_html_sha256": "ece03c6e366f1e5d0ba4b660cf81e9b20f9d7274c2c7238413a465c421ae5676",
+  "website_last_updated": "31/May/2026"
+}

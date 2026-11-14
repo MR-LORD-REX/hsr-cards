@@ -1,0 +1,62 @@
+{
+  "char_name": "Yanqing",
+  "character_id": 1209,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "yanqing.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yanqing/yanqing.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yanqing/yanqing.png",
+      "sha256": "a209386b8a1e4003a658f39063b808b2855d0c2ee9f88f58453a7c6fe2a4dcbd",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yanqing.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yanqing/yanqing.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yanqing/yanqing.detailed.png",
+      "sha256": "8e51ef7b43bb895c74f281bf00aa2b746b5aca02968456cfe4a946a891917c70",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yanqing.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yanqing/yanqing.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yanqing/yanqing.detailed.conditions-01.png",
+      "sha256": "11163ffdaa518449ce0a7fa47743fc046d40ad7b6f64b07392532764499bd3e3",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yanqing.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yanqing/yanqing.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yanqing/yanqing.detailed.conditions-02.png",
+      "sha256": "90b82e8d15e1d714891c2aa2dee2bcf627932a6c8f751e388acc76964f331190",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:50:01.758240+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.697583Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "yanqing",
+  "source": "https://www.prydwen.gg/star-rail/characters/yanqing",
+  "source_html_sha256": "713cfd6160f5d7cf3d5bd7db1b661e823fbb15034f4e1eafe29cdfbe3ee807f4",
+  "website_last_updated": "31/May/2026"
+}

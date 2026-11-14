@@ -1249,6 +1249,7 @@ class ItemSummary(NanokaModel):
     item_avatar_icon_path: str | None = None
     item_desc: str | None = None
     item_bg_desc: str | None = None
+    item_comefrom: list[NamedEntry] = Field(default_factory=list)
     pile_limit: int | None = None
 
     @computed_field

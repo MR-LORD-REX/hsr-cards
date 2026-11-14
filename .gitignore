@@ -10,3 +10,4 @@ venv/
 .test_nanoka_cache/
 .hsr_cards_rendered/
 AGENTS.md
+.hsr_prydwen/

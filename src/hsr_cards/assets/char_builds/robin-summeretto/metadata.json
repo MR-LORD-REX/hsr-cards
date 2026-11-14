@@ -1,0 +1,73 @@
+{
+  "char_name": "Robin Summeretto",
+  "character_id": 1512,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "robin-summeretto.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/robin-summeretto/robin-summeretto.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/robin-summeretto/robin-summeretto.png",
+      "sha256": "c240875d9ddefe6402b869ac13baaff3c11d03c4645976261218a113c722eb24",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "robin-summeretto.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/robin-summeretto/robin-summeretto.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/robin-summeretto/robin-summeretto.detailed.png",
+      "sha256": "65dcb2e463c3e50353e6b86eaa326e9c0eddf19d7442b5d47cddf0e48d5cfae5",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "robin-summeretto.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/robin-summeretto/robin-summeretto.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/robin-summeretto/robin-summeretto.detailed.conditions-01.png",
+      "sha256": "d7d5e44de01eeb582d2939af4af7fd91be91275f137603e8ab6641a3ce2d224e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "robin-summeretto.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/robin-summeretto/robin-summeretto.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/robin-summeretto/robin-summeretto.detailed.conditions-02.png",
+      "sha256": "9fd9c62856d5d327d1e01baaab19471d7d488bb35e0740d4d800f7ed16fe7b56",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "robin-summeretto.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/robin-summeretto/robin-summeretto.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/robin-summeretto/robin-summeretto.detailed.conditions-03.png",
+      "sha256": "41346bf756b34ee796ed5d216facdf0b4798204b4c7dab35afb3de6de403f413",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:28.410652+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.913330Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "robin-summeretto",
+  "source": "https://www.prydwen.gg/star-rail/characters/robin-summeretto",
+  "source_html_sha256": "30efde9b6d879cf762864451c0516a5f9b58fc6c847ff77eb6e2c144bf974113",
+  "website_last_updated": "29/September/2026"
+}

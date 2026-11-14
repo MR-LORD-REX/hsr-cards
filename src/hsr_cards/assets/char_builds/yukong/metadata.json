@@ -1,0 +1,62 @@
+{
+  "char_name": "Yukong",
+  "character_id": 1207,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "yukong.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yukong/yukong.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yukong/yukong.png",
+      "sha256": "6ef00e61f6d98400bb4561a96877601129580d01a94c5dc75148ca31b6b369a8",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yukong.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yukong/yukong.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yukong/yukong.detailed.png",
+      "sha256": "c83126ec9c8d29cf6f5a01e4b92657c91be976855baac6325c6ea6c13bc6557d",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yukong.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yukong/yukong.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yukong/yukong.detailed.conditions-01.png",
+      "sha256": "a3adaa69f90a047c81f4bbe832c0a0432a91653b34fec7a9c5915c4b9084fcbc",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yukong.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yukong/yukong.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yukong/yukong.detailed.conditions-02.png",
+      "sha256": "aa04c14bdfe6c4c4672c769c2f00396cfbf026dbd12cb800d5fcb233e7d78a4c",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:50:04.108555+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.815422Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "yukong",
+  "source": "https://www.prydwen.gg/star-rail/characters/yukong",
+  "source_html_sha256": "0f1c7a065743b064846926b72d321926c15ef048f913a3c55c4cb019d0bbedf6",
+  "website_last_updated": "31/May/2026"
+}

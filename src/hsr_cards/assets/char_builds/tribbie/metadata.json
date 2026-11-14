@@ -1,0 +1,73 @@
+{
+  "char_name": "Tribbie",
+  "character_id": 1403,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "tribbie.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/tribbie/tribbie.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/tribbie/tribbie.png",
+      "sha256": "dcab97e49eaf4f361a1853bf9c19a2e879d26ddb120feab2b42c5a50f85b8ee9",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "tribbie.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/tribbie/tribbie.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/tribbie/tribbie.detailed.png",
+      "sha256": "a2c4be697150f7e0451cc405e9b289834f2e22c0b75b6c5df8ef6b046305bfc6",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "tribbie.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/tribbie/tribbie.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/tribbie/tribbie.detailed.conditions-01.png",
+      "sha256": "c5e389aa32ed751692d60aeda46df2cc7a535d04d57c6472bf8d3f1a75f7f981",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "tribbie.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/tribbie/tribbie.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/tribbie/tribbie.detailed.conditions-02.png",
+      "sha256": "771afc16a9aa4dd34a3edf6eeaf1d2bedceb0532730a649e83709887803a9a05",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "tribbie.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/tribbie/tribbie.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/tribbie/tribbie.detailed.conditions-03.png",
+      "sha256": "2ea9d178a5f5f2eee1b162595564cb5c9e065f7b4ad2d3a43a2a8c7363eaa762",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:57.931148+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.503568Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "tribbie",
+  "source": "https://www.prydwen.gg/star-rail/characters/tribbie",
+  "source_html_sha256": "38b54c8a4982bddf961ac131dbb8ef4e7a1cb8df6b7e74cb1dc16005ce92ea1b",
+  "website_last_updated": "31/May/2026"
+}

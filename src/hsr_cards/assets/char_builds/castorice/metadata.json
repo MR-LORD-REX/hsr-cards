@@ -1,0 +1,73 @@
+{
+  "char_name": "Castorice",
+  "character_id": 1407,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "castorice.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/castorice/castorice.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/castorice/castorice.png",
+      "sha256": "827cdd6c0bbc8d43817555c152f4e5b1db2d4d6e026beed789e27ad0d0c7108c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "castorice.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/castorice/castorice.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/castorice/castorice.detailed.png",
+      "sha256": "409d54e1e362e91f04a910ceeb9626aef8220c57dddecffbc4bfd9b050628844",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "castorice.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/castorice/castorice.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/castorice/castorice.detailed.conditions-01.png",
+      "sha256": "121729e1f81658d5dec036ead042f98d7699ddcfcc3c0a8d93a8bfacf761beae",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "castorice.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/castorice/castorice.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/castorice/castorice.detailed.conditions-02.png",
+      "sha256": "d065d836720648658147ec5af3bf76e5097e1302a2180d7079ddc705331d0bd0",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "castorice.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/castorice/castorice.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/castorice/castorice.detailed.conditions-03.png",
+      "sha256": "bb0ee63a3d7ea03bbe8841ad9eb950c20eddc4bc14e7e838b0deb16cf9a89ed1",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:27.261450+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.165052Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "castorice",
+  "source": "https://www.prydwen.gg/star-rail/characters/castorice",
+  "source_html_sha256": "7cd09a2b86bb4f03d7b663722e0b9f4bca015da709610f447d22af1d05b54d65",
+  "website_last_updated": "31/May/2026"
+}

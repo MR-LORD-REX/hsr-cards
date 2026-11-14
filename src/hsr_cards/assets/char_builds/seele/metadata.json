@@ -1,0 +1,73 @@
+{
+  "char_name": "Seele",
+  "character_id": 1102,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "seele.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/seele/seele.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/seele/seele.png",
+      "sha256": "4cf1b0f31af98a4191a9785dadd954aa189d02a630c6f644ef0bc1bcd8050521",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "seele.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/seele/seele.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/seele/seele.detailed.png",
+      "sha256": "5eca1a9334e3a7c94e5f6f49a711eeeb5615351f7f141b913805b5c67c76a206",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "seele.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/seele/seele.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/seele/seele.detailed.conditions-01.png",
+      "sha256": "85f1f10b7a5aaaf206f498b4d50b66c5518a684a51707a33ae3fcd329dbe3c75",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "seele.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/seele/seele.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/seele/seele.detailed.conditions-02.png",
+      "sha256": "f0e411acab2f57fbb4c46b1db12767c5fe6355328368fd8da8068ac9da9b3a40",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "seele.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/seele/seele.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/seele/seele.detailed.conditions-03.png",
+      "sha256": "d32b0dc4fdfe05368b557db781de5566af9db62d04c94de7273052aadc08636f",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:35.138702+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.256282Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "seele",
+  "source": "https://www.prydwen.gg/star-rail/characters/seele",
+  "source_html_sha256": "ad5f5be887e1c7a00668ea408a36ef804f1983da3d10ca154b77952aa147681c",
+  "website_last_updated": "31/May/2026"
+}

@@ -1,0 +1,62 @@
+{
+  "char_name": "Bailu",
+  "character_id": 1211,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "bailu.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/bailu/bailu.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/bailu/bailu.png",
+      "sha256": "d818876c73da5f64b1aa748d30f90a06fae4609b533b1413fba41240a6bd7510",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "bailu.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/bailu/bailu.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/bailu/bailu.detailed.png",
+      "sha256": "7eb143f5cd9689f7ea069e661ba76551e4f87cd0d695ae5d3e09117d2262788c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "bailu.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/bailu/bailu.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/bailu/bailu.detailed.conditions-01.png",
+      "sha256": "4a7cdb2229e390f5006c0b83ec07367c214868de3a2879e4da888a660b443799",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "bailu.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/bailu/bailu.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/bailu/bailu.detailed.conditions-02.png",
+      "sha256": "c5df4c82a5e37cde49d69788845ebfc0b61cb0ae1e7748532b09ed05bf517499",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:19.405770+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.729207Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "bailu",
+  "source": "https://www.prydwen.gg/star-rail/characters/bailu",
+  "source_html_sha256": "91ca58b32ea138c9271b6e97febf63ad2ddf5a6e98c9b6e82cbbe3328e37aa24",
+  "website_last_updated": "31/May/2026"
+}

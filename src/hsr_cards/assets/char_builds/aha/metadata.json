@@ -1,0 +1,62 @@
+{
+  "char_name": "Aha",
+  "character_id": 1511,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "aha.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aha/aha.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aha/aha.png",
+      "sha256": "1f9c8bbd4e14e83a606193878e0d39d4c74e5e1a4ed80a07c7778a5b91ac82e0",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aha.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aha/aha.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aha/aha.detailed.png",
+      "sha256": "ea408aaa2b62bbaa52ad581807a947101fc3abcedab1663832ac339a03698a40",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aha.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aha/aha.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aha/aha.detailed.conditions-01.png",
+      "sha256": "16c7bfff3d1f5d4847c326746c27c9f0133fc6f23bfcd1f344c21f7f17123d27",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "aha.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/aha/aha.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/aha/aha.detailed.conditions-02.png",
+      "sha256": "7fd37fb080ccdc4c612bf7b0f37698bfcea5511737c22aeedb7b6969417065c4",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:07.642418+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.141086Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "aha",
+  "source": "https://www.prydwen.gg/star-rail/characters/aha",
+  "source_html_sha256": "4e6884860182e636826f2f1bc2f8fef53b9783695a8959a3c9a7438b03b3e6a2",
+  "website_last_updated": "11/November/2026"
+}

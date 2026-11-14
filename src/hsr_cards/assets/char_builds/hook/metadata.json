@@ -1,0 +1,62 @@
+{
+  "char_name": "Hook",
+  "character_id": 1109,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "hook.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hook/hook.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hook/hook.png",
+      "sha256": "8517fa1cd2ef17c8c956798ff7a2dd1782d8946234ca85b18db3108fb45626bf",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hook.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hook/hook.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hook/hook.detailed.png",
+      "sha256": "32ae450decaa3ec74f69694ab9b8a1294e1f740e850a5e0c53b98e91b29800b8",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hook.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hook/hook.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hook/hook.detailed.conditions-01.png",
+      "sha256": "cd7795400d3f46c7bdd5b99e2d2d9cbc62704c8daf6700d1df8e1fc215f79c44",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "hook.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/hook/hook.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/hook/hook.detailed.conditions-02.png",
+      "sha256": "c1dd37fb501c41e193e29af1ca3a0194c913eda8b8658c50d963fbf2fe4c013b",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:52.711518+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.426074Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "hook",
+  "source": "https://www.prydwen.gg/star-rail/characters/hook",
+  "source_html_sha256": "d07f68c8c79492dd028b5bf0eb5f68e9b1d03114e06d0e0d2d4c1a2a7d422034",
+  "website_last_updated": "31/May/2026"
+}

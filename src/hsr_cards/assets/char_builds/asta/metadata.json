@@ -1,0 +1,73 @@
+{
+  "char_name": "Asta",
+  "character_id": 1009,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "asta.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/asta/asta.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/asta/asta.png",
+      "sha256": "88178fc01dda8496858ad4ebdc3a2889e93f92f40a987547d2c7e13a31645aa2",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "asta.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/asta/asta.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/asta/asta.detailed.png",
+      "sha256": "4c1541b1d53ee3a665c0d80f55fc73a61c13c9625f91bb4a1bb9351006a75d8f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "asta.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/asta/asta.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/asta/asta.detailed.conditions-01.png",
+      "sha256": "ee615a21944c7381b25ed93e0bd743e0e7b1fc98b2ce1ef18504035da3601503",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "asta.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/asta/asta.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/asta/asta.detailed.conditions-02.png",
+      "sha256": "5f045f92df81ec582164aa8b2ffe3e1c3ed71c11480a0d3e207e04f9febec820",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "asta.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/asta/asta.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/asta/asta.detailed.conditions-03.png",
+      "sha256": "f274438f86dfb27583f8e5f834377c20f11393fe9c75f8a079c368123eb6a67b",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:15.414061+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.489452Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "asta",
+  "source": "https://www.prydwen.gg/star-rail/characters/asta",
+  "source_html_sha256": "2bb236ccba1026b377116aff62a597fee438b44f1e7d746a0dc774485311864a",
+  "website_last_updated": "31/May/2026"
+}

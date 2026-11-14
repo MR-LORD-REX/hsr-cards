@@ -1,0 +1,73 @@
+{
+  "char_name": "Cyrene",
+  "character_id": 1415,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "cyrene.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cyrene/cyrene.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cyrene/cyrene.png",
+      "sha256": "b7a47d7740b839e843efc7d2db1fc0c7aa76630ac290cee5f94831f23b450ef6",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cyrene.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cyrene/cyrene.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cyrene/cyrene.detailed.png",
+      "sha256": "f4b510449d418c4fcd0c216137fdb886d5443d25c32d8610009dc8dc87f9cf8d",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cyrene.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cyrene/cyrene.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cyrene/cyrene.detailed.conditions-01.png",
+      "sha256": "9076a8dfa5da4e59a4be3f1a23f6898601b1e5a598ae45c02569a531d0ac22a8",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cyrene.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cyrene/cyrene.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cyrene/cyrene.detailed.conditions-02.png",
+      "sha256": "7c68d4d1f3973adf495f57b2a1f071c51c0b78d74170324841f1875357593a6d",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "cyrene.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/cyrene/cyrene.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/cyrene/cyrene.detailed.conditions-03.png",
+      "sha256": "55b1c72060ccc506a872f7bd846dc7d7b6977e9de876620ea39f8122cfca6941",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:32.559153+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.482808Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "cyrene",
+  "source": "https://www.prydwen.gg/star-rail/characters/cyrene",
+  "source_html_sha256": "5c833c2b5fbb33ad67292b56dadd66e9ee906e098ccf2d4903c2049f97d03881",
+  "website_last_updated": "31/May/2026"
+}

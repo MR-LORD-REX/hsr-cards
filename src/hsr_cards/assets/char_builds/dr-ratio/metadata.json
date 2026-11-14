@@ -1,0 +1,73 @@
+{
+  "char_name": "Dr. Ratio",
+  "character_id": 1305,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "dr-ratio.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dr-ratio/dr-ratio.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dr-ratio/dr-ratio.png",
+      "sha256": "86b9753e1b12d7d307a234bbee5ec52724042be60e6c041f93e2f8022cb183e4",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "dr-ratio.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dr-ratio/dr-ratio.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dr-ratio/dr-ratio.detailed.png",
+      "sha256": "b5e98936e8b4109b12f5d3202cd940533e52070122125a7d58841cd5b36b1a76",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "dr-ratio.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dr-ratio/dr-ratio.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dr-ratio/dr-ratio.detailed.conditions-01.png",
+      "sha256": "46f9fd7cc94d5e7a6f2014653e0532805bc0607fc9dfba8a196e878abae305b1",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "dr-ratio.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dr-ratio/dr-ratio.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dr-ratio/dr-ratio.detailed.conditions-02.png",
+      "sha256": "fd763b4727a97e78904bd862523da3f8598cf48a959aabf74bae7c9b4a4f6334",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "dr-ratio.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/dr-ratio/dr-ratio.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/dr-ratio/dr-ratio.detailed.conditions-03.png",
+      "sha256": "380e8e0c6ba69f335ac06047c624e829aa1757b876e211650c8b7690dd923d03",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:36.427946+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:12.736768Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "dr-ratio",
+  "source": "https://www.prydwen.gg/star-rail/characters/dr-ratio",
+  "source_html_sha256": "e89943ee99051c22eacf5d41eb5646e806c811b6f5bf8fb4c7fe7d62b43252c7",
+  "website_last_updated": "31/May/2026"
+}

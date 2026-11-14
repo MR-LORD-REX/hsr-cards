@@ -1,20 +1,14 @@
-"""Community build-guide cards bundled with ``hsr-cards``.
-
-Images live in ``assets/char_builds`` as ``<character_id>.png`` and are
-described by ``metadata.json``. The directory is scanned on each lookup so
-``HonkaiStarrail.update_builds()`` can add or replace cards without a package
-release.
-"""
-
+"""Approved build images, stored per character with clean and detailed variants."""
 from __future__ import annotations
 
 import asyncio
 import json
 import re
 from collections.abc import Mapping
-from dataclasses import dataclass, replace
+from dataclasses import dataclass
 from io import BytesIO
 from pathlib import Path
+from urllib.parse import quote
 
 import aiohttp
 from PIL import Image
@@ -24,34 +18,39 @@ from .utils.errors import HSR_Error
 BUILD_REPO = "MR-LORD-REX/hsr-cards"
 BUILD_BRANCH = "main"
 BUILD_ASSET_PATH = "src/hsr_cards/assets/char_builds"
-BUILD_METADATA_URL = (
-    f"https://raw.githubusercontent.com/{BUILD_REPO}/{BUILD_BRANCH}/{BUILD_ASSET_PATH}/metadata.json"
-)
-BUILD_RAW_BASE = (
-    f"https://raw.githubusercontent.com/{BUILD_REPO}/{BUILD_BRANCH}/{BUILD_ASSET_PATH}"
-)
+BUILD_RAW_BASE = f"https://raw.githubusercontent.com/{BUILD_REPO}/{BUILD_BRANCH}/{BUILD_ASSET_PATH}"
 BUILD_TREE_BASE = f"https://github.com/{BUILD_REPO}/tree/{BUILD_BRANCH}/{BUILD_ASSET_PATH}"
+BUILD_METADATA_URL = f"{BUILD_RAW_BASE}/metadata.json"
 
 
 def default_build_dir() -> Path:
     return Path(__file__).resolve().parent / "assets" / "char_builds"
 
 
-def build_raw_url(character_id: int | str) -> str:
-    return f"{BUILD_RAW_BASE}/{character_id}.png"
+def _filename(value: object) -> str:
+    text = str(value)
+    if not text or text in {".", ".."} or any(char in text for char in '/\\:'):
+        raise ValueError(f"Expected a plain filename: {text!r}")
+    return text
 
 
-def build_tree_url(character_id: int | str) -> str:
-    return f"{BUILD_TREE_BASE}/{character_id}.png"
+def build_raw_url(character: str, filename: str) -> str:
+    return f"{BUILD_RAW_BASE}/{quote(_filename(character))}/{quote(_filename(filename))}"
+
+
+def build_tree_url(character: str, filename: str) -> str:
+    return f"{BUILD_TREE_BASE}/{quote(_filename(character))}/{quote(_filename(filename))}"
 
 
 @dataclass(frozen=True)
 class CharacterBuild:
     character_id: int
     char_name: str
+    slug: str
     raw_url: str
     git_url: str
     path: Path
+    detailed: bool = False
 
     def load(self) -> Image.Image:
         with Image.open(self.path) as image:
@@ -63,11 +62,8 @@ def _normalise(value: object) -> str:
 
 
 def _matches_name(query: str, candidate: str) -> bool:
-    needle = _normalise(query)
-    name = _normalise(candidate)
-    if not needle or not name:
-        return False
-    return needle == name or needle in name.split()
+    needle, name = _normalise(query), _normalise(candidate)
+    return bool(needle and name and (needle == name or needle in name.split()))
 
 
 def _read_metadata(path: Path) -> dict:
@@ -80,75 +76,62 @@ def _read_metadata(path: Path) -> dict:
     return payload if isinstance(payload, dict) else {}
 
 
-def _record_from_payload(root: Path, key: object, value: object) -> CharacterBuild | None:
-    if not str(key).isdigit() or not isinstance(value, Mapping):
-        return None
-    character_id = int(str(key))
-    char_name = value.get("char_name") or value.get("name") or str(character_id)
-    return CharacterBuild(
-        character_id=character_id,
-        char_name=str(char_name),
-        raw_url=str(value.get("raw_url") or build_raw_url(character_id)),
-        git_url=str(value.get("git_url") or build_tree_url(character_id)),
-        path=root / f"{character_id}.png",
-    )
+def _records(root: Path, payload: Mapping) -> list[CharacterBuild]:
+    identifier = int(payload["character_id"])
+    slug = _filename(payload["slug"])
+    records = []
+    for image in payload.get("images", []):
+        filename = _filename(image["filename"])
+        if not filename.endswith(".png"):
+            raise ValueError("Build images must be PNG files")
+        records.append(CharacterBuild(
+            character_id=identifier, char_name=str(payload["char_name"]), slug=slug,
+            raw_url=str(image.get("raw_url") or build_raw_url(slug, filename)),
+            git_url=str(image.get("git_url") or build_tree_url(slug, filename)),
+            path=root / slug / filename, detailed=bool(image["detailed"]),
+        ))
+    return records
 
 
 def scan_builds(build_dir: str | Path | None = None) -> list[CharacterBuild]:
-    """Scan ``char_builds`` and merge ``metadata.json`` with the PNG files."""
-    root = Path(build_dir).expanduser() if build_dir else default_build_dir()
-    records: dict[int, CharacterBuild] = {}
-
-    for key, value in _read_metadata(root / "metadata.json").items():
-        record = _record_from_payload(root, key, value)
-        if record is not None:
-            records[record.character_id] = record
-
-    if root.is_dir():
-        for path in root.glob("*.png"):
-            if not path.stem.isdigit():
+    """Read the root index and each character's metadata on every lookup."""
+    root = Path(build_dir).expanduser() if build_dir is not None else default_build_dir()
+    payloads = _read_metadata(root / "metadata.json")
+    for path in sorted(root.glob("*/metadata.json")):
+        payload = _read_metadata(path)
+        if "character_id" in payload:
+            payloads[str(payload["character_id"])] = payload
+    records = []
+    for payload in payloads.values():
+        if isinstance(payload, Mapping):
+            try:
+                records.extend(_records(root, payload))
+            except (KeyError, TypeError, ValueError):
                 continue
-            character_id = int(path.stem)
-            if character_id in records:
-                records[character_id] = replace(records[character_id], path=path)
-            else:
-                records[character_id] = CharacterBuild(
-                    character_id=character_id,
-                    char_name=str(character_id),
-                    raw_url=build_raw_url(character_id),
-                    git_url=build_tree_url(character_id),
-                    path=path,
-                )
-
-    return sorted(records.values(), key=lambda record: record.character_id)
+    return sorted(records, key=lambda r: (r.character_id, r.detailed, ".conditions-" in r.path.name, r.path.name))
 
 
-def find_build(
-    identifier: int | str | None = None,
-    *,
-    name: str | None = None,
-    search: str | None = None,
-    build_dir: str | Path | None = None,
-) -> CharacterBuild | None:
-    """Find a build by character id, name, or Nanoka-style search text."""
-    builds = scan_builds(build_dir)
-    queries: list[str] = []
+def find_builds(
+    identifier: int | str | None = None, *, name: str | None = None,
+    search: str | None = None, build_dir: str | Path | None = None,
+    detailed: bool = False,
+) -> list[CharacterBuild]:
+    records = [record for record in scan_builds(build_dir) if record.detailed == detailed]
+    if identifier is not None and str(identifier).strip().isdigit():
+        return [record for record in records if record.character_id == int(identifier)]
+    for query in (identifier, name, search):
+        if query is None:
+            continue
+        match = next((record for record in records if
+                      _matches_name(str(query), record.char_name) or
+                      _matches_name(str(query), record.slug)), None)
+        if match:
+            return [record for record in records if record.character_id == match.character_id]
+    return []
 
-    if identifier is not None:
-        if isinstance(identifier, int) or str(identifier).strip().isdigit():
-            target = int(identifier)
-            return next((build for build in builds if build.character_id == target), None)
-        queries.append(str(identifier))
-    if name:
-        queries.append(name)
-    if search:
-        queries.append(search)
 
-    for query in queries:
-        for build in builds:
-            if _matches_name(query, build.char_name):
-                return build
-    return None
+def find_build(identifier=None, **kwargs) -> CharacterBuild | None:
+    return next(iter(find_builds(identifier, **kwargs)), None)
 
 
 def load_build_image(record: CharacterBuild | None) -> Image.Image | None:
@@ -161,91 +144,69 @@ def load_build_image(record: CharacterBuild | None) -> Image.Image | None:
 
 
 def _write_metadata(path: Path, payload: Mapping) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_name(path.name + ".tmp")
-    temp.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
-    )
+    temp.write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     temp.replace(path)
 
 
 async def update_build_assets(
-    session: aiohttp.ClientSession,
-    *,
-    metadata_url: str = BUILD_METADATA_URL,
-    build_dir: str | Path | None = None,
-    timeout: float = 30.0,
-    concurrency: int = 4,
+    session: aiohttp.ClientSession, *, metadata_url: str = BUILD_METADATA_URL,
+    build_dir: str | Path | None = None, timeout: float = 30.0, concurrency: int = 4,
 ) -> int:
-    """Fetch remote metadata and refresh the local images it references.
+    """Download every indexed variant and condition page, then publish metadata.
 
-    Remote entries override matching local metadata keys; local-only entries
-    are preserved. Returns the number of successfully updated images.
+    Local-only characters are preserved. A failed download leaves the previous
+    metadata intact, so an incomplete update cannot advertise missing cards.
     """
-    root = Path(build_dir).expanduser() if build_dir else default_build_dir()
-    root.mkdir(parents=True, exist_ok=True)
-
+    root = Path(build_dir).expanduser() if build_dir is not None else default_build_dir()
+    request_timeout = aiohttp.ClientTimeout(total=timeout)
     try:
-        async with session.get(
-            metadata_url, timeout=aiohttp.ClientTimeout(total=timeout)
-        ) as response:
+        async with session.get(metadata_url, timeout=request_timeout) as response:
             if response.status != 200:
-                raise HSR_Error(
-                    f"Build metadata request failed with HTTP {response.status}: {metadata_url}"
-                )
+                raise HSR_Error(f"Build metadata request failed with HTTP {response.status}")
             payload = await response.json(content_type=None)
+        if not isinstance(payload, Mapping):
+            raise ValueError("Build metadata must be a JSON object")
+        remote = {}
+        records = []
+        for key, value in payload.items():
+            if not str(key).isdigit() or not isinstance(value, Mapping):
+                raise ValueError(f"Invalid character metadata: {key!r}")
+            images = _records(root, value)
+            if int(key) != int(value["character_id"]) or not images:
+                raise ValueError(f"Invalid character images: {key!r}")
+            remote[str(key)] = dict(value)
+            records.extend(images)
     except HSR_Error:
         raise
     except Exception as exc:
         raise HSR_Error(f"Could not fetch build metadata: {exc}") from exc
 
-    if not isinstance(payload, Mapping):
-        raise HSR_Error("Build metadata must be a JSON object")
-
-    remote: dict[int, dict[str, str]] = {}
-    for key, value in payload.items():
-        record = _record_from_payload(root, key, value)
-        if record is not None:
-            remote[record.character_id] = {
-                "char_name": record.char_name,
-                "raw_url": record.raw_url,
-                "git_url": record.git_url,
-            }
-
-    if not remote:
-        raise HSR_Error("Build metadata contains no character entries")
-
-    local = _read_metadata(root / "metadata.json")
-    merged = {key: value for key, value in local.items() if isinstance(value, Mapping)}
-    merged.update({str(character_id): value for character_id, value in remote.items()})
-    _write_metadata(root / "metadata.json", merged)
-
     semaphore = asyncio.Semaphore(max(1, int(concurrency)))
-    failures: list[str] = []
 
-    async def download(character_id: int, record: Mapping[str, str]) -> bool:
+    async def download(record: CharacterBuild) -> None:
         async with semaphore:
-            try:
-                async with session.get(
-                    record["raw_url"], timeout=aiohttp.ClientTimeout(total=timeout)
-                ) as response:
-                    if response.status != 200:
-                        raise HSR_Error(f"HTTP {response.status}")
-                    data = await response.read()
-                with Image.open(BytesIO(data)) as image:
-                    image.verify()
-                target = root / f"{character_id}.png"
-                temp = target.with_name(target.name + ".tmp")
-                await asyncio.to_thread(temp.write_bytes, data)
-                await asyncio.to_thread(temp.replace, target)
-                return True
-            except Exception as exc:
-                failures.append(f"{character_id}: {exc}")
-                return False
+            async with session.get(record.raw_url, timeout=request_timeout) as response:
+                if response.status != 200:
+                    raise HSR_Error(f"{record.path.name}: HTTP {response.status}")
+                data = await response.read()
+            with Image.open(BytesIO(data)) as image:
+                if image.format != "PNG":
+                    raise ValueError(f"Not a PNG: {record.path.name}")
+                image.verify()
+            record.path.parent.mkdir(parents=True, exist_ok=True)
+            temp = record.path.with_name(record.path.name + ".tmp")
+            await asyncio.to_thread(temp.write_bytes, data)
+            await asyncio.to_thread(temp.replace, record.path)
 
-    results = await asyncio.gather(
-        *(download(character_id, record) for character_id, record in remote.items())
-    )
+    results = await asyncio.gather(*(download(record) for record in records), return_exceptions=True)
+    failures = [str(result) for result in results if isinstance(result, Exception)]
     if failures:
         raise HSR_Error("Failed to update build images: " + "; ".join(failures))
-    return sum(1 for result in results if result)
+    merged = _read_metadata(root / "metadata.json")
+    merged.update(remote)
+    for value in remote.values():
+        _write_metadata(root / _filename(value["slug"]) / "metadata.json", value)
+    _write_metadata(root / "metadata.json", merged)
+    return len(records)

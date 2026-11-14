@@ -1,0 +1,62 @@
+{
+  "char_name": "Himeko",
+  "character_id": 1003,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "himeko.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/himeko/himeko.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/himeko/himeko.png",
+      "sha256": "f83a2bfbc85e10d13cc2a5d26007fb30012e0d1c58d6f1f746096c0384cfc405",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "himeko.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/himeko/himeko.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/himeko/himeko.detailed.png",
+      "sha256": "b75f9cc176c36a1daa63abe4a73f2f4b14b2bcea6ded5e09f8521a6a0b03e7a1",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "himeko.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/himeko/himeko.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/himeko/himeko.detailed.conditions-01.png",
+      "sha256": "d9e43fc4f31185991ca5424a4deb5a6b815b38e46b34a39dc46f64900b54ca61",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "himeko.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/himeko/himeko.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/himeko/himeko.detailed.conditions-02.png",
+      "sha256": "209f0a64ca74c58d823207e4515632a8972942224a1fc68800cbc369bb0138cf",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:51.645253+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.402693Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "himeko",
+  "source": "https://www.prydwen.gg/star-rail/characters/himeko",
+  "source_html_sha256": "fd1519501faa8eb07b9d55df95ac36f146f45863c7f846eda47ab4b5abd2647a",
+  "website_last_updated": "31/May/2026"
+}

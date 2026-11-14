@@ -1,0 +1,73 @@
+{
+  "char_name": "Mydei",
+  "character_id": 1404,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "mydei.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/mydei/mydei.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/mydei/mydei.png",
+      "sha256": "bb0cd41baf6f748c3feb34da2860e1f304008448e917fcfa5e9a802d9367515b",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "mydei.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/mydei/mydei.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/mydei/mydei.detailed.png",
+      "sha256": "c257600701282506d97fc75a0bbe28ec86a58b1553dd5386bad2bf0534b86076",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "mydei.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/mydei/mydei.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/mydei/mydei.detailed.conditions-01.png",
+      "sha256": "63c833a94e35283171396178cb1eea0b2aea9c26f6bfdfbb05f8614ac32f49ae",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "mydei.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/mydei/mydei.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/mydei/mydei.detailed.conditions-02.png",
+      "sha256": "0eebee62ac8c64c30b146f7afc90d7a5885b0048962897c5b372d882e0c55a26",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "mydei.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/mydei/mydei.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/mydei/mydei.detailed.conditions-03.png",
+      "sha256": "188e41869d1be415cba06a050b286b4dc3f5b469e6537f93b5afa1c6a54823d4",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:17.577089+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.470873Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "mydei",
+  "source": "https://www.prydwen.gg/star-rail/characters/mydei",
+  "source_html_sha256": "c7cbc7abe2c9883dd0862c6df6ce1c49477f14c7c88025ebcb19229c471cdfa4",
+  "website_last_updated": "31/May/2026"
+}

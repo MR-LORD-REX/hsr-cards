@@ -1,0 +1,73 @@
+{
+  "char_name": "Black Swan",
+  "character_id": 1307,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "black-swan.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/black-swan/black-swan.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/black-swan/black-swan.png",
+      "sha256": "6fe82c3297e782e739d43e6867d43682e7f1a13e963ae2b065990a81a278f264",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "black-swan.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/black-swan/black-swan.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/black-swan/black-swan.detailed.png",
+      "sha256": "2462a11e550f55b0994d3b64da1a65824e3b278fb82ccc5ebacb00b564914c4c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "black-swan.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/black-swan/black-swan.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/black-swan/black-swan.detailed.conditions-01.png",
+      "sha256": "4e4b75a48b705bf877f39d7e95827b409bd9adf6aa34f8bb15090c89ec970f21",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "black-swan.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/black-swan/black-swan.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/black-swan/black-swan.detailed.conditions-02.png",
+      "sha256": "8d011efbd9bbb7c78664eb2ac9b0caf70921686e1ff67e3e4beaf4235c8b325e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "black-swan.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/black-swan/black-swan.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/black-swan/black-swan.detailed.conditions-03.png",
+      "sha256": "967ce931afca64e43930094ce7b977d49b06a23b2018a0cdf4b95fa58c56e280",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:20.620422+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.787269Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "black-swan",
+  "source": "https://www.prydwen.gg/star-rail/characters/black-swan",
+  "source_html_sha256": "a183b21b52c6ac5c39a26475a27bc575ec095b649afbcb8f27927f968663eebc",
+  "website_last_updated": "31/May/2026"
+}

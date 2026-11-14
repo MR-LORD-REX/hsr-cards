@@ -1,0 +1,73 @@
+{
+  "char_name": "Saber",
+  "character_id": 1014,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "saber.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/saber/saber.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/saber/saber.png",
+      "sha256": "2b1dcf287c38d44f1f6a058ad27e31e2ed912359e30f77ed936f77b637d10b41",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "saber.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/saber/saber.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/saber/saber.detailed.png",
+      "sha256": "e22d409dc7b5293270a372aef6d1a49ba29cf130b004091f6dae6e8b94599bbd",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "saber.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/saber/saber.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/saber/saber.detailed.conditions-01.png",
+      "sha256": "f3a4b216ce8b5ca7aa4fa0c6206daf7291f1d6300aa0281250a18f47f2059a2c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "saber.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/saber/saber.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/saber/saber.detailed.conditions-02.png",
+      "sha256": "30f4221a72fa7a8bff8c16a6b38724673880e7fe2cbbd767ad4c785ed9557034",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "saber.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/saber/saber.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/saber/saber.detailed.conditions-03.png",
+      "sha256": "2c81066bf478bb938fbb5b67cefcf0e622282fde7435953cac795b8570c7a6c3",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:32.649011+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.177723Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "saber",
+  "source": "https://www.prydwen.gg/star-rail/characters/saber",
+  "source_html_sha256": "8a83061c3940dc7d161bd0aba20cb701ec6e833234c187b6fcef5027fa0cbbf6",
+  "website_last_updated": "31/May/2026"
+}

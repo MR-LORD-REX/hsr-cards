@@ -1,0 +1,47 @@
+{
+  "id": 223,
+  "item_main_type": "Material",
+  "item_sub_type": "EquipmentExp",
+  "inventory_display_tag": 1,
+  "rarity": "VeryRare",
+  "purpose_type": 5,
+  "is_visible": true,
+  "item_name": "Refined Aether",
+  "item_desc": "Enhancement material for Light Cones, provides <unbreak>6000</unbreak> Light Cone EXP.",
+  "item_bg_desc": "A canister of aether that has been extracted and distilled using special procedures.\\n\\n<i>\"The Garden looks forward to recreating a past glory, but it is a 'past glory' selected by them. Do you understand?\"</i>",
+  "item_icon_path": "SpriteOutput/ItemIcon/223.png",
+  "item_figure_icon_path": "SpriteOutput/ItemFigures/223.png",
+  "item_currency_icon_path": "SpriteOutput/ItemIcon/223.png",
+  "item_avatar_icon_path": "",
+  "pile_limit": 99999,
+  "custom_data_list": [],
+  "return_item_id_list": [],
+  "item_group": 1020,
+  "sell_type": "Destroy",
+  "item_comefrom": [
+    {
+      "id": 1,
+      "desc": "Calyx: Backwater Pass"
+    },
+    {
+      "id": 4,
+      "desc": "Calyx: Divination Commission"
+    },
+    {
+      "id": 5,
+      "desc": "Calyx: A Child's Dream"
+    },
+    {
+      "id": 6,
+      "desc": "Calyx: \"Strife Ruins\" Castrum Kremnos"
+    },
+    {
+      "id": 7,
+      "desc": "Calyx: \"{TextID#FloorName_20503001}\""
+    },
+    {
+      "id": 3,
+      "desc": "Forgotten Hall"
+    }
+  ]
+}

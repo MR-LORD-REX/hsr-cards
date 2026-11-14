@@ -1,0 +1,73 @@
+{
+  "char_name": "Gallagher",
+  "character_id": 1301,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "gallagher.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gallagher/gallagher.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gallagher/gallagher.png",
+      "sha256": "8a4a730762c0ebcd01364c0e6bd4372ff1f3b4147b318a1d34fca35d082dfa97",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "gallagher.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gallagher/gallagher.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gallagher/gallagher.detailed.png",
+      "sha256": "2125d61bf2d5a97a12b6ca7c12648bb6be8fca0110db9ebdad937537648bb4cc",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "gallagher.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gallagher/gallagher.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gallagher/gallagher.detailed.conditions-01.png",
+      "sha256": "aa289639f0e2b6eac0b5d1ba5e2a9df3e2de1922080b4a3f114f8597953a78af",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "gallagher.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gallagher/gallagher.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gallagher/gallagher.detailed.conditions-02.png",
+      "sha256": "b62e83b83f306783af4c1e115aaaaea75dd406029f1cef5afb937bdb468a1c1b",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "gallagher.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/gallagher/gallagher.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/gallagher/gallagher.detailed.conditions-03.png",
+      "sha256": "12990acf9fb5e50526c56a886bb535ee39de454918fafaa3c2e819bfd77e5c8e",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:42.920518+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.051295Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "gallagher",
+  "source": "https://www.prydwen.gg/star-rail/characters/gallagher",
+  "source_html_sha256": "5eb3acd56e9155eeb292a491b3c2f7e1cd104b80e4db8007401d900ea52c1538",
+  "website_last_updated": "31/May/2026"
+}

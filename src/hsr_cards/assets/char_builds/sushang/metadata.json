@@ -1,0 +1,62 @@
+{
+  "char_name": "Sushang",
+  "character_id": 1206,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "sushang.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sushang/sushang.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sushang/sushang.png",
+      "sha256": "5924d582641681e06a4772379488aa87ea0b4cb2b0ba7b79707f9aa8acdee488",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sushang.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sushang/sushang.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sushang/sushang.detailed.png",
+      "sha256": "862b336f1f41e7babf6bbcd113ed4bda86339515fd3ee15f07cc5f51ed379646",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sushang.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sushang/sushang.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sushang/sushang.detailed.conditions-01.png",
+      "sha256": "9a90a6a1e2d14957f6bf074dab24008d4c67a000365fef185b7ce5dea08fce07",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "sushang.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/sushang/sushang.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/sushang/sushang.detailed.conditions-02.png",
+      "sha256": "9164950876baa9d3ba5ba2dfc7e586a7182205fadecb369f3dd6880d2dc62ff2",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:44.601344+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:15.777333Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "sushang",
+  "source": "https://www.prydwen.gg/star-rail/characters/sushang",
+  "source_html_sha256": "a6009346e1c28c49babcda55bdbc0bb3e788aff8dd3e5b7123151182f476fec4",
+  "website_last_updated": "31/May/2026"
+}

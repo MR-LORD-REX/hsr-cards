@@ -1,0 +1,73 @@
+{
+  "char_name": "Moze",
+  "character_id": 1223,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "moze.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/moze/moze.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/moze/moze.png",
+      "sha256": "c04db107d62bad5df2264543f65609814c9928dfa5714dc3dae0d37e319f247f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "moze.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/moze/moze.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/moze/moze.detailed.png",
+      "sha256": "35f9e0f79e131a457e2f7114afce270c5625c1aac248c7aac3fe1ed2bebba5af",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "moze.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/moze/moze.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/moze/moze.detailed.conditions-01.png",
+      "sha256": "b99c9205fb0909e022ab65b1457fa083b04892c73b9afc32362d7ec82383d59f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "moze.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/moze/moze.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/moze/moze.detailed.conditions-02.png",
+      "sha256": "2e5f40d5d784f0f088f113e2c7784eef46097f2c4a8a8306388451466db827da",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "moze.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/moze/moze.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/moze/moze.detailed.conditions-03.png",
+      "sha256": "908476d20cf54b0583a86917a36abeb47381e795e6ba2b84339c67cd719dc889",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:16.289137+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.429996Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "moze",
+  "source": "https://www.prydwen.gg/star-rail/characters/moze",
+  "source_html_sha256": "fb5f9c215ef0cfd219dee96d3e4ab74d5d76932c1bdef84c0f554b60ed039ef7",
+  "website_last_updated": "31/May/2026"
+}

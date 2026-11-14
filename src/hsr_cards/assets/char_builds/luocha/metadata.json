@@ -1,0 +1,62 @@
+{
+  "char_name": "Luocha",
+  "character_id": 1203,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "luocha.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/luocha/luocha.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/luocha/luocha.png",
+      "sha256": "b674e37f321edd7e605074fad8971be98fca74a2a728340e06c841d156d9123a",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "luocha.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/luocha/luocha.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/luocha/luocha.detailed.png",
+      "sha256": "343f1a01ef62491b78649d675ab3fe2c1a644634a0c1a937e6e84813f722d2bf",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "luocha.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/luocha/luocha.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/luocha/luocha.detailed.conditions-01.png",
+      "sha256": "37696e1e89d9d0225a0446dfad19a5985682de64dea04cee55778cb23cf3cfa8",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "luocha.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/luocha/luocha.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/luocha/luocha.detailed.conditions-02.png",
+      "sha256": "eae0393b00635e829e095f370ce911141bc53c6b80c5e3783d551bcd2aaf0f15",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:08.907421+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.170156Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "luocha",
+  "source": "https://www.prydwen.gg/star-rail/characters/luocha",
+  "source_html_sha256": "9c28e96c6b4310d55a49470757c90655915fa156b738163710c07604935502a9",
+  "website_last_updated": "31/May/2026"
+}

@@ -1,0 +1,62 @@
+{
+  "char_name": "Luka",
+  "character_id": 1111,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "luka.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/luka/luka.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/luka/luka.png",
+      "sha256": "7f8acdfedf126da2bbe497a6f50a45c74978b3004da249ab1ae583534d5da3c7",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "luka.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/luka/luka.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/luka/luka.detailed.png",
+      "sha256": "3fdb57dc704e4aae8584b258880b6b72d246be4eae8a4abd40d44a6b77dcc211",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "luka.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/luka/luka.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/luka/luka.detailed.conditions-01.png",
+      "sha256": "00de5ffe57c39265d1785c8c4d9cc24505a7d910f2d653196bb2d845d545114f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "luka.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/luka/luka.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/luka/luka.detailed.conditions-02.png",
+      "sha256": "04fa6963930bb900afc8f6eac00ab0fdac5b286a39d738f51c52f1fa9a65642b",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:07.621975+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.100904Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "luka",
+  "source": "https://www.prydwen.gg/star-rail/characters/luka",
+  "source_html_sha256": "b821cb030feef778e5bfea0084f12ba546b4ccfa698f2f4096c9f925f0f7fdb1",
+  "website_last_updated": "31/May/2026"
+}

@@ -3,11 +3,15 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from .client import HonkaiStarrail
 
+from .prydwen.builds import PrydwenClient
+from .nanoka import Locale, NanokaClient
+
 __version__ = "1.0.2"
 __author__ = "sora"
 
 __all__ = [
     "HonkaiStarrail",
+    "PrydwenClient",
     "NanokaClient",
     "Locale",
     "get_character_info",
@@ -15,6 +19,8 @@ __all__ = [
     "LCInfoCardResult",
     "get_relic_info",
     "RelicInfoCardResult",
+    "get_item_info",
+    "ItemInfoCardResult",
     "get_character_skills",
     "render_all_info",
     "render_all_skills",
@@ -33,6 +39,10 @@ def __getattr__(name: str):
     ``HonkaiStarrail`` validates HoYoLAB cookies at import time, so importing
     the package must not pull it in for callers that only want Nanoka cards.
     """
+    if name == "PrydwenClient":
+        from .prydwen.builds import PrydwenClient
+
+        return PrydwenClient
     if name == "HonkaiStarrail":
         from .client import HonkaiStarrail
 
@@ -59,6 +69,8 @@ def __getattr__(name: str):
         "LCInfoCardResult",
         "get_relic_info",
         "RelicInfoCardResult",
+        "get_item_info",
+        "ItemInfoCardResult",
         "get_character_skills",
         "render_all_info",
         "render_all_skills",

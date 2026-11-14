@@ -4,8 +4,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 from src.hsr_cards import HonkaiStarrail
-from src.hsr_cards.nanoka import NanokaClient
+from src.hsr_cards import NanokaClient
+from src.hsr_cards import PrydwenClient
 from src.hsr_cards.models.auth import Cookies
+
 
 UID = 800556377 
 
@@ -14,8 +16,16 @@ proxy = None  # Optional: Set your proxy here if needed
 os.makedirs("Cards",exist_ok=True)
 
 async def main():
-    async with NanokaClient() as n :
-        await n.update_assets(force=True)
+    # async with NanokaClient() as n :
+    #     c = await n.get_character("yao")
+    #     print(c)
+
+    prydwen = PrydwenClient()
+    await prydwen.urls()
+    await prydwen.pull()
+    # cards =  prydwen.cards()
+
+
 
     # async with HonkaiStarrail(uid=UID, cookie=None,proxy=proxy) as client:
     #     print(f"[*] Testing with UID: {UID}")

@@ -1,0 +1,73 @@
+{
+  "char_name": "Rin Tohsaka",
+  "character_id": 1508,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "rin-tohsaka.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/rin-tohsaka/rin-tohsaka.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/rin-tohsaka/rin-tohsaka.png",
+      "sha256": "9288ee24a5e5f13117d3056b021b0f7e8c89b1f6f1f4cb87ab25190541d5cfff",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "rin-tohsaka.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/rin-tohsaka/rin-tohsaka.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/rin-tohsaka/rin-tohsaka.detailed.png",
+      "sha256": "c4a84c4f337a4094889d66dcf8056c0623e91fc3db726c074c165cf85a09795f",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "rin-tohsaka.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/rin-tohsaka/rin-tohsaka.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/rin-tohsaka/rin-tohsaka.detailed.conditions-01.png",
+      "sha256": "770171e02e6d19d4b438acfa1e5c29c193d111331c2be1d0a611f247835a6b43",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "rin-tohsaka.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/rin-tohsaka/rin-tohsaka.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/rin-tohsaka/rin-tohsaka.detailed.conditions-02.png",
+      "sha256": "e3506cc248bcb0466bf9f64c98c1f20d7a090a4b907c79d543d8e46ba2bdbc6c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "rin-tohsaka.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/rin-tohsaka/rin-tohsaka.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/rin-tohsaka/rin-tohsaka.detailed.conditions-03.png",
+      "sha256": "68845f2dee6c395c5e9c7ad93849733111fa7fd06238ede8fc2083698c626b69",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:26.888643+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.783907Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "rin-tohsaka",
+  "source": "https://www.prydwen.gg/star-rail/characters/rin-tohsaka",
+  "source_html_sha256": "127817e0770b2f67d7b9fb919d749320af3808a10601df3c633aa509143cba8c",
+  "website_last_updated": "26/August/2026"
+}

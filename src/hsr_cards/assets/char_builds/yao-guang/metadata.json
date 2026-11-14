@@ -1,0 +1,73 @@
+{
+  "char_name": "Yao Guang",
+  "character_id": 1502,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "yao-guang.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yao-guang/yao-guang.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yao-guang/yao-guang.png",
+      "sha256": "0919c6343e98f2334819faaa96150699852d6aaa42840a9d795bb77a959f5db6",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yao-guang.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yao-guang/yao-guang.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yao-guang/yao-guang.detailed.png",
+      "sha256": "31e4d9f6da6a58db21155df9582a36000740f743cf4d8060ccc2f98bbe7f3756",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yao-guang.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yao-guang/yao-guang.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yao-guang/yao-guang.detailed.conditions-01.png",
+      "sha256": "c5ecbe14f135ed5fffaad466705caeae926b5026d8616dc65e00ac706b71180d",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yao-guang.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yao-guang/yao-guang.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yao-guang/yao-guang.detailed.conditions-02.png",
+      "sha256": "0cfb45128941ecbee9fedbf6118105f79d7e41d87d59efda17e7a8a678ab0b5d",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "yao-guang.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/yao-guang/yao-guang.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/yao-guang/yao-guang.detailed.conditions-03.png",
+      "sha256": "76132ebf0789ad100254a959f645e2cee4cac7803de39e5628ac4e43af42d890",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:50:02.992288+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.778381Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "yao-guang",
+  "source": "https://www.prydwen.gg/star-rail/characters/yao-guang",
+  "source_html_sha256": "e383be2f4bff58c200bc8020bc2f072ac18ca42cdb421365efbc82388d1aa4bb",
+  "website_last_updated": "15/June/2026"
+}

@@ -1,0 +1,62 @@
+{
+  "char_name": "Jing Yuan",
+  "character_id": 1204,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "jing-yuan.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jing-yuan/jing-yuan.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jing-yuan/jing-yuan.png",
+      "sha256": "e846547d96d8af6e705e9a40116097ed42b66a4964240807bda08d6b4a3e016c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "jing-yuan.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jing-yuan/jing-yuan.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jing-yuan/jing-yuan.detailed.png",
+      "sha256": "426f57f2ea6837a4343cd57f8024ebb4acfceef220337593fd6e634ec60932a8",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "jing-yuan.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jing-yuan/jing-yuan.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jing-yuan/jing-yuan.detailed.conditions-01.png",
+      "sha256": "133f807c80530b9299d065191d26483e1fedf735e85126c616e70a7864fd033c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "jing-yuan.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/jing-yuan/jing-yuan.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/jing-yuan/jing-yuan.detailed.conditions-02.png",
+      "sha256": "446ac3fefca7fb33706b97727078cdc405166ee679f87efc0f2f76a70e399cf7",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:02.157875+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:13.898181Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "jing-yuan",
+  "source": "https://www.prydwen.gg/star-rail/characters/jing-yuan",
+  "source_html_sha256": "25940ca85e5aa9cd176631ada04003ea0cb1e1184860f7afb4734fd80d0a59f4",
+  "website_last_updated": "11/November/2026"
+}

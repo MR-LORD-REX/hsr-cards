@@ -1,0 +1,62 @@
+{
+  "char_name": "Topaz & Numby",
+  "character_id": 1112,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "topaz.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/topaz/topaz.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/topaz/topaz.png",
+      "sha256": "30d6d39147c43e2051f3c609b4a48c0bdd85b403ade75696a8725210116471ec",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "topaz.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/topaz/topaz.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/topaz/topaz.detailed.png",
+      "sha256": "f2a2b8109707fc2678297b9b4eb442e37022a9f0dc89ff79061edfe73581966e",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "topaz.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/topaz/topaz.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/topaz/topaz.detailed.conditions-01.png",
+      "sha256": "243e22b3b7385ba67e32cf85d57966b847787ef3bc987c37dfb293498ccedc80",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "topaz.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/topaz/topaz.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/topaz/topaz.detailed.conditions-02.png",
+      "sha256": "b85fd038c7deb817c1f1d65775f08b87a65c66437bb8dc6a92f6f22608c163f8",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:51.486342+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:16.067491Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "topaz",
+  "source": "https://www.prydwen.gg/star-rail/characters/topaz",
+  "source_html_sha256": "03cb72be7eefd0770720f8379fe32de3b132b72c8fa878ae4eabd0cc856db05a",
+  "website_last_updated": "31/May/2026"
+}

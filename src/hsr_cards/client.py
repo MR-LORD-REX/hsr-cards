@@ -268,9 +268,10 @@ class HonkaiStarrail:
 
     async def character_build(
         self,
-        identifier: int | str ,
+        identifier: int | str | None = None,
         url: bool = False,
         *,
+        detailed: bool = False,
         name: str | None = None,
         element: str | None = None,
         path: str | None = None,
@@ -280,12 +281,11 @@ class HonkaiStarrail:
         search: str | None = None,
         build_dir: str | Path | None = None,
         **filters: Any,
-    ) -> Image.Image | str | None:
-        """Return a community build card or its raw GitHub URL.
+    ) -> Image.Image | str | list[Image.Image] | list[str] | None:
+        """Return one clean image/link, or a list of detailed images/links.
 
-        Identifiers follow Nanoka's resolution rules: pass an id, a character
-        name, or catalog filters. ``url=True`` returns ``raw_url`` from
-        ``metadata.json`` instead of loading the local PNG.
+        Detailed results contain the summary first, then its condition pages.
+        Missing variants return `None`. Identifiers follow Nanoka's rules.
         """
         from .nanoka import NanokaClient
 
@@ -301,6 +301,7 @@ class HonkaiStarrail:
                 include_beta=include_beta,
                 search=search,
                 url=url,
+                detailed=detailed,
                 build_dir=build_dir,
                 **filters,
             )
@@ -392,6 +393,33 @@ class HonkaiStarrail:
         from .renderer.nanoka import get_relic_info as render_relic
 
         return await render_relic(
+            identifier,
+            version,
+            locale=locale,
+            cache_dir=cache_dir,
+            proxy=proxy,
+            rendered_cache_dir=rendered_cache_dir,
+            use_rendered_cache=use_rendered_cache,
+        )
+
+    async def get_item_info(
+        self,
+        identifier: int | str,
+        version: str | tuple[str, str] | list[str] | None = None,
+        *,
+        locale: str = "en",
+        cache_dir: str | None = None,
+        proxy: str | None = None,
+        rendered_cache_dir: str | None = None,
+        use_rendered_cache: bool = True,
+    ):
+        """Render a Nanoka item card with its description and sources.
+
+        Arguments and version comparisons follow get_character_info().
+        """
+        from .renderer.nanoka import get_item_info as render_item
+
+        return await render_item(
             identifier,
             version,
             locale=locale,

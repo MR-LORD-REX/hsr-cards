@@ -1,0 +1,73 @@
+{
+  "char_name": "Mortenax Blade",
+  "character_id": 1507,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "blade-mortenax.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/blade-mortenax/blade-mortenax.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/blade-mortenax/blade-mortenax.png",
+      "sha256": "8207ac952d4b8b319493552e242f3bc935a2876b4b1e7220ab7c8fce4c903e3b",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "blade-mortenax.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/blade-mortenax/blade-mortenax.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/blade-mortenax/blade-mortenax.detailed.png",
+      "sha256": "036265c51959afef1b4cba470f5aa342d1a8322d90783a781fca549bc47a6811",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "blade-mortenax.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/blade-mortenax/blade-mortenax.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/blade-mortenax/blade-mortenax.detailed.conditions-01.png",
+      "sha256": "cf95fd1fe5fcfe3c081f05ed1b59ec403a304731678277f16be52a6f55a87750",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "blade-mortenax.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/blade-mortenax/blade-mortenax.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/blade-mortenax/blade-mortenax.detailed.conditions-02.png",
+      "sha256": "fc03c9e022d662ccbc8028e0ad2a9bf6581509989b7aeeba4b3ef6cbbdfa2ae9",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "blade-mortenax.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/blade-mortenax/blade-mortenax.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/blade-mortenax/blade-mortenax.detailed.conditions-03.png",
+      "sha256": "2c625803a2478319c81a3544281a0c3d3fc25d1278162837ea9dcb1fa60dd6ac",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:22.097555+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.932208Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "blade-mortenax",
+  "source": "https://www.prydwen.gg/star-rail/characters/blade-mortenax",
+  "source_html_sha256": "02a2623c05d0046fd51ee45dd634191a367d6fb1b5ea0d26a65e120a05fb0562",
+  "website_last_updated": "15/July/2026"
+}

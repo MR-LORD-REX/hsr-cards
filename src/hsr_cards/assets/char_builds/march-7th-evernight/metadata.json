@@ -1,0 +1,73 @@
+{
+  "char_name": "March 7th • Evernight",
+  "character_id": 1413,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "march-7th-evernight.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th-evernight/march-7th-evernight.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th-evernight/march-7th-evernight.png",
+      "sha256": "84e590d6876f870979f1a0b8b49d7690ef925091280fd418bf29948edd0107a2",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "march-7th-evernight.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th-evernight/march-7th-evernight.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th-evernight/march-7th-evernight.detailed.png",
+      "sha256": "7cf7c19e0e4fbe3d6fff652cb61bc6140c9c86981c52d3b255eaef1fa7088270",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "march-7th-evernight.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th-evernight/march-7th-evernight.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th-evernight/march-7th-evernight.detailed.conditions-01.png",
+      "sha256": "c7ace86727178b7839640f2aa01636c116c763832f0a5af804ca3865c400e88c",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "march-7th-evernight.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th-evernight/march-7th-evernight.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th-evernight/march-7th-evernight.detailed.conditions-02.png",
+      "sha256": "4e5afee79c4a08d255fc8696b210c5fd61183370cf0e975cc4c257d909f878d0",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "march-7th-evernight.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/march-7th-evernight/march-7th-evernight.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/march-7th-evernight/march-7th-evernight.detailed.conditions-03.png",
+      "sha256": "412e69a1a2e6524562f6f589f9cae1af5b4fa3601647d58f6bb47fe1edcef0e6",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:49:11.464865+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:14.271421Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "march-7th-evernight",
+  "source": "https://www.prydwen.gg/star-rail/characters/march-7th-evernight",
+  "source_html_sha256": "9e16ef8cbe906651198364f1f93e619906e26e28f24424a683b5fdda65899b11",
+  "website_last_updated": "31/May/2026"
+}

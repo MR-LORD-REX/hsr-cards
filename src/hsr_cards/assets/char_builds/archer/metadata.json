@@ -1,0 +1,73 @@
+{
+  "char_name": "Archer",
+  "character_id": 1015,
+  "images": [
+    {
+      "detailed": false,
+      "filename": "archer.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/archer/archer.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/archer/archer.png",
+      "sha256": "45210c2e88da1632a20e636ed1a25cca8d6cc53d89897f40fd645f7185baa5ec",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "archer.detailed.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/archer/archer.detailed.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/archer/archer.detailed.png",
+      "sha256": "5c09bf8651b60c57d2adb42c277655ac8a241c8737b9c73b3e8136e8441ae495",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "archer.detailed.conditions-01.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/archer/archer.detailed.conditions-01.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/archer/archer.detailed.conditions-01.png",
+      "sha256": "b86c43d1e23f6439295889533f5ebb358c3031bafe6acb01e9f25e2cb3ae583d",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "archer.detailed.conditions-02.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/archer/archer.detailed.conditions-02.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/archer/archer.detailed.conditions-02.png",
+      "sha256": "3405ef20e5c585b72cc211d170f3301fc200b54ea96d24df7e3d7ab672dc18d2",
+      "size": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "detailed": true,
+      "filename": "archer.detailed.conditions-03.png",
+      "git_url": "https://github.com/MR-LORD-REX/hsr-cards/tree/main/src/hsr_cards/assets/char_builds/archer/archer.detailed.conditions-03.png",
+      "raw_url": "https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/src/hsr_cards/assets/char_builds/archer/archer.detailed.conditions-03.png",
+      "sha256": "f3383385d93a5c2e55ebdec2cf786882288c1f239a767687c5a17094d0c34fa8",
+      "size": [
+        1920,
+        1440
+      ]
+    }
+  ],
+  "rendered_at": "2026-11-14T17:48:10.224124+00:00",
+  "review": {
+    "note": null,
+    "reviewed_at": "2026-11-14T17:25:11.268130Z",
+    "reviewer": "manual",
+    "status": "approved"
+  },
+  "schema_version": 1,
+  "slug": "archer",
+  "source": "https://www.prydwen.gg/star-rail/characters/archer",
+  "source_html_sha256": "77a4d600ddaf966ac45a467556d58f79178e98983cc02f70d650fb20983b43f2",
+  "website_last_updated": "31/May/2026"
+}
