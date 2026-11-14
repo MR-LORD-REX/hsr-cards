@@ -14,6 +14,8 @@ __all__ = [
     "get_character_skills",
     "render_all_info",
     "render_all_skills",
+    "RedeemCode",
+    "Reward",
 ]
 
 
@@ -31,6 +33,10 @@ def __getattr__(name: str):
         from .nanoka import Locale, NanokaClient
 
         return {"NanokaClient": NanokaClient, "Locale": Locale}[name]
+    if name in {"RedeemCode", "Reward"}:
+        from .prydwen.codes import RedeemCode, Reward
+
+        return {"RedeemCode": RedeemCode, "Reward": Reward}[name]
     if name in {
         "get_character_info",
         "get_character_skills",

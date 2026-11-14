@@ -255,6 +255,7 @@ async with HonkaiStarrail("800556377") as client:
 - aiohttp
 - Pillow (PIL)
 - python-dotenv
+- cloudscraper
 - asyncio
 
 ## API Reference
@@ -281,6 +282,7 @@ Main client class for generating cards.
 - `update_nanoka_assets(version=None, force=False)` -> `None`: Refresh the Nanoka cache
 - `get_character_info(identifier, version=None, ...)` -> `InfoCardResult`: Generate a Nanoka info card
 - `get_character_skills(identifier, version=None, ...)` -> `SkillsCardResult`: Generate a Nanoka skills card
+- `redeem_codes()` -> `list[RedeemCode]`: Fetch active HSR redeem codes and their rewards from Prydwen
 
 `currency_war()` returns a `CurrencyWarResult` with:
 
@@ -296,6 +298,21 @@ async with HonkaiStarrail("800556377") as client:
     for i in run.all:
         (await client.currency_war(i)).image.save(f"Cards/CurrencyWar_{i}.png")
 ```
+
+`redeem_codes()` reads Prydwen's active-codes list. Each returned `RedeemCode` is one code
+with its rewards:
+
+```python
+from hsr_cards import HonkaiStarrail
+
+async with HonkaiStarrail("800556377") as client:
+    for redeem in await client.redeem_codes():
+        print(redeem.code)
+        for reward in redeem.rewards:
+            print(" ", reward.name, reward.count, reward.url)
+```
+
+`RedeemCode` exposes `.code` and `.rewards`; each `Reward` exposes `.name`, `.count`, and `.url`.
 
 All methods are async. Player methods return PIL images; Nanoka card methods return the
 result objects described above.

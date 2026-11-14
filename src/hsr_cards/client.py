@@ -16,6 +16,7 @@ from .models.events import CalendarData, CalendarResponse
 from .models.notes import NotesResponse, NotesData
 from .models.currencywar import CurrencyWarData, CurrencyWarResponse 
 from .builds import BUILD_METADATA_URL, update_build_assets
+from .prydwen.codes import RedeemCode, fetch_redeem_codes
 from PIL import Image
 
 class HonkaiStarrail:
@@ -214,6 +215,13 @@ class HonkaiStarrail:
             return raw.get("retcode", -1) == 0
         except Exception:
             return False
+
+    async def redeem_codes(self) -> list[RedeemCode]:
+        """Fetch active HSR redeem codes and their rewards from Prydwen."""
+        try:
+            return await fetch_redeem_codes()
+        except Exception as e:
+            raise HSR_Error(f"Failed to fetch redeem codes: {e}")
 
     async def update_nanoka_assets(
         self,
