@@ -24,7 +24,7 @@ async def main():
 asyncio.run(main())
 ```
 
-See the [quickstart](docs/getting-started/quickstart.md), [endgame guide](docs/guides/endgame.md), [player cards](docs/guides/player-cards.md), and [GitHub Pages setup](docs/guides/github-pages.md). The documentation tracks the current source checkout; published package versions may have an older API.
+See the [quickstart](docs/getting-started/quickstart.md), [endgame guide](docs/guides/endgame.md), [player cards](docs/guides/player-cards.md). The documentation tracks the current source checkout; published package versions may have an older API.
 
 [MIT license](LICENSE) · [Report an issue](https://github.com/MR-LORD-REX/hsr-cards/issues)
 
