@@ -201,6 +201,7 @@ class HonkaiStarrail(PlayerCardMethods, NanokaCardMethods):
 
         Identifiers/filters follow Nanoka's catalog rules. Missing variants return
         None. build_dir overrides local build assets; provider errors propagate.
+        Installed packages download cards with update_builds() before lookup.
         An existing Nanoka client stays caller/facade-owned; otherwise a temporary
         client loads catalogs without bulk assets and is closed on completion.
         """
@@ -223,11 +224,14 @@ class HonkaiStarrail(PlayerCardMethods, NanokaCardMethods):
         self, *, metadata_url: str = BUILD_METADATA_URL,
         build_dir: str | Path | None = None,
     ) -> int:
-        """Download changed community build images; return the updated image count.
+        """Download all indexed community build images; return the image count.
 
-        metadata_url selects the manifest and build_dir overrides packaged build
-        assets. Own the temporary public-download session; no player UID/cookies
-        are required. Invalid metadata or download errors raise HSR_Error.
+        metadata_url selects the GitHub manifest. build_dir overrides the local
+        destination: existing source-checkout build assets or .hsr_cards_builds
+        under the working directory for an installed package. Missing directories
+        are created on download. Own the temporary public-download session; no
+        player UID/cookies are required. Invalid metadata or download errors raise
+        HSR_Error. Local-only cards and previous metadata survive failed updates.
         """
         async with aiohttp.ClientSession() as session:
             return await update_build_assets(session, metadata_url=metadata_url, build_dir=build_dir)

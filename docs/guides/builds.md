@@ -8,6 +8,7 @@ Prydwen features need neither a player UID nor HoYoLAB cookies. The query client
 from hsr_cards import HonkaiStarrail
 
 async with HonkaiStarrail() as client:
+    await client.update_builds()
     image = await client.character_build("Acheron")
     if image is not None:
         image.save("acheron-build.png")
@@ -16,7 +17,21 @@ async with HonkaiStarrail() as client:
     print(link)
 ```
 
-`character_build()` resolves an identifier or Nanoka catalog filters. A single match returns one image/link; several return a list. Missing build variants return `None`. `detailed=True` selects a summary and its condition pages. `update_builds()` refreshes bundled community images from repository metadata.
+Generated build cards are downloaded from GitHub rather than bundled with the PyPI package. Run `update_builds()` before the first lookup, and again whenever you want the current repository cards. Installed packages store them in `.hsr_cards_builds/` under your application's working directory; source checkouts retain their existing `src/hsr_cards/assets/char_builds/` tree. Downloads create missing directories and refresh every indexed variant and condition page. Local-only cards are retained; a failed download does not replace the previous metadata.
+
+`character_build()` resolves an identifier or Nanoka catalog filters. A single clean match returns one image/link. Missing build variants return `None`. `detailed=True` returns a list containing a summary and its condition pages.
+
+Use the same explicit directory for downloads and later lookups when your application changes working directories:
+
+```python
+from hsr_cards import HonkaiStarrail
+
+async with HonkaiStarrail() as client:
+    await client.update_builds(build_dir="data/builds")
+    image = await client.character_build("Acheron", build_dir="data/builds")
+    if image is not None:
+        image.save("acheron-build.png")
+```
 
 ## Tiers and active codes
 
@@ -56,7 +71,7 @@ Drafts are excluded from normal rendering. `allow_draft=True` creates a preview 
 
 ## Files and CLI
 
-The default working directory is the nearest existing ancestor `.hsr_prydwen` tree, or `.hsr_prydwen` under the caller's working directory when none exists. It contains `raw`, `data`, `cards`, and reports. `build_dir`, `nanoka_cache`, and `nanoka_version` are explicit constructor options.
+The default working directory is the nearest existing ancestor `.hsr_prydwen` tree, or `.hsr_prydwen` under the caller's working directory when none exists. It contains `raw`, `data`, `cards`, and reports. Approved publication uses the same default build directory as downloaded cards: existing source-checkout build assets or `.hsr_cards_builds/` for an installed package. `build_dir`, `nanoka_cache`, and `nanoka_version` are explicit constructor options.
 
 ```bash
 hsr-prydwen --help

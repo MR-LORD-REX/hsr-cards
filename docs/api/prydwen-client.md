@@ -40,6 +40,8 @@ def __init__(
 Configure independent build and query access with an optional caller-owned API.
 
 work_dir contains drafts/reports; build_dir contains approved artifacts.
+The default build directory retains an existing source-checkout build tree;
+installed packages use `.hsr_cards_builds/` under the working directory.
 Reads existing Nanoka catalogs for nanoka_version, but creates no directories.
 transport selects HTTP or explicit browser collection; timeouts are milliseconds
 for builds. Injected api objects are never closed by this client.

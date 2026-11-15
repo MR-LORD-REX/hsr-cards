@@ -1,3 +1,4 @@
 include README.md
 include LICENSE
 recursive-include src/hsr_cards/assets *
+prune src/hsr_cards/assets/char_builds

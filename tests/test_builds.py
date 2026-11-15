@@ -10,7 +10,7 @@ import pytest
 from PIL import Image
 
 from hsr_cards.builds import (
-    build_raw_url, build_tree_url, find_builds, scan_builds, update_build_assets,
+    build_raw_url, build_tree_url, default_build_dir, find_builds, scan_builds, update_build_assets,
 )
 from hsr_cards.nanoka import NanokaClient
 from hsr_cards.utils.errors import HSR_Error
@@ -156,3 +156,67 @@ def test_missing_variant_for_a_known_character_returns_none_without_network(tmp_
         assert await client.character_build(1308, detailed=True, build_dir=tmp_path) is None
         client.get_character.assert_not_awaited()
     asyncio.run(run())
+
+
+def test_source_checkout_keeps_existing_approved_build_directory(tmp_path, monkeypatch):
+    package = tmp_path / "checkout" / "src" / "hsr_cards"
+    approved = package / "assets" / "char_builds"
+    approved.mkdir(parents=True)
+    (tmp_path / "checkout" / "pyproject.toml").write_text("[project]\nname='hsr-cards'\n", encoding="utf-8")
+    monkeypatch.setattr("hsr_cards.builds.__file__", str(package / "builds.py"))
+    monkeypatch.chdir(tmp_path)
+
+    assert default_build_dir() == approved
+    assert not (tmp_path / ".hsr_cards_builds").exists()
+
+
+def test_installed_package_downloads_and_loads_cards_from_an_empty_local_cache(tmp_path, monkeypatch):
+    from hsr_cards import HonkaiStarrail
+
+    package = tmp_path / "site-packages" / "hsr_cards"
+    package.mkdir(parents=True)
+    application = tmp_path / "application"
+    application.mkdir()
+    monkeypatch.setattr("hsr_cards.builds.__file__", str(package / "builds.py"))
+    monkeypatch.chdir(application)
+    downloaded = application / ".hsr_cards_builds"
+    assert default_build_dir() == downloaded
+    assert scan_builds() == []
+    assert not downloaded.exists()
+
+    transport = session({"1308": metadata()})
+
+    class DownloadSession:
+        get = transport.get
+        closed = False
+
+        async def __aenter__(self):
+            return self
+
+        async def __aexit__(self, *args):
+            self.closed = True
+
+    download_session = DownloadSession()
+    monkeypatch.setattr("hsr_cards.clients.main.aiohttp.ClientSession", lambda: download_session)
+
+    async def run():
+        nanoka = NanokaClient(include_assets=False)
+        nanoka.get_character = AsyncMock(side_effect=AssertionError("downloaded build lookup must stay offline"))
+        try:
+            async with HonkaiStarrail(nanoka_client=nanoka) as client:
+                assert await client.update_builds(metadata_url="https://example.test/metadata.json") == 4
+                image = await client.character_build("Acheron")
+                assert isinstance(image, Image.Image)
+                assert image.size == (10, 10)
+                detailed = await client.character_build(1308, detailed=True)
+                assert len(detailed) == 3
+                assert await client.character_build(1308, url=True) == metadata()["images"][0]["raw_url"]
+                nanoka.get_character.assert_not_awaited()
+        finally:
+            await nanoka.close()
+
+    asyncio.run(run())
+    assert download_session.closed
+    assert (downloaded / "metadata.json").is_file()
+    assert len(find_builds(1308, detailed=True)) == 3
+    assert not (package / "assets").exists()

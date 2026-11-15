@@ -55,12 +55,16 @@ Issues = "https://github.com/MR-LORD-REX/hsr-cards/issues"
 
 [tool.setuptools.packages.find]
 where=["src"]
+exclude=["hsr_cards.assets.char_builds", "hsr_cards.assets.char_builds.*"]
 
 [tool.setuptools.package-dir]
 "" = "src"
 
 [tool.setuptools]
 include-package-data=true
+
+[tool.setuptools.exclude-package-data]
+"*" = ["assets/char_builds/*", "assets/char_builds/**/*", "char_builds/*", "char_builds/**/*"]
 
 [tool.black]
 line-length = 100

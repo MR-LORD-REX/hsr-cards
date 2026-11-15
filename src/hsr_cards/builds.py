@@ -24,7 +24,21 @@ BUILD_METADATA_URL = f"{BUILD_RAW_BASE}/metadata.json"
 
 
 def default_build_dir() -> Path:
-    return Path(__file__).resolve().parent / "assets" / "char_builds"
+    """Return the local approved-build directory without creating it.
+
+    Source checkouts retain their existing assets/char_builds tree. Installed
+    packages use .hsr_cards_builds under the caller's working directory so an
+    update never needs to write generated images into site-packages.
+    """
+    package_root = Path(__file__).resolve().parent
+    source_builds = package_root / "assets" / "char_builds"
+    source_checkout = (
+        package_root.parent.name == "src"
+        and (package_root.parent.parent / "pyproject.toml").is_file()
+    )
+    if source_checkout and source_builds.is_dir():
+        return source_builds
+    return Path.cwd() / ".hsr_cards_builds"
 
 
 def _filename(value: object) -> str:
@@ -156,6 +170,9 @@ async def update_build_assets(
 ) -> int:
     """Download every indexed variant and condition page, then publish metadata.
 
+    With no build_dir, use the source checkout's approved cards or the installed
+    package's caller-local .hsr_cards_builds directory. Missing directories are
+    created during the update; no cards need to be bundled in the distribution.
     Local-only characters are preserved. A failed download leaves the previous
     metadata intact, so an incomplete update cannot advertise missing cards.
     """

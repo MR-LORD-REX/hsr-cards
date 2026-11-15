@@ -173,7 +173,7 @@ async def nanoka_examples(showcase):
                     raise ValueError("The approved Acheron build variant is missing")
                 showcase.save(result, id=f"character_build-acheron-{'detailed' if detailed else 'clean'}", method="HonkaiStarrail.character_build",
                               title=f"Acheron build · {'Detailed' if detailed else 'Clean'}", group="Prydwen",
-                              source="Packaged, approved Prydwen build assets; retrieved through the public facade",
+                              source="Approved repository Prydwen build assets; retrieved through the public facade",
                               description="The public method returns an approved build image. Detailed mode also returns the available condition pages; this preview shows the summary.",
                               example=f'build = await client.character_build("Acheron", detailed={detailed})\n' + ('build[0].save("acheron-detailed.png")' if detailed else 'build.save("acheron.png")'))
             except Exception as exc:

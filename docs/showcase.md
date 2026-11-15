@@ -354,7 +354,7 @@ for item in batch.succeeded:
 
 The public method returns an approved build image. Detailed mode also returns the available condition pages; this preview shows the summary.
 
-**Source:** Packaged, approved Prydwen build assets; retrieved through the public facade
+**Source:** Approved repository Prydwen build assets; retrieved through the public facade
 
 [![Acheron build · Clean](assets/showcase/showcase-character_build-acheron-clean.webp)](https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/Cards/showcase-character_build-acheron-clean.png)
 
@@ -369,7 +369,7 @@ build.save("acheron.png")
 
 The public method returns an approved build image. Detailed mode also returns the available condition pages; this preview shows the summary.
 
-**Source:** Packaged, approved Prydwen build assets; retrieved through the public facade
+**Source:** Approved repository Prydwen build assets; retrieved through the public facade
 
 [![Acheron build · Detailed](assets/showcase/showcase-character_build-acheron-detailed.webp)](https://raw.githubusercontent.com/MR-LORD-REX/hsr-cards/main/Cards/showcase-character_build-acheron-detailed.png)
 
