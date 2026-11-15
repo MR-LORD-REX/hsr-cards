@@ -1,7 +1,6 @@
 """Measured text, fonts, images, and drawing context for build cards."""
 from __future__ import annotations
 
-import io
 
 
 from dataclasses import dataclass, field
@@ -14,6 +13,7 @@ from .styles import W, H, FONT_DIR, EXTERNAL_FONTS, INK, MUTED, GOLD, LINE, PANE
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 from ....providers.prydwen.models import AssetRef
+from ....utils.hsrfonts import load_font
 
 from ....providers.prydwen.assets import NanokaIndex
 
@@ -59,7 +59,7 @@ class RenderContext:
 
 @lru_cache(maxsize=48)
 def _font(size: int, weight: str = "regular") -> ImageFont.FreeTypeFont:
-    """Use the supplied game font when possible; never download a font."""
+    """Use local game/system faces with a bundled fallback; never download a font."""
     if weight == "icon":
         candidates = [EXTERNAL_FONTS / "hsr-icon.ttf"]
     elif weight == "bold":
@@ -69,27 +69,13 @@ def _font(size: int, weight: str = "regular") -> ImageFont.FreeTypeFont:
     elif weight == "source":
         candidates = [FONT_DIR / "segoeui.ttf", FONT_DIR / "arial.ttf"]
     else:
-        game_font = EXTERNAL_FONTS / "optimized_global_web.woff2"
-        if game_font.is_file():
-            try:
-                from fontTools.ttLib import TTFont
-                font = TTFont(game_font)
-                font.flavor = None
-                data = io.BytesIO()
-                font.save(data)
-                data.seek(0)
-                return ImageFont.truetype(data, size)
-            except (ImportError, OSError, ValueError):
-                pass
-        candidates = [FONT_DIR / "segoeui.ttf", FONT_DIR / "arial.ttf"]
-    for path in candidates:
-        if path.is_file():
-            return ImageFont.truetype(str(path), size)
-    # Pillow's bundled DejaVu font gives a readable cross-platform fallback.
-    try:
-        return ImageFont.truetype("DejaVuSans.ttf", size)
-    except OSError:
-        return ImageFont.load_default(size=size)
+        candidates = [EXTERNAL_FONTS / "optimized_global_web.woff2", FONT_DIR / "segoeui.ttf", FONT_DIR / "arial.ttf"]
+    if weight != "icon":
+        candidates.extend(
+            ("NotoSans-Bold.ttf", "DejaVuSans-Bold.ttf") if weight in ("bold", "title")
+            else ("NotoSans-Regular.ttf", "DejaVuSans.ttf")
+        )
+    return load_font(size, candidates, fallback="bold" if weight in ("bold", "title") else "regular")
 
 
 def _wrap(text: str, font: ImageFont.FreeTypeFont, width: int) -> list[str]:
@@ -208,4 +194,3 @@ def _icon(ctx: RenderContext, ref: AssetRef | None, box: Box, *, portrait: bool 
     else:
         art.thumbnail((box.w, box.h), Image.Resampling.LANCZOS)
     ctx.image.alpha_composite(art, (box.x + (box.w - art.width) // 2, box.y + (box.h - art.height) // 2))
-

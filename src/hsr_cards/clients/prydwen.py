@@ -32,7 +32,7 @@ class PrydwenClient:
         nanoka_cache: str | Path | None = None, nanoka_version: str = DEFAULT_NANOKA_VERSION,
         headed: bool = False, proxy: str | None = None, settle_ms: int = 5_000,
         transport: str = "http", refresh: bool = False, timeout_ms: int = 30_000,
-        retries: int = 2, chrome: str | Path = DEFAULT_CHROME,
+        retries: int = 2, chrome: str | Path | None = DEFAULT_CHROME,
         api: PrydwenAPIClient | None = None,
     ):
         """Configure independent build and query access with an optional caller-owned API.
@@ -55,7 +55,7 @@ class PrydwenClient:
             version=nanoka_version,
         )
         self.fetch_config = FetchConfig(
-            raw_dir=self.raw_dir, chrome=Path(chrome), headless=not headed,
+            raw_dir=self.raw_dir, chrome=Path(chrome).expanduser() if chrome is not None else None, headless=not headed,
             proxy=proxy, settle_ms=settle_ms, transport=transport, refresh=refresh,
             timeout_ms=timeout_ms, retries=retries,
         )

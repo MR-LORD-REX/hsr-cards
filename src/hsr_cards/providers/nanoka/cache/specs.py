@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from ..constants import PATH_ALIASES
+from ....core.paths import asset_stem
 
 
 RELIC_ICON_SPECS = {
@@ -55,7 +56,7 @@ def collect_asset_specs(data_dir: Path) -> dict[str, str]:
             if isinstance(entry, dict):
                 icon = entry.get("icon")
                 if isinstance(icon, str):
-                    specs[f"relic:{identifier}"] = f"itemfigures/{Path(icon).stem}.webp"
+                    specs[f"relic:{identifier}"] = f"itemfigures/{asset_stem(icon)}.webp"
     monster_catalog = _load_json_file(data_dir / "monster.json")
     if isinstance(monster_catalog, dict):
         for identifier, entry in monster_catalog.items():
@@ -63,7 +64,7 @@ def collect_asset_specs(data_dir: Path) -> dict[str, str]:
                 continue
             icon = entry.get("icon")
             if isinstance(icon, str):
-                specs[f"monster:{identifier}"] = f"monstermiddleicon/{Path(icon).stem}.webp"
+                specs[f"monster:{identifier}"] = f"monstermiddleicon/{asset_stem(icon)}.webp"
             for weakness in entry.get("weak") or []:
                 if isinstance(weakness, str):
                     add_element_spec(weakness, specs)

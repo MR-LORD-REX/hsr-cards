@@ -24,6 +24,17 @@ async def main():
 asyncio.run(main())
 ```
 
+Game sprite paths normalize Windows and POSIX separators before icon lookup. English cards fall back to bundled DIN fonts when optional system fonts are missing or unreadable. Chinese, Japanese, and Korean Nanoka cards also look for installed Noto CJK or macOS language fonts; install a suitable CJK font for full character coverage.
+
+Optional Prydwen browser collection discovers installed Chrome/Chromium on Windows, Linux, and macOS. If none is found, it uses Playwright's managed Chromium. Install the browser extra and managed browser when needed:
+
+```bash
+python -m pip install "hsr-cards[browser]"
+python -m playwright install chromium
+```
+
+An explicit `chrome=` or `--chrome` path overrides discovery.
+
 See the [quickstart](docs/getting-started/quickstart.md), [endgame guide](docs/guides/endgame.md), [player cards](docs/guides/player-cards.md). The documentation tracks the current source checkout; published package versions may have an older API.
 
 [MIT license](LICENSE) · [Report an issue](https://github.com/MR-LORD-REX/hsr-cards/issues)

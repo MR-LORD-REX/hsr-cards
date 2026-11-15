@@ -41,11 +41,15 @@ def test_generated_cards_are_rejected_in_both_package_formats(tmp_path):
     assert any(source.name in issue for issue in issues)
 
 
-def test_required_fonts_are_not_lost_when_trimming_generated_assets(tmp_path):
-    distributions(tmp_path, omit="hsr_cards/assets/fonts/optimized_global_web.woff2")
+@pytest.mark.parametrize("font_file", [
+    "optimized_global_web.woff2", "DIN-Regular.ttf", "DIN-Medium.ttf",
+    "DIN-Light.ttf", "DIN-Bold.ttf", "hsr-icon.ttf",
+])
+def test_required_fonts_are_not_lost_when_trimming_generated_assets(tmp_path, font_file):
+    distributions(tmp_path, omit=f"hsr_cards/assets/fonts/{font_file}")
     issues = validate_dist(tmp_path)
     assert len(issues) == 2
-    assert all("missing runtime/source file" in issue and "optimized_global_web.woff2" in issue for issue in issues)
+    assert all("missing runtime/source file" in issue and font_file in issue for issue in issues)
 
 
 def test_file_size_limit_is_checked_before_upload(tmp_path):

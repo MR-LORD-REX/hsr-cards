@@ -3,7 +3,7 @@ from __future__ import annotations
 import hashlib
 import re
 from collections.abc import Sequence
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 _HASH_WIDTH = 10
 
 
@@ -31,3 +31,8 @@ def comparison_key(versions: Sequence[str]) -> str:
 def default_rendered_cache_dir() -> Path:
     """Return .hsr_cards_rendered under the caller cwd without creating it."""
     return Path.cwd() / ".hsr_cards_rendered"
+
+
+def asset_stem(value: str | None) -> str:
+    """Return a CDN sprite basename with Windows/POSIX separators normalized; no IO occurs."""
+    return PurePosixPath(str(value or "").replace("\\", "/")).stem

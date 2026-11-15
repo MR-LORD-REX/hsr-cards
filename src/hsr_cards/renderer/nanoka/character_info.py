@@ -7,11 +7,13 @@ import math
 import re
 import sys
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from ...nanoka import NanokaClient
+from ...utils.hsrfonts import WINDOWS_FONT_DIR, load_font
 
 W, H = 2400, 1540
 M = 96
@@ -27,7 +29,7 @@ LINE = (255, 255, 255, 25)
 PANEL_FILL = (25, 20, 38, 220)
 PANEL_EDGE = (255, 255, 255, 30)
 
-FONT_DIR = Path("C:/Windows/Fonts")
+FONT_DIR = WINDOWS_FONT_DIR
 FONT_REG = FONT_DIR / "segoeui.ttf"
 FONT_BOLD = FONT_DIR / "segoeuib.ttf"
 FONT_SEMI = FONT_DIR / "segoeuisl.ttf"
@@ -43,6 +45,18 @@ LOCALE_BOLD_FONTS = {
     "zh": FONT_DIR / "msyhbd.ttc",
     "ja": FONT_DIR / "YuGothB.ttc",
     "ko": FONT_DIR / "malgunbd.ttf",
+}
+
+LOCALE_PORTABLE_FONTS = {
+    "zh": ("NotoSansSC-Regular.otf", "NotoSansSC-Regular.ttf", "NotoSansCJK-Regular.ttc", "PingFang.ttc"),
+    "ja": ("NotoSansJP-Regular.otf", "NotoSansJP-Regular.ttf", "NotoSansCJK-Regular.ttc", "Hiragino Sans.ttc"),
+    "ko": ("NotoSansKR-Regular.otf", "NotoSansKR-Regular.ttf", "NotoSansCJK-Regular.ttc", "AppleSDGothicNeo.ttc"),
+}
+
+LOCALE_PORTABLE_BOLD_FONTS = {
+    "zh": ("NotoSansSC-Bold.otf", "NotoSansSC-Bold.ttf", "NotoSansCJK-Bold.ttc"),
+    "ja": ("NotoSansJP-Bold.otf", "NotoSansJP-Bold.ttf", "NotoSansCJK-Bold.ttc"),
+    "ko": ("NotoSansKR-Bold.otf", "NotoSansKR-Bold.ttf", "NotoSansCJK-Bold.ttc"),
 }
 
 ELEMENT_NAMES = {
@@ -73,22 +87,19 @@ MATERIAL_SECTIONS = (
 )
 
 
+@lru_cache(maxsize=128)
 def font(size: int, *, bold: bool = False, display: bool = False, locale: str = "en"):
-    if display and locale == "en":
-        path = FONT_DISPLAY
-    elif bold:
-        path = FONT_BOLD
-    else:
-        path = FONT_REG
+    """Load an optional platform face, falling back to bundled DIN without downloads."""
+    path = FONT_DISPLAY if display and locale == "en" else FONT_BOLD if bold else FONT_REG
+    candidates = []
     if locale in LOCALE_FONTS:
-        candidates = (LOCALE_BOLD_FONTS.get(locale), LOCALE_FONTS[locale]) if bold or display else (LOCALE_FONTS[locale],)
-        for candidate in candidates:
-            if candidate and candidate.exists():
-                path = candidate
-                break
-    if not path.exists():
-        path = FONT_REG
-    return ImageFont.truetype(str(path), size)
+        if bold or display:
+            candidates.append(LOCALE_BOLD_FONTS[locale])
+            candidates.extend(LOCALE_PORTABLE_BOLD_FONTS[locale])
+        candidates.append(LOCALE_FONTS[locale])
+        candidates.extend(LOCALE_PORTABLE_FONTS[locale])
+    candidates.append(path)
+    return load_font(size, candidates, fallback="bold" if bold or display else "regular")
 
 
 def gradient(size, top, bottom):

@@ -11,6 +11,7 @@ from hsr_cards.renderer.nanoka.data import prime_assets
 from hsr_cards.renderer.nanoka.data import rank_icon_relative
 from hsr_cards.renderer.nanoka.data import rank_texture_relative
 from pathlib import Path
+from hsr_cards.core.paths import asset_stem
 from hsr_cards.renderer.nanoka.skills.comparison import mark_skill_diff
 from hsr_cards.renderer.nanoka.skills.models import SkillData, SkillsCardResult
 from hsr_cards.renderer.nanoka.skills.preparation import plain, rank_rows, skill_groups
@@ -66,7 +67,7 @@ async def build_skill_data(character: CharacterData) -> SkillData:
     path_labels = PATH_LABELS.get(locale, PATH_LABELS["en"])
     memosprite = detail.memosprite or {}
     spprite_name = clean_localized(str(memosprite.get("name") or ""), locale) or ""
-    spprite_icon = Path(str(memosprite.get("icon") or "")).stem
+    spprite_icon = asset_stem(str(memosprite.get("icon") or ""))
     spprite_code = "".join(ch for ch in spprite_icon if ch.isdigit())
 
     relatives = [

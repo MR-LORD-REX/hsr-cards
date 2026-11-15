@@ -1,8 +1,6 @@
-"""Browser-based Prydwen collection.
+"""Prydwen build/team collection through installed Chrome/Chromium or managed Chromium.
 
-Prydwen rejects plain HTTP with 403, so every page is rendered with the locally
-installed Chrome through Playwright. The build tab is clicked before saving,
-which makes the raw HTML self-contained and reviewable without a browser.
+The build tab is clicked before saving, making the raw HTML self-contained.
 """
 
 from __future__ import annotations
@@ -18,8 +16,9 @@ from playwright.async_api import Browser, BrowserContext, Page, Playwright, asyn
 
 from .parsing.roster import PRYDWEN_CHARACTERS_URL, RosterEntry, parse_roster_html, write_raw_urls
 from .assets import NanokaIndex
+from .paths import discover_chrome
 
-DEFAULT_CHROME = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
+DEFAULT_CHROME = None
 TEAM_MODES = ("Memory of Chaos", "Pure Fiction", "Apocalyptic Shadow", "Anomaly Arbitration")
 
 
@@ -27,7 +26,7 @@ TEAM_MODES = ("Memory of Chaos", "Pure Fiction", "Apocalyptic Shadow", "Anomaly 
 class FetchConfig:
     """Options for explicit public-page collection, including cache root and transport timeouts."""
     raw_dir: Path
-    chrome: Path = DEFAULT_CHROME
+    chrome: Path | None = DEFAULT_CHROME
     headless: bool = True
     timeout_ms: int = 90_000
     settle_ms: int = 5_000
@@ -35,7 +34,7 @@ class FetchConfig:
 
 
 class BrowserPrydwenFetcher:
-    """Collect rendered build/team snapshots with a locally installed Chrome context."""
+    """Collect rendered build/team snapshots with an installed or managed browser."""
     def __init__(self, config: FetchConfig):
         """Store Chrome collection options without launching Playwright or creating directories."""
         self.config = config
@@ -44,25 +43,33 @@ class BrowserPrydwenFetcher:
         self._context: BrowserContext | None = None
 
     async def __aenter__(self) -> "BrowserPrydwenFetcher":
-        """Launch the configured local Chrome and own its browser/context resources.
+        """Launch explicit/discovered Chrome or Playwright's managed Chromium.
 
-        Missing Chrome raises FileNotFoundError; launch/context errors propagate."""
-        executable = self.config.chrome
-        if not executable.is_file():
+        An invalid explicit path raises FileNotFoundError. Browser dependencies
+        and launch errors propagate after cleaning up operation-owned resources.
+        """
+        executable = Path(self.config.chrome).expanduser() if self.config.chrome is not None else discover_chrome()
+        if self.config.chrome is not None and not executable.is_file():
             raise FileNotFoundError(f"Chrome executable not found: {executable}")
         self._playwright = await async_playwright().start()
-        launch: dict[str, object] = {"headless": self.config.headless, "executable_path": str(executable)}
+        launch: dict[str, object] = {"headless": self.config.headless}
+        if executable is not None:
+            launch["executable_path"] = str(executable)
         if self.config.proxy:
             launch["proxy"] = {"server": self.config.proxy}
-        self._browser = await self._playwright.chromium.launch(**launch)
-        self._context = await self._browser.new_context(
-            viewport={"width": 1440, "height": 1000},
-            locale="en-US",
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36"
-            ),
-        )
+        try:
+            self._browser = await self._playwright.chromium.launch(**launch)
+            self._context = await self._browser.new_context(
+                viewport={"width": 1440, "height": 1000},
+                locale="en-US",
+                user_agent=(
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36"
+                ),
+            )
+        except BaseException:
+            await self.__aexit__(None, None, None)
+            raise
         return self
 
     async def __aexit__(self, exc_type, exc, tb) -> None:

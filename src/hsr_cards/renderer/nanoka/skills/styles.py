@@ -5,6 +5,7 @@ from PIL import ImageFont
 from hsr_cards.renderer.nanoka.character_info import MUTED
 from hsr_cards.renderer.nanoka.character_info import TEXT
 from pathlib import Path
+from hsr_cards.utils.hsrfonts import WINDOWS_FONT_DIR
 import re
 
 
@@ -301,7 +302,7 @@ WEIGHT_SEMI = "semi"
 WEIGHT_BOLD = "bold"
 
 
-FONT_DIR = Path("C:/Windows/Fonts")
+FONT_DIR = WINDOWS_FONT_DIR
 
 
 FONT_SEMI_FILE = FONT_DIR / "seguisb.ttf"

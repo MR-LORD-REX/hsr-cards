@@ -7,7 +7,7 @@ import re
 from hsr_cards.renderer.nanoka.skills.models import GlossaryTerm, Piece, RankRow, SkillGroup, SkillRow
 from hsr_cards.renderer.nanoka.skills.preparation import format_number, group_columns, normalize_breaks, value_kind
 from hsr_cards.renderer.nanoka.skills.styles import BODY, CHANGED_VALUE_KINDS, DESC_TARGET_H, EIDOLON_VALUE, FALLBACK_CHARS, FONT_SYMBOLS, KIND_COLOR, KIND_WEIGHT, MAX_PARTS, MECHANIC, MECHANIC_RE, PARAM_RE, PUNCT_ONLY, QUOTE, TAG_RE, VALUE, VALUE_KINDS, WEIGHT_REGULAR
-from hsr_cards.renderer.nanoka.skills.typography import font_w
+from hsr_cards.renderer.nanoka.skills.typography import font_w, symbol_font
 
 
 def _runs_to_pieces(runs) -> list[Piece]:
@@ -246,7 +246,7 @@ def trim_blank_lines(lines: list[list[Piece]]) -> list[list[Piece]]:
 def measure_text_mixed(draw, text: str, size: int, weight: str, locale: str) -> float:
     """Measure a string with the same per-run fallback faces used to draw it."""
     base = font_w(size, weight, locale)
-    symbol = ImageFont.truetype(str(FONT_SYMBOLS), size) if FONT_SYMBOLS.exists() else base
+    symbol = symbol_font(size)
     run = ""
     run_symbols = False
     width = 0.0
@@ -267,7 +267,7 @@ def measure_text_mixed(draw, text: str, size: int, weight: str, locale: str) -> 
 def draw_text_runs(draw, text: str, x: int, y: int, size: int, weight: str, color, locale: str) -> float:
     """Draw a string while switching only the glyphs that need a fallback face."""
     base = font_w(size, weight, locale)
-    symbol = ImageFont.truetype(str(FONT_SYMBOLS), size) if FONT_SYMBOLS.exists() else base
+    symbol = symbol_font(size)
     run = ""
     run_symbols = False
     cursor = float(x)

@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Any
 
 from .models import AssetRef
+from ...core.paths import asset_stem
 
 DEFAULT_NANOKA_VERSION = "4.7.51"
 from .paths import default_nanoka_cache
@@ -187,6 +188,7 @@ def parse_score(value: str | None) -> tuple[float | None, str | None]:
 
 
 def _asset(ref: str, relative_path: str) -> AssetRef:
+    relative_path = relative_path.replace("\\", "/")
     return AssetRef(ref=ref, relative_path=relative_path, local_name=Path(relative_path).name, source_url=None)
 
 
@@ -333,7 +335,7 @@ class NanokaIndex:
         icon = record.get("icon")
         if not isinstance(icon, str) or not icon:
             raise ValueError(f"relic {record.get('en')!r} has no Nanoka icon path")
-        stem = Path(icon).stem
+        stem = asset_stem(icon)
         return _asset(f"relic:{record['id']}", f"itemfigures/{stem}.webp")
 
     def item_asset(self, record: dict[str, Any]) -> AssetRef | None:
@@ -341,7 +343,7 @@ class NanokaIndex:
         icon = record.get("item_figure_icon_path")
         if not isinstance(icon, str) or not icon:
             return None
-        return _asset(f"item:{record['id']}", f"itemfigures/{Path(icon).stem}.webp")
+        return _asset(f"item:{record['id']}", f"itemfigures/{asset_stem(icon)}.webp")
 
     def element_asset(self, element: str | None) -> AssetRef | None:
         """Return an element icon reference for a known case-insensitive alias, otherwise None."""

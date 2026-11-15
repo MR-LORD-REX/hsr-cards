@@ -4,6 +4,7 @@ from __future__ import annotations
 from PIL import Image
 from hsr_cards.renderer.nanoka.character_info import load_webp
 from pathlib import Path
+from hsr_cards.core.paths import asset_stem
 from hsr_cards.renderer.nanoka.skills.models import RankRow, SkillData, SkillGroup
 
 
@@ -52,7 +53,7 @@ def eidolon_icon(data: SkillData, rank: RankRow, size: int) -> Image.Image | Non
         if image:
             return image
     candidates = [f"SkillIcon_{data.character_id}_Rank{rank.key}.webp"]
-    stem = Path(rank.rank.icon or "").stem
+    stem = asset_stem(rank.rank.icon)
     if stem:
         candidates.append(f"{stem}.webp")
     for name in candidates:
@@ -82,7 +83,7 @@ def previous_eidolon_icon(data: SkillData, rank: RankRow, size: int) -> Image.Im
     """
     before = previous_rank(data, rank)
     if before is not None:
-        icon_name = Path(str(before.rank.icon or "")).stem
+        icon_name = asset_stem(before.rank.icon)
         candidates = [f"{icon_name}.webp"] if icon_name else []
         candidates.append(f"SkillIcon_{data.character_id}_Rank{before.key}.webp")
         for name in candidates:

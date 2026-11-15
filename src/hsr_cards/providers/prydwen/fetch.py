@@ -22,14 +22,14 @@ from bs4 import BeautifulSoup
 from .assets import NanokaIndex
 from .parsing.roster import PRYDWEN_CHARACTERS_URL, RosterEntry, parse_roster_html, write_raw_urls
 
-DEFAULT_CHROME = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
+DEFAULT_CHROME = None
 
 
 @dataclass
 class FetchConfig:
     """Options for explicit public-page collection, including cache root and transport timeouts."""
     raw_dir: Path
-    chrome: Path = DEFAULT_CHROME
+    chrome: Path | None = DEFAULT_CHROME
     headless: bool = True
     timeout_ms: int = 30_000
     settle_ms: int = 1_500

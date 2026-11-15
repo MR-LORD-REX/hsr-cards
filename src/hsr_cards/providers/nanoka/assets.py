@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from ...core.paths import asset_stem
 from typing import Any
 
 
@@ -87,10 +88,10 @@ class AssetsQueries:
                         wanted[f"skill:{skill.type_name}"] = f"stem:SkillIcon_{identifier}_{suffix}"
         for rank in detail.eidolons:
             if rank.icon:
-                wanted[f"eidolon:{rank.id}"] = f"stem:{Path(rank.icon).stem}"
+                wanted[f"eidolon:{rank.id}"] = f"stem:{asset_stem(rank.icon)}"
         for trace in detail.traces:
             if trace.icon:
-                wanted[f"trace:{trace.point}"] = f"stem:{Path(trace.icon).stem}"
+                wanted[f"trace:{trace.point}"] = f"stem:{asset_stem(trace.icon)}"
         wanted["relic_head"] = "relicslot:head"
         wanted["relic_body"] = "relicslot:body"
         for key, value in wanted.items():

@@ -5,7 +5,8 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
+from ...utils.hsrfonts import WINDOWS_FONT_DIR, load_font
 
 from .models import ReviewStatus
 from .nanoka import NanokaIndex
@@ -61,8 +62,7 @@ def render_batch(paths: list[Path], output: Path, *, nanoka: NanokaIndex, allow_
 def _contact_sheets(output: Path, cards: list[dict]) -> list[str]:
     """An index for locating cards; full-size PNGs are the review artifacts."""
     width, height = 480, 404
-    font_path = Path('C:/Windows/Fonts/arial.ttf')
-    font = ImageFont.truetype(str(font_path), 22) if font_path.is_file() else ImageFont.load_default(size=22)
+    font = load_font(22, (WINDOWS_FONT_DIR / "arial.ttf",))
     results = []
     for start in range(0, len(cards), 12):
         sheet = Image.new('RGB', (width * 3, height * 4), '#121321')

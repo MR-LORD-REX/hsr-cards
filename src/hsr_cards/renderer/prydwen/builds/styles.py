@@ -1,5 +1,6 @@
 """Build-card dimensions, font roots, and palette."""
 from pathlib import Path
+from ....utils.hsrfonts import WINDOWS_FONT_DIR
 
 W, H = 1920, 1440
 
@@ -7,7 +8,7 @@ W, H = 1920, 1440
 PACKAGE_ASSETS = Path(__file__).resolve().parents[3] / "assets"
 
 
-FONT_DIR = Path("C:/Windows/Fonts")
+FONT_DIR = WINDOWS_FONT_DIR
 
 
 EXTERNAL_FONTS = PACKAGE_ASSETS / "fonts"
