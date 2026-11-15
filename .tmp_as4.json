@@ -1,0 +1,422 @@
+{
+ "id": 30214,
+ "name": "Dominance of Oblivion: Difficulty <unbreak>04</unbreak>",
+ "challenge": [
+  {
+   "name": "Gain #1 points",
+   "param": 4000
+  },
+  {
+   "name": "Gain #1 points",
+   "param": 5200
+  },
+  {
+   "name": "Gain #1 points",
+   "param": 6600
+  }
+ ],
+ "damage_type1": [
+  "Physical",
+  "Fire",
+  "Wind",
+  "Imaginary"
+ ],
+ "damage_type2": [
+  "Physical",
+  "Fire",
+  "Thunder",
+  "Imaginary"
+ ],
+ "maze_group_id1": 6,
+ "maze_group_id2": 7,
+ "boss_monster_id1": 200401404,
+ "boss_monster_id2": 406401204,
+ "boss_monster_id1_skill_list": [
+  200401401,
+  200401402,
+  200401403,
+  200401404,
+  200401405,
+  200401406,
+  200401407,
+  200401408,
+  200401409,
+  200401410,
+  200401411,
+  200401412,
+  200401413,
+  200401414
+ ],
+ "boss_monster_id2_skill_list": [
+  406401201,
+  406401202,
+  406401203,
+  406401204,
+  406401205,
+  406401206,
+  406401207,
+  406401208,
+  406401209,
+  406401211,
+  406401213,
+  406401214,
+  406401215,
+  406401216,
+  406401217,
+  406401210
+ ],
+ "boss_monster_config1": {
+  "difficulty": 4,
+  "difficulty_list": [
+   1,
+   1,
+   3,
+   4
+  ],
+  "tag_list": [
+   {
+    "name": "Steadfast Safeguard",
+    "desc": "Boss Mirage takes <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> less DMG. After <color=#f29e38ff>Weakness is broken</color>, action gets additionally delayed and DMG taken increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+    "param": [
+     0.5,
+     1,
+     1.5
+    ],
+    "skill_id": 200401410,
+    "param_fix": [
+     0.5,
+     1,
+     1.5,
+     0,
+     0,
+     0
+    ],
+    "child": []
+   },
+   {
+    "name": "Battlefield Transfer",
+    "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will <color=#f29e38ff><u>transmit</u></color> its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
+    "param": [],
+    "skill_id": null,
+    "param_fix": [],
+    "child": [
+     {
+      "name": "Transmit",
+      "desc": "Transmits the Weakness Type to the target. After the target is defeated, additionally reduces Toughness. The Weakness Type will return once all targets that gained the Weakness Type are defeated.",
+      "param": []
+     }
+    ]
+   },
+   {
+    "name": "Stellar Aegis",
+    "desc": "For <color=#f29e38ff>every unit</color> on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG.",
+    "param": [],
+    "skill_id": null,
+    "param_fix": [],
+    "child": []
+   },
+   {
+    "name": "Turn Back the Tide",
+    "desc": "When the Boss Mirage uses \"Puppet Understudy\" in its second phase, it will apply Enhancement effects to <color=#f29e38ff>all summons</color>.",
+    "param": [],
+    "skill_id": null,
+    "param_fix": [],
+    "child": []
+   }
+  ],
+  "difficulty_guide_list": [
+   {
+    "desc": "Boss Mirage takes <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> less DMG. After <color=#f29e38ff>Weakness is broken</color>, action gets additionally delayed and DMG taken increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+    "param": [
+     0.5,
+     1,
+     1.5
+    ],
+    "skill_id": 200401410,
+    "param_fix": [
+     0.5,
+     1,
+     1.5,
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "desc": "Boss Mirage will <color=#f29e38ff>transmit its own Weakness Type to the summon</color>. After any one of its summons is defeated, the summon's Weakness Type will be <color=#f29e38ff>added</color> to the remaining summons.",
+    "param": [],
+    "skill_id": null,
+    "param_fix": []
+   },
+   {
+    "desc": "Attacking summons reduces Boss Mirage's HP by an <color=#f29e38ff>equal amount</color>. After any summon is eliminated, the remaining summons' SPD increases, and <color=#f29e38ff>the DMG they take increases</color>.",
+    "param": [],
+    "skill_id": null,
+    "param_fix": []
+   }
+  ],
+  "text_guide_list": [
+   "Prioritize <color=#f29e38ff>defeating summons</color>. Doing so will <color=#f29e38ff>transmit</color> their Weakness Type back to the Boss Mirage.",
+   "After defeating any summon, increases DMG received by other summons. Take advantage of this mechanism to quickly defeat other summons.",
+   "Increase Effect RES or use abilities to remove the <color=#f29e38ff>Dominated</color> status applied by Boss Mirage."
+  ],
+  "phase_list": [
+   {
+    "name": "Phase I: Cryopyre Duet",
+    "desc": "Boss Mirage will summon Blaze Out of Space and Ice Out of Space to assist it in battle, and transmit its own Weakness Type to the summons.",
+    "answer": "Strategy: Prioritize defeating the summons. Defeating all summons will make the Weakness Type transmit back to the Boss Mirage.",
+    "difficulty": 1,
+    "skill_list": [
+     100411,
+     100412,
+     100413
+    ]
+   },
+   {
+    "name": "Phase II: The Game Is On",
+    "desc": "Boss Mirage will summon Dreamjolt Troupe's Beyond Overcooked and Memory Zone Meme \"Shell of Faded Rage\" to assist it in battle, and transmit its own Weakness Type to the summons.",
+    "answer": "Strategy: Prioritize defeating the summons. Defeating all summons will make the Weakness Type transmit back to the Boss Mirage.",
+    "difficulty": 1,
+    "skill_list": [
+     100421,
+     100422,
+     100423
+    ]
+   }
+  ]
+ },
+ "boss_monster_config2": {
+  "difficulty": 4,
+  "difficulty_list": [
+   1,
+   1,
+   3,
+   4
+  ],
+  "tag_list": [
+   {
+    "name": "Steadfast Safeguard",
+    "desc": "Boss Mirage takes <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> less DMG. After <color=#f29e38ff>Weakness is Broken</color>, action gets additionally delayed and DMG taken increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+    "param": [
+     0.5,
+     1,
+     1.5
+    ],
+    "skill_id": 406401213,
+    "param_fix": [
+     0.5,
+     1,
+     1.5
+    ],
+    "child": []
+   },
+   {
+    "name": "Singularity Split",
+    "desc": "At the start of combat and during phase transitions, the Boss Mirage splits into 5 \"ichor memosprites\" and applies \"<u>Monoform Merger</u>\" to these summons. When all \"ichor memosprites\" with \"Monoform Merger\" enter the \"<u>Feigned Death</u>\" state, they merge back into the Boss Mirage.",
+    "param": [],
+    "skill_id": null,
+    "param_fix": [],
+    "child": [
+     {
+      "name": "Monoform Merger",
+      "desc": "When receiving fatal damage, enters the \"Feigned Death\" state. When all \"ichor memosprites\" possessing \"Monoform Merger\" enter the \"Feigned Death\" state, they merge back into the \"Arbiter of the Lost Abyss.\"",
+      "param": []
+     },
+     {
+      "name": "Feigned Death",
+      "desc": "Cannot be selected, cannot take action.",
+      "param": []
+     }
+    ]
+   },
+   {
+    "name": "Mutual Complement",
+    "desc": "Increases the Max HP of the \"ichor memosprites\" summoned after the Boss Mirage's split, and the \"ichor memosprites\" summoned after the split in the second phase have Shared HP.",
+    "param": [],
+    "skill_id": null,
+    "param_fix": [],
+    "child": []
+   },
+   {
+    "name": "Economies of Scale",
+    "desc": "For <color=#f29e38ff>every unit</color> on the enemy's side of the field that is not in the \"<u>Feigned Death</u>\" state aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
+    "param": [],
+    "skill_id": null,
+    "param_fix": [],
+    "child": [
+     {
+      "name": "Feigned Death",
+      "desc": "Cannot be selected, cannot take action.",
+      "param": []
+     }
+    ]
+   }
+  ],
+  "difficulty_guide_list": [
+   {
+    "desc": "Boss Mirage takes <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> less DMG. After <color=#f29e38ff>Weakness is Broken</color>, action gets additionally delayed and DMG taken increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+    "param": [
+     0.5,
+     1,
+     1.5
+    ],
+    "skill_id": 406401213,
+    "param_fix": [
+     0.5,
+     1,
+     1.5
+    ]
+   },
+   {
+    "desc": "After Boss Mirage uses \"Hemotort Teethgrind\" and \"Hemotort Saw\" to hit an ally target, \"Barrier Recoil\" is triggered if the attacked ally target has a Shield. Defeating the summons summoned by \"Execution in Place\" triggers \"Barrier Recoil.\" When Boss Mirage triggers \"Barrier Recoil,\" it reduces this unit's Toughness and DEF.\\nIf an ally inflicts a debuff on Boss Mirage and its summons when using an attack, slightly reduces the Toughness of that enemy unit and deals True DMG to it.",
+    "param": [],
+    "skill_id": null,
+    "param_fix": []
+   },
+   {
+    "desc": "At the start of combat and during phase transitions, Boss Mirage splits into 5 \"ichor memosprites\" and applies \"Monoform Merger\" to these summons. When all \"ichor memosprites\" with \"Monoform Merger\" enter the \"Feigned Death\" state, they merge back into the Boss Mirage.",
+    "param": [],
+    "skill_id": null,
+    "param_fix": []
+   }
+  ],
+  "text_guide_list": [
+   "Prioritize applying Shields to ally targets. This can offset the Boss Mirage's DMG while reducing its Toughness and lowering its DEF.",
+   "Attack enemy targets using abilities with <color=#f29e38ff>Impair</color> capabilities. If a debuff is successfully applied, their Toughness will be further reduced, and they will take True DMG.",
+   "When the Boss Mirage fissures and summons \"ichor memosprite,\" prioritize using AoE ATK abilities to quickly force the summons into the \"Feigned Death\" state."
+  ],
+  "phase_list": [
+   {
+    "name": "Arbiter of the Lost Abyss",
+    "desc": "At the start of combat and during phase transitions, the Boss Mirage splits into 5 \"ichor memosprites.\"",
+    "answer": "Strategy: Actively use AoE ATK abilities to cause all \"ichor memosprites\" to enter \"Feigned Death\" as quickly as possible, forcing them to merge back.",
+    "difficulty": 1,
+    "skill_list": [
+     101511,
+     101512
+    ]
+   }
+  ]
+ },
+ "event_id_list1": [
+  {
+   "stage_id": 420534,
+   "stage_type": "Challenge",
+   "stage_name": 1358289180218405445,
+   "hard_level_group": 1,
+   "level": 90,
+   "elite_group": 166,
+   "level_graph_path": "Config/Level/StageCommonTemplate.json",
+   "stage_ability_config": [],
+   "battle_scoring_group": 902,
+   "sub_level_graphs": [],
+   "stage_config_data": [
+    {
+     "jdkamoanicm": "_Wave",
+     "mojjbfbkbnc": "1"
+    },
+    {
+     "jdkamoanicm": "_IsEliteBattle",
+     "mojjbfbkbnc": "1"
+    },
+    {
+     "jdkamoanicm": "_BGM",
+     "mojjbfbkbnc": "State_Xianzhou_Combat_Kafuka"
+    },
+    {
+     "jdkamoanicm": "_BindingMazeBuff",
+     "mojjbfbkbnc": "3110017"
+    }
+   ],
+   "monster_list": [
+    {
+     "monster0": 200401404
+    }
+   ],
+   "level_lose_condition": [
+    "[CDT_WaitCustomString:Level_SpecialLose]"
+   ],
+   "level_win_condition": [
+    "[CDT_WaitCustomString:Level_SpecialWin]"
+   ],
+   "forbid_exit_battle": true,
+   "monster_warning_ratio": 1,
+   "trial_avatar_list": [],
+   "invasion": {
+    "level": 3,
+    "desc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+    "maze_buff_id": 3034003,
+    "maze_buff_param": [
+     0.65,
+     0.3,
+     0.5,
+     1,
+     0.5
+    ],
+    "monster_param": [
+     0.6,
+     0.8,
+     1,
+     3,
+     1.44
+    ],
+    "monster_list": [
+     {
+      "monster_id": 800302201,
+      "param_list": []
+     },
+     {
+      "monster_id": 300301401,
+      "param_list": []
+     }
+    ]
+   }
+  }
+ ],
+ "event_id_list2": [
+  {
+   "stage_id": 420544,
+   "stage_type": "Challenge",
+   "stage_name": 7487180788362239792,
+   "hard_level_group": 1,
+   "level": 90,
+   "elite_group": 85,
+   "level_graph_path": "Config/Level/StageCommonTemplate.json",
+   "stage_ability_config": [],
+   "battle_scoring_group": 902,
+   "sub_level_graphs": [],
+   "stage_config_data": [
+    {
+     "jdkamoanicm": "_Wave",
+     "mojjbfbkbnc": "1"
+    },
+    {
+     "jdkamoanicm": "_IsEliteBattle",
+     "mojjbfbkbnc": "1"
+    },
+    {
+     "jdkamoanicm": "_BGM",
+     "mojjbfbkbnc": "State_Amphoreus_Combat_Boss_Serpent"
+    },
+    {
+     "jdkamoanicm": "_BindingMazeBuff",
+     "mojjbfbkbnc": "3110017"
+    }
+   ],
+   "monster_list": [
+    {
+     "monster0": 406401204
+    }
+   ],
+   "level_lose_condition": [
+    "[CDT_WaitCustomString:Level_SpecialLose]"
+   ],
+   "level_win_condition": [
+    "[CDT_WaitCustomString:Level_SpecialWin]"
+   ],
+   "forbid_exit_battle": true,
+   "monster_warning_ratio": 1,
+   "trial_avatar_list": []
+  }
+ ]
+}

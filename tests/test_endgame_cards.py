@@ -1,4 +1,4 @@
-"""Offline regressions for MOC endgame floor cards."""
+"""Offline regressions for MOC, PF, and AS endgame floor cards."""
 
 import asyncio
 import inspect
@@ -146,10 +146,10 @@ class RenderTests(unittest.TestCase):
 
 
 class ApiTests(unittest.IsolatedAsyncioTestCase):
-    async def test_unsupported_modes_are_explicit(self):
-        for mode in ("PF", "AS", "AA"):
-            with self.assertRaises(NotImplementedError):
-                await get_current_endgame_card(mode)
+    async def test_aa_is_explicitly_deferred(self):
+        for render in (get_current_endgame_card, get_next_endgame_card):
+            with self.assertRaisesRegex(NotImplementedError, "deferred"):
+                await render("AA")
 
     async def test_client_exposes_both_endgame_methods(self):
         self.assertTrue(inspect.iscoroutinefunction(HonkaiStarrail.get_current_endgame_card))

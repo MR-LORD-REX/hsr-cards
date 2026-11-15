@@ -467,8 +467,8 @@ class HonkaiStarrail:
     ):
         """Render one Telegram-friendly info card per requested live endgame floor.
 
-        MOC is supported first. Its default floors are 11 and 12; PF and AS
-        default to 3 and 4, while AA uses every published floor.
+        MOC defaults to floors 11 and 12; PF and AS default to 3 and 4.
+        AA cards are deferred and raise ``NotImplementedError``.
         """
         from .renderer.nanoka import get_current_endgame_card as render_endgame
 

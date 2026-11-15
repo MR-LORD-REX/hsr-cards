@@ -1,0 +1,3042 @@
+{
+  "source": "Nanoka 4.7.51/en: story/2027 and boss/3021 (reference screenshots)",
+  "seasons": {
+    "PF": {
+      "schedule": {
+        "en": null,
+        "id": 2027,
+        "begin": "2026-08-24 04:00:01",
+        "end": "2026-10-27 04:00:00",
+        "ko": null,
+        "zh": "取象为文",
+        "ja": null,
+        "live_begin": "2026-10-19 04:00:00",
+        "live_end": "2026-11-30 04:00:00"
+      },
+      "payload": {
+        "id": 2027,
+        "name": null,
+        "buff": {
+          "name": null,
+          "desc": null,
+          "param": []
+        },
+        "option": [
+          {
+            "name": "Toccata",
+            "desc": "Increases Ultimate and Follow-Up ATK DMG dealt by ally targets by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color>. During \"Surging Grit,\" each time an enemy target is inflicted with the \"Dejection\" effect, it changes to stacking <color=#f29e38ff><unbreak>#2[i]</unbreak></color> stack(s) of this effect instead. The max stacking limit of the \"Dejection\" effect increases to <color=#f29e38ff><unbreak>#3[i]</unbreak></color> stacks.",
+            "param": [
+              0.4,
+              2,
+              50,
+              1
+            ]
+          },
+          {
+            "name": "Mirthful Cadence",
+            "desc": "After an ally character uses an Elation Skill to attack an enemy target, inflicts the \"Indulgence\" effect on the attacked enemy target, increasing the DMG taken by this target by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> for <color=#f29e38ff><unbreak>#2[i]</unbreak></color> turn(s). This effect applied by each character exists independently. Upon entering \"Surging Grit\", allies gain <color=#f29e38ff><unbreak>#3[i]</unbreak></color> Punchline(s).",
+            "param": [
+              0.15,
+              2,
+              40,
+              3
+            ]
+          },
+          {
+            "name": "Fugato",
+            "desc": "During \"Surging Grit,\" after an ally target uses an attack, additionally causes 1 random DoT debuff currently applied to the attacked target to immediately produce DMG equal to <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> of its original DMG.",
+            "param": [
+              4,
+              1
+            ]
+          }
+        ],
+        "sub_option": [
+          {
+            "name": "Debuff Application",
+            "desc": "When an ally target inflicts a debuff on an enemy target, allies additionally accumulate <color=#f29e38ff><unbreak>#1[i]</unbreak></color> Grit Value. This effect can be triggered up to <color=#f29e38ff><unbreak>#2[i]</unbreak></color> time(s) per enemy target.",
+            "param": [
+              1,
+              10
+            ]
+          },
+          {
+            "name": "Concordant Truce",
+            "desc": "Decreases enemy targets' Effect RES by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color>. Increases DMG taken by enemy targets afflicted with <color=#f29e38ff><unbreak>#3[i]</unbreak></color> or more debuffs by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+            "param": [
+              0.3,
+              0.2,
+              4
+            ]
+          },
+          {
+            "name": "Surging Grit",
+            "desc": "Upon entering \"Surging Grit,\" deals a set amount of DMG to enemy targets 1 time for every debuff they are inflicted with. During \"Surging Grit,\" DMG received by enemy targets increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>. After each time an enemy target is inflicted with a debuff, inflicts 1 stack of \"Dejection\" on them, decreasing their All-Type RES by <color=#f29e38ff><unbreak>#3[i]%</unbreak></color> for <color=#f29e38ff><unbreak>#4[i]</unbreak></color> turn(s). This effect can stack up to <color=#f29e38ff><unbreak>#5[i]</unbreak></color> time(s).",
+            "param": [
+              0.8,
+              0.5,
+              0.01,
+              2,
+              20
+            ]
+          }
+        ],
+        "begin_time": "2026-08-24 04:00:01",
+        "end_time": "2026-10-27 04:00:00",
+        "level": [
+          {
+            "id": 20271,
+            "name": "Imagined Words (I)"
+          },
+          {
+            "id": 20272,
+            "name": "Imagined Words (II)"
+          },
+          {
+            "id": 20273,
+            "name": "Imagined Words (III)",
+            "challenge": [
+              {
+                "name": "Gain #1 points",
+                "param": 40000
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 50000
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 60000
+              }
+            ],
+            "damage_type1": [
+              "Ice",
+              "Imaginary"
+            ],
+            "damage_type2": [
+              "Physical",
+              "Imaginary"
+            ],
+            "event_id_list1": [
+              {
+                "stage_id": 30325031,
+                "hard_level_group": 1,
+                "level": 75,
+                "monster_list": [
+                  {
+                    "monster0": 1012030,
+                    "monster1": 4012010,
+                    "monster2": 501211002,
+                    "monster3": 1012030,
+                    "monster4": 4012010
+                  },
+                  {
+                    "monster0": 101302032
+                  },
+                  {
+                    "monster0": 803301011
+                  }
+                ]
+              }
+            ],
+            "event_id_list2": [
+              {
+                "stage_id": 30325032,
+                "hard_level_group": 1,
+                "level": 75,
+                "monster_list": [
+                  {
+                    "monster0": 2032020,
+                    "monster1": 2002030,
+                    "monster2": 501211002,
+                    "monster3": 2032020,
+                    "monster4": 2002030
+                  },
+                  {
+                    "monster0": 300305007
+                  },
+                  {
+                    "monster0": 501304001
+                  }
+                ],
+                "invasion": {
+                  "level": 2,
+                  "desc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+                  "maze_buff_id": 3034002,
+                  "maze_buff_param": [
+                    0.4,
+                    0.2,
+                    1,
+                    1,
+                    0.35
+                  ],
+                  "monster_param": [
+                    0.4,
+                    0.4,
+                    1,
+                    1,
+                    0.72
+                  ],
+                  "monster_list": [
+                    {
+                      "monster_id": 300305007,
+                      "param_list": []
+                    },
+                    {
+                      "monster_id": 1002030,
+                      "param_list": [
+                        1,
+                        0,
+                        1,
+                        0,
+                        0
+                      ]
+                    },
+                    {
+                      "monster_id": 2002030,
+                      "param_list": [
+                        1,
+                        0,
+                        1,
+                        0
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "infinite_list1": {
+              "303250311": {
+                "infinite_wave_id": 303250311,
+                "monster_group_id_list": [
+                  8003060,
+                  1012030,
+                  4012010,
+                  501211002,
+                  1012030,
+                  4012010,
+                  1012030,
+                  4012010,
+                  1012030,
+                  4012010,
+                  1012030,
+                  4012010,
+                  1012030,
+                  1012030,
+                  4012010,
+                  1012030,
+                  4012010,
+                  1012030,
+                  4012010,
+                  501211002,
+                  1012030,
+                  4012010,
+                  1012030,
+                  4012010,
+                  1012030,
+                  4012010,
+                  1012030,
+                  4012010,
+                  1012030,
+                  4012010
+                ],
+                "max_monster_count": 25,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0,
+                  0.5
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 55
+              },
+              "303250312": {
+                "infinite_wave_id": 303250312,
+                "monster_group_id_list": [
+                  3002010,
+                  8022010,
+                  101302032,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010,
+                  3002010,
+                  8022010
+                ],
+                "max_monster_count": 45,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0,
+                  1.4
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 55
+              },
+              "303250313": {
+                "infinite_wave_id": 303250313,
+                "monster_group_id_list": [
+                  1022020,
+                  5012050,
+                  803301011,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050,
+                  1022020,
+                  5012050
+                ],
+                "max_monster_count": 45,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0.1,
+                  4.2
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 55
+              }
+            },
+            "infinite_list2": {
+              "303250321": {
+                "infinite_wave_id": 303250321,
+                "monster_group_id_list": [
+                  8003060,
+                  2032020,
+                  2002030,
+                  501211002,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  501211002,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030
+                ],
+                "max_monster_count": 25,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0,
+                  0.5
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 55
+              },
+              "303250322": {
+                "infinite_wave_id": 303250322,
+                "monster_group_id_list": [
+                  2032020,
+                  3002030,
+                  300305007,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030,
+                  2032020,
+                  3002030
+                ],
+                "max_monster_count": 100,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0,
+                  1.4
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 55
+              },
+              "303250323": {
+                "infinite_wave_id": 303250323,
+                "monster_group_id_list": [
+                  1002030,
+                  4022010,
+                  501304001,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010,
+                  1002030,
+                  4022010
+                ],
+                "max_monster_count": 45,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0.1,
+                  4.2
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 55
+              }
+            }
+          },
+          {
+            "id": 20274,
+            "name": "Imagined Words (IV)",
+            "challenge": [
+              {
+                "name": "Gain #1 points",
+                "param": 40000
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 50000
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 60000
+              }
+            ],
+            "damage_type1": [
+              "Ice",
+              "Thunder"
+            ],
+            "damage_type2": [
+              "Fire",
+              "Imaginary"
+            ],
+            "event_id_list1": [
+              {
+                "stage_id": 30325041,
+                "hard_level_group": 1,
+                "level": 85,
+                "monster_list": [
+                  {
+                    "monster0": 4012010,
+                    "monster1": 4022010,
+                    "monster2": 501211002,
+                    "monster3": 4012010,
+                    "monster4": 4022010
+                  },
+                  {
+                    "monster0": 401301201
+                  },
+                  {
+                    "monster0": 4034014
+                  }
+                ]
+              }
+            ],
+            "event_id_list2": [
+              {
+                "stage_id": 30325042,
+                "hard_level_group": 1,
+                "level": 85,
+                "monster_list": [
+                  {
+                    "monster0": 2032010,
+                    "monster1": 202205004,
+                    "monster2": 501211002,
+                    "monster3": 2032010,
+                    "monster4": 202205004
+                  },
+                  {
+                    "monster0": 300302007
+                  },
+                  {
+                    "monster0": 5014023
+                  }
+                ],
+                "invasion": {
+                  "level": 3,
+                  "desc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+                  "maze_buff_id": 3034003,
+                  "maze_buff_param": [
+                    0.65,
+                    0.3,
+                    0.5,
+                    1,
+                    0.5
+                  ],
+                  "monster_param": [
+                    0.6,
+                    0.8,
+                    1,
+                    3,
+                    1.44
+                  ],
+                  "monster_list": [
+                    {
+                      "monster_id": 300302007,
+                      "param_list": []
+                    },
+                    {
+                      "monster_id": 5012120,
+                      "param_list": [
+                        1,
+                        0,
+                        1,
+                        0,
+                        0
+                      ]
+                    },
+                    {
+                      "monster_id": 2032010,
+                      "param_list": [
+                        1,
+                        0,
+                        1,
+                        0
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "infinite_list1": {
+              "303250411": {
+                "infinite_wave_id": 303250411,
+                "monster_group_id_list": [
+                  8003060,
+                  4012010,
+                  4022010,
+                  501211002,
+                  4012010,
+                  4022010,
+                  4012010,
+                  4022010,
+                  4012010,
+                  4022010,
+                  4012010,
+                  4022010,
+                  4012010,
+                  4012010,
+                  4022010,
+                  4012010,
+                  4022010,
+                  4012010,
+                  4022010,
+                  501211002,
+                  4012010,
+                  4022010,
+                  4012010,
+                  4022010,
+                  4012010,
+                  4022010,
+                  4012010,
+                  4022010,
+                  4012010,
+                  4022010
+                ],
+                "max_monster_count": 25,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0,
+                  4
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 57
+              },
+              "303250412": {
+                "infinite_wave_id": 303250412,
+                "monster_group_id_list": [
+                  1012010,
+                  2022040,
+                  401301201,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040,
+                  1012010,
+                  2022040
+                ],
+                "max_monster_count": 45,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0.05,
+                  9
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 57
+              },
+              "303250413": {
+                "infinite_wave_id": 303250413,
+                "monster_group_id_list": [
+                  4032030,
+                  4032024,
+                  4034014,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024,
+                  4032030,
+                  4032024
+                ],
+                "max_monster_count": 45,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0.12,
+                  45
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 57
+              }
+            },
+            "infinite_list2": {
+              "303250421": {
+                "infinite_wave_id": 303250421,
+                "monster_group_id_list": [
+                  8003060,
+                  2032010,
+                  202205004,
+                  501211002,
+                  2032010,
+                  202205004,
+                  2032010,
+                  202205004,
+                  2032010,
+                  202205004,
+                  2032010,
+                  202205004,
+                  2032010,
+                  2032010,
+                  202205004,
+                  2032010,
+                  202205004,
+                  2032010,
+                  202205004,
+                  501211002,
+                  2032010,
+                  202205004,
+                  2032010,
+                  202205004,
+                  2032010,
+                  202205004,
+                  2032010,
+                  202205004,
+                  2032010,
+                  202205004
+                ],
+                "max_monster_count": 25,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0,
+                  4
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 57
+              },
+              "303250422": {
+                "infinite_wave_id": 303250422,
+                "monster_group_id_list": [
+                  2002010,
+                  8022010,
+                  300302007,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010,
+                  2002010,
+                  8022010
+                ],
+                "max_monster_count": 100,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0.05,
+                  9
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 57
+              },
+              "303250423": {
+                "infinite_wave_id": 303250423,
+                "monster_group_id_list": [
+                  5012120,
+                  202205004,
+                  5014023,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004,
+                  5012120,
+                  202205004
+                ],
+                "max_monster_count": 45,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0.12,
+                  45
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 57
+              }
+            }
+          },
+          {
+            "id": 20275,
+            "pre_id": 20274,
+            "challenge": [
+              {
+                "name": "Gain #1 points",
+                "param": 60000
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 75000
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 90000
+              }
+            ],
+            "challenge_special": {
+              "name": "Gain #1 points",
+              "param": 99000
+            },
+            "countdown": 45000,
+            "damage_type": [
+              "Physical",
+              "Ice"
+            ],
+            "event_id_list": [
+              {
+                "stage_id": 30325043,
+                "hard_level_group": 1,
+                "level": 85,
+                "monster_list": [
+                  {
+                    "monster0": 1002030,
+                    "monster1": 1002050,
+                    "monster2": 501211002,
+                    "monster3": 1002030,
+                    "monster4": 1002050
+                  },
+                  {
+                    "monster0": 202303016
+                  },
+                  {
+                    "monster0": 302401204
+                  }
+                ]
+              }
+            ],
+            "infinite_list": {
+              "303250431": {
+                "infinite_wave_id": 303250431,
+                "monster_group_id_list": [
+                  8003060,
+                  1002030,
+                  1002050,
+                  501211002,
+                  1002030,
+                  1002050,
+                  1002030,
+                  1002050,
+                  1002030,
+                  1002050,
+                  1002030,
+                  1002050,
+                  1002030,
+                  1002030,
+                  1002050,
+                  1002030,
+                  1002050,
+                  1002030,
+                  1002050,
+                  501211002,
+                  1002030,
+                  1002050,
+                  1002030,
+                  1002050,
+                  1002030,
+                  1002050,
+                  1002030,
+                  1002050,
+                  1002030,
+                  1002050
+                ],
+                "max_monster_count": 25,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0,
+                  4.5
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 57
+              },
+              "303250432": {
+                "infinite_wave_id": 303250432,
+                "monster_group_id_list": [
+                  2032020,
+                  2002030,
+                  202303016,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030,
+                  2032020,
+                  2002030
+                ],
+                "max_monster_count": 45,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0.05,
+                  12
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 57
+              },
+              "303250433": {
+                "infinite_wave_id": 303250433,
+                "monster_group_id_list": [
+                  3021020,
+                  3021040,
+                  302401204,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040,
+                  3021020,
+                  3021040
+                ],
+                "max_monster_count": 45,
+                "max_teammate_count": 5,
+                "ability": "FantasticStory_Wave_Ability_0001",
+                "param_list": [
+                  0.12,
+                  55
+                ],
+                "clear_previous_ability": true,
+                "elite_group": 57
+              }
+            }
+          }
+        ]
+      }
+    },
+    "AS": {
+      "schedule": {
+        "en": "Dominance of Oblivion",
+        "id": 3021,
+        "begin": "2026-08-24 04:00:02",
+        "end": "2026-10-27 04:00:00",
+        "ko": "지배와 망각",
+        "zh": "支配遗忘",
+        "ja": "忘却の支配",
+        "live_begin": "2026-10-05 04:00:00",
+        "live_end": "2026-11-16 04:00:00"
+      },
+      "payload": {
+        "id": 3021,
+        "name": "Dominance of Oblivion",
+        "buff": {
+          "name": "Ruinous Embers",
+          "desc": "When an enemy target with <color=#f29e38ff>\"Steadfast Safeguard\"</color> is inflicted with <color=#f29e38ff>Weakness Break</color>, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as <color=#f29e38ff><unbreak>#3[i]</unbreak></color> fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> and Elation DMG by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+          "param": [
+            0.25,
+            0.15,
+            10
+          ]
+        },
+        "buff_list1": [
+          {
+            "name": "Magic Time",
+            "desc": "At the start of battle, when there are 1/2/3/4 Elation character(s) in the team, increases the Elation of all allies by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color>/<color=#f29e38ff><unbreak>#2[i]%</unbreak></color>/<color=#f29e38ff><unbreak>#3[i]%</unbreak></color>/<color=#f29e38ff><unbreak>#4[i]%</unbreak></color>.",
+            "param": [
+              0.1,
+              0.2,
+              0.3,
+              0.6
+            ]
+          },
+          {
+            "name": "Collapse on Sight",
+            "desc": "Increases all enemies' Break DMG taken by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color>. After Breaking an enemy's Weakness, increases all allies' SPD by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> for <color=#f29e38ff><unbreak>#3[i]</unbreak></color> turn(s).",
+            "param": [
+              0.1,
+              0.15,
+              2
+            ]
+          },
+          {
+            "name": "Moment of Opportunity",
+            "desc": "Increases Follow-Up ATK and Ultimate DMG dealt by all allies by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color>, and additionally increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> against enemy targets in Weakness Broken state.",
+            "param": [
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "buff_list2": [
+          {
+            "name": "Comic Relief",
+            "desc": "After an ally target uses an attack that deals Elation DMG, inflicts Vulnerability on the target receiving Elation DMG, increasing the DMG they take by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> for <color=#f29e38ff><unbreak>#2[i]</unbreak></color> turn(s). This effect can trigger up to 1 time per enemy target per attack.",
+            "param": [
+              0.15,
+              2
+            ]
+          },
+          {
+            "name": "Exploit Opening",
+            "desc": "After any ally target inflicts a debuff to an enemy target, increases their CRIT DMG by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> for <color=#f29e38ff><unbreak>#2[i]</unbreak></color> turn(s).",
+            "param": [
+              0.75,
+              2
+            ]
+          },
+          {
+            "name": "Land of Fertility",
+            "desc": "Increases Skill and Ultimate DMG dealt by all allies by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color>, and additionally increases Skill and Ultimate DMG dealt by the 1st character in the lineup by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+            "param": [
+              0.3,
+              0.3
+            ]
+          }
+        ],
+        "buff_list3": [
+          {
+            "name": "Unstoppable Force",
+            "desc": "DMG dealt by memosprites ignores <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> of the target's DEF.",
+            "param": [
+              0.2
+            ]
+          },
+          {
+            "name": "Heroic Vanguard",
+            "desc": "After the character in position 1 in the team uses Ultimate, their Weakness Break Efficiency increases by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> and increases CRIT DMG by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>, lasting for <color=#f29e38ff><unbreak>#3[i]</unbreak></color> turn(s).",
+            "param": [
+              0.5,
+              0.5,
+              1
+            ]
+          },
+          {
+            "name": "Unto Apotheosis",
+            "desc": "When ally targets consume Skill Points, increases their CRIT DMG by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color>, stacking up to <color=#f29e38ff><unbreak>#2[i]</unbreak></color> times.",
+            "param": [
+              0.06,
+              10
+            ]
+          }
+        ],
+        "begin_time": "2026-08-24 04:00:02",
+        "end_time": "2026-10-27 04:00:00",
+        "level": [
+          {
+            "id": 30211,
+            "name": "Dominance of Oblivion: Difficulty <unbreak>01</unbreak>"
+          },
+          {
+            "id": 30212,
+            "name": "Dominance of Oblivion: Difficulty <unbreak>02</unbreak>"
+          },
+          {
+            "id": 30213,
+            "name": "Dominance of Oblivion: Difficulty <unbreak>03</unbreak>",
+            "challenge": [
+              {
+                "name": "Gain #1 points",
+                "param": 4000
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 5200
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 6600
+              }
+            ],
+            "damage_type1": [
+              "Physical",
+              "Fire",
+              "Wind",
+              "Imaginary"
+            ],
+            "damage_type2": [
+              "Physical",
+              "Fire",
+              "Thunder",
+              "Imaginary"
+            ],
+            "boss_monster_id1": 200401403,
+            "boss_monster_id2": 406401203,
+            "boss_monster_config1": {
+              "tag_list": [
+                {
+                  "name": "Steadfast Safeguard",
+                  "desc": "Boss Mirage takes <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> less DMG. After <color=#f29e38ff>Weakness is broken</color>, action gets additionally delayed and DMG taken increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+                  "param": [
+                    0.5,
+                    1,
+                    1.5
+                  ],
+                  "skill_id": 200401410,
+                  "param_fix": [
+                    0.5,
+                    1,
+                    1.5,
+                    0,
+                    0,
+                    0
+                  ],
+                  "child": []
+                },
+                {
+                  "name": "Battlefield Transfer",
+                  "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will <color=#f29e38ff><u>transmit</u></color> its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": [
+                    {
+                      "name": "Transmit",
+                      "desc": "Transmits the Weakness Type to the target. After the target is defeated, additionally reduces Toughness. The Weakness Type will return once all targets that gained the Weakness Type are defeated.",
+                      "param": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Stellar Aegis",
+                  "desc": "For <color=#f29e38ff>every unit</color> on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": []
+                },
+                {
+                  "name": "Turn Back the Tide",
+                  "desc": "When the Boss Mirage uses \"Puppet Understudy\" in its second phase, it will apply Enhancement effects to <color=#f29e38ff>all summons</color>.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": []
+                }
+              ]
+            },
+            "boss_monster_config2": {
+              "tag_list": [
+                {
+                  "name": "Steadfast Safeguard",
+                  "desc": "Boss Mirage takes <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> less DMG. After <color=#f29e38ff>Weakness is Broken</color>, action gets additionally delayed and DMG taken increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+                  "param": [
+                    0.5,
+                    1,
+                    1.5
+                  ],
+                  "skill_id": 406401213,
+                  "param_fix": [
+                    0.5,
+                    1,
+                    1.5
+                  ],
+                  "child": []
+                },
+                {
+                  "name": "Singularity Split",
+                  "desc": "At the start of combat and during phase transitions, the Boss Mirage splits into 5 \"ichor memosprites\" and applies \"<u>Monoform Merger</u>\" to these summons. When all \"ichor memosprites\" with \"Monoform Merger\" enter the \"<u>Feigned Death</u>\" state, they merge back into the Boss Mirage.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": [
+                    {
+                      "name": "Monoform Merger",
+                      "desc": "When receiving fatal damage, enters the \"Feigned Death\" state. When all \"ichor memosprites\" possessing \"Monoform Merger\" enter the \"Feigned Death\" state, they merge back into the \"Arbiter of the Lost Abyss.\"",
+                      "param": []
+                    },
+                    {
+                      "name": "Feigned Death",
+                      "desc": "Cannot be selected, cannot take action.",
+                      "param": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Mutual Complement",
+                  "desc": "Increases the Max HP of the \"ichor memosprites\" summoned after the Boss Mirage's split, and the \"ichor memosprites\" summoned after the split in the second phase have Shared HP.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": []
+                },
+                {
+                  "name": "Economies of Scale",
+                  "desc": "For <color=#f29e38ff>every unit</color> on the enemy's side of the field that is not in the \"<u>Feigned Death</u>\" state aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": [
+                    {
+                      "name": "Feigned Death",
+                      "desc": "Cannot be selected, cannot take action.",
+                      "param": []
+                    }
+                  ]
+                }
+              ]
+            },
+            "event_id_list1": [
+              {
+                "stage_id": 420533,
+                "hard_level_group": 1,
+                "level": 80,
+                "elite_group": 902,
+                "monster_list": [
+                  {
+                    "monster0": 200401403
+                  }
+                ],
+                "invasion": {
+                  "level": 2,
+                  "desc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+                  "maze_buff_id": 3034002,
+                  "maze_buff_param": [
+                    0.4,
+                    0.2,
+                    1,
+                    1,
+                    0.35
+                  ],
+                  "monster_param": [
+                    0.4,
+                    0.4,
+                    1,
+                    1,
+                    0.72
+                  ],
+                  "monster_list": [
+                    {
+                      "monster_id": 800302201,
+                      "param_list": []
+                    },
+                    {
+                      "monster_id": 300301401,
+                      "param_list": []
+                    }
+                  ]
+                }
+              }
+            ],
+            "event_id_list2": [
+              {
+                "stage_id": 420543,
+                "hard_level_group": 1,
+                "level": 80,
+                "elite_group": 943,
+                "monster_list": [
+                  {
+                    "monster0": 406401203
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 30214,
+            "name": "Dominance of Oblivion: Difficulty <unbreak>04</unbreak>",
+            "challenge": [
+              {
+                "name": "Gain #1 points",
+                "param": 4000
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 5200
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 6600
+              }
+            ],
+            "damage_type1": [
+              "Physical",
+              "Fire",
+              "Wind",
+              "Imaginary"
+            ],
+            "damage_type2": [
+              "Physical",
+              "Fire",
+              "Thunder",
+              "Imaginary"
+            ],
+            "boss_monster_id1": 200401404,
+            "boss_monster_id2": 406401204,
+            "boss_monster_config1": {
+              "tag_list": [
+                {
+                  "name": "Steadfast Safeguard",
+                  "desc": "Boss Mirage takes <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> less DMG. After <color=#f29e38ff>Weakness is broken</color>, action gets additionally delayed and DMG taken increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+                  "param": [
+                    0.5,
+                    1,
+                    1.5
+                  ],
+                  "skill_id": 200401410,
+                  "param_fix": [
+                    0.5,
+                    1,
+                    1.5,
+                    0,
+                    0,
+                    0
+                  ],
+                  "child": []
+                },
+                {
+                  "name": "Battlefield Transfer",
+                  "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will <color=#f29e38ff><u>transmit</u></color> its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": [
+                    {
+                      "name": "Transmit",
+                      "desc": "Transmits the Weakness Type to the target. After the target is defeated, additionally reduces Toughness. The Weakness Type will return once all targets that gained the Weakness Type are defeated.",
+                      "param": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Stellar Aegis",
+                  "desc": "For <color=#f29e38ff>every unit</color> on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": []
+                },
+                {
+                  "name": "Turn Back the Tide",
+                  "desc": "When the Boss Mirage uses \"Puppet Understudy\" in its second phase, it will apply Enhancement effects to <color=#f29e38ff>all summons</color>.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": []
+                }
+              ]
+            },
+            "boss_monster_config2": {
+              "tag_list": [
+                {
+                  "name": "Steadfast Safeguard",
+                  "desc": "Boss Mirage takes <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> less DMG. After <color=#f29e38ff>Weakness is Broken</color>, action gets additionally delayed and DMG taken increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+                  "param": [
+                    0.5,
+                    1,
+                    1.5
+                  ],
+                  "skill_id": 406401213,
+                  "param_fix": [
+                    0.5,
+                    1,
+                    1.5
+                  ],
+                  "child": []
+                },
+                {
+                  "name": "Singularity Split",
+                  "desc": "At the start of combat and during phase transitions, the Boss Mirage splits into 5 \"ichor memosprites\" and applies \"<u>Monoform Merger</u>\" to these summons. When all \"ichor memosprites\" with \"Monoform Merger\" enter the \"<u>Feigned Death</u>\" state, they merge back into the Boss Mirage.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": [
+                    {
+                      "name": "Monoform Merger",
+                      "desc": "When receiving fatal damage, enters the \"Feigned Death\" state. When all \"ichor memosprites\" possessing \"Monoform Merger\" enter the \"Feigned Death\" state, they merge back into the \"Arbiter of the Lost Abyss.\"",
+                      "param": []
+                    },
+                    {
+                      "name": "Feigned Death",
+                      "desc": "Cannot be selected, cannot take action.",
+                      "param": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Mutual Complement",
+                  "desc": "Increases the Max HP of the \"ichor memosprites\" summoned after the Boss Mirage's split, and the \"ichor memosprites\" summoned after the split in the second phase have Shared HP.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": []
+                },
+                {
+                  "name": "Economies of Scale",
+                  "desc": "For <color=#f29e38ff>every unit</color> on the enemy's side of the field that is not in the \"<u>Feigned Death</u>\" state aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": [
+                    {
+                      "name": "Feigned Death",
+                      "desc": "Cannot be selected, cannot take action.",
+                      "param": []
+                    }
+                  ]
+                }
+              ]
+            },
+            "event_id_list1": [
+              {
+                "stage_id": 420534,
+                "hard_level_group": 1,
+                "level": 90,
+                "elite_group": 166,
+                "monster_list": [
+                  {
+                    "monster0": 200401404
+                  }
+                ],
+                "invasion": {
+                  "level": 3,
+                  "desc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+                  "maze_buff_id": 3034003,
+                  "maze_buff_param": [
+                    0.65,
+                    0.3,
+                    0.5,
+                    1,
+                    0.5
+                  ],
+                  "monster_param": [
+                    0.6,
+                    0.8,
+                    1,
+                    3,
+                    1.44
+                  ],
+                  "monster_list": [
+                    {
+                      "monster_id": 800302201,
+                      "param_list": []
+                    },
+                    {
+                      "monster_id": 300301401,
+                      "param_list": []
+                    }
+                  ]
+                }
+              }
+            ],
+            "event_id_list2": [
+              {
+                "stage_id": 420544,
+                "hard_level_group": 1,
+                "level": 90,
+                "elite_group": 85,
+                "monster_list": [
+                  {
+                    "monster0": 406401204
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 30215,
+            "pre_id": 30214,
+            "challenge": [
+              {
+                "name": "Gain #1 points",
+                "param": 6000
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 7800
+              },
+              {
+                "name": "Gain #1 points",
+                "param": 9900
+              }
+            ],
+            "challenge_special": {
+              "name": "Gain #1 points",
+              "param": 10200
+            },
+            "damage_type": [
+              "Physical",
+              "Fire",
+              "Wind",
+              "Quantum"
+            ],
+            "boss_monster_id": 203401404,
+            "boss_monster_config": {
+              "tag_list": [
+                {
+                  "name": "Steadfast Safeguard",
+                  "desc": "Decreases DMG taken by Boss Mirage by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color>. After its <color=#f29e38ff>Weakness is broken</color>, its action is additionally delayed and increases its DMG taken by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>.",
+                  "param": [
+                    0.5,
+                    1,
+                    1.5
+                  ],
+                  "skill_id": 203401410,
+                  "param_fix": [
+                    0.5,
+                    1,
+                    1.5
+                  ],
+                  "child": []
+                },
+                {
+                  "name": "Better Safe Than Sorry",
+                  "desc": "When the Boss Mirage uses \"Barrenness of Earth Gouged,\" all other Wolftroopers will be eliminated.",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": []
+                },
+                {
+                  "name": "Apex Predator",
+                  "desc": "After Boss Mirage enters Phase II, it gains extra action per turn during \"Going Solo.\"",
+                  "param": [],
+                  "skill_id": null,
+                  "param_fix": [],
+                  "child": []
+                },
+                {
+                  "name": "Till Death",
+                  "desc": "After Boss Mirage enters \"Going Solo,\" reduces its DMG taken by an additional <color=#f29e38ff><unbreak>#1[i]%</unbreak></color>.",
+                  "param": [
+                    0.6
+                  ],
+                  "skill_id": 203401413,
+                  "param_fix": [
+                    0.15
+                  ],
+                  "child": []
+                }
+              ]
+            },
+            "event_id_list": [
+              {
+                "stage_id": 420554,
+                "hard_level_group": 1,
+                "level": 90,
+                "elite_group": 156,
+                "monster_list": [
+                  {
+                    "monster0": 203401404
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "monsters": {
+    "8003022": {
+      "id": 8003022,
+      "name": "Blaze Out of Space",
+      "hp_base": 744,
+      "child": [
+        {
+          "id": 800302201,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": []
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_8003020.png"
+    },
+    "5012100": {
+      "id": 5012100,
+      "name": "Magical Girl Troupe",
+      "hp_base": 279,
+      "child": [
+        {
+          "id": 5012100,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Ice"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_5012100.png"
+    },
+    "5014023": {
+      "id": 5014023,
+      "name": "Alloy Mechatron: King Pom-Pom",
+      "hp_base": 7672.5,
+      "child": [
+        {
+          "id": 5014023,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Fire",
+            "Thunder",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_5014020.png"
+    },
+    "4033010": {
+      "id": 4033010,
+      "name": "Black Tide's Corroded Daemon",
+      "hp_base": 1302,
+      "child": [
+        {
+          "id": 403301002,
+          "hp_modify_ratio": 5.892857,
+          "stance_weak_list": [
+            "Physical",
+            "Wind",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4033010.png"
+    },
+    "4053010": {
+      "id": 4053010,
+      "name": "Lady of Crashing Waves",
+      "hp_base": 1395,
+      "child": [
+        {
+          "id": 405301002,
+          "hp_modify_ratio": 5.5,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Thunder"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4053010.png"
+    },
+    "4032010": {
+      "id": 4032010,
+      "name": "Tide-Eroded Blade",
+      "hp_base": 279,
+      "child": [
+        {
+          "id": 4032010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Thunder",
+            "Quantum",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4032010.png"
+    },
+    "2032010": {
+      "id": 2032010,
+      "name": "Sableclaw Wolftrooper",
+      "hp_base": 186,
+      "child": [
+        {
+          "id": 2032010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Fire",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_2032010.png"
+    },
+    "1013020": {
+      "id": 1013020,
+      "name": "Automaton Direwolf",
+      "hp_base": 1023,
+      "child": [
+        {
+          "id": 101302032,
+          "hp_modify_ratio": 7.5,
+          "stance_weak_list": [
+            "Ice",
+            "Thunder",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_1013020.png"
+    },
+    "8033010": {
+      "id": 8033010,
+      "name": "Senior Staff: Team Leader",
+      "hp_base": 1488,
+      "child": [
+        {
+          "id": 803301011,
+          "hp_modify_ratio": 5.15625,
+          "stance_weak_list": [
+            "Fire",
+            "Ice",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_8033010.png"
+    },
+    "2032020": {
+      "id": 2032020,
+      "name": "Eclipse Wolftrooper",
+      "hp_base": 186,
+      "child": [
+        {
+          "id": 2032020,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Wind"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_2032020.png"
+    },
+    "2022040": {
+      "id": 2022040,
+      "name": "Abundance Sprite: Golden Hound",
+      "hp_base": 148.8,
+      "child": [
+        {
+          "id": 2022040,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Ice",
+            "Thunder",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_2022040.png"
+    },
+    "4032024": {
+      "id": 4032024,
+      "name": "Long-Shattered Vessel",
+      "hp_base": 223.2,
+      "child": [
+        {
+          "id": 4032024,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Ice",
+            "Thunder",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4032020.png"
+    },
+    "3002010": {
+      "id": 3002010,
+      "name": "Dreamjolt Troupe's Mr. Domescreen",
+      "hp_base": 255.75,
+      "child": [
+        {
+          "id": 3002010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Ice",
+            "Thunder",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_3002010.png"
+    },
+    "5012120": {
+      "id": 5012120,
+      "name": "\"Alloy Pommy\"",
+      "hp_base": 279,
+      "child": [
+        {
+          "id": 5012120,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Fire",
+            "Thunder",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_5012120.png"
+    },
+    "4032030": {
+      "id": 4032030,
+      "name": "Black Tide's Corroded Axe",
+      "hp_base": 316.2,
+      "child": [
+        {
+          "id": 4032030,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Thunder",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4032030.png"
+    },
+    "8022010": {
+      "id": 8022010,
+      "name": "Juvenile Sting",
+      "hp_base": 209.25,
+      "child": [
+        {
+          "id": 8022010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Quantum",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_8022010.png"
+    },
+    "1002020": {
+      "id": 1002020,
+      "name": "Vagrant",
+      "hp_base": 139.5,
+      "child": [
+        {
+          "id": 1002020,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Fire",
+            "Ice",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_1002020.png"
+    },
+    "2023030": {
+      "id": 2023030,
+      "name": "The Ascended",
+      "hp_base": 1023,
+      "child": [
+        {
+          "id": 202303016,
+          "hp_modify_ratio": 7.5,
+          "stance_weak_list": [
+            "Physical",
+            "Ice",
+            "Thunder"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_2023030.png"
+    },
+    "1012010": {
+      "id": 1012010,
+      "name": "Automaton Hound",
+      "hp_base": 130.2,
+      "child": [
+        {
+          "id": 1012010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Thunder"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_1012010.png"
+    },
+    "4052010": {
+      "id": 4052010,
+      "name": "Servant of Tides",
+      "hp_base": 302.25,
+      "child": [
+        {
+          "id": 4052010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Thunder",
+            "Wind"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4052010.png"
+    },
+    "3002030": {
+      "id": 3002030,
+      "name": "Dreamjolt Troupe's Bubble Hound",
+      "hp_base": 209.25,
+      "child": [
+        {
+          "id": 3002030,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Thunder",
+            "Wind"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_3002030.png"
+    },
+    "1002030": {
+      "id": 1002030,
+      "name": "Silvermane Cannoneer",
+      "hp_base": 195.3,
+      "child": [
+        {
+          "id": 1002030,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Ice",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_1002030.png"
+    },
+    "4064012": {
+      "id": 4064012,
+      "name": "Arbiter of the Lost Abyss",
+      "hp_base": 27900,
+      "child": [
+        {
+          "id": 406401201,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Thunder",
+            "Imaginary"
+          ]
+        },
+        {
+          "id": 406401202,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Thunder",
+            "Imaginary"
+          ]
+        },
+        {
+          "id": 406401203,
+          "hp_modify_ratio": 1.1,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Thunder",
+            "Imaginary"
+          ]
+        },
+        {
+          "id": 406401204,
+          "hp_modify_ratio": 1.1,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Thunder",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [
+        {
+          "phase_num": 1,
+          "phase_max_hp_ratio": 1.0
+        },
+        {
+          "phase_num": 2,
+          "phase_max_hp_ratio": 1.0
+        }
+      ],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4064010.png"
+    },
+    "3024012": {
+      "id": 3024012,
+      "name": "Argenti",
+      "hp_base": 3255,
+      "child": [
+        {
+          "id": 302401204,
+          "hp_modify_ratio": 2.357143,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Ice"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_3024010.png"
+    },
+    "3003020": {
+      "id": 3003020,
+      "name": "Dreamjolt Troupe's Sweet Gorilla",
+      "hp_base": 1674,
+      "child": [
+        {
+          "id": 300302007,
+          "hp_modify_ratio": 4.583333,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_3003020.png"
+    },
+    "1002040": {
+      "id": 1002040,
+      "name": "Silvermane Soldier",
+      "hp_base": 120.9,
+      "child": [
+        {
+          "id": 1002040,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Wind",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_1002040.png"
+    },
+    "1022010": {
+      "id": 1022010,
+      "name": "Everwinter Shadewalker",
+      "hp_base": 139.5,
+      "child": [
+        {
+          "id": 1022010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_1022010.png"
+    },
+    "4062010": {
+      "id": 4062010,
+      "name": "Ichor Memosprite: Pheasant",
+      "hp_base": 232.5,
+      "child": [
+        {
+          "id": 4062010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Fire"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4062010.png"
+    },
+    "2034014": {
+      "id": 2034014,
+      "name": "Fulminating Wolflord",
+      "hp_base": 10230,
+      "child": [
+        {
+          "id": 203401404,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Wind",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [
+        {
+          "phase_num": 1,
+          "phase_max_hp_ratio": 1.0
+        },
+        {
+          "phase_num": 2,
+          "phase_max_hp_ratio": 1.0
+        }
+      ],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_2034010.png"
+    },
+    "1012030": {
+      "id": 1012030,
+      "name": "Automaton Beetle",
+      "hp_base": 130.2,
+      "child": [
+        {
+          "id": 1012030,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Thunder",
+            "Wind",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_1012030.png"
+    },
+    "5013040": {
+      "id": 5013040,
+      "name": "Daybreak Squadron: Azurewing",
+      "hp_base": 1395,
+      "child": [
+        {
+          "id": 501304001,
+          "hp_modify_ratio": 5.5,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_5013040.png"
+    },
+    "1002050": {
+      "id": 1002050,
+      "name": "Silvermane Gunner",
+      "hp_base": 102.3,
+      "child": [
+        {
+          "id": 1002050,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Ice"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_1002050.png"
+    },
+    "1022020": {
+      "id": 1022020,
+      "name": "Incineration Shadewalker",
+      "hp_base": 139.5,
+      "child": [
+        {
+          "id": 1022020,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Ice",
+            "Wind",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_1022020.png"
+    },
+    "4063010": {
+      "id": 4063010,
+      "name": "Ichor Memosprite: Winged Serpent",
+      "hp_base": 1488,
+      "child": [
+        {
+          "id": 406301001,
+          "hp_modify_ratio": 5.15625,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Ice"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4063010.png"
+    },
+    "4023010": {
+      "id": 4023010,
+      "name": "Noontide Gryphon",
+      "hp_base": 1209,
+      "child": [
+        {
+          "id": 402301002,
+          "hp_modify_ratio": 6.346154,
+          "stance_weak_list": [
+            "Physical",
+            "Quantum",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4023010.png"
+    },
+    "2022050": {
+      "id": 2022050,
+      "name": "Abundance Sprite: Wooden Lupus",
+      "hp_base": 186,
+      "child": [
+        {
+          "id": 202205004,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Fire",
+            "Wind",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_2022050.png"
+    },
+    "4013012": {
+      "id": 4013012,
+      "name": "Furiae Praetor",
+      "hp_base": 1674,
+      "child": [
+        {
+          "id": 401301201,
+          "hp_modify_ratio": 4.583333,
+          "stance_weak_list": [
+            "Ice",
+            "Thunder",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4013010.png"
+    },
+    "5012050": {
+      "id": 5012050,
+      "name": "Assistant Graffiti: Rusher",
+      "hp_base": 232.5,
+      "child": [
+        {
+          "id": 5012050,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Ice",
+            "Thunder"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_5012050.png"
+    },
+    "3003014": {
+      "id": 3003014,
+      "name": "Dreamjolt Troupe's Beyond Overcooked",
+      "hp_base": 930,
+      "child": [
+        {
+          "id": 300301401,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": []
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_3003010.png"
+    },
+    "8002010": {
+      "id": 8002010,
+      "name": "Imaginary Weaver",
+      "hp_base": 176.7,
+      "child": [
+        {
+          "id": 8002010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Thunder",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_8002010.png"
+    },
+    "4022010": {
+      "id": 4022010,
+      "name": "Meteoric Eagle",
+      "hp_base": 279,
+      "child": [
+        {
+          "id": 4022010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Wind",
+            "Quantum",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4022010.png"
+    },
+    "8003010": {
+      "id": 8003010,
+      "name": "Ice Out of Space",
+      "hp_base": 930,
+      "child": [
+        {
+          "id": 800301020,
+          "hp_modify_ratio": 8.25,
+          "stance_weak_list": [
+            "Fire",
+            "Wind",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_8003010.png"
+    },
+    "2002010": {
+      "id": 2002010,
+      "name": "Cloud Knights Patroller",
+      "hp_base": 148.8,
+      "child": [
+        {
+          "id": 2002010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Fire",
+            "Wind",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_2002010.png"
+    },
+    "5012110": {
+      "id": 5012110,
+      "name": "Furbo Journalist",
+      "hp_base": 372,
+      "child": [
+        {
+          "id": 501211002,
+          "hp_modify_ratio": 1.5,
+          "stance_weak_list": [
+            "Thunder",
+            "Quantum",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_5012110.png"
+    },
+    "4034014": {
+      "id": 4034014,
+      "name": "Flame Reaver of the Deepest Dark",
+      "hp_base": 7672.5,
+      "child": [
+        {
+          "id": 4034014,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Ice",
+            "Thunder",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4034010.png"
+    },
+    "3021020": {
+      "id": 3021020,
+      "name": "\"The Honored\"",
+      "hp_base": 255.75,
+      "child": [
+        {
+          "id": 3021020,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Ice"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_3021020.png"
+    },
+    "4012010": {
+      "id": 4012010,
+      "name": "Furiae Warrior",
+      "hp_base": 241.8,
+      "child": [
+        {
+          "id": 4012010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Thunder",
+            "Quantum",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4012010.png"
+    },
+    "2012010": {
+      "id": 2012010,
+      "name": "Entranced Ingenium: Illumination Dragonfish",
+      "hp_base": 139.5,
+      "child": [
+        {
+          "id": 2012010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Thunder",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_2012010.png"
+    },
+    "8012010": {
+      "id": 8012010,
+      "name": "Voidranger: Reaver",
+      "hp_base": 139.5,
+      "child": [
+        {
+          "id": 8012010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Thunder"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_8012010.png"
+    },
+    "2002030": {
+      "id": 2002030,
+      "name": "Wraith Warden",
+      "hp_base": 139.5,
+      "child": [
+        {
+          "id": 2002030,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Ice",
+            "Wind"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_2002030.png"
+    },
+    "3003050": {
+      "id": 3003050,
+      "name": "\"Present Inebriated in Revelry\"",
+      "hp_base": 1116,
+      "child": [
+        {
+          "id": 300305007,
+          "hp_modify_ratio": 6.875,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_3003050.png"
+    },
+    "3021040": {
+      "id": 3021040,
+      "name": "\"The Shield\"",
+      "hp_base": 176.7,
+      "child": [
+        {
+          "id": 3021040,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Thunder"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_3021040.png"
+    },
+    "2004014": {
+      "id": 2004014,
+      "name": "Soulhook Sovereign",
+      "hp_base": 7207.5,
+      "child": [
+        {
+          "id": 200401401,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Wind",
+            "Imaginary"
+          ]
+        },
+        {
+          "id": 200401402,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Wind",
+            "Imaginary"
+          ]
+        },
+        {
+          "id": 200401403,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Wind",
+            "Imaginary"
+          ]
+        },
+        {
+          "id": 200401404,
+          "hp_modify_ratio": 1.096774,
+          "stance_weak_list": [
+            "Physical",
+            "Fire",
+            "Wind",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [
+        {
+          "phase_num": 1,
+          "phase_max_hp_ratio": 1.0
+        },
+        {
+          "phase_num": 2,
+          "phase_max_hp_ratio": 1.0
+        }
+      ],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_2004010.png"
+    },
+    "4012020": {
+      "id": 4012020,
+      "name": "Furiae Philosopher",
+      "hp_base": 241.8,
+      "child": [
+        {
+          "id": 4012020,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Fire",
+            "Ice",
+            "Imaginary"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_4012020.png"
+    },
+    "8003060": {
+      "id": 8003060,
+      "name": "Fictional Ensemble",
+      "hp_base": 465,
+      "child": [
+        {
+          "id": 8003060,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": []
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/BattleEventIcon/Monster_Unknown.png"
+    },
+    "2022010": {
+      "id": 2022010,
+      "name": "Mara-Struck Soldier",
+      "hp_base": 111.6,
+      "child": [
+        {
+          "id": 2022010,
+          "hp_modify_ratio": 1,
+          "stance_weak_list": [
+            "Fire",
+            "Ice",
+            "Quantum"
+          ]
+        }
+      ],
+      "phase_list": [],
+      "image_path": "SpriteOutput/MonsterFigure/Monster_2022010.png"
+    }
+  },
+  "HardLevelGroup.json": [
+    {
+      "HardLevelGroup": 1,
+      "Level": 55,
+      "HPRatio": 37.432132
+    },
+    {
+      "HardLevelGroup": 1,
+      "Level": 60,
+      "HPRatio": 52.724147
+    },
+    {
+      "HardLevelGroup": 1,
+      "Level": 65,
+      "HPRatio": 73.855657
+    },
+    {
+      "HardLevelGroup": 1,
+      "Level": 70,
+      "HPRatio": 94.987167
+    },
+    {
+      "HardLevelGroup": 1,
+      "Level": 75,
+      "HPRatio": 121.499095
+    },
+    {
+      "HardLevelGroup": 1,
+      "Level": 80,
+      "HPRatio": 148.011024
+    },
+    {
+      "HardLevelGroup": 1,
+      "Level": 85,
+      "HPRatio": 188.263594
+    },
+    {
+      "HardLevelGroup": 1,
+      "Level": 90,
+      "HPRatio": 236.534716
+    }
+  ],
+  "EliteGroup.json": [
+    {
+      "EliteGroup": 55,
+      "HPRatio": 1
+    },
+    {
+      "EliteGroup": 57,
+      "HPRatio": 1
+    },
+    {
+      "EliteGroup": 85,
+      "HPRatio": 1.5
+    },
+    {
+      "EliteGroup": 156,
+      "HPRatio": 4.4
+    },
+    {
+      "EliteGroup": 166,
+      "HPRatio": 7.1
+    },
+    {
+      "EliteGroup": 896,
+      "HPRatio": 0.2
+    },
+    {
+      "EliteGroup": 897,
+      "HPRatio": 0.4
+    },
+    {
+      "EliteGroup": 900,
+      "HPRatio": 0.3
+    },
+    {
+      "EliteGroup": 901,
+      "HPRatio": 0.6
+    },
+    {
+      "EliteGroup": 902,
+      "HPRatio": 1.08
+    },
+    {
+      "EliteGroup": 943,
+      "HPRatio": 0.55
+    }
+  ],
+  "monstervalue.json": {
+    "1002020": {
+      "HPBase": 139.5
+    },
+    "1002030": {
+      "HPBase": 195.3
+    },
+    "1002040": {
+      "HPBase": 120.9
+    },
+    "1002050": {
+      "HPBase": 102.3
+    },
+    "1012010": {
+      "HPBase": 130.2
+    },
+    "1012030": {
+      "HPBase": 130.2
+    },
+    "1022010": {
+      "HPBase": 139.5
+    },
+    "1022020": {
+      "HPBase": 139.5
+    },
+    "2002010": {
+      "HPBase": 148.8
+    },
+    "2002030": {
+      "HPBase": 139.5
+    },
+    "2012010": {
+      "HPBase": 139.5
+    },
+    "2022010": {
+      "HPBase": 111.6
+    },
+    "2022040": {
+      "HPBase": 148.8
+    },
+    "2032010": {
+      "HPBase": 186
+    },
+    "2032020": {
+      "HPBase": 186
+    },
+    "3002010": {
+      "HPBase": 255.75
+    },
+    "3002030": {
+      "HPBase": 209.25
+    },
+    "3021020": {
+      "HPBase": 255.75
+    },
+    "3021040": {
+      "HPBase": 176.7
+    },
+    "4012010": {
+      "HPBase": 241.8
+    },
+    "4012020": {
+      "HPBase": 241.8
+    },
+    "4022010": {
+      "HPBase": 279
+    },
+    "4032010": {
+      "HPBase": 279
+    },
+    "4032024": {
+      "HPBase": 223.2
+    },
+    "4032030": {
+      "HPBase": 316.2
+    },
+    "4034014": {
+      "HPBase": 7672.5
+    },
+    "4052010": {
+      "HPBase": 302.25
+    },
+    "4062010": {
+      "HPBase": 232.5
+    },
+    "5012050": {
+      "HPBase": 232.5
+    },
+    "5012100": {
+      "HPBase": 279
+    },
+    "5012120": {
+      "HPBase": 279
+    },
+    "5014023": {
+      "HPBase": 7672.5
+    },
+    "8002010": {
+      "HPBase": 176.7
+    },
+    "8003060": {
+      "HPBase": 465
+    },
+    "8012010": {
+      "HPBase": 139.5
+    },
+    "8022010": {
+      "HPBase": 209.25
+    }
+  }
+}

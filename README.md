@@ -137,6 +137,46 @@ asyncio.run(main())
 - Set `include_assets=False` for JSON-only caches. Without a preceding full
   `initialize()`, `character_assets()` lazy-downloads the icons it needs.
 
+## Endgame floor cards
+
+Generate Nanoka info cards for Memory of Chaos (`MOC`), Pure Fiction (`PF`),
+and Apocalyptic Shadow (`AS`) without a player UID or HoYoLAB cookies:
+
+```python
+from hsr_cards import get_current_endgame_card, get_next_endgame_card
+
+async def endgame_cards():
+    current = await get_current_endgame_card("PF")  # Floors 3 and 4
+    upcoming = await get_next_endgame_card("AS", floors=4)
+    for card in current.cards:
+        card.save(f"PF-{current.season_id}-{card.floor}.png")
+    upcoming.cards[0].save("AS-next-floor4.png")
+```
+
+Both functions are also available as `HonkaiStarrail` methods. MOC defaults to
+floors 11 and 12; PF and AS default to floors 3 and 4. Pass an integer or a sequence
+of floor numbers to select floors. Floor 4 includes its continuation: PF's third
+node and AS's Starward mode. PF uses complete wave rosters and counts; AS includes
+season and boss effects. Both show per-node elements, HP bars, and corrosion.
+
+The result exposes `game_mode`, `season_id`, `season_name`, `version`, `cards`,
+`images`, `begins_at`, `ends_at`, and `is_live`. Each floor card exposes `image`,
+`floor`, `stage_id`, `name`, `cache_path`, and `save()`.
+
+`get_next_endgame_card(..., look_ahead=1)` returns one result. A larger positive
+integer or `"max"` returns a list in live-date order, skipping unpublished stage
+data. Seasons without live dates follow dated seasons, show `UNSCHEDULED`, and
+expose `None` for their live dates. Deployment/test dates do not determine live
+status. A missing current season or single upcoming result raises `ValueError`;
+list requests return an empty list when nothing is available.
+
+Common options are `locale`, `cache_dir`, `proxy`, `rendered_cache_dir`,
+`use_rendered_cache`, and `force_refresh`. Rendered caches include the schedule
+status so an upcoming badge is refreshed when the season goes live.
+
+AA (Anomaly Arbitration) floor cards are deferred; both entry points raise
+`NotImplementedError` for `"AA"`.
+
 ## Character Cards
 
 The Nanoka renderer is available from the package root. Character identifiers may be a
