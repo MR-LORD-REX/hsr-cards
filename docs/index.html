@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Public API, guides, and rendered examples for HSR Cards. Create Honkai Star Rail cards with independent async Python clients.">
+  <meta name="theme-color" content="#f8faf9">
+  <title>HSR Cards · Documentation</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem('hsr-docs-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch (_) {}
+  </script>
+  <script src="data/content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-definitions" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6m0-6-9 9m-1-9H4v16h16v-6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V4H4v11h5"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.3A8.5 8.5 0 0 1 9.7 4 8.5 8.5 0 1 0 20 14.3Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1m0-15c3-2 6-2 9-1v15c-3-1-6-1-9 1Zm0 0v15"/></symbol>
+    <symbol id="i-cards" viewBox="0 0 24 24"><rect x="8" y="3" width="13" height="17" rx="2"/><path d="m8 6-5 1a2 2 0 0 0-1 2l3 12a2 2 0 0 0 2 1l9-2M12 8h5m-5 4h5m-5 4h3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-brand">
+      <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+      <a class="brand" href="#/readme" aria-label="HSR Cards documentation home"><img src="assets/logo.svg" width="30" height="30" alt=""><span>HSR <strong>Cards</strong></span></a>
+      <span class="header-divider"></span><span class="header-label">Docs</span>
+    </div>
+    <button class="search-launch" id="search-launch"><svg><use href="#i-search"/></svg><span>Search documentation</span><kbd>Ctrl K</kbd></button>
+    <div class="header-actions">
+      <span class="version" id="version">Python SDK</span>
+      <a class="repository-link" href="https://github.com/MR-LORD-REX/hsr-cards" target="_blank" rel="noopener noreferrer">GitHub <svg><use href="#i-external"/></svg></a>
+      <button class="icon-button" id="theme-toggle" aria-label="Switch color theme"><svg><use href="#i-moon"/></svg></button>
+    </div>
+  </header>
+  <button class="sidebar-backdrop" id="sidebar-backdrop" aria-label="Close navigation" hidden></button>
+  <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
+    <div class="sidebar-inner"><nav id="navigation"></nav></div>
+    <div class="sidebar-footer"><span class="status-dot"></span> Async Python · 3.10+<a href="https://github.com/MR-LORD-REX/hsr-cards/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT license <svg><use href="#i-external"/></svg></a></div>
+  </aside>
+  <div class="page-shell">
+    <main id="main-content" tabindex="-1"><article id="article"></article><nav class="page-pagination" id="pagination" aria-label="Adjacent documentation pages"></nav><footer class="content-footer"><span>HSR Cards · Community Python library</span><a id="source-link" href="readme.md">View Markdown source <svg><use href="#i-external"/></svg></a></footer></main>
+    <aside class="page-outline" id="page-outline" aria-label="On this page"><div class="outline-sticky"><span class="outline-label">On this page</span><nav id="outline"></nav><a class="outline-help" href="https://github.com/MR-LORD-REX/hsr-cards/issues" target="_blank" rel="noopener noreferrer">Suggest an improvement <svg><use href="#i-external"/></svg></a></div></aside>
+  </div>
+  <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-heading">
+    <h2 class="sr-only" id="search-heading">Search documentation</h2>
+    <div class="search-input-row"><svg><use href="#i-search"/></svg><input id="search-input" type="search" placeholder="Search a method, property, or guide…" aria-label="Search documentation" autocomplete="off" aria-controls="search-results"><button class="icon-button" id="search-close" aria-label="Close search"><svg><use href="#i-close"/></svg></button></div>
+    <div class="search-results" id="search-results"></div>
+    <div class="search-footer"><span><kbd>↑</kbd><kbd>↓</kbd> navigate · <kbd>Enter</kbd> open</span><span id="search-status" aria-live="polite"></span></div>
+  </dialog>
+  <dialog class="image-dialog" id="image-dialog" aria-labelledby="image-title">
+    <div class="image-dialog-toolbar"><div><h2 id="image-title"></h2><p id="image-source"></p></div><button class="icon-button" id="image-close" aria-label="Close image preview"><svg><use href="#i-close"/></svg></button></div>
+    <div class="image-dialog-body"><img id="image-preview" alt=""></div>
+    <div class="image-dialog-footer"><code id="image-method"></code><a id="image-original" target="_blank" rel="noopener noreferrer">Open original PNG <svg><use href="#i-external"/></svg></a></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="no-script">This reader uses JavaScript. You can read all documentation directly in <a href="readme.md">the Markdown documentation index</a>.</div></noscript>
+</body>
+</html>
