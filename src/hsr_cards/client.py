@@ -453,6 +453,68 @@ class HonkaiStarrail:
             use_rendered_cache=use_rendered_cache,
         )
 
+    async def get_current_endgame_card(
+        self,
+        game_mode: str = "MOC",
+        floors: list[int] | tuple[int, ...] | int | None = None,
+        *,
+        locale: str = "en",
+        cache_dir: str | None = None,
+        proxy: str | None = None,
+        rendered_cache_dir: str | None = None,
+        use_rendered_cache: bool = True,
+        force_refresh: bool = False,
+    ):
+        """Render one Telegram-friendly info card per requested live endgame floor.
+
+        MOC is supported first. Its default floors are 11 and 12; PF and AS
+        default to 3 and 4, while AA uses every published floor.
+        """
+        from .renderer.nanoka import get_current_endgame_card as render_endgame
+
+        return await render_endgame(
+            game_mode,
+            floors,
+            locale=locale,
+            cache_dir=cache_dir,
+            proxy=proxy,
+            rendered_cache_dir=rendered_cache_dir,
+            use_rendered_cache=use_rendered_cache,
+            force_refresh=force_refresh,
+        )
+
+    async def get_next_endgame_card(
+        self,
+        game_mode: str = "MOC",
+        floors: list[int] | tuple[int, ...] | int | None = None,
+        *,
+        look_ahead: int | str = 1,
+        locale: str = "en",
+        cache_dir: str | None = None,
+        proxy: str | None = None,
+        rendered_cache_dir: str | None = None,
+        use_rendered_cache: bool = True,
+        force_refresh: bool = False,
+    ):
+        """Render upcoming endgame cards after the live season.
+
+        ``look_ahead=1`` returns one result; larger values or ``"max"`` return
+        a list ordered by start time.
+        """
+        from .renderer.nanoka import get_next_endgame_card as render_next_endgame
+
+        return await render_next_endgame(
+            game_mode,
+            floors,
+            look_ahead=look_ahead,  # type: ignore[arg-type]
+            locale=locale,
+            cache_dir=cache_dir,
+            proxy=proxy,
+            rendered_cache_dir=rendered_cache_dir,
+            use_rendered_cache=use_rendered_cache,
+            force_refresh=force_refresh,
+        )
+
     async def render_all_info(
         self,
         version: str | tuple[str, str] | list[str] | None = None,

@@ -25,6 +25,12 @@ from .data import RenderedCardCache, default_rendered_cache_dir
 from .light_cone import LCInfoCardResult, get_LC_info
 from .relic import RelicInfoCardResult, get_relic_info
 from .item import ItemInfoCardResult, get_item_info
+from .endgames import (
+    EndgameCardResult,
+    EndgameFloorCard,
+    get_current_endgame_card,
+    get_next_endgame_card,
+)
 
 __all__ = [
     "BatchCardResult",
@@ -42,6 +48,10 @@ __all__ = [
     "RelicInfoCardResult",
     "get_item_info",
     "ItemInfoCardResult",
+    "EndgameCardResult",
+    "EndgameFloorCard",
+    "get_current_endgame_card",
+    "get_next_endgame_card",
     "get_character_skills",
     "load_character",
     "normalize_locale",

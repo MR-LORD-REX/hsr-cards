@@ -375,14 +375,19 @@ class MonsterSlot(NanokaModel):
 
 
 class StageInvasion(NanokaModel):
-    monster_list: list[MonsterSlot] = Field(default_factory=list)
+    monster_list: list[MonsterSlot | StageMonster] = Field(default_factory=list)
     monster_ids: list[int] = Field(default_factory=list)
 
     @computed_field
     @property
     def all_monster_ids(self) -> list[int]:
         found = list(self.monster_ids)
-        found.extend(monster for slot in self.monster_list for monster in slot.monster_ids)
+        for slot in self.monster_list:
+            if isinstance(slot, StageMonster):
+                found.append(slot.resolved_id)
+            else:
+                found.extend(slot.monster_ids)
+        found = [monster for monster in found if monster is not None]
         return list(dict.fromkeys(found))
 
 
