@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from .services.endgame.api import get_current_endgame_card, get_next_endgame_card
     from .services.endgame.results import EndgameCardResult, EndgameFloorCard
 
-__version__ = "1.0.2"
+__version__ = "1.1.0"
 __author__ = "sora"
 
 _EXPORTS = {
