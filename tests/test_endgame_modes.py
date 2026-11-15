@@ -30,6 +30,9 @@ class OfflineClient:
         self.fetch_asset = AsyncMock(return_value=None)
         self._detail = AsyncMock(side_effect=self.detail)
 
+    async def get_endgame_payload(self, identifier, *, mode="maze", refresh=False):
+        return await self._detail(mode, identifier)
+
     async def detail(self, mode, identifier):
         for season in FIXTURE["seasons"].values():
             if season["schedule"]["id"] == identifier:

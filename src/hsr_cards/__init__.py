@@ -1,89 +1,71 @@
+"""Stable public exports, loaded without provider IO or session creation."""
+from importlib import import_module
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from .client import HonkaiStarrail
-
-from .prydwen.builds import PrydwenClient
-from .nanoka import Locale, NanokaClient
+    from .clients.main import HonkaiStarrail
+    from .clients.nanoka import NanokaClient
+    from .clients.prydwen import PrydwenClient
+    from .core.types import GameMode
+    from .providers.nanoka.locales import Locale
+    from .services.characters import (
+        BatchCardResult, BatchRenderResult, InfoCardResult,
+        get_character_info, get_character_skills, render_all_info, render_all_skills,
+    )
+    from .services.endgame.api import get_current_endgame_card, get_next_endgame_card
+    from .services.endgame.results import EndgameCardResult, EndgameFloorCard
 
 __version__ = "1.0.2"
 __author__ = "sora"
 
-__all__ = [
-    "HonkaiStarrail",
-    "PrydwenClient",
-    "NanokaClient",
-    "Locale",
-    "get_character_info",
-    "get_LC_info",
-    "LCInfoCardResult",
-    "get_relic_info",
-    "RelicInfoCardResult",
-    "get_item_info",
-    "ItemInfoCardResult",
-    "get_character_skills",
-    "EndgameCardResult",
-    "EndgameFloorCard",
-    "get_current_endgame_card",
-    "get_next_endgame_card",
-    "render_all_info",
-    "render_all_skills",
-    "RedeemCode",
-    "Reward",
-    "tier_list",
-    "TierListData",
-    "fetch_tier_list",
-    "parse_tier_list",
-]
+_EXPORTS = {
+    "HonkaiStarrail": ".clients.main",
+    "NanokaClient": ".clients.nanoka",
+    "PrydwenClient": ".clients.prydwen",
+    "Locale": ".providers.nanoka.locales",
+    "GameMode": ".core.types",
+    "get_character_info": ".services.characters",
+    "get_character_skills": ".services.characters",
+    "InfoCardResult": ".services.characters",
+    "SkillsCardResult": ".renderer.nanoka.skills.models",
+    "BatchCardResult": ".services.characters",
+    "BatchRenderResult": ".services.characters",
+    "render_all_info": ".services.characters",
+    "render_all_skills": ".services.characters",
+    "get_LC_info": ".renderer.nanoka.light_cone",
+    "LCInfoCardResult": ".renderer.nanoka.light_cone",
+    "get_relic_info": ".renderer.nanoka.relic",
+    "RelicInfoCardResult": ".renderer.nanoka.relic",
+    "get_item_info": ".renderer.nanoka.item",
+    "ItemInfoCardResult": ".renderer.nanoka.item",
+    "EndgameCardResult": ".services.endgame.results",
+    "EndgameFloorCard": ".services.endgame.results",
+    "get_current_endgame_card": ".services.endgame.api",
+    "get_next_endgame_card": ".services.endgame.api",
+    "RedeemCode": ".prydwen.codes",
+    "Reward": ".prydwen.codes",
+    "tier_list": ".renderer.prydwen.tier_list",
+    "TierListData": ".prydwen.tier_list",
+    "fetch_tier_list": ".prydwen.tier_list",
+    "parse_tier_list": ".prydwen.tier_list",
+}
+__all__ = list(_EXPORTS)
 
 
 def __getattr__(name: str):
-    """Expose the player-card client and Nanoka APIs without eager imports.
+    """Resolve a public export on demand; unknown names raise AttributeError.
 
-    ``HonkaiStarrail`` validates HoYoLAB cookies at import time, so importing
-    the package must not pull it in for callers that only want Nanoka cards.
+    Importing the package alone performs no filesystem discovery, cookie
+    validation, HTTP requests, or session creation. Resolved exports are cached.
     """
-    if name == "PrydwenClient":
-        from .prydwen.builds import PrydwenClient
+    module_name = _EXPORTS.get(name)
+    if module_name is None:
+        raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+    value = getattr(import_module(module_name, __name__), name)
+    globals()[name] = value
+    return value
 
-        return PrydwenClient
-    if name == "HonkaiStarrail":
-        from .client import HonkaiStarrail
 
-        return HonkaiStarrail
-    if name in {"NanokaClient", "Locale"}:
-        from .nanoka import Locale, NanokaClient
-
-        return {"NanokaClient": NanokaClient, "Locale": Locale}[name]
-    if name == "tier_list":
-        from .renderer.prydwen import tier_list
-
-        return tier_list
-    if name in {"TierListData", "fetch_tier_list", "parse_tier_list"}:
-        from .prydwen import tier_list as tier_list_module
-
-        return getattr(tier_list_module, name)
-    if name in {"RedeemCode", "Reward"}:
-        from .prydwen.codes import RedeemCode, Reward
-
-        return {"RedeemCode": RedeemCode, "Reward": Reward}[name]
-    if name in {
-        "get_character_info",
-        "get_LC_info",
-        "LCInfoCardResult",
-        "get_relic_info",
-        "RelicInfoCardResult",
-        "get_item_info",
-        "ItemInfoCardResult",
-        "EndgameCardResult",
-        "EndgameFloorCard",
-        "get_current_endgame_card",
-        "get_next_endgame_card",
-        "get_character_skills",
-        "render_all_info",
-        "render_all_skills",
-    }:
-        from .renderer import nanoka
-
-        return getattr(nanoka, name)
-    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+def __dir__() -> list[str]:
+    """Include lazy exports in interactive discovery and editor suggestions."""
+    return sorted(set(globals()) | set(__all__))

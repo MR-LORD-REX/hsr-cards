@@ -1,12 +1,15 @@
 import asyncio
 import os
+from pathlib import Path
+import sys
 from dotenv import load_dotenv
 
+# Load the local source tree under the same package name used by installed builds.
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+
 load_dotenv()
-from src.hsr_cards import HonkaiStarrail
-from src.hsr_cards import NanokaClient
-from src.hsr_cards import PrydwenClient
-from src.hsr_cards.models.auth import Cookies
+from hsr_cards import HonkaiStarrail, NanokaClient, PrydwenClient
+from hsr_cards.models.auth import Cookies
 
 
 UID = 800556377 
@@ -20,15 +23,18 @@ async def main():
     #     c = await n.get_character("yao")
     #     print(c)
 
-    prydwen = PrydwenClient()
-    await prydwen.urls()
-    await prydwen.pull()
+    # prydwen = PrydwenClient()
+    # await prydwen.urls()
+    # await prydwen.pull()
     # cards =  prydwen.cards()
 
 
 
-    # async with HonkaiStarrail(uid=UID, cookie=None,proxy=proxy) as client:
-    #     print(f"[*] Testing with UID: {UID}")
+    async with HonkaiStarrail(uid=UID, cookie=None,proxy=proxy) as client:
+        cards = await client.get_current_endgame_card(game_mode="AS",floors=[4])
+        for c in cards.cards:
+            print(f"[*] Rendering {c.name}...")
+            c.image.show()
 
     #     print("[*] Rendering Banners...")
     #     img = await client.banners()

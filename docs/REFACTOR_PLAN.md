@@ -1,216 +1,138 @@
-# Client and renderer refactor preparation
+# Client and renderer refactor
 
-Prepared 15 November 2026. This is the proposed migration plan; the package-wide
-moves have not started. PF and AS floor-card support is the baseline to preserve.
-AA floor cards stay deferred for a later version.
+Implemented 15 November 2026. MOC, PF, and AS floor cards retain the reference
+behavior from the preparation baseline. AA floor cards remain deferred.
 
-[Editable client-boundary diagram](https://www.figma.com/board/NnDvWQKjcd6aBFpEqXeH5l)
+[Original client-boundary diagram](https://www.figma.com/board/NnDvWQKjcd6aBFpEqXeH5l)
 
-## Objectives and boundaries
+## Responsibilities
 
-Separate the main convenience client, provider clients, provider API access,
-card orchestration, and drawing. Keep Nanoka and Prydwen usable without a player
-UID, HoYoLAB cookies, or construction of a HoYoLAB session. Preserve existing
-imports, method signatures, return objects, cache locations, and image behavior
-throughout the migration.
+`clients/main.py` contains the `HonkaiStarrail` facade. Its player and Nanoka card
+methods are split into explicit-signature method modules. Provider clients are
+independent: HoYoLAB queries validate player responses, Nanoka queries resolve
+catalog/domain objects, and Prydwen queries expose tiers, codes, and the existing
+build pipeline. Provider API clients handle raw data access and transport.
 
-A provider API client handles HTTP requests and response decoding. A provider
-client resolves domain objects and exposes catalog/query operations. A card
-service loads those objects, resolves assets, reads/writes rendered caches, and
-calls a renderer. A renderer accepts resolved data and returns a PIL image;
-it does not perform HTTP calls or select live seasons. The main facade only
-delegates to these components and owns components it creates.
+`services/` owns character loading, comparison preparation, rendered caches, and
+endgame orchestration. Nanoka info, skills, and floor renderers draw resolved
+models synchronously. HTTP calls, season selection, and client lifecycle stay
+outside the floor drawing code. Pure locale, version, filename, parameter, and
+image helpers are shared only where their behavior matches.
 
-Do not force provider-specific authentication, browser scraping, catalog formats,
-or cache invalidation into one generic base client. Share small utilities only
-when the behavior is actually identical.
-
-## Current seams to extract
-
-- `client.py` (about 580 lines) combines HoYoLAB player methods, Nanoka render
-  delegates, Prydwen operations, build assets, and session ownership.
-- `nanoka/client.py` (about 1,660 lines) combines transport/cache setup, catalog
-  filtering, version resolution, schedule selection, assets, and result wrappers.
-- `nanoka/models.py` (about 1,640 lines) combines character, monster, endgame,
-  item, currency, and cache models.
-- `nanoka/cache.py` (about 910 lines) combines version manifests, JSON storage,
-  downloading, assets, and invalidation.
-- `renderer/nanoka/endgames.py` (about 1,050 lines) combines result types, data
-  loading, HP calculations, schedules, caching, layout, and public orchestration.
-  `endgame_modes.py` now isolates the PF wave and AS effect adapters.
-- `renderer/nanoka/character_skills.py` (about 2,615 lines) and
-  `character_variants.py` (about 1,010 lines) should split by data preparation,
-  comparison, layout, and drawing responsibilities.
-- `prydwen/builds/parse.py` (about 880 lines), `render.py` (about 700), and
-  `prydwen/tier_list.py` (about 590) should split along fetch/parse/model/render
-  boundaries. Keep CLI and publication workflows separate from the query client.
-- Package-root imports currently pull in Prydwen modules eagerly, producing
-  path-discovery output during imports. Capture this behavior in a regression
-  before making provider exports lazy.
-- Endgame public calls currently create a discovery client and another client
-  for each season. Use one explicitly owned provider client per card operation.
-  Replace renderer calls to `_prepare()` and `_detail()` with public provider APIs.
-
-Line counts are approximate and describe this preparation baseline.
-
-## Proposed layout
+## Implemented layout
 
 ```text
 src/hsr_cards/
-  __init__.py                       # Stable lazy public exports
-  client.py                         # Compatibility export of HonkaiStarrail
+  __init__.py                       # Lazy stable public exports
+  client.py                         # Legacy facade module alias
   clients/
-    main.py                         # HonkaiStarrail facade
-    hoyolab.py                      # Player query client
+    main.py                         # Facade configuration, ownership, delegates
+    player_cards.py                  # Explicit player-card method signatures
+    nanoka_cards.py                  # Explicit non-player card signatures
+    hoyolab.py                      # Validated player queries
     nanoka.py                       # Catalog/domain client
-    prydwen.py                      # Prydwen query/build facade
+    prydwen.py                      # Tier/code/build client
   providers/
-    hoyolab/
-      api.py                        # Existing BaseAPI operations
-      endpoints.py
-      models/
-    nanoka/
-      api.py                        # HTTP, catalogs, detail access
-      catalogs.py                   # Catalog lookup and filtering
-      schedules.py                  # Live/test windows and ordering
-      assets.py
-      versions.py
-      cache/
-        json_store.py
-        manifests.py
-        assets.py
-      models/
-        characters.py
-        monsters.py
-        endgame.py
-        items.py
-        currency.py
-        cache.py
-    prydwen/
-      api.py                        # HTTP/browser transport adapters
-      models.py
-      parsing/
-        builds.py
-        tiers.py
-        codes.py
+    hoyolab/{api,endpoints}.py
+    hoyolab/models/
+    nanoka/api.py                   # Raw catalog/detail/document/asset access
+    nanoka/{catalogs,characters,equipment,items,monsters,schedules,assets}.py
+    nanoka/models/                  # Character, monster, equipment, endgame, etc.
+    nanoka/cache/                   # Controller, manifests, JSON, asset IO
+    prydwen/{api,http,fetch,browser_fetch,models,assets,paths}.py
+    prydwen/parsing/                # Build sections, tiers/DOM, codes, roster
   services/
-    endgame/
-      api.py                        # get_current/get_next orchestration
-      results.py                    # EndgameCardResult/EndgameFloorCard
-      data.py                       # Resolved floor/node data
-      hp.py                         # Variants, phases, scaling, corrosion
-      modes.py                      # PF/AS adapters
-    characters.py
-    builds.py
-  renderer/                         # Existing family boundaries stay
-    common/
-      text.py                       # Wrapping and measured text blocks
-      images.py                     # Image fitting/compositing
-      elements.py
-      stars.py
-      team.py
-    nanoka/
-      endgame/
-        layout.py
-        nodes.py
-        effects.py
-      skills/
-        layout.py
-        tables.py
-        sections.py
-      endgames.py                    # Compatibility re-exports
-    hoyolab/
-    prydwen/
-  core/
-    http.py                         # Only transport behavior shared by providers
-    paths.py                        # Explicit roots and safe filenames
-    locale.py
-    text.py                         # Shared markup/parameter rules where identical
-  nanoka/                           # Compatibility exports during migration
-  prydwen/                          # Compatibility exports and existing CLI
-  api/                              # Compatibility exports of HoYoLAB API
+    characters.py                   # Public info/skills/batch orchestration
+    character_data.py               # Shared character loading and ownership
+    character_info.py               # Info/comparison model preparation
+    skills.py                       # Skills/comparison model preparation
+    character_assets.py             # Targeted artwork preparation
+    rendered_cache.py               # Stable rendered-card filenames and IO
+    endgame/                        # API, data, results, HP, modes, assets, schedules
+  renderer/
+    common/{images,text,stars,team}.py
+    nanoka/info/                    # Identity, material, stat, text, drawing models
+    nanoka/skills/                  # Preparation, tables, mixed text, cards, layout
+    nanoka/endgame/                 # Floor composition, nodes, effects, drawing
+    hoyolab/                        # Existing player-card family
+    prydwen/builds/                 # Build primitives, notes, card composition
+  core/{types,locale,versions,paths,text}.py
+  nanoka/                           # Legacy provider/client compatibility imports
+  prydwen/                          # Legacy imports, CLI, registry, publication
+  api/                              # Legacy HoYoLAB API compatibility imports
 ```
 
-The tree is a responsibility map. Introduce each package only when moving real
-code into it. Preserve provider-specific options and avoid empty scaffolding.
-Keep existing `utils/` entry points as forwarding imports when extracting shared
-helpers. Existing `renderer/hoyolab/endgame.py` remains the HoYoLAB schedule card;
-Nanoka floor cards retain their own service and renderer.
+The legacy character renderer, data, and endgame modules forward to the extracted
+implementations. Files were split by responsibility; established drawing and
+cache behavior remain the compatibility baseline.
 
-## Migration sequence
+## Public contracts and ownership
 
-1. **Freeze contracts and references.** Record import paths and signatures for
-   root exports, the three existing clients, card results, and the CLI. Preserve
-   the independent PF/AS snapshots in `tests/fixtures/endgame_reference.json`.
-   Add independent MOC fixtures so its regressions no longer require a private
-   local Nanoka cache. Retain the established character render anchors.
-2. **Extract endgame responsibilities first.** Move result/data types, HP math,
-   mode adapters, service orchestration, and drawing in separate steps. Leave
-   forwarding exports in `renderer/nanoka/endgames.py`. Make drawing entirely
-   synchronous and independent of a `NanokaClient` reference. Reuse one injected
-   client per operation and test that only internally created clients are closed.
-3. **Separate provider API access from domain clients.** Move Nanoka catalog,
-   asset, version, and schedule operations behind a public API client. Move
-   HoYoLAB request code under its provider without changing endpoint behavior.
-   Wrap Prydwen fetchers without merging HTTP and browser transports. Update
-   provider tests alongside each extraction; do not redesign network policies
-   during file moves.
-4. **Extract the main facade and remove import side effects.** Move
-   `HonkaiStarrail` into `clients/main.py`, inject/lazily construct provider
-   clients, preserve its existing delegates, and retain `client.py` imports.
-   Root imports must not perform IO, discover writable paths, validate cookies,
-   or open sessions. Keep the existing `PrydwenClient` API and sync/async
-   distinctions intact.
-5. **Split models, cache, and large renderers.** Move domain models into focused
-   modules with stable re-exports. Separate manifest, JSON, and asset caching.
-   Split skills/variants and Prydwen parsing/rendering by responsibility, then
-   extract shared drawing and text utilities with matching behavior tests.
-6. **Finish documentation and compatibility checks.** Document every public
-   function, method, exported model/property, and provider API operation as it
-   moves. Update README examples and package guidance after paths stabilize.
-   Keep shims until an explicitly versioned compatibility decision removes them.
+Existing package-root exports, legacy module paths, callable parameters, result
+objects, and `hsr-prydwen` CLI entry points remain supported. Newly explicit
+client/API paths can be imported directly. Shared implementation objects are
+re-exported rather than copied. Legacy modules used by existing monkeypatches
+retain module identity where necessary.
 
-Keep each step reviewable and independently runnable. Avoid combining file moves
-with behavior changes except where a contract regression demonstrates the need.
+Importing public APIs performs no cache-path discovery, directory creation,
+credential loading, or session opening. `HonkaiStarrail()` supports non-player
+operations without a UID. Player operations require a UID. HoYoLAB credentials
+are explicit `Cookies(ltoken_v2=..., ltuid_v2=...)`; applications choose whether
+to load environment files themselves.
 
-## Docstring contract
+The facade lazily creates its provider clients. Injected clients remain owned by
+the caller. Closing the facade attempts to close every owned provider even when
+another close fails. Provider clients likewise distinguish owned API/session
+resources from injected ones.
 
-For each public/API function include a concise action summary and document:
+Endgame public functions accept an optional initialized `client=` and reuse one
+provider for every requested floor and season. Only internally created clients
+are initialized and closed by the operation, including on failure. An injected
+client's language controls render-cache localization. The facade forwards an
+existing Nanoka client when available.
 
-- Arguments, defaults, accepted aliases, locale/version rules, and live/test
-  date semantics where relevant.
-- Return type and shape, including single versus multiple-season results and
-  the distinction between provider data and image results.
-- Expected exceptions and which missing-data conditions return empty results.
-- Network/file/cache side effects, refresh behavior, session ownership, and
-  async requirements.
+Both current/next card functions and facade methods use
+`GameMode = Literal["MOC", "PF", "AS", "AA"]`. Runtime mode normalization still
+accepts surrounding whitespace and lowercase names. MOC defaults to floors 11
+and 12; PF and AS default to 3 and 4. `look_ahead=1` returns one upcoming season;
+larger values and `"max"` return an ordered list. Test/deployment dates never
+stand in for live dates, and undated upcoming seasons remain `UNSCHEDULED`.
 
-Use the same format within each package; add a short example for ambiguous
-entry points. Private helpers need a docstring when their calculation or
-invariant is not obvious. Do not add meaningless parameter descriptions or
-comments that repeat the function name.
+Downloaded and rendered cache roots, filenames, locale suffixes, and comparison
+keys retain their existing formats. Batch rendering records ordinary per-item
+failures and propagates cancellation. Comparison/data-loading failures close
+clients already created for that operation.
 
-## Verification gates
+## Documentation and verification
 
-Run focused tests after each extraction, then the affected provider/renderer
-suite, then the full offline suite. Require `compileall`, stable public imports,
-and compatibility exports to pass before declaring a stage complete. Preserve
-current caches and rendered filenames unless an intentional schema revision is
-needed; status-sensitive endgame cache keys are already versioned.
+Public/API functions, methods, properties, and model classes in the extracted
+packages have docstrings. Service entry points document accepted version/mode
+selections, return shapes, cache effects, and resource ownership. The README
+includes independent client usage and explicit credential setup.
 
-PF regressions must preserve all three nodes, spawn counts, wave HP modifiers,
-per-node elements, and the 99,000-point condition. AS regressions must preserve
-two HP bars per reference boss, corrosion on additional targets, all node
-buffs/mechanics, Starward mode, and its 10,200-point condition. Render assertions
-must check text bounds, full descriptions, and image dimensions suitable for
-Telegram. Check the approved info anchor at 1080x1440 and the comparison skills
-anchor at 1920x3188 with eight tables. Network smoke tests are supplementary to
-self-contained fixture tests.
+Offline tests cover compatibility imports, fresh-process import side effects,
+client/API ownership, failure cleanup, cancellation, version switching, cache
+invalidation, provider parsing, and reference drawing. MOC has a checked-in
+reference fixture; PF/AS retain their independent Nanoka fixture. These checks
+do not require a downloaded private cache or live provider access.
+
+The established character anchors remain 1080x1440 for character 1507 at
+4.7.51, and 1920x3188 with eight tables for character 1511 compared between
+4.6.51 and 4.6.54. Source-preserving renderer extraction was checked against
+pre-refactor pixel hashes and rich-message payloads.
+
+Run the project interpreter with `PYTHONPATH=src`:
+
+```powershell
+$env:PYTHONPATH = Join-Path (Get-Location).Path 'src'
+& '.\.venv\Scripts\python.exe' -m pytest tests -q -p no:cacheprovider
+& '.\.venv\Scripts\python.exe' -m compileall -q src tests
+```
 
 ## Deferred AA work
 
-Do not implement AA floor cards in this refactor. Existing `PeakSchedule` data
-has no dependable live date window; the SDK currently treats the highest ID as
-current and consequently has no higher next ID. Preserve the explicit renderer
-`NotImplementedError`. Incorporate the user's date-resolution fix in a later
-version with tests for current/next selection before enabling AA cards.
+Do not enable AA floor cards in this refactor. Existing PeakSchedule data has no
+reliable live window, so current/next selection remains ambiguous. Both floor
+card functions retain `NotImplementedError` for AA. Apply the user's proposed
+date-resolution fix with current/next schedule regressions in a later version.
+Existing HoYoLAB player AA cards remain available.

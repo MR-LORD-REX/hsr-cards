@@ -1,6 +1,9 @@
 """Prydwen build-data extraction and static build-card rendering."""
 
-from .client import PrydwenClient
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from ...clients.prydwen import PrydwenClient
 from .models import (
     AssetRef,
     BuildCardData,
@@ -40,3 +43,10 @@ __all__ = [
     "TracePriority",
     "build_team_index",
 ]
+
+def __getattr__(name: str):
+    """Load the pipeline client only when requested, without opening transports."""
+    if name == "PrydwenClient":
+        from ...clients.prydwen import PrydwenClient
+        return PrydwenClient
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

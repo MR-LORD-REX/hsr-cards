@@ -28,16 +28,21 @@ from hsr_cards.renderer.nanoka.endgames import (
     invasion_ratio,
     monster_hp_values,
     normalize_floors,
+    render_floor_card,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / ".nanoka_cache" / "4.7.51" / "en" / "data"
+DATA = ROOT / "tests" / "fixtures"
+FIXTURE = json.loads((DATA / "moc_reference.json").read_text(encoding="utf-8"))
 MODULE = "hsr_cards.renderer.nanoka.endgames"
-HAS_FIXTURE_DATA = (DATA / "maze" / "1036.json").is_file()
 
 
 def load_json(relative):
-    return json.loads((DATA / relative).read_text(encoding="utf-8"))
+    if relative == "maze/1036.json":
+        return FIXTURE["records"]
+    if relative.startswith("monster/"):
+        return FIXTURE["monsters"][Path(relative).stem]
+    return FIXTURE[relative]
 
 
 def floor_records(identifier=5512):
@@ -73,8 +78,6 @@ class FloorShapeTests(unittest.TestCase):
             normalize_floors("XX", None)
 
     def test_continuation_records_merge_into_the_main_floor(self):
-        if not HAS_FIXTURE_DATA:
-            self.skipTest("Nanoka cache fixture is not available")
         grouped = group_floor_records(load_json("maze/1036.json"))
         self.assertEqual(sorted(grouped), list(range(1, 13)))
         self.assertEqual([int(record["id"]) for record in grouped[12]], [5512, 5513])
@@ -83,15 +86,11 @@ class FloorShapeTests(unittest.TestCase):
 
 class HpTests(unittest.TestCase):
     def test_corrosion_uses_the_second_buff_parameter(self):
-        if not HAS_FIXTURE_DATA:
-            self.skipTest("Nanoka cache fixture is not available")
         record = load_json("maze/1036.json")[-1]
         event = stage_event(record, "event_id_list")
         self.assertAlmostEqual(invasion_ratio(event), 0.30)
 
     def test_phase_hp_matches_live_moc_values(self):
-        if not HAS_FIXTURE_DATA:
-            self.skipTest("Nanoka cache fixture is not available")
         hard, elite, values = ratios()
         judge = stage_event(load_json("maze/1036.json")[-1], "event_id_list")
         detail = MonsterDetail.model_validate(load_json("monster/4064010.json"))
@@ -106,8 +105,6 @@ class HpTests(unittest.TestCase):
         self.assertEqual(format_hp(4085146.2), "4,085,146")
 
     def test_corrosion_targets_exclude_unaffected_monsters(self):
-        if not HAS_FIXTURE_DATA:
-            self.skipTest("Nanoka cache fixture is not available")
         record = load_json("maze/1036.json")[-1]
         event = stage_event(record, "event_id_list")
         affected = set(event.invasion.all_monster_ids)
@@ -117,8 +114,6 @@ class HpTests(unittest.TestCase):
 
 class RenderTests(unittest.TestCase):
     def test_card_is_telegram_sized_and_has_no_trailing_void(self):
-        if not HAS_FIXTURE_DATA:
-            self.skipTest("Nanoka cache fixture is not available")
 
         class OfflineClient:
             version = "4.7.51"
@@ -128,14 +123,14 @@ class RenderTests(unittest.TestCase):
             )
 
             async def get_monster_detail(self, identifier):
-                path = DATA / f"monster/{identifier}.json"
-                if not path.is_file():
+                if str(identifier) not in FIXTURE["monsters"]:
                     raise NanokaNotFoundError("monster", identifier)
                 payload = load_json(f"monster/{identifier}.json")
                 return MonsterDetail.model_validate(payload)
 
             async def list_monsters(self):
-                return []
+                return [SimpleNamespace(id=int(key), child=[item["id"] for item in value["child"]])
+                        for key, value in FIXTURE["monsters"].items()]
 
         season = MazeSchedule(id=1036, name="Survival of the Fittest")
         data = asyncio.run(build_floor_data(OfflineClient(), season, 12, floor_records(), mode="MOC", status="LIVE"))
@@ -143,6 +138,10 @@ class RenderTests(unittest.TestCase):
         self.assertEqual([target.identifier for target in node3.corrosion_targets], [4064010, 4062010, 4063010])
         self.assertEqual([round(target.bonus_hp) for target in node3.corrosion_targets], [2177697, 201639, 1290487])
         self.assertTrue(all(target.bonus_ratio == 0.3 for target in node3.corrosion_targets))
+        image = render_floor_card(data)
+        self.assertEqual(image.width, 1080)
+        self.assertLessEqual(sum(image.size), 10000)
+        self.assertLessEqual(max(image.size) / min(image.size), 20)
 
 
 class ApiTests(unittest.IsolatedAsyncioTestCase):

@@ -137,6 +137,11 @@ class TierListRenderer:
             return None
 
     async def render_tier_list(self, data: TierListData) -> Image.Image:
+        """Render ranking data to an RGB card, fetching unique portraits once.
+
+        Missing portraits become named placeholders. Uses the entered session
+        and returns an image without writing output files or refetching rankings.
+        """
         if len(data.roles) != 4:
             raise ValueError("The HSR tier-list renderer requires four role headers")
         if not data.tiers:

@@ -79,10 +79,12 @@ ELEMENT_COLORS = {
     "thunder": (190, 128, 255),
 }
 
-_CACHE_ROOTS = (
-    Path(__file__).resolve().parents[4] / ".nanoka_cache",
-    Path.cwd() / ".nanoka_cache",
-)
+def _cache_roots() -> tuple[Path, Path]:
+    """Resolve Nanoka cache locations only when a Currency Wars asset is needed."""
+    return (
+        Path(__file__).resolve().parents[4] / ".nanoka_cache",
+        Path.cwd() / ".nanoka_cache",
+    )
 
 
 def _font(size: int, weight: str = "medium"):
@@ -201,7 +203,7 @@ def _vertical_gradient(size: tuple[int, int], top, bottom) -> Image.Image:
 def _element_map() -> dict[str, str]:
     """Read character element names from the Nanoka cache (read-only)."""
     mapping: dict[str, str] = {}
-    for root in _CACHE_ROOTS:
+    for root in _cache_roots():
         if not root.is_dir():
             continue
         for version in sorted(root.iterdir(), reverse=True):
