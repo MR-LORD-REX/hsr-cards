@@ -36,6 +36,8 @@ The default image cache is `.hsr_cards_rendered`. Non-player card filenames incl
 
 Standalone card functions accept `rendered_cache_dir`, `use_rendered_cache`, and `force_refresh`. A rendered-image hit does not promise that all provider metadata can be skipped. Skills payloads are rebuilt even when the image itself is reused. Endgame cache identities also include schedule status.
 
+Skills images from older layouts are automatically regenerated at the same cache path.
+
 - `force_refresh=True` skips a generated-image read.
 - `use_rendered_cache=False` disables generated-image read/write activity.
 - Downloaded catalogs and artwork may still be read, requested, or cached.

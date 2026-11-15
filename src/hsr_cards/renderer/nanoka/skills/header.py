@@ -139,25 +139,26 @@ def scrim(size: tuple[int, int], horizontal: bool) -> Image.Image:
 
 
 def header_art(canvas, data: SkillData, width: int, height: int) -> None:
-    """Composite scaled character art and readability scrims into the header, keeping space for stats panels."""
-    if not data.splash:
-        return
-    image = trimmed_splash(data.splash)
-    target_h = height + 18
-    scale = target_h / image.height
-    resized = image.resize((round(image.width * scale), target_h), Image.Resampling.LANCZOS)
-    # Sit the art in the gap between the identity text and the stats panel
-    # instead of flush against the left edge, where it collided with the copy.
-    max_width = 470
-    if resized.width > max_width:
-        ratio = max_width / resized.width
-        resized = resized.resize((max_width, round(resized.height * ratio)), Image.Resampling.LANCZOS)
-    art_x = 812 - resized.width
-    art_y = height - resized.height + 26
-    canvas.alpha_composite(radial((700, 700), (246, 172, 87, 0.18)), (art_x + 20, art_y + 40))
-    canvas.alpha_composite(resized, (art_x, art_y))
-    canvas.alpha_composite(scrim((780, height), horizontal=True), (0, 0))
-    canvas.alpha_composite(scrim((780, height), horizontal=False), (0, 0))
+    """Place optional header art beneath a translucent film covering the full canvas.
+
+    width/height describe the header layout; the film uses canvas.size so no edge
+    cuts through the splash or glow. Call before drawing any text or panels.
+    """
+    if data.splash:
+        image = trimmed_splash(data.splash)
+        target_h = height + 18
+        scale = target_h / image.height
+        resized = image.resize((round(image.width * scale), target_h), Image.Resampling.LANCZOS)
+        # Keep the art between the identity text and the stats panel.
+        max_width = 470
+        if resized.width > max_width:
+            ratio = max_width / resized.width
+            resized = resized.resize((max_width, round(resized.height * ratio)), Image.Resampling.LANCZOS)
+        art_x = 812 - resized.width
+        art_y = height - resized.height + 26
+        canvas.alpha_composite(radial((700, 700), (246, 172, 87), 0.18), (art_x + 20, art_y + 40))
+        canvas.alpha_composite(resized, (art_x, art_y))
+    canvas.alpha_composite(Image.new("RGBA", canvas.size, (12, 8, 23, 144)))
 
 
 def stat_icon(data: SkillData, name: str | None, size: int = 18) -> Image.Image | None:
@@ -365,8 +366,7 @@ def draw_bonus_panel(canvas, draw, data: SkillData, x: int, y: int, width: int, 
 
 
 def header(canvas, draw, data: SkillData, width: int, height: int):
-    """Draw the complete identity/art/stats/bonus header into the provided canvas dimensions."""
-    draw.rectangle((0, 0, width, height), fill=(12, 8, 23, 255))
+    """Draw art and full-page film first, then the identity/stats/bonus foreground."""
     header_art(canvas, data, width, height)
     draw.line((M, 64, width - M, 64), fill=LINE, width=1)
     header_label = ui(data, "header")

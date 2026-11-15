@@ -3,8 +3,13 @@ from __future__ import annotations
 from collections.abc import Sequence
 from pathlib import Path
 from PIL import Image
+from PIL.PngImagePlugin import PngInfo
 from ..core.locale import DEFAULT_LOCALE, normalize_locale
 from ..core.paths import comparison_key, default_rendered_cache_dir, safe_filename
+
+
+_RENDER_REVISION_KEY = "hsr_cards_render_revision"
+_CARD_RENDER_REVISIONS = {"skills": "full-page-film-v1"}
 
 
 class RenderedCardCache:
@@ -62,7 +67,8 @@ class RenderedCardCache:
         """Read a matching cached PNG into a fully decoded RGBA PIL image.
 
         Identity/type/version/locale follow path(). Return None when disabled, absent,
-        corrupt or unreadable. Unsupported locale errors propagate. The image has no
+        outdated, corrupt or unreadable. Skills PNGs must match the current layout
+        revision. Unsupported locale errors propagate. The image has no
         remaining file dependency and the cache owns no provider resource.
         """
         if not self.enabled:
@@ -71,9 +77,12 @@ class RenderedCardCache:
         if not path.is_file():
             return None
         try:
-            image = Image.open(path)
-            image.load()
-            return image.convert("RGBA")
+            with Image.open(path) as image:
+                revision = _CARD_RENDER_REVISIONS.get(card_type)
+                if revision is not None and image.info.get(_RENDER_REVISION_KEY) != revision:
+                    return None
+                image.load()
+                return image.convert("RGBA")
         except (OSError, ValueError):
             return None
 
@@ -89,12 +98,18 @@ class RenderedCardCache:
         """Write image as an optimized RGBA PNG and return its cache Path.
 
         Identity/type/version/locale follow path(). Parent directories are created and
-        existing images are replaced. This explicit write runs even when enabled=False;
+        existing images are replaced. Skills PNGs include their layout revision so
+        older layouts refresh automatically. This write runs even when enabled=False;
         callers should skip it to disable IO. File/encoder/locale errors propagate.
         """
         path = self.path(character, card_type, version, locale=locale)
         path.parent.mkdir(parents=True, exist_ok=True)
-        image.convert("RGBA").save(path, format="PNG", optimize=True)
+        metadata = None
+        revision = _CARD_RENDER_REVISIONS.get(card_type)
+        if revision is not None:
+            metadata = PngInfo()
+            metadata.add_text(_RENDER_REVISION_KEY, revision)
+        image.convert("RGBA").save(path, format="PNG", optimize=True, pnginfo=metadata)
         return path
 
     def clear(self, version: str | None = None) -> int:
